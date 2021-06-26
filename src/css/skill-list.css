@@ -1,0 +1,57 @@
+#skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow-y: scroll;
+  padding: 2px 0;
+  background: #585859;
+  border-radius: 5px;
+  width: fit-content;
+  height: 300px;
+}
+
+.skill-list-skill {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 1px;
+  border: 2px solid #303031;
+  border-radius: 5px;
+  height: fit-content;
+  width: 50px;
+}
+
+.skill-list-skill > img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  height: 40px;
+  width: 40px;
+}
+
+.skill-list-skill-footer {
+  background: rgba(20, 20, 21, 0.6);
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  width: 100%;
+}
+
+.skill-list-skill-primary-trait {
+  margin: 3px 2px;
+  height: 19px;
+  width: 19px;
+}
+
+.skill-list-skill-secondary-trait {
+  margin: 4px 3px;
+  height: 17px;
+  width: 17px;
+}
+
+@media (min-width: 768px) {
+  #skill-list {
+    width: 60%;
+  }
+}

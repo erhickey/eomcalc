@@ -1,0 +1,19 @@
+.common {
+  background-color: #bcc8f7;
+}
+
+.uncommon {
+  background-color: #4cc441;
+}
+
+.rare {
+  background-color: #4a87e8;
+}
+
+.epic {
+  background-color: #a64ae8;
+}
+
+.legendary {
+  background-color: #e69f1c;
+}

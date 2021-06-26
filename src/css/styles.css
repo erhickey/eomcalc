@@ -1,0 +1,12 @@
+@import './chosen-skills.css';
+@import './rarity.css';
+@import './skill-list.css';
+
+body {
+  font-family: "arial";
+}
+
+#wrapper {
+  width: 95%;
+  margin: 1em auto;
+}

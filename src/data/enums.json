@@ -1,0 +1,35 @@
+{
+  "skillTypes": [ "Active", "Passive" ],
+  "rarities": {
+    "Common": 1,
+    "Uncommon":  2,
+    "Rare": 3,
+    "Epic": 4,
+    "Legendary": 5
+  },
+  "damageTypes": [ "Physical", "Magic" ],
+  "modifiers": [
+    "Slow",
+    "Stun",
+    "Attack Speed",
+    "Move Speed",
+    "Attack Increase",
+    "Self Harm",
+    "Disarm",
+    "Knockback",
+    "Crit Damage",
+    "Crit Chance",
+    "Damage Reduction",
+    "Shield",
+    "Taunt",
+    "AP Increase",
+    "Dodge",
+    "Movement",
+    "Healing",
+    "Channeled",
+    "Invulnerability",
+    "Cooldown Reduction",
+    "Lifesteal",
+    "Freeze"
+  ]
+}

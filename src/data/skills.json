@@ -1,0 +1,1265 @@
+{
+  "skills": [
+    {
+      "name": "Tsunami",
+      "id": 1,
+      "type": "Active",
+      "rarity": "Legendary",
+      "primaryTrait": "Seer",
+      "secondaryTrait": "Ocean",
+      "damage": [ "Magic" ],
+      "mods": [ "Slow" ],
+      "cooldown": 40,
+      "description": "Summon a massive tsunami wave that slows, and deals {}% magic damage to enemies",
+      "stats": [
+        [ 350 ]
+      ]
+    },
+    {
+      "name": "Stormhammer",
+      "id": 2,
+      "type": "Active",
+      "rarity": "Epic",
+      "primaryTrait": "Seer",
+      "secondaryTrait": "Thunder",
+      "damage": [ "Magic" ],
+      "mods": [ "Stun" ],
+      "cooldown": 15,
+      "description": "Throw {} tracking lightning hammer(s) at a target, dealing {}% magic damage plus a {}s stun to all enemies nearby the target",
+      "stats": [
+        [ 1, 145, 2 ]
+      ]
+    },
+    {
+      "name": "Starfall",
+      "id": 3,
+      "type": "Active",
+      "rarity": "Common",
+      "primaryTrait": "Seer",
+      "secondaryTrait": "Arcane",
+      "damage": [ "Magic" ],
+      "mods": [],
+      "cooldown": 6,
+      "description": "Call down a wave of shooting stars to damage up to {} enemy units, dealing {}% magic damage",
+      "stats": [
+        [ 6, 45 ],
+        [ 8, 60 ]
+      ]
+    },
+    {
+      "name": "Chaos",
+      "id": 4,
+      "type": "Active",
+      "rarity": "Legendary",
+      "primaryTrait": "Warrior",
+      "secondaryTrait": "Origin",
+      "damage": [ "Physical" ],
+      "mods": [ "Attack Speed", "Move Speed", "Attack Increase" ],
+      "cooldown": 40,
+      "description": "Morph into a chaos warrior and deal {}% continual physical damage per second to all nearby enemies. Also boosts attack speed {}%, attack {}%, and move speed {}% for {} seconds",
+      "stats": [
+        [ 32, 10, 25, 20, 8 ]
+      ]
+    },
+    {
+      "name": "Life Break",
+      "id": 5,
+      "type": "Active",
+      "rarity": "Epic",
+      "primaryTrait": "Warrior",
+      "secondaryTrait": "Dark",
+      "damage": [ "Physical" ],
+      "mods": [ "Self Harm", "Disarm" ],
+      "cooldown": 15,
+      "description": "Sacrifice {}% of your current health to break an enemy's life, charging to a target, dealing {}% physical damage and disarm target {}s.",
+      "stats": [
+        [ 20, 250, 3 ]
+      ]
+    },
+    {
+      "name": "Void Thrust",
+      "id": 6,
+      "type": "Active",
+      "rarity": "Epic",
+      "primaryTrait": "Warrior",
+      "secondaryTrait": "Void",
+      "damage": [ "Physical" ],
+      "mods": [],
+      "cooldown": 5,
+      "description": "Thrust by using void power to {} enemy units in a line, dealing {} times of {}% physical damage the first of which counts as basic attack damage and applies all your on-hit effects",
+      "stats": [
+        [ 7, 3, 25 ]
+      ]
+    },
+    {
+      "name": "Crush",
+      "id": 7,
+      "type": "Passive",
+      "rarity": "Epic",
+      "primaryTrait": "Warrior",
+      "secondaryTrait": "Earth",
+      "damage": [ "Physical" ],
+      "mods": [],
+      "description": "Basic attacks have a {}% chance of making a shockwave, dealing bonus {}% physical damage to enemies near the target",
+      "stats": [
+        [ 20, 70 ]
+      ]
+    },
+    {
+      "name": "Grim",
+      "id": 8,
+      "type": "Passive",
+      "rarity": "Epic",
+      "primaryTrait": "Assassin",
+      "secondaryTrait": "Earth",
+      "damage": [],
+      "mods": [ "Crit Damage" ],
+      "description": "Permanently boosts crit damage {}%",
+      "stats": [
+        [ 60 ]
+      ]
+    },
+    {
+      "name": "Rude Counter",
+      "id": 9,
+      "type": "Active",
+      "rarity": "Epic",
+      "primaryTrait": "Guardian",
+      "secondaryTrait": "Tornado",
+      "damage": [ "Physical" ],
+      "mods": [ "Knockback" ],
+      "cooldown": 15,
+      "description": "With the power of wind charge forward dealing {}% physical damage and knocking back enemies in your path, before releasing {} blast(s) that deal a total of {}% physical damage to nearby enemies",
+      "stats": [
+        [ 52, 1, 130 ]
+      ]
+    },
+    {
+      "name": "Fanatic",
+      "id": 10,
+      "type": "Passive",
+      "rarity": "Epic",
+      "primaryTrait": "Ranger",
+      "secondaryTrait": "Evil",
+      "damage": [],
+      "mods": [ "Attack Speed" ],
+      "description": "Attack speed is increased by {}%, but damage of basic attack is decreased by {}%",
+      "stats": [
+        [ 45, 15 ]
+      ]
+    },
+    {
+      "name": "Pyroblast",
+      "id": 11,
+      "type": "Active",
+      "rarity": "Epic",
+      "primaryTrait": "Mage",
+      "secondaryTrait": "Flame",
+      "damage": [ "Magic" ],
+      "mods": [ "Slow" ],
+      "cooldown": 20,
+      "description": "Summon a crater of lava in a target area, dealing {}% magic damage per second for {} seconds, the crater then erupts, dealing {}% magic damage and slowing all enemies in the area by {}% for {} seconds",
+      "stats": [
+        [ 22, 3, 110, 20, 0.5 ]
+      ]
+    },
+    {
+      "name": "Wrath",
+      "id": 12,
+      "type": "Passive",
+      "rarity": "Epic",
+      "primaryTrait": "Shaman",
+      "secondaryTrait": "Nature",
+      "damage": [ "Magic" ],
+      "mods": [],
+      "description": "When any active skill is used there's a {}% chance of firing {} tracking energy balls of condensed wrath, each blast dealing {}% magic damage to {} random enemy within range",
+      "stats": [
+        [ 45, 5, 30, 1 ]
+      ]
+    },
+    {
+      "name": "Combat Focus",
+      "id": 13,
+      "type": "Passive",
+      "rarity": "Rare",
+      "primaryTrait": "Warrior",
+      "secondaryTrait": "Origin",
+      "damage": [],
+      "mods": [ "Attack Speed" ],
+      "description": "Each continuous basic attack boosts attack speed {}% up to {} stacks, but it will drop to zero if you go {} seconds without making a basic attack",
+      "stats": [
+        [ 5, 6, 3 ]
+      ]
+    },
+    {
+      "name": "Phantom Sword",
+      "id": 14,
+      "type": "Active",
+      "rarity": "Rare",
+      "primaryTrait": "Warrior",
+      "secondaryTrait": "Dark",
+      "damage": [ "Physical" ],
+      "mods": [],
+      "cooldown": 10,
+      "description": "Throw a giant Phantom Sword that deals {}% physical damage every {} seconds to each enemy it hits, the sword returns back to you with an accelerated speed after {} seconds. The returning sword deals {}% - {}% physical damage to each enemy hit, gaining damage over the first {} seconds of travel time",
+      "stats": [
+        [ 10, 0.5, 3, 15, 75, 2 ]
+      ]
+    },
+    {
+      "name": "Boomerang Blade",
+      "id": 15,
+      "type": "Active",
+      "rarity": "Rare",
+      "primaryTrait": "Assassin",
+      "secondaryTrait": "Dark",
+      "damage": [ "Physical" ],
+      "mods": [],
+      "cooldown": 15,
+      "description": "Send out {} magic blades that deal {} physical damage every {} second(s), then they return back to you after a few moments. The returning blades deal a bonus {} physical damage to units hit",
+      "stats": [
+        [ 3, 5, 0.5, 30 ],
+        [ 3, 10, 0.5, 60 ]
+      ]
+    },
+    {
+      "name": "Shadow Chaser",
+      "id": 16,
+      "type": "Passive",
+      "rarity": "Rare",
+      "primaryTrait": "Assassin",
+      "secondaryTrait": "Tornado",
+      "damage": [],
+      "mods": [ "Dodge", "Crit Chance" ],
+      "description": "Get a permanent {}% chance of dodging enemy basic attacks. When dodging, get a boost of {}% crit chance for {} seconds, you can accumulate up to {} stacks, and it will drop to zero with a critical strike",
+      "stats": [
+        [ 4, 4, 5, 10 ]
+      ]
+    },
+    {
+      "name": "Endure",
+      "id": 17,
+      "type": "Passive",
+      "rarity": "Rare",
+      "primaryTrait": "Guardian",
+      "secondaryTrait": "Evil",
+      "damage": [],
+      "mods": [ "Damage Reduction" ],
+      "description": "Increases damage reduction as HP decreases:\nWhen HP is < {}%, gain {}% damage reduction\nWhen HP is < {}% gain {}% damage reduction\nWhen HP is < {}% gain {}% damage reduction",
+      "stats": [
+        [ 80, 8, 50, 20, 20, 43 ]
+      ]
+    },
+    {
+      "name": "Kraken Shell",
+      "id": 18,
+      "type": "Passive",
+      "rarity": "Rare",
+      "primaryTrait": "Guardian",
+      "secondaryTrait": "Ocean",
+      "damage": [ "Physical" ],
+      "mods": [ "Stun" ],
+      "description": "When attacked, there's a {}% chance of dealing {}% physical damage to all nearby enemies, stunning up to {} nearby enemies for {} seconds. {} second cooldown",
+      "stats": [
+        [ 20, 72, 5, 2, 8 ]
+      ]
+    },
+    {
+      "name": "Sacrifice",
+      "id": 19,
+      "type": "Active",
+      "rarity": "Rare",
+      "primaryTrait": "Guardian",
+      "secondaryTrait": "Evil",
+      "damage": [ "Physical" ],
+      "mods": [ "Self Harm" ],
+      "cooldown": 10,
+      "description": "Toggle Sacrifice to drain {}% of your current health per second, dealing {}% physical damage per second to all nearby enemies",
+      "stats": [
+        [ 0.9, 30 ]
+      ]
+    },
+    {
+      "name": "Shelter",
+      "id": 20,
+      "type": "Active",
+      "rarity": "Rare",
+      "primaryTrait": "Guardian",
+      "secondaryTrait": "Earth",
+      "damage": [ "Physical" ],
+      "mods": [ "Damage Reduction", "Channeled" ],
+      "cooldown": 20,
+      "description": "Summon {} ring of shields around you for {} seconds, gaining {}% damage reduction and reflecting {}% of the damage of all enemy attacks. With a stone spear, rapidly strike {} times for {}% physical damage each. After the duration expires, the shield explodes which deals {}% physical damage",
+      "stats": [
+        [ 1, 5, 50, 100, 25, 8, 80 ]
+      ]
+    },
+    {
+      "name": "Hunt",
+      "id": 21,
+      "type": "Passive",
+      "rarity": "Rare",
+      "primaryTrait": "Ranger",
+      "secondaryTrait": "Origin",
+      "damage": [],
+      "mods": [],
+      "description": "Periodically marks enemies nearby for {} seconds. Marked targets will recieve {}% extra damage",
+      "stats": [
+        [ 4, 25 ]
+      ]
+    },
+    {
+      "name": "Lightning Field",
+      "id": 22,
+      "type": "Active",
+      "rarity": "Rare",
+      "primaryTrait": "Ranger",
+      "secondaryTrait": "Thunder",
+      "damage": [ "Magic" ],
+      "mods": [],
+      "cooldown": 15,
+      "description": "Summon an arrow of lightning from the sky dealing magic damage equal to {}% of the sum of your ATK and AP to the target area, and continuous discharge to enemies with {}% of the damage when arrow grounded, once per {} second(s) for {} seconds",
+      "stats": [
+        [ 25, 14, 0.5, 2.5 ]
+      ]
+    },
+    {
+      "name": "Water Elemental",
+      "id": 23,
+      "type": "Active",
+      "rarity": "Rare",
+      "primaryTrait": "Summon",
+      "secondaryTrait": "Ocean",
+      "damage": [],
+      "mods": [],
+      "cooldown": 10,
+      "description": "Summon one water elemental which fights using ranged magic bolts, inherting {}% HP and {}% AP from your character, lasting {} seconds",
+      "stats": [
+        [ 20, 250, 20 ]
+      ]
+    },
+    {
+      "name": "Ice Thorn Shield",
+      "id": 24,
+      "type": "Active",
+      "rarity": "Rare",
+      "primaryTrait": "Summon",
+      "secondaryTrait": "Frost",
+      "damage": [ "Magic" ],
+      "mods": [ "Shield" ],
+      "cooldown": 25,
+      "description": "Shield yourself and all friendly units in a large area around you for {}% of your ATK and AP. When an individual shield breaks, it deals {}% magic damage to nearby enemies",
+      "stats": [
+        [ 40, 20 ]
+      ]
+    },
+    {
+      "name": "Earth Elemental",
+      "id": 25,
+      "type": "Active",
+      "rarity": "Rare",
+      "primaryTrait": "Summon",
+      "secondaryTrait": "Earth",
+      "damage": [],
+      "mods": [ "Taunt" ],
+      "cooldown": 15,
+      "description": "Summon an Earth Elemental that taunts enemies and fights using its fists, inherting {}% HP and {}% AP from your character, lasting {} seconds",
+      "stats": [
+        [ 40, 300, 15 ]
+      ]
+    },
+    {
+      "name": "Hell Flame",
+      "id": 26,
+      "type": "Passive",
+      "rarity": "Rare",
+      "primaryTrait": "Summon",
+      "secondaryTrait": "Flame",
+      "damage": [ "Magic" ],
+      "mods": [],
+      "description": "When any active skill is used, there's a {}% chance of creating a pillar of flame, dealing {}% magic damage to surrounding enemies",
+      "stats": [
+        [ 30, 85 ]
+      ]
+    },
+    {
+      "name": "Dead Domination",
+      "id": 27,
+      "type": "Passive",
+      "rarity": "Rare",
+      "primaryTrait": "Mage",
+      "secondaryTrait": "Dark",
+      "damage": [],
+      "mods": [ "AP Increase" ],
+      "description": "Each enemy death increases AP by {}% up to {} stacks. After {} seconds without an enemy death, all stacks are removed",
+      "stats": [
+        [ 1.5, 10, 10 ]
+      ]
+    },
+    {
+      "name": "Blizzard",
+      "id": 28,
+      "type": "Active",
+      "rarity": "Rare",
+      "primaryTrait": "Mage",
+      "secondaryTrait": "Frost",
+      "damage": [ "Magic" ],
+      "mods": [],
+      "cooldown": 15,
+      "description": "Rapidly summon a blizzard {} times in the target area, each blast dealing {}% magic damage to enemies",
+      "stats": [
+        [ 6, 18 ]
+      ]
+    },
+    {
+      "name": "SpaceTime Shift",
+      "id": 29,
+      "type": "Active",
+      "rarity": "Rare",
+      "primaryTrait": "Mage",
+      "secondaryTrait": "Thunder",
+      "damage": [ "Magic" ],
+      "mods": [ "Movement" ],
+      "cooldown": 10,
+      "description": "Fold time and space to instantly teleport to a target location dealing {}% magic damage to all nearby units after shifting",
+      "stats": [
+        [ 110 ]
+      ]
+    },
+    {
+      "name": "Forked Lightning",
+      "id": 30,
+      "type": "Active",
+      "rarity": "Rare",
+      "primaryTrait": "Shaman",
+      "secondaryTrait": "Thunder",
+      "damage": [ "Magic" ],
+      "mods": [],
+      "cooldown": 8,
+      "description": "Cast several bolts of eldritch lightning power that pierce through enemies, dealing {} times of {}% magic damage to targets in the area",
+      "stats": [
+        [ 3, 26 ]
+      ]
+    },
+    {
+      "name": "Whirlwind",
+      "id": 31,
+      "type": "Active",
+      "rarity": "Uncommon",
+      "primaryTrait": "Warrior",
+      "secondaryTrait": "Tornado",
+      "damage": [ "Physical" ],
+      "mods": [ "Dodge" ],
+      "cooldown": 12,
+      "description": "Cause a bladestorm of destructive force around you, dealing up to total {}% physical damage to nearby enemy units with {}% chance of dodging enemy basic attacks",
+      "stats": [
+        [ 90, 50 ],
+        [ 180, 60 ]
+      ]
+    },
+    {
+      "name": "Assault Charge",
+      "id": 32,
+      "type": "Active",
+      "rarity": "Uncommon",
+      "primaryTrait": "Warrior",
+      "secondaryTrait": "Void",
+      "damage": [ "Physical" ],
+      "mods": [ "Attack Speed" ],
+      "cooldown": 9,
+      "description": "Charge to an enemy, dealing {}% physical damage, and boosts attack speed {}% for {} basic attacks",
+      "stats": [
+        [ 60, 200, 3 ]
+      ]
+    },
+    {
+      "name": "Swordfall",
+      "id": 33,
+      "type": "Active",
+      "rarity": "Uncommon",
+      "primaryTrait": "Assassin",
+      "secondaryTrait": "Nature",
+      "damage": [ "Physical" ],
+      "mods": [],
+      "cooldown": 8,
+      "description": "{} Swords raze the ground directly in front of you, each sword deals {}% physical damage and {}% blast damage",
+      "stats": [
+        [ 2, 30, 30 ]
+      ]
+    },
+    {
+      "name": "Sweeping Blade",
+      "id": 34,
+      "type": "Active",
+      "rarity": "Uncommon",
+      "primaryTrait": "Assassin",
+      "secondaryTrait": "Tornado",
+      "damage": [ "Physical" ],
+      "mods": [ "Movement" ],
+      "cooldown": 5,
+      "description": "Dash forward to strike, dealing {}% physical damage to all targets you pass through. If any target dies to Sweeping Blade, its cooldown refreshes",
+      "stats": [
+        [ 30 ],
+        [ 60 ]
+      ]
+    },
+    {
+      "name": "Double Edge",
+      "id": 35,
+      "type": "Active",
+      "rarity": "Uncommon",
+      "primaryTrait": "Guardian",
+      "secondaryTrait": "Dark",
+      "damage": [ "Physical" ],
+      "mods": [ "Self Harm" ],
+      "cooldown": 10,
+      "description": "Strike a mightly blow at melee range, dealing {}% of your current health damage to yourself and {} times of {}% physical damage to all enemies in a small area around you",
+      "stats": [
+        [ 6, 4, 36 ]
+      ]
+    },
+    {
+      "name": "Counter Helix",
+      "id": 36,
+      "type": "Passive",
+      "rarity": "Uncommon",
+      "primaryTrait": "Guardian",
+      "secondaryTrait": "Origin",
+      "damage": [ "Physical" ],
+      "mods": [],
+      "description": "When attacked, there's a {}% chance of performing a helix counter, dealing {}% physical damage to all nearby enemies. {} second cooldown",
+      "stats": [
+        [ 30, 70, 8 ],
+        [ 40, 140, 8 ]
+      ]
+    },
+    {
+      "name": "Lightning Rod",
+      "id": 37,
+      "type": "Passive",
+      "rarity": "Uncommon",
+      "primaryTrait": "Ranger",
+      "secondaryTrait": "Thunder",
+      "damage": [ "Magic" ],
+      "mods": [],
+      "description": "When any active skill casts, your next basic attacks will summon a lightning bolt, dealing {}% magic damage to all the enemy units around the target",
+      "stats": [
+        [ 35 ]
+      ]
+    },
+    {
+      "name": "Tide Arrow",
+      "id": 38,
+      "type": "Active",
+      "rarity": "Uncommon",
+      "primaryTrait": "Ranger",
+      "secondaryTrait": "Ocean",
+      "damage": [ "Magic" ],
+      "mods": [ "Knockback" ],
+      "cooldown": 8,
+      "description": "Wind up before firing a powerful barrage of tide that deals damage to each enemy unit it passes through, dealing magic damage equal to {}% of the sum of your ATK and AP and throwing them back for {}m",
+      "stats": [
+        [ 50, 3 ]
+      ]
+    },
+    {
+      "name": "Escape Plan",
+      "id": 39,
+      "type": "Active",
+      "rarity": "Uncommon",
+      "primaryTrait": "Ranger",
+      "secondaryTrait": "Earth",
+      "damage": [],
+      "mods": [],
+      "cooldown": 12,
+      "description": "Dash in a direction, leaving behind {} clone(s) that will attack enemies for {} seconds. Clones recieve {}% more damage from enemies and explode dealing {}% damage on death",
+      "stats": [
+        [ 1, 3, 900, 15 ],
+        [ 2, 3, 750, 30 ]
+      ]
+    },
+    {
+      "name": "Dead Reborn",
+      "id": 40,
+      "type": "Passive",
+      "rarity": "Uncommon",
+      "primaryTrait": "Summon",
+      "secondaryTrait": "Earth",
+      "damage": [],
+      "mods": [],
+      "description": "When an enemy is killed, there's a {}% chance of summoning an Ancient Skeleton Guard that fights enemies for {} seconds, inheriting {}% HP and {}% AP from your character",
+      "stats": [
+        [ 50, 6, 15, 100 ],
+        [ 50, 6, 30, 200 ]
+      ]
+    },
+    {
+      "name": "Faerie Dragon",
+      "id": 41,
+      "type": "Active",
+      "rarity": "Uncommon",
+      "primaryTrait": "Summon",
+      "secondaryTrait": "Nature",
+      "damage": [],
+      "mods": [ "Healing" ],
+      "cooldown": 20,
+      "description": "Summon a Faerie Dragon which heals allies attacking using ranged magic bolts, inheriting {}% HP and {}% AP from your character, lasting {} seconds. When Faerie Dragon dies, it leaves a magic healing orb that restores HP equal to {}% AP + {}% ATK of the character who touches it",
+      "stats": [
+        [ 15, 100, 20, 10, 10 ]
+      ]
+    },
+    {
+      "name": "Laser",
+      "id": 42,
+      "type": "Active",
+      "rarity": "Uncommon",
+      "primaryTrait": "Mage",
+      "secondaryTrait": "Arcane",
+      "damage": [ "Magic" ],
+      "mods": [ "Channeled" ],
+      "cooldown": 12,
+      "description": "Unleash {} ray of energy which can direct with the virtual joystick for {} seconds, dealing up to total {}% continuous magic damage",
+      "stats": [
+        [ 1, 3, 140 ]
+      ]
+    },
+    {
+      "name": "Frost Nova",
+      "id": 43,
+      "type": "Passive",
+      "rarity": "Uncommon",
+      "primaryTrait": "Mage",
+      "secondaryTrait": "Frost",
+      "damage": [ "Magic" ],
+      "mods": [ "Slow" ],
+      "description": "When attacked, there's a {}% chance of causing a Frost Nova, dealing {}% magic damage to all neary enemies, and slowing enemies move speed by {}% for {} second(s). {} second cooldown",
+      "stats": [
+        [ 20, 50, 20, 1, 8 ]
+      ]
+    },
+    {
+      "name": "Shadow Strike",
+      "id": 44,
+      "type": "Active",
+      "rarity": "Uncommon",
+      "primaryTrait": "Shaman",
+      "secondaryTrait": "Dark",
+      "damage": [ "Magic" ],
+      "mods": [],
+      "cooldown": 15,
+      "description": "Open a rift to the darkness with magic force, dealing {}% magic damage to all enemy units nearby",
+      "stats": [
+        [ 116 ]
+      ]
+    },
+    {
+      "name": "Arcane Strike",
+      "id": 45,
+      "type": "Active",
+      "rarity": "Uncommon",
+      "primaryTrait": "Seer",
+      "secondaryTrait": "Arcane",
+      "damage": [ "Magic" ],
+      "mods": [],
+      "cooldown": 8,
+      "description": "Fire {} arcane energy ball at a target enemy, dealing {}% magic damage to all enemies near the target",
+      "stats": [
+        [ 1, 70 ]
+      ]
+    },
+    {
+      "name": "Rejuvenate",
+      "id": 46,
+      "type": "Active",
+      "rarity": "Uncommon",
+      "primaryTrait": "Seer",
+      "secondaryTrait": "Nature",
+      "damage": [],
+      "mods": [ "Healing" ],
+      "cooldown": 30,
+      "description": "Conjures a healing magical wind around you, restoring HP equal to {}% of your ATK + AP once per second for {} seconds, up to a total of {}% of your ATK + AP",
+      "stats": [
+        [ 6, 5, 30 ]
+      ]
+    },
+    {
+      "name": "Cleave",
+      "id": 47,
+      "type": "Active",
+      "rarity": "Common",
+      "primaryTrait": "Warrior",
+      "secondaryTrait": "Evil",
+      "damage": [ "Physical" ],
+      "mods": [],
+      "cooldown": 3,
+      "description": "Swipe at those around you with great force, dealing {} times of {}% physical damage",
+      "stats": [
+        [ 1, 16 ],
+        [ 2, 16 ]
+      ]
+    },
+    {
+      "name": "Shadow Kunai",
+      "id": 48,
+      "type": "Active",
+      "rarity": "Common",
+      "primaryTrait": "Assassin",
+      "secondaryTrait": "Dark",
+      "damage": [ "Physical" ],
+      "mods": [ "Crit Damage" ],
+      "cooldown": 3,
+      "description": "Throw {} long-range kunai that converge on target position, each kunai deals {}% physical damage to all enemies it passes through, and boosts your critical strike damage within the next {} seconds by {}%",
+      "stats": [
+        [ 3, 5, 2, 10 ],
+        [ 5, 6, 2, 10 ]
+      ]
+    },
+    {
+      "name": "Boomerang Shield",
+      "id": 49,
+      "type": "Active",
+      "rarity": "Common",
+      "primaryTrait": "Guardian",
+      "secondaryTrait": "Ocean",
+      "damage": [ "Physical" ],
+      "mods": [ "Shield" ],
+      "cooldown": 16,
+      "description": "Throw a shield that returns toward the starting direction after reaching its maximum range, dealing {}% physical damage to enemies it hits. If you catch the returning shield, it will grant you a shield equal to {}% of your ATK + AP and its cooldown is reduced by {}%",
+      "stats": [
+        [ 13, 11, 50 ]
+      ]
+    },
+    {
+      "name": "Crystal Arrow",
+      "id": 50,
+      "type": "Active",
+      "rarity": "Common",
+      "primaryTrait": "Ranger",
+      "secondaryTrait": "Frost",
+      "damage": [ "Magic" ],
+      "mods": [ "Slow" ],
+      "cooldown": 3,
+      "description": "Fire {} arrow(s) of ice crystal in a straight line. If the arrow collides with an enemy, it explodes and slows all surrounding enemy units, dealing magic damage equal to {}% of your ATK and AP",
+      "stats": [
+        [ 1, 10 ],
+        [ 1, 15 ]
+      ]
+    },
+    {
+      "name": "Skeleton Guard",
+      "id": 51,
+      "type": "Active",
+      "rarity": "Common",
+      "primaryTrait": "Summon",
+      "secondaryTrait": "Earth",
+      "damage": [],
+      "mods": [],
+      "cooldown": 10,
+      "description": "Summon an Ancient Skeleton Guard that fights in melee range, inheriting {}% HP and {}% AP from your character, lasting {} seconds",
+      "stats": [
+        [ 15, 100, 20 ],
+        [ 30, 200, 20 ]
+      ]
+    },
+    {
+      "name": "Flame Phoenix",
+      "id": 52,
+      "type": "Active",
+      "rarity": "Common",
+      "primaryTrait": "Mage",
+      "secondaryTrait": "Flame",
+      "damage": [ "Magic" ],
+      "mods": [],
+      "cooldown": 3,
+      "description": "Channel the breath of a phoenix, sending out {} wave(s) of fire scorching every enemy in its path, dealing {}% magic damage",
+      "stats": [
+        [ 1, 16 ],
+        [ 1, 32 ]
+      ]
+    },
+    {
+      "name": "Icy Burst",
+      "id": 53,
+      "type": "Active",
+      "rarity": "Common",
+      "primaryTrait": "Shaman",
+      "secondaryTrait": "Frost",
+      "damage": [ "Magic" ],
+      "mods": [ "Slow" ],
+      "cooldown": 8,
+      "description": "Summon a sphere of ice to a target area that explodes, dealing {}% magic damage to all enemies in the area, plus a {}% slow for {} seconds",
+      "stats": [
+        [ 30, 20, 3 ],
+        [ 60, 20, 3 ]
+      ]
+    },
+    {
+      "name": "Omnislash",
+      "id": 54,
+      "type": "Active",
+      "rarity": "Legendary",
+      "primaryTrait": "Assassin",
+      "secondaryTrait": "Void",
+      "damage": [ "Physical" ],
+      "mods": [ "Invulnerability" ],
+      "cooldown": 30,
+      "description": "Leap towards and slashes, attacking a random enemy target nearby {} times, dealing {}% physical damage to all enemy units around the target. Invulnerable for the duration",
+      "stats": [
+        [ 9, 45 ]
+      ]
+    },
+    {
+      "name": "Borrowed Time",
+      "id": 55,
+      "type": "Passive",
+      "rarity": "Legendary",
+      "primaryTrait": "Guardian",
+      "secondaryTrait": "Void",
+      "damage": [],
+      "mods": [],
+      "description": "When killed, prevent your death and immediately recover {}% of your max HP. {} second cooldown",
+      "stats": [
+        [ 16, 90 ]
+      ]
+    },
+    {
+      "name": "Shield Wall",
+      "id": 56,
+      "type": "Active",
+      "rarity": "Legendary",
+      "primaryTrait": "Guardian",
+      "secondaryTrait": "Earth",
+      "damage": [],
+      "mods": [ "Damage Reduction" ],
+      "cooldown": 30,
+      "description": "For {} seconds, gain {}% damage reduction and immunity to all CC",
+      "stats": [
+        [ 5, 50 ]
+      ]
+    },
+    {
+      "name": "Dawn Shockwave",
+      "id": 57,
+      "type": "Active",
+      "rarity": "Legendary",
+      "primaryTrait": "Ranger",
+      "secondaryTrait": "Tornado",
+      "damage": [ "Magic" ],
+      "mods": [ "Dodge" ],
+      "cooldown": 30,
+      "description": "Call upon the God of Dawn, fire a global shockwave that boosts allies dodge rate by {}%, while throwing enemies caught in the wave back by deaing magic damage equal to {}% of the sum of your ATK and AP",
+      "stats": [
+        [ 20, 110 ]
+      ]
+    },
+    {
+      "name": "Hellfire",
+      "id": 58,
+      "type": "Active",
+      "rarity": "Legendary",
+      "primaryTrait": "Summon",
+      "secondaryTrait": "Flame",
+      "damage": [ "Magic" ],
+      "mods": [ "Stun" ],
+      "cooldown": 20,
+      "description": "Pull a blazing meteor from the sky towards a target area to summon a Hellfire Demon, dealing {}% magic damage and stuns enemies within the impact zone for {} seconds, inherting {}% AP and {}% HP from your character, lasting {} seconds. Hellfire leave a fireland on death",
+      "stats": [
+        [ 140, 2, 400, 50, 20 ]
+      ]
+    },
+    {
+      "name": "Overload",
+      "id": 59,
+      "type": "Active",
+      "rarity": "Legendary",
+      "primaryTrait": "Mage",
+      "secondaryTrait": "Arcane",
+      "damage": [],
+      "mods": [ "AP Increase", "Cooldown Reduction" ],
+      "cooldown": 40,
+      "description": "Unlock your inner mind with an arcane storm that distorts the space-time. While the mindstorm rages, you gain {}% AP, and cooldown time of all active skills is {}% shorter",
+      "stats": [
+        [ 10, 40 ]
+      ]
+    },
+    {
+      "name": "Torrent Wave",
+      "id": 60,
+      "type": "Active",
+      "rarity": "Legendary",
+      "primaryTrait": "Shaman",
+      "secondaryTrait": "Ocean",
+      "damage": [ "Magic" ],
+      "mods": [],
+      "cooldown": 30,
+      "description": "Summons {} torrent swell(s) that, after a short delay, deal {}% magic damage to all enemy units in a target area",
+      "stats": [
+        [ 1, 285 ]
+      ]
+    },
+    {
+      "name": "Impale",
+      "id": 61,
+      "type": "Passive",
+      "rarity": "Epic",
+      "primaryTrait": "Assassin",
+      "secondaryTrait": "Evil",
+      "damage": [ "Physical" ],
+      "mods": [],
+      "description": "Basic attacks have a {}% chance of impaling the enemy, dealing {}% bonus physical damage to the target",
+      "stats": [
+        [ 25, 90 ]
+      ]
+    },
+    {
+      "name": "Lucky Dice",
+      "id": 62,
+      "type": "Active",
+      "rarity": "Epic",
+      "primaryTrait": "Assassin",
+      "secondaryTrait": "Origin",
+      "damage": [],
+      "mods": [ "Attack Speed", "Attack Increase", "AP Increase", "Crit Chance", "Cooldown Reduction" ],
+      "cooldown": 30,
+      "description": "Roll the Lucky Dice to activate a boosting ability according to the result for {} seconds\n1-Nothing happens\n2-Boosts DEF by {}%\n3-Boosts attack speed by {}%\n4-Boosts ATK and AP by {}%\n5-Boosts crit chance by {}%\n6-Boosts cooldown reduction by {}%",
+      "stats": [
+        [ 30, 5, 20, 7, 8, 16 ]
+      ]
+    },
+    {
+      "name": "Regeneration",
+      "id": 63,
+      "type": "Passive",
+      "rarity": "Epic",
+      "primaryTrait": "Guardian",
+      "secondaryTrait": "Nature",
+      "damage": [],
+      "mods": [ "Healing" ],
+      "description": "When attacked, there's a {}% chance of restoring HP equal to {}% of your ATK + AP once per second for {} seconds, up to a total of {}% of your ATK + AP. {} second cooldown",
+      "stats": [
+        [ 20, 5.5, 3, 16.5, 10 ]
+      ]
+    },
+    {
+      "name": "Arcane Volley",
+      "id": 64,
+      "type": "Active",
+      "rarity": "Epic",
+      "primaryTrait": "Ranger",
+      "secondaryTrait": "Arcane",
+      "damage": [ "Magic" ],
+      "mods": [],
+      "cooldown": 35,
+      "description": "Rapidly unleash a {} arrow shots from arcane power source in a single direction, move freely while firing, each arrow deals magic damage equal to {}% of the sum or your ATK and AP",
+      "stats": [
+        [ 1, 7 ]
+      ] },
+    {
+      "name": "Storm Roar",
+      "id": 65,
+      "type": "Passive",
+      "rarity": "Epic",
+      "primaryTrait": "Ranger",
+      "secondaryTrait": "Tornado",
+      "damage": [ "Physical" ],
+      "mods": [ "Knockback" ],
+      "description": "With the help of God of Storm, basic attacks have a {}% chance to add bonus {}% physical damage plus a chance of throwing enemy back",
+      "stats": [
+        [ 25, 100 ]
+      ]
+    },
+    {
+      "name": "Energy Concentration",
+      "id": 66,
+      "type": "Passive",
+      "rarity": "Epic",
+      "primaryTrait": "Summon",
+      "secondaryTrait": "Arcane",
+      "damage": [],
+      "mods": [],
+      "description": "When any active skill is used, there's a {}% chance to summon an Ancient Skeleton Mage who fights enemies with ranged magic bolts for {} seconds, inherting {}% HP and {}% AP from your character",
+      "stats": [
+        [ 50, 5, 20, 250 ]
+      ]
+    },
+    {
+      "name": "Thunder Elemental",
+      "id": 67,
+      "type": "Active",
+      "rarity": "Epic",
+      "primaryTrait": "Summon",
+      "secondaryTrait": "Thunder",
+      "damage": [ "Magic" ],
+      "mods": [],
+      "cooldown": 20,
+      "description": "Summon {} Thunder Elementals which inherit {}% HP and {}% AP from your character, lasting {} seconds. Thunder Elementals generate a lightning chain between itself and your character, boosting character's damage dealt by {}% and dealing {}% magic damage every {} seconds to enemies touching the chain",
+      "stats": [
+        [ 2, 20, 50, 15, 8, 5, 0.4 ]
+      ]
+    },
+    {
+      "name": "Black Hole",
+      "id": 68,
+      "type": "Active",
+      "rarity": "Epic",
+      "primaryTrait": "Summon",
+      "secondaryTrait": "Dark",
+      "damage": [ "Magic" ],
+      "mods": [ "Slow" ],
+      "cooldown": 20,
+      "description": "Summon a vortex that sucks in nearby enemy units, dealing up to {}% magic damage. Enemies affected by Black Hole have their movement speed slowed by {}%",
+      "stats": [
+        [ 196, 50 ]
+      ]
+    },
+    {
+      "name": "Dark Rift",
+      "id": 69,
+      "type": "Active",
+      "rarity": "Epic",
+      "primaryTrait": "Mage",
+      "secondaryTrait": "Dark",
+      "damage": [ "Magic" ],
+      "mods": [],
+      "cooldown": 15,
+      "description": "Open {} rift to the darkness dealing an initial burst of {}% magic damage, then explodes for a second burst of {}% magic damage after a delay",
+      "stats": [
+        [ 1, 75, 100 ]
+      ]
+    },
+    {
+      "name": "Arc Lightning",
+      "id": 70,
+      "type": "Passive",
+      "rarity": "Epic",
+      "primaryTrait": "Mage",
+      "secondaryTrait": "Thunder",
+      "damage": [ "Magic" ],
+      "mods": [],
+      "description": "Causes a lightning explosion to {} enemies nearby every {} second(s), dealing {}% magic damage and increasing damage recieved by {}%, lasting {} seconds",
+      "stats": [
+        [ 5, 1, 15, 5, 3 ]
+      ]
+    },
+    {
+      "name": "Earthquake",
+      "id": 71,
+      "type": "Passive",
+      "rarity": "Epic",
+      "primaryTrait": "Shaman",
+      "secondaryTrait": "Earth",
+      "damage": [ "Magic" ],
+      "mods": [ "Slow" ],
+      "description": "When any active skill is used there's a {}% chance of triggering {} earthquakes, each blast dealing {}% magic damage and a {}% slow for {} second(s)",
+      "stats": [
+        [ 20, 4, 40, 90, 0.5 ]
+      ]
+    },
+    {
+      "name": "Windrun",
+      "id": 72,
+      "type": "Active",
+      "rarity": "Epic",
+      "primaryTrait": "Seer",
+      "secondaryTrait": "Tornado",
+      "damage": [],
+      "mods": [ "Dodge", "Move Speed" ],
+      "cooldown": 25,
+      "description": "For the next {} seconds, boost move speed {}% and have a {}% chance of dodging enemy basic attacks",
+      "stats": [
+        [ 7, 40, 50 ]
+      ]
+    },
+    {
+      "name": "Feast",
+      "id": 73,
+      "type": "Passive",
+      "rarity": "Rare",
+      "primaryTrait": "Warrior",
+      "secondaryTrait": "Evil",
+      "damage": [],
+      "mods": [ "Lifesteal" ],
+      "description": "By using evil power, there's a {}% chance to enable {}% lifesteal for basic attacks",
+      "stats": [
+        [ 20, 30 ]
+      ]
+    },
+    {
+      "name": "Super Strike",
+      "id": 74,
+      "type": "Active",
+      "rarity": "Rare",
+      "primaryTrait": "Assassin",
+      "secondaryTrait": "Origin",
+      "damage": [ "Physical" ],
+      "mods": [],
+      "cooldown": 10,
+      "description": "Gives your next basic attack strike a fan-shaped splash damage effect, dealing {}% physical damage",
+      "stats": [
+        [ 100 ]
+      ]
+    },
+    {
+      "name": "Vortex",
+      "id": 75,
+      "type": "Passive",
+      "rarity": "Rare",
+      "primaryTrait": "Assassin",
+      "secondaryTrait": "Void",
+      "damage": [],
+      "mods": [ "Attack Increase" ],
+      "description": "Each enemy death boosts attack by {}%, up to {} stacks, but it will drop to zero if you go {} seconds with no enemy deaths",
+      "stats": [
+        [ 1.8, 10, 10 ]
+      ]
+    },
+    {
+      "name": "Explosion Fruit",
+      "id": 76,
+      "type": "Active",
+      "rarity": "Rare",
+      "primaryTrait": "Ranger",
+      "secondaryTrait": "Nature",
+      "damage": [ "Magic" ],
+      "mods": [],
+      "cooldown": 5,
+      "description": "Place a fruit trap that blooms when walked over, dealing magic damage equal to {}% of the sum of your ATK and AP with an explosion",
+      "stats": [
+        [ 38 ]
+      ]
+    },
+    {
+      "name": "Riptide Strike",
+      "id": 77,
+      "type": "Active",
+      "rarity": "Rare",
+      "primaryTrait": "Mage",
+      "secondaryTrait": "Ocean",
+      "damage": [ "Magic" ],
+      "mods": [ "Slow", "Knockback" ],
+      "cooldown": 10,
+      "description": "Create {} exploding riptide waves around yourself. {} Explosions respectively deal {}% and {}% magic damage and slows enemies. The second explosion will throw enemy back {}m",
+      "stats": [
+        [ 2, 2, 75, 125, 3 ]
+      ]
+    },
+    {
+      "name": "Surge",
+      "id": 78,
+      "type": "Passive",
+      "rarity": "Rare",
+      "primaryTrait": "Shaman",
+      "secondaryTrait": "Ocean",
+      "damage": [],
+      "mods": [ "Healing" ],
+      "description": "When any active skill is used, there's a {}% chance of healing for {}% of your AP",
+      "stats": [
+        [ 25, 16 ]
+      ]
+    },
+    {
+      "name": "Earth Knoll",
+      "id": 79,
+      "type": "Active",
+      "rarity": "Rare",
+      "primaryTrait": "Shaman",
+      "secondaryTrait": "Earth",
+      "damage": [ "Magic" ],
+      "mods": [ "Slow" ],
+      "cooldown": 15,
+      "description": "Create several earth protrusions that slow passing enemies. Dealing {}% magic damage when cast, then dealing {}% magic damage per second for up to {} seconds, up to a total of {}% magic damage, before exploding for a burst of {}% magic damage",
+      "stats": [
+        [ 20, 15, 5, 75, 40 ]
+      ]
+    },
+    {
+      "name": "Ice Lotus",
+      "id": 80,
+      "type": "Active",
+      "rarity": "Rare",
+      "primaryTrait": "Shaman",
+      "secondaryTrait": "Frost",
+      "damage": [ "Magic" ],
+      "mods": [ "Slow", "Freeze" ],
+      "cooldown": 25,
+      "description": "Plant an Ice Lotus which flourishes over {} seconds, breeze that surrounds the flourescent lotus, slows and deals {}% magic damage per {} seconds to nearby enemies. The flourescent lotus lasts {} seconds, then it busts and freezes enemies {} seconds by dealing {}% magic damage. If an enemy touches the lotus before its flourescence, the lotus prematurely bursts and freezes enemies for {} seconds",
+      "stats": [
+        [ 5, 7, 0.5, 15, 0.5, 30, 2 ]
+      ]
+    },
+    {
+      "name": "Wrath of Nature",
+      "id": 81,
+      "type": "Active",
+      "rarity": "Rare",
+      "primaryTrait": "Shaman",
+      "secondaryTrait": "Nature",
+      "damage": [ "Magic" ],
+      "mods": [ "Knockback", "Slow" ],
+      "cooldown": 20,
+      "description": "Surround yourself in a magical storm of nature, throwing enemies back and slowing their move speed by {}% for {} seconds, dealing {}%-{}% magic damage that depends on the distance of enemy knockback",
+      "stats": [
+        [ 50, 5, 45, 150 ]
+      ]
+    },
+    {
+      "name": "Meteor",
+      "id": 82,
+      "type": "Active",
+      "rarity": "Rare",
+      "primaryTrait": "Seer",
+      "secondaryTrait": "Flame",
+      "damage": [ "Magic" ],
+      "mods": [ "Knockback" ],
+      "cooldown": 20,
+      "description": "Summon {} flaming meteor from the sky onto the target location, dealing {}%-{}% magic damage. Upon landing, the meteor rolls forward, continuously dealing up to a total of {}%-{}% magic damage, finally exploding after {} seconds and dealing {}%-{}% magic damage",
+      "stats": [
+        [ 1, 24, 80, 15, 50, 1.5, 6, 20 ]
+      ]
+    },
+    {
+      "name": "Purify",
+      "id": 83,
+      "type": "Active",
+      "rarity": "Rare",
+      "primaryTrait": "Seer",
+      "secondaryTrait": "Ocean",
+      "damage": [ "Magic", "Physical" ],
+      "mods": [ "Healing" ],
+      "cooldown": 25,
+      "description": "Instantly heals the character for {}% of sum of ATK and AP, also deals {} time of {}% magic damage and {}% physical damage to any surrounding enemies",
+      "stats": [
+        [ 18, 1, 45, 45 ]
+      ]
+    },
+    {
+      "name": "War Stomp",
+      "id": 84,
+      "type": "Active",
+      "rarity": "Uncommon",
+      "primaryTrait": "Warrior",
+      "secondaryTrait": "Nature",
+      "damage": [ "Physical" ],
+      "mods": [ "Stun" ],
+      "cooldown": 8,
+      "description": "Slams the ground, dealing {}% physical damage to nearby enemies all around the caster, plus {} seconds of stun to up to {} enemies",
+      "stats": [
+        [ 60, 2, 5 ]
+      ]
+    },
+    {
+      "name": "Lightning Orbs",
+      "id": 85,
+      "type": "Passive",
+      "rarity": "Uncommon",
+      "primaryTrait": "Shaman",
+      "secondaryTrait": "Thunder",
+      "damage": [ "Magic" ],
+      "mods": [],
+      "description": "Summon {} lightning balls that orbit you, dealing {}% magic damage per {} seconds when they hit an enemy",
+      "stats": [
+        [ 2, 6, 0.3 ]
+      ]
+    }
+  ]
+}

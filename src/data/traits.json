@@ -1,0 +1,229 @@
+{
+  "traits": [
+    {
+      "name": "Warrior",
+      "type": "Primary",
+      "description": "Increase PHYS DEF and basic atk dmg, also gives basic attacks fan-shaped splash dmg effect",
+      "breakpoints": [ 2, 4, 6 ],
+      "affect": "{}% Base Atk Dmg boost",
+      "stats": [
+        [ 100 ],
+        [ 200 ],
+        [ 400 ]
+      ]
+    },
+    {
+      "name": "Assassin",
+      "type": "Primary",
+      "desc": "Raise Crit Rate and Crit Dmg",
+      "breakpoints": [ 2, 4, 6 ],
+      "affect": "Crit Rate +{}%, Crit Dmg +{}%",
+      "stats": [
+        [ 15, 45 ],
+        [ 20, 90 ],
+        [ 35, 120 ]
+      ]
+    },
+    {
+      "name": "Guardian",
+      "type": "Primary",
+      "desc": "Rebound all kinds of damage recieved back at surrounding enemies",
+      "breakpoints": [ 2, 4, 6 ],
+      "affect": "Rebound {}% of Dmg Recieved",
+      "stats": [
+        [ 90 ],
+        [ 180 ],
+        [ 360 ]
+      ]
+    },
+    {
+      "name": "Ranger",
+      "type": "Primary",
+      "desc": "Give basic atk 30% chance or active skills 100% chance to fire tracking arrows",
+      "breakpoints": [ 3, 6, 9 ],
+      "affect": "{} tracking arrows",
+      "stats": [
+        [ 3 ],
+        [ 6 ],
+        [ 12 ]
+      ]
+    },
+    {
+      "name": "Summon",
+      "type": "Primary",
+      "desc": "Enhance stats for all summoned creatures and extend their duration 5s",
+      "breakpoints": [ 3, 6 ],
+      "affect": "Inherit bonus {}% HP, {}% ATK from character",
+      "stats": [
+        [ 15, 150 ],
+        [ 30, 300 ]
+      ]
+    },
+    {
+      "name": "Mage",
+      "type": "Primary",
+      "desc": "Boost magic damage of next skill within 5s after casting any active skill",
+      "breakpoints": [ 2, 4, 6 ],
+      "affect": "{}% AP Boost",
+      "stats": [
+        [ 22 ],
+        [ 45 ],
+        [ 90 ]
+      ]
+    },
+    {
+      "name": "Shaman",
+      "type": "Primary",
+      "desc": "Gives chance to instantly reset the cooldown of each active skill cast",
+      "breakpoints": [ 3, 6 ],
+      "affect": "{}% Chance",
+      "stats": [
+        [ 20 ],
+        [ 40 ]
+      ]
+    },
+    {
+      "name": "Seer",
+      "type": "Primary",
+      "desc": "Reduce cooldown for all active skills",
+      "breakpoints": [ 2, 4 ],
+      "affect": "Reduce cooldown {}%",
+      "stats": [
+        [ 15 ],
+        [ 30 ]
+      ]
+    },
+    {
+      "name": "Flame",
+      "type": "Secondary",
+      "desc": "Boost crit damage for all skills, and trigger a burn effect for 3s (deals AP-based magic damage) after dealing crit damage to an enemy",
+      "breakpoints": [ 2, 4 ],
+      "affect": "{}% crit damage, burning deals {}% AP as magic damage per second",
+      "stats": [
+        [ 40, 40 ],
+        [ 65, 65 ]
+      ]
+    },
+    {
+      "name": "Frost",
+      "type": "Secondary",
+      "desc": "Gives a chance to freeze a target upon dealing damage with any skill. Freeze will deal bonus damage to the target",
+      "breakpoints": [ 2, 4 ],
+      "affect": "{}% Chance, Freeze {} seconds, {}% bonus magic damage",
+      "stats": [
+        [ 5, 2, 20 ],
+        [ 7, 4, 20 ]
+      ]
+    },
+    {
+      "name": "Arcane",
+      "type": "Secondary",
+      "desc": "Gives active skills a chance to proc a buff that guarantees your next active skill will critically hit. Dodging and non-damaging active skills will consume the buff",
+      "breakpoints": [ 2, 4 ],
+      "affect": "{}% Chance to gain buff",
+      "stats": [
+        [ 20 ],
+        [ 35 ]
+      ]
+    },
+    {
+      "name": "Thunder",
+      "type": "Secondary",
+      "desc": "Increase damage dealt to slowed and frozen enemies",
+      "breakpoints": [ 2, 4 ],
+      "affect": "{}% to slowed, {}% to frozen",
+      "stats": [
+        [ 30, 75 ],
+        [ 60, 150 ]
+      ]
+    },
+    {
+      "name": "Dark",
+      "type": "Secondary",
+      "desc": "Gives a chance to trigger a lifesteal upon dealing damage",
+      "breakpoints": [ 3 ],
+      "affect": "{}% chance, {}% lifesteal",
+      "stats": [
+        [ 10, 7 ]
+      ]
+    },
+    {
+      "name": "Ocean",
+      "type": "Secondary",
+      "desc": "Gives a chance to get a 10 second shield (based on percentage of ATK + AP) after each active skill cast",
+      "breakpoints": [ 2, 4 ],
+      "affect": "{}% chance, shield {}% of ATK + AP",
+      "stats": [
+        [ 10, 20  ],
+        [ 10, 40 ]
+      ]
+    },
+    {
+      "name": "Earth",
+      "type": "Secondary",
+      "desc": "Raise the character''s max HP",
+      "breakpoints": [ 2, 4, 6 ],
+      "affect": "Raise max HP {}%",
+      "stats": [
+        [ 10 ],
+        [ 20 ],
+        [ 40 ]
+      ]
+    },
+    {
+      "name": "Nature",
+      "type": "Secondary",
+      "desc": "Recover HP every 5 seconds (based on ATK + AP)",
+      "breakpoints": [ 2, 4 ],
+      "affect": "Recover {}% of ATK + AP every 5 seconds",
+      "stats": [
+        [ 5 ],
+        [ 10 ]
+      ]
+    },
+    {
+      "name": "Tornado",
+      "type": "Secondary",
+      "desc": "Gives a stackable boost of movement speed and dodge after using a skill",
+      "breakpoints": [ 2, 4 ],
+      "affect": "{}% move speed, {}% dodge, 5 stacks",
+      "stats": [
+        [ 3, 2.5 ],
+        [ 6, 5 ]
+      ]
+    },
+    {
+      "name": "Void",
+      "type": "Secondary",
+      "desc": "Add bonus damage to basic attakcs plus a chance to stun for 3 seconds",
+      "breakpoints": [ 2, 4 ],
+      "affect": "{}% bonus basic attack damage, {}% chance to stun",
+      "stats": [
+        [ 63, 10 ],
+        [ 100, 10 ]
+      ]
+    },
+    {
+      "name": "Evil",
+      "type": "Secondary",
+      "desc": "Increase ATK and attack speed as HP decreases",
+      "breakpoints": [ 2, 4 ],
+      "affect": "Up to {}% ATK and {}% attack speed boost",
+      "stats": [
+        [ 50, 120 ],
+        [ 100, 240 ]
+      ]
+    },
+    {
+      "name": "Origin",
+      "type": "Secondary",
+      "desc": "Lower target armor for 3 seconds upon dealing basic attack damage",
+      "breakpoints": [ 2, 4 ],
+      "affect": "Lower armor {}%",
+      "stats": [
+        [ 25 ],
+        [ 45 ]
+      ]
+    }
+  ]
+}
