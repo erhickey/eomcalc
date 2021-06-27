@@ -17,7 +17,6 @@
   margin: 1px;
   border: 2px solid #303031;
   border-radius: 5px;
-  height: fit-content;
   width: 50px;
 }
 
@@ -48,6 +47,20 @@
   margin: 4px 3px;
   height: 17px;
   width: 17px;
+}
+
+.chosen-skill-list-skill {
+  position: relative;
+}
+
+.chosen-skill-list-skill:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255,255,255,.5);
 }
 
 @media (min-width: 768px) {

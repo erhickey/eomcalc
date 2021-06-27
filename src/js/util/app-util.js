@@ -1,36 +1,18 @@
-import {ACTIVE} from './constants.js';
+/**
+ * contains app specific utility functions
+ */
 
-import {rarities} from '../data/enums.json';
-import {skills} from '../data/skills.json';
+import {addPathSeparator} from './util.js';
+import {ACTIVE} from '../constants/constants.js';
 
-export function format(str, args) {
-  var i = 0;
-
-  return str.replace(/{}/g, function () {
-    return typeof args[i] != 'undefined' ? args[i++] : '';
-  });
-};
-
-export function replaceChildren(container, children) {
-  container.replaceChildren();
-  const df = new DocumentFragment();
-
-  for (let c of children) {
-    df.appendChild(c);
-  }
-
-  container.appendChild(df);
-}
+import {rarities} from '../../data/enums.json';
+import {skills} from '../../data/skills.json';
 
 export function createImageNode(imgDir, imgName) {
   const el = document.createElement('img');
   el.setAttribute('loading', 'lazy');
-  el.src = addTrailingSlash(imgDir) + formatImageName(imgName) + '.webp';
+  el.src = addPathSeparator(imgDir) + formatImageName(imgName) + '.webp';
   return el;
-}
-
-export function addTrailingSlash(dir) {
-  return dir.endsWith('/') ? dir : dir + '/';
 }
 
 export function formatImageName(s) {
@@ -57,7 +39,7 @@ export function compareSkillRarity(skill1, skill2) {
 
 export function parseBuild(input) {
   if (input === null) {
-    return null;
+    return [];
   }
 
   const build = input.split('.').map(n => skills.find(s => s.id === parseInt(n))).filter(s => s !== undefined);
@@ -66,15 +48,14 @@ export function parseBuild(input) {
     return build;
   }
 
-  return null;
+  return [];
 }
 
 export function validBuild(build) {
-  if (build.length > 10) {
-    return false;
-  }
-
-  if (build.filter(s => s.type === ACTIVE).length > 5) {
+  if (
+    build.length > 10 ||
+    build.filter(s => s.type === ACTIVE).length > 5
+  ) {
     return false;
   }
 

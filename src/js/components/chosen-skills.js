@@ -1,42 +1,13 @@
-import {ACTIVE, SKILL_IMAGES_DIR} from './constants.js';
-import {createImageNode, parseBuild, replaceChildren, sortSkills, stringifyBuild} from './util.js';
+/*
+ * contains functions which create the elements indicating which skills have been chosen
+ */
 
-var chosenSkills = [];
+import {ACTIVE, SKILL_IMAGES_DIR} from '../constants/constants.js';
+import {onChosenSkillClick} from '../mvc/controller.js';
+import {createImageNode, sortSkills, stringifyBuild} from '../util/app-util.js';
 
-function renderChosenSkills(skills) {
-  replaceChildren(document.getElementById('chosen-skills'), createChosenSkillComponents(skills));
-}
-
-export function chooseSkill(skill) {
-  if (chosenSkills.find(s => s.id === skill.id)) {
-    removeChosenSkill(skill);
-    return;
-  }
-
-  if (
-    chosenSkills.length === 10 ||
-    (skill.type === ACTIVE && chosenSkills.filter(s => s.type === ACTIVE).length === 5)
-  ) {
-    return;
-  }
-
-  chosenSkills.push(skill);
-  renderChosenSkills(chosenSkills);
-}
-
-export function initChosenSkillsComponent(input) {
-  const build = parseBuild(input);
-
-  if (build) {
-    chosenSkills = build;
-    return createChosenSkillComponents(chosenSkills);
-  }
-
-  return createChosenSkillComponents([]);
-}
-
-function createChosenSkillComponents(skills) {
-  if (skills.length > 0) {
+export function createChosenSkills(skills) {
+  if (skills && skills.length > 0) {
     const buildLinkEl = document.createElement('input');
     buildLinkEl.setAttribute('type', 'text');
     buildLinkEl.setAttribute('disabled', 'true');
@@ -50,7 +21,7 @@ function createChosenSkillComponents(skills) {
     const info = document.createElement('div');
     info.innerHTML = 'Choose skills from above to create your build.';
     info.innerHTML += ' A link will appear here allowing you to share your build.';
-    return [info];
+    return info;
   }
 }
 
@@ -63,7 +34,7 @@ function createChosenSkillComponent(skill) {
   component.appendChild(skillImage);
 
   component.onclick = function() {
-    removeChosenSkill(skill);
+    onChosenSkillClick(skill);
   }
 
   return component;
@@ -79,9 +50,4 @@ function sortChosenSkills(skill1, skill2) {
   }
 
   return 1;
-}
-
-function removeChosenSkill(skill) {
-  chosenSkills = chosenSkills.filter(s => s.id !== skill.id);
-  renderChosenSkills(chosenSkills);
 }

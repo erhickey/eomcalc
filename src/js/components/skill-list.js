@@ -1,14 +1,23 @@
-import {chooseSkill} from './chosen-skills.js';
-import {SKILL_IMAGES_DIR, TRAIT_IMAGES_DIR} from './constants.js';
-import {createImageNode, sortSkills} from './util.js';
+/*
+ * contains functions which create the elements that make up the list of skills to choose from
+ */
 
-export function createSkillListComponents(skills) {
-  return skills.sort(sortSkills).map(s => createSkillListComponent(s));
+import {SKILL_ID_PREFIX, SKILL_IMAGES_DIR, TRAIT_IMAGES_DIR} from '../constants/constants.js';
+import {onSkillClick} from '../mvc/controller.js';
+import {createImageNode, sortSkills} from '../util/app-util.js';
+
+export function createSkills(skills, chosenSkills) {
+  return skills.sort(sortSkills).map(s => createSkillListComponent(s, chosenSkills));
 }
 
-function createSkillListComponent(skill) {
+function createSkillListComponent(skill, chosenSkills) {
   const component = document.createElement('div');
+  component.id = SKILL_ID_PREFIX + skill.id;
   component.classList.add('skill-list-skill', skill.rarity.toLowerCase());
+
+  if (chosenSkills && chosenSkills.some(s => s.id === skill.id)) {
+    component.classList.add('chosen-skill-list-skill');
+  }
 
   const skillImage = createImageNode(SKILL_IMAGES_DIR, skill.name);
 
@@ -27,7 +36,7 @@ function createSkillListComponent(skill) {
   component.appendChild(footer);
 
   component.onclick = function () {
-    chooseSkill(skill);
+    onSkillClick(skill);
   }
 
   return component;
