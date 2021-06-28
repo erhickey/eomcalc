@@ -1,5 +1,5 @@
 /**
- * Responsible for responding to user input
+ * responsible for responding to user input
  */
 
 import {addOrRemoveSkill, initializeState, removeSkill} from './model.js';

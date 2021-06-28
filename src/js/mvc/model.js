@@ -1,8 +1,8 @@
 /**
- * Reponsible for managing application state
+ * reponsible for managing application state
  */
 
-import {ACTIVE, NO_CHANGE, SKILL_ADDED, SKILL_REMOVED} from '../constants/constants.js';
+import {ACTIVE, NO_CHANGE, PASSIVE, SKILL_ADDED, SKILL_REMOVED} from '../constants/constants.js';
 
 import {skills as SKILLS} from '../../data/skills.json';
 
@@ -21,7 +21,10 @@ export function addOrRemoveSkill(skill) {
 
   if (
     chosenSkills.length < 10 &&
-    (skill.type === ACTIVE && chosenSkills.filter(s => s.type === ACTIVE).length < 5)
+    (
+      (skill.type === ACTIVE && chosenSkills.filter(s => s.type === ACTIVE).length < 5) ||
+      (skill.type === PASSIVE && chosenSkills.filter(s => s.type === PASSIVE).length < 7)
+    )
   ) {
     chosenSkills.push(skill);
     return [chosenSkills, SKILL_ADDED];

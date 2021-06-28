@@ -1,5 +1,5 @@
 /**
- * contains fuctions responsible for rendering of the page
+ * contains fuctions responsible for rendering the page
  */
 
 import {createChosenSkills} from '../components/chosen-skills.js';

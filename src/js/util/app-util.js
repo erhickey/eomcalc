@@ -62,6 +62,10 @@ export function validBuild(build) {
   return true;
 }
 
-export function stringifyBuild(build) {
+export function generateBuildUrlParam(build) {
   return build.map(s => s.id).join('.');
+}
+
+export function generateBuildDiscordMsg(build) {
+  return build.map(s => ':' + s.name.replace(/ /g, '') + ':').join('');
 }
