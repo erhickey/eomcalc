@@ -2,7 +2,8 @@
   "traits": [
     {
       "name": "Warrior",
-      "type": "Primary",
+      "id": 1,
+      "type": 1,
       "description": "Increase PHYS DEF and basic atk dmg, also gives basic attacks fan-shaped splash dmg effect",
       "breakpoints": [ 2, 4, 6 ],
       "affect": "{}% Base Atk Dmg boost",
@@ -14,7 +15,8 @@
     },
     {
       "name": "Assassin",
-      "type": "Primary",
+      "id": 2,
+      "type": 1,
       "desc": "Raise Crit Rate and Crit Dmg",
       "breakpoints": [ 2, 4, 6 ],
       "affect": "Crit Rate +{}%, Crit Dmg +{}%",
@@ -26,7 +28,8 @@
     },
     {
       "name": "Guardian",
-      "type": "Primary",
+      "id": 3,
+      "type": 1,
       "desc": "Rebound all kinds of damage recieved back at surrounding enemies",
       "breakpoints": [ 2, 4, 6 ],
       "affect": "Rebound {}% of Dmg Recieved",
@@ -38,7 +41,8 @@
     },
     {
       "name": "Ranger",
-      "type": "Primary",
+      "id": 4,
+      "type": 1,
       "desc": "Give basic atk 30% chance or active skills 100% chance to fire tracking arrows",
       "breakpoints": [ 3, 6, 9 ],
       "affect": "{} tracking arrows",
@@ -50,7 +54,8 @@
     },
     {
       "name": "Summon",
-      "type": "Primary",
+      "id": 5,
+      "type": 1,
       "desc": "Enhance stats for all summoned creatures and extend their duration 5s",
       "breakpoints": [ 3, 6 ],
       "affect": "Inherit bonus {}% HP, {}% ATK from character",
@@ -61,7 +66,8 @@
     },
     {
       "name": "Mage",
-      "type": "Primary",
+      "id": 6,
+      "type": 1,
       "desc": "Boost magic damage of next skill within 5s after casting any active skill",
       "breakpoints": [ 2, 4, 6 ],
       "affect": "{}% AP Boost",
@@ -73,7 +79,8 @@
     },
     {
       "name": "Shaman",
-      "type": "Primary",
+      "id": 7,
+      "type": 1,
       "desc": "Gives chance to instantly reset the cooldown of each active skill cast",
       "breakpoints": [ 3, 6 ],
       "affect": "{}% Chance",
@@ -84,7 +91,8 @@
     },
     {
       "name": "Seer",
-      "type": "Primary",
+      "id": 8,
+      "type": 1,
       "desc": "Reduce cooldown for all active skills",
       "breakpoints": [ 2, 4 ],
       "affect": "Reduce cooldown {}%",
@@ -95,7 +103,8 @@
     },
     {
       "name": "Flame",
-      "type": "Secondary",
+      "id": 9,
+      "type": 2,
       "desc": "Boost crit damage for all skills, and trigger a burn effect for 3s (deals AP-based magic damage) after dealing crit damage to an enemy",
       "breakpoints": [ 2, 4 ],
       "affect": "{}% crit damage, burning deals {}% AP as magic damage per second",
@@ -106,7 +115,8 @@
     },
     {
       "name": "Frost",
-      "type": "Secondary",
+      "id": 10,
+      "type": 2,
       "desc": "Gives a chance to freeze a target upon dealing damage with any skill. Freeze will deal bonus damage to the target",
       "breakpoints": [ 2, 4 ],
       "affect": "{}% Chance, Freeze {} seconds, {}% bonus magic damage",
@@ -117,7 +127,8 @@
     },
     {
       "name": "Arcane",
-      "type": "Secondary",
+      "id": 11,
+      "type": 2,
       "desc": "Gives active skills a chance to proc a buff that guarantees your next active skill will critically hit. Dodging and non-damaging active skills will consume the buff",
       "breakpoints": [ 2, 4 ],
       "affect": "{}% Chance to gain buff",
@@ -128,7 +139,8 @@
     },
     {
       "name": "Thunder",
-      "type": "Secondary",
+      "id": 12,
+      "type": 2,
       "desc": "Increase damage dealt to slowed and frozen enemies",
       "breakpoints": [ 2, 4 ],
       "affect": "{}% to slowed, {}% to frozen",
@@ -139,7 +151,8 @@
     },
     {
       "name": "Dark",
-      "type": "Secondary",
+      "id": 13,
+      "type": 2,
       "desc": "Gives a chance to trigger a lifesteal upon dealing damage",
       "breakpoints": [ 3 ],
       "affect": "{}% chance, {}% lifesteal",
@@ -149,7 +162,8 @@
     },
     {
       "name": "Ocean",
-      "type": "Secondary",
+      "id": 14,
+      "type": 2,
       "desc": "Gives a chance to get a 10 second shield (based on percentage of ATK + AP) after each active skill cast",
       "breakpoints": [ 2, 4 ],
       "affect": "{}% chance, shield {}% of ATK + AP",
@@ -160,7 +174,8 @@
     },
     {
       "name": "Earth",
-      "type": "Secondary",
+      "id": 15,
+      "type": 2,
       "desc": "Raise the character''s max HP",
       "breakpoints": [ 2, 4, 6 ],
       "affect": "Raise max HP {}%",
@@ -172,7 +187,8 @@
     },
     {
       "name": "Nature",
-      "type": "Secondary",
+      "id": 16,
+      "type": 2,
       "desc": "Recover HP every 5 seconds (based on ATK + AP)",
       "breakpoints": [ 2, 4 ],
       "affect": "Recover {}% of ATK + AP every 5 seconds",
@@ -183,7 +199,8 @@
     },
     {
       "name": "Tornado",
-      "type": "Secondary",
+      "id": 17,
+      "type": 2,
       "desc": "Gives a stackable boost of movement speed and dodge after using a skill",
       "breakpoints": [ 2, 4 ],
       "affect": "{}% move speed, {}% dodge, 5 stacks",
@@ -194,7 +211,8 @@
     },
     {
       "name": "Void",
-      "type": "Secondary",
+      "id": 18,
+      "type": 2,
       "desc": "Add bonus damage to basic attakcs plus a chance to stun for 3 seconds",
       "breakpoints": [ 2, 4 ],
       "affect": "{}% bonus basic attack damage, {}% chance to stun",
@@ -205,7 +223,8 @@
     },
     {
       "name": "Evil",
-      "type": "Secondary",
+      "id": 19,
+      "type": 2,
       "desc": "Increase ATK and attack speed as HP decreases",
       "breakpoints": [ 2, 4 ],
       "affect": "Up to {}% ATK and {}% attack speed boost",
@@ -216,7 +235,8 @@
     },
     {
       "name": "Origin",
-      "type": "Secondary",
+      "id": 20,
+      "type": 2,
       "desc": "Lower target armor for 3 seconds upon dealing basic attack damage",
       "breakpoints": [ 2, 4 ],
       "affect": "Lower armor {}%",

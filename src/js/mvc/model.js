@@ -2,9 +2,7 @@
  * reponsible for managing application state
  */
 
-import {ACTIVE, NO_CHANGE, PASSIVE, SKILL_ADDED, SKILL_REMOVED} from '../constants/constants.js';
-
-import {skills as SKILLS} from '../../data/skills.json';
+import {NO_CHANGE, SKILLS, SKILL_ADDED, SKILL_REMOVED, SKILL_TYPES} from '../constants/constants.js';
 
 var skills = SKILLS;
 var chosenSkills = [];
@@ -15,15 +13,15 @@ export function initializeState(build) {
 }
 
 export function addOrRemoveSkill(skill) {
-  if (chosenSkills.find(s => s.id === skill.id)) {
+  if (chosenSkills.some(s => s.id === skill.id)) {
     return [removeSkill(skill), SKILL_REMOVED];
   }
 
   if (
     chosenSkills.length < 10 &&
     (
-      (skill.type === ACTIVE && chosenSkills.filter(s => s.type === ACTIVE).length < 5) ||
-      (skill.type === PASSIVE && chosenSkills.filter(s => s.type === PASSIVE).length < 7)
+      (skill.type === SKILL_TYPES.ACTIVE && chosenSkills.filter(s => s.type === SKILL_TYPES.ACTIVE).length < 5) ||
+      (skill.type === SKILL_TYPES.PASSIVE && chosenSkills.filter(s => s.type === SKILL_TYPES.PASSIVE).length < 7)
     )
   ) {
     chosenSkills.push(skill);

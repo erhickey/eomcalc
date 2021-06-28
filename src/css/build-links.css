@@ -1,0 +1,45 @@
+.build-link-container {
+  display: flex;
+  border: 2px solid #303031;
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 6px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.build-link-container > label {
+  background: #585859;
+  font-size: 0.8em;
+  color: #101011;
+  position: absolute;
+  top: -8px;
+  left: 40px;
+}
+
+.build-link-container > input[type=image] {
+  width: 22px;
+  cursor: pointer;
+  padding: 4px;
+  background: #404041;
+}
+
+.build-link-container > input[type=image]:hover {
+  background: #303031;
+}
+
+.build-link-container > input[type=image]:active {
+  border-radius: 5px;
+  background: #606061;
+}
+
+.build-link-container > input[type=text] {
+  padding-left: 5px;
+  padding-top: 2px;
+  background: #585859;
+  border-radius: 5px;
+  border: none;
+  box-sizing: border-box;
+  width: 100%;
+  color: #e0e0e1;
+}

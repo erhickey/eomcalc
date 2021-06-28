@@ -3,11 +3,11 @@
  */
 
 import {addPathSeparator} from './util.js';
-import {ACTIVE, IMAGES_DIR} from '../constants/constants.js';
+import {SKILLS, SKILL_TYPES} from '../constants/constants.js';
 
-import {rarities} from '../../data/enums.json';
-import {skills} from '../../data/skills.json';
-
+/*
+ * create standard image node
+ */
 export function createImageNode(imgDir, imgName) {
   const el = document.createElement('img');
   el.setAttribute('loading', 'lazy');
@@ -15,11 +15,17 @@ export function createImageNode(imgDir, imgName) {
   return el;
 }
 
+/*
+ * format image name to match app standard
+ */
 export function formatImageName(s) {
   return s.toLowerCase().replace(/ /g, '_');
 }
 
-export function sortSkills(skill1, skill2) {
+/*
+ * compareFunction for skills
+ */
+export function compareSkills(skill1, skill2) {
   const raritySort = compareSkillRarity(skill1, skill2);
 
   if (raritySort !== 0) {
@@ -33,16 +39,22 @@ export function sortSkills(skill1, skill2) {
   return 1;
 }
 
+/*
+ * compareFunction for skills by rarity
+ */
 export function compareSkillRarity(skill1, skill2) {
-  return rarities[skill2.rarity] - rarities[skill1.rarity];
+  return skill2.rarity - skill1.rarity;
 }
 
+/*
+ * parse url param which may contain list of skills to include in user's build
+ */
 export function parseBuild(input) {
   if (input === null) {
     return [];
   }
 
-  const build = input.split('.').map(n => skills.find(s => s.id === parseInt(n))).filter(s => s !== undefined);
+  const build = input.split('.').map(n => SKILLS.find(s => s.id === parseInt(n))).filter(s => s !== undefined);
 
   if (validBuild(build)) {
     return build;
@@ -51,10 +63,14 @@ export function parseBuild(input) {
   return [];
 }
 
+/*
+ * validate build conforms to game rules
+ */
 export function validBuild(build) {
   if (
     build.length > 10 ||
-    build.filter(s => s.type === ACTIVE).length > 5
+    build.filter(s => s.type === SKILL_TYPES.ACTIVE).length > 5 ||
+    build.filter(s => s.type === SKILL_TYPES.PASSIVE).length > 7
   ) {
     return false;
   }
@@ -62,41 +78,16 @@ export function validBuild(build) {
   return true;
 }
 
+/*
+ * generate build url param from list of skills
+ */
 export function generateBuildUrlParam(build) {
   return build.map(s => s.id).join('.');
 }
 
+/*
+ * generate discord message from list of skills
+ */
 export function generateBuildDiscordMsg(build) {
   return build.map(s => ':' + s.name.replace(/ /g, '') + ':').join('');
-}
-
-export function createBuildLink(label, value, inputId) {
-  const container = document.createElement('div');
-  container.classList.add('build-link-container');
-
-  const inputEl = document.createElement('input');
-  inputEl.setAttribute('type', 'text');
-  inputEl.setAttribute('disabled', 'true');
-  inputEl.value = value;
-  inputEl.id = inputId;
-
-  const labelEl = document.createElement('label');
-  labelEl.innerHTML = label;
-
-  const copyButton = document.createElement('input');
-  copyButton.setAttribute('type', 'image');
-  copyButton.src = IMAGES_DIR + 'clipboard.webp';
-  copyButton.onclick = function() {
-    copyInputText(inputId);
-  }
-
-  container.appendChild(labelEl);
-  container.appendChild(copyButton);
-  container.appendChild(inputEl);
-  return container;
-}
-
-export function copyInputText(inputId) {
-  const input = document.getElementById(inputId);
-  navigator.clipboard.writeText(input.value);
 }

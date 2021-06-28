@@ -2,13 +2,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  overflow-y: scroll;
   padding: 2px 0;
   background: #585859;
   border-radius: 5px;
   border: 1px solid #303031;
-  width: fit-content;
-  height: 300px;
 }
 
 .skill-list-skill {
@@ -62,10 +59,4 @@
   right: 0;
   bottom: 0;
   background: rgba(255,255,255,.5);
-}
-
-@media (min-width: 768px) {
-  #skill-list {
-    width: 60%;
-  }
 }

@@ -1,13 +1,23 @@
 {
-  "skillTypes": [ "Active", "Passive" ],
-  "rarities": {
-    "Common": 1,
-    "Uncommon":  2,
-    "Rare": 3,
-    "Epic": 4,
-    "Legendary": 5
+  "skillTypes": {
+    "ACTIVE": 1,
+    "PASSIVE": 2
   },
-  "damageTypes": [ "Physical", "Magic" ],
+  "traitTypes": {
+    "PRIMARY": 1,
+    "SECONDARY": 2
+  },
+  "rarities": {
+    "COMMON": 1,
+    "UNCOMMON":  2,
+    "RARE": 3,
+    "EPIC": 4,
+    "LEGENDARY": 5
+  },
+  "damageTypes": {
+    "MAGIC": 1,
+    "PHYSICAL": 2
+  },
   "modifiers": [
     "Slow",
     "Stun",

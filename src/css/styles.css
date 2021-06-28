@@ -1,6 +1,10 @@
+@import './build.css';
+@import './build-links.css';
 @import './chosen-skills.css';
 @import './rarity.css';
+@import './skill-and-filter.css';
 @import './skill-list.css';
+@import './traits.css';
 
 body {
   font-family: "arial";

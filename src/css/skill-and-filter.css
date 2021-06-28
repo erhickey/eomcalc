@@ -1,0 +1,11 @@
+#skill-and-filter-wrapper {
+  overflow-y: scroll;
+  width: fit-content;
+  height: 265px;
+}
+
+@media (min-width: 768px) {
+  #skill-and-filter-wrapper {
+    width: 60%;
+  }
+}
