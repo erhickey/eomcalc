@@ -98,8 +98,5 @@ export function createBuildLink(label, value, inputId) {
 
 export function copyInputText(inputId) {
   const input = document.getElementById(inputId);
-  input.focus();
-  input.select();
-  input.setSelectionRange(0, 99999); /* For mobile devices */
-  document.execCommand("copy");
+  navigator.clipboard.writeText(input.value);
 }
