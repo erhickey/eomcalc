@@ -17,6 +17,7 @@ const buildOptions = {
 fs.rmdirSync('./dist', { recursive: true });
 fs.mkdirSync('./dist');
 
+fs.closeSync(fs.openSync('./dist/.nojekyll', 'w'));
 fsp.copyFile('./src/html/index.html', './dist/index.html');
 copyDir('./src/img', './dist/assets/img', [ 'webp', 'ico' ]);
 
