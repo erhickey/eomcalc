@@ -55,6 +55,16 @@ function createTraitComponent(trait) {
 }
 
 function compareTraits(trait1, trait2) {
+  if (!trait1.active || !trait2.active) {
+    if (trait1.active) {
+      return -1;
+    }
+
+    if (trait2.active) {
+      return 1;
+    }
+  }
+
   if (trait1.count === trait2.count) {
     if (trait1.type === trait2.type) {
       return compareTraitsByName(trait1, trait2);
