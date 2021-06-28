@@ -3,7 +3,7 @@
  */
 
 import {addPathSeparator} from './util.js';
-import {ACTIVE} from '../constants/constants.js';
+import {ACTIVE, IMAGES_DIR} from '../constants/constants.js';
 
 import {rarities} from '../../data/enums.json';
 import {skills} from '../../data/skills.json';
@@ -68,4 +68,38 @@ export function generateBuildUrlParam(build) {
 
 export function generateBuildDiscordMsg(build) {
   return build.map(s => ':' + s.name.replace(/ /g, '') + ':').join('');
+}
+
+export function createBuildLink(label, value, inputId) {
+  const container = document.createElement('div');
+  container.classList.add('build-link-container');
+
+  const inputEl = document.createElement('input');
+  inputEl.setAttribute('type', 'text');
+  inputEl.setAttribute('disabled', 'true');
+  inputEl.value = value;
+  inputEl.id = inputId;
+
+  const labelEl = document.createElement('label');
+  labelEl.innerHTML = label;
+
+  const copyButton = document.createElement('input');
+  copyButton.setAttribute('type', 'image');
+  copyButton.src = IMAGES_DIR + 'clipboard.webp';
+  copyButton.onclick = function() {
+    copyInputText(inputId);
+  }
+
+  container.appendChild(labelEl);
+  container.appendChild(copyButton);
+  container.appendChild(inputEl);
+  return container;
+}
+
+export function copyInputText(inputId) {
+  const input = document.getElementById(inputId);
+  input.focus();
+  input.select();
+  input.setSelectionRange(0, 99999); /* For mobile devices */
+  document.execCommand("copy");
 }

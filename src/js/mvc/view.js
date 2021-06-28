@@ -19,7 +19,7 @@ export function initialRender(skills, chosenSkills) {
 }
 
 export function buildChanged(chosenSkills, changedSkill, isRemoved) {
-  replaceChildren(document.getElementById(CHOSEN_SKILLS_ID), createChosenSkillsComponent(chosenSkills));
+  replaceChildren(document.getElementById(CHOSEN_SKILLS_ID), createChosenSkills(chosenSkills));
   const skillEl = document.getElementById(SKILL_ID_PREFIX + changedSkill.id);
 
   if (isRemoved) {

@@ -4,26 +4,27 @@
 
 import {ACTIVE, SKILL_IMAGES_DIR} from '../constants/constants.js';
 import {onChosenSkillClick} from '../mvc/controller.js';
-import {createImageNode, sortSkills, generateBuildDiscordMsg, generateBuildUrlParam} from '../util/app-util.js';
+import {
+  createBuildLink,
+  createImageNode,
+  sortSkills,
+  generateBuildDiscordMsg,
+  generateBuildUrlParam
+} from '../util/app-util.js';
 
 export function createChosenSkills(skills) {
   if (skills && skills.length > 0) {
 
-    const buildLinkEl = document.createElement('input');
-    buildLinkEl.setAttribute('type', 'text');
-    buildLinkEl.setAttribute('disabled', 'true');
-    buildLinkEl.classList.add('build-link-input');
-    buildLinkEl.value = window.location.origin + window.location.pathname + '?b=' + generateBuildUrlParam(skills);
+    const buildLinkEl = createBuildLink(
+      'Link to Build',
+      window.location.origin + window.location.pathname + '?b=' + generateBuildUrlParam(skills),
+      'build-link-input');
 
-    const discordMsgEl = document.createElement('input');
-    discordMsgEl.setAttribute('type', 'text');
-    discordMsgEl.setAttribute('disabled', 'true');
-    discordMsgEl.classList.add('build-link-input');
-    discordMsgEl.value = generateBuildDiscordMsg(skills);
+    const discordMsgEl = createBuildLink('Discord Message', generateBuildDiscordMsg(skills), 'discord-msg-input');
 
     const toReturn = skills.sort(sortChosenSkills).map(s => createChosenSkillComponent(s));
-    toReturn.unshift(discordMsgEl);
-    toReturn.unshift(buildLinkEl);
+    toReturn.push(buildLinkEl);
+    toReturn.push(discordMsgEl);
     return toReturn;
   } else {
     const info = document.createElement('div');
