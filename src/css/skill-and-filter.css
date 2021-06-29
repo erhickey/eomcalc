@@ -4,7 +4,7 @@
   height: 265px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   #skill-and-filter-wrapper {
     width: 60%;
   }

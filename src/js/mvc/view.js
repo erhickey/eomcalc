@@ -63,10 +63,9 @@ function initBuildComponents(chosenSkills) {
 }
 
 function createChosenSkillsComponent(chosenSkills) {
-  const component = document.createElement('div');
-  component.id = CHOSEN_SKILLS_ID;
-
   if (chosenSkills && chosenSkills.length > 0) {
+    const component = document.createElement('div');
+    component.id = CHOSEN_SKILLS_ID;
     replaceChildren(component, createChosenSkills(chosenSkills));
     return component;
   }
@@ -75,9 +74,7 @@ function createChosenSkillsComponent(chosenSkills) {
   info.classList.add('chosen-skills-info');
   info.innerHTML = 'Choose skills from above to create your build.';
   info.innerHTML += '\nShare your build with the link or discord message below.';
-  component.appendChild(info);
-
-  return component;
+  return info;
 }
 
 function createTraitsComponent(chosenSkills) {

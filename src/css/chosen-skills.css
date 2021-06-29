@@ -4,13 +4,15 @@
   justify-content: center;
   padding: 2px;
   min-height: 50px;
-  width: 100%;
+  width: 260px;
   box-sizing: border-box;
+  margin: 0 auto;
 }
 
 .chosen-skills-info {
   padding: 10px;
   font-size: 0.9em;
+  text-align: center;
   color: #e0e0e1;
   white-space: pre-wrap;
 }
@@ -29,4 +31,10 @@
   margin-right: auto;
   width: 40px;
   height: 40px;
+}
+
+@media (min-width: 768px) {
+  #chosen-skills {
+    width: 100%;
+  }
 }
