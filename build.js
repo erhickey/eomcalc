@@ -5,42 +5,41 @@ const path = require('path');
 
 const buildOptions = {
   entryPoints: [
-    './src/js/app.js',
-    './src/css/styles.css'
-  ],
-  outdir: './dist/assets/',
-  sourcemap: false,
-  minify: true,
-  bundle: true
-}
+    './src/js/app.js'
+    , './src/css/styles.css'
+  ]
+  , outdir: './dist/assets/'
+  , sourcemap: false
+  , minify: true
+  , bundle: true
+};
 
-fs.rmdirSync('./dist', { recursive: true });
+fs.rmdirSync('./dist', {recursive: true});
 fs.mkdirSync('./dist');
 
 fs.closeSync(fs.openSync('./dist/.nojekyll', 'w'));
 fsp.copyFile('./src/html/index.html', './dist/index.html');
-copyDir('./src/img', './dist/assets/img', [ 'webp', 'ico' ]);
+copyDir('./src/img', './dist/assets/img', ['webp', 'ico']);
 
 if (process.argv.includes('--serve')) {
   buildOptions.sourcemap = true;
 
-  esbuild.serve({ servedir: 'dist' }, buildOptions)
+  esbuild.serve({servedir: 'dist'}, buildOptions)
     .then(server => {
       console.log('Listening on ' + server.host + ':' + server.port);
-      const start = (process.platform == 'darwin' ? 'open': process.platform == 'win32' ? 'start' : 'xdg-open');
-      require('child_process').exec(start + ' http://' + server.host + ':' + server.port);
+      require('child_process').exec(getStartCommand(process.platform) + ' http://' + server.host + ':' + server.port);
     });
 } else {
   esbuild.buildSync(buildOptions);
 }
 
 function copyDir(src, dest, filetypes) {
-  fs.mkdirSync(dest, { recursive: true });
-  let entries = fs.readdirSync(src, { withFileTypes: true });
+  fs.mkdirSync(dest, {recursive: true});
+  const entries = fs.readdirSync(src, {withFileTypes: true});
 
-  for (let entry of entries) {
-    let srcPath = path.join(src, entry.name);
-    let destPath = path.join(dest, entry.name);
+  for (const entry of entries) {
+    const srcPath = path.join(src, entry.name);
+    const destPath = path.join(dest, entry.name);
 
     if (entry.isDirectory()) {
       copyDir(srcPath, destPath, filetypes);
@@ -48,4 +47,16 @@ function copyDir(src, dest, filetypes) {
       fsp.copyFile(srcPath, destPath);
     }
   }
+}
+
+function getStartCommand(platform) {
+  if ('darwin' === platform) {
+    return 'open';
+  }
+
+  if ('win32' === platform) {
+    return 'start';
+  }
+
+  return 'xdg-open';
 }

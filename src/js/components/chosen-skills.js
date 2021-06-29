@@ -2,7 +2,7 @@
  * contains functions which create the elements indicating which skills have been chosen
  */
 
-import {RARITY_MAP, SKILL_IMAGES_DIR, SKILL_TYPES} from '../constants/constants.js';
+import {ORDER_AFTER, ORDER_BEFORE, RARITY_MAP, SKILL_IMAGES_DIR, SKILL_TYPES} from '../constants/constants.js';
 import {onChosenSkillClick} from '../mvc/controller.js';
 import {createImageNode, compareSkills} from '../util/app-util.js';
 
@@ -27,8 +27,8 @@ function compareChosenSkills(skill1, skill2) {
   }
 
   if (skill1.type === SKILL_TYPES.ACTIVE) {
-    return -1;
+    return ORDER_BEFORE;
   }
 
-  return 1;
+  return ORDER_AFTER;
 }

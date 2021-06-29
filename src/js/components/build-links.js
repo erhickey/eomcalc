@@ -4,14 +4,15 @@
 
 import {IMAGES_DIR} from '../constants/constants.js';
 import {generateBuildDiscordMsg, generateBuildUrlParam} from '../util/app-util.js';
-import {copyInputText} from '../util/util.js'
+import {copyInputText, isEmpty} from '../util/util.js';
 
 export function createBuildLinks(skills) {
-  const buildParam = (skills && skills.length > 0) ? '?b=' + generateBuildUrlParam(skills) : '';
+  const buildParam = isEmpty(skills) ? '' : '?b=' + generateBuildUrlParam(skills);
   const buildLinkEl = createBuildLink(
     'Link to Build',
     window.location.origin + window.location.pathname + buildParam,
-    'build-link-input');
+    'build-link-input'
+  );
 
   const discordMsgEl = createBuildLink('Discord Message', generateBuildDiscordMsg(skills), 'discord-msg-input');
 

@@ -7,36 +7,37 @@
  * the same index in the array supplied
  */
 export function format(str, args) {
-  var i = 0;
+  let i = 0;
 
-  return str.replace(/{}/g, function () {
-    return typeof args[i] != 'undefined' ? args[i++] : '';
+  return str.replace(/{}/g, () => {
+    return 'undefined' == typeof args[i] ? '' : args[i++];
   });
-};
+}
 
 /*
  * true if the object supplied is iterable, false otherwise
  */
 export function isIterable(obj) {
-    // checks for null and undefined
-    if (obj == null) {
-      return false;
-    }
-    return typeof obj[Symbol.iterator] === 'function';
+  // checks for null and undefined
+  if (null == obj) {
+    return false;
+  }
+
+  return 'function' === typeof obj[Symbol.iterator];
 }
 
 /*
  * append the child or children
  */
 export function appendChildren(container, children) {
-  if (children == null) {
-    return
+  if (null == children) {
+    return;
   }
 
   const df = new DocumentFragment();
 
   if (isIterable(children)) {
-    for (let c of children) {
+    for (const c of children) {
       df.appendChild(c);
     }
   } else {
@@ -67,7 +68,7 @@ export function addPathSeparator(dir) {
  * is the value of the attribute specified
  */
 export function arrayToMap(arr, key) {
-  return arr.reduce(function(map, obj) {
+  return arr.reduce((map, obj) => {
     map[obj[key]] = obj;
     return map;
   }, {});
@@ -79,7 +80,7 @@ export function arrayToMap(arr, key) {
  * and the key of the attribute is the value
  */
 export function objectToMapByValues(obj) {
-  return Object.keys(obj).reduce(function(map, key) {
+  return Object.keys(obj).reduce((map, key) => {
     map[obj[key]] = key;
     return map;
   }, {});
@@ -98,4 +99,11 @@ export function copyInputText(inputId) {
  */
 export function compareStringsCaseInsensitive(string1, string2) {
   return string1.toUpperCase().localeCompare(string2.toUpperCase());
+}
+
+/*
+ * returns true if object is not an array or has no elements
+ */
+export function isEmpty(arr) {
+  return !arr || !arr.length;
 }

@@ -2,10 +2,11 @@
  * reponsible for managing application state
  */
 
-import {NO_CHANGE, SKILLS, SKILL_ADDED, SKILL_REMOVED, SKILL_TYPES} from '../constants/constants.js';
+import {NO_CHANGE, SKILLS, SKILL_ADDED, SKILL_REMOVED} from '../constants/constants.js';
+import {validBuild} from '../util/app-util.js';
 
-var skills = SKILLS;
-var chosenSkills = [];
+const skills = SKILLS;
+let chosenSkills = [];
 
 export function initializeState(build) {
   chosenSkills = build;
@@ -17,17 +18,13 @@ export function addOrRemoveSkill(skill) {
     return [removeSkill(skill), SKILL_REMOVED];
   }
 
-  if (
-    chosenSkills.length < 10 &&
-    (
-      (skill.type === SKILL_TYPES.ACTIVE && chosenSkills.filter(s => s.type === SKILL_TYPES.ACTIVE).length < 5) ||
-      (skill.type === SKILL_TYPES.PASSIVE && chosenSkills.filter(s => s.type === SKILL_TYPES.PASSIVE).length < 7)
-    )
-  ) {
-    chosenSkills.push(skill);
+  chosenSkills.push(skill);
+
+  if (validBuild(chosenSkills)) {
     return [chosenSkills, SKILL_ADDED];
   }
 
+  chosenSkills.pop();
   return [chosenSkills, NO_CHANGE];
 }
 

@@ -11,7 +11,9 @@
     "type": "git",
     "url": "https://github.com/erhickey/eomcalc.git"
   },
-  "dependencies": {
-    "esbuild": "^0.12.9"
+  "dependencies": {},
+  "devDependencies": {
+    "esbuild": "^0.12.12",
+    "eslint": "^7.29.0"
   }
 }

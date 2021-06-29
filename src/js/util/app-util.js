@@ -3,7 +3,7 @@
  */
 
 import {addPathSeparator, compareStringsCaseInsensitive} from './util.js';
-import {SKILLS, SKILL_TYPES} from '../constants/constants.js';
+import {MAX_ACTIVES, MAX_PASSIVES, MAX_SKILLS, ORDER_EQUAL, SKILLS, SKILL_TYPES} from '../constants/constants.js';
 
 /*
  * create standard image node
@@ -28,7 +28,7 @@ export function formatImageName(s) {
 export function compareSkills(skill1, skill2) {
   const raritySort = compareSkillsByRarity(skill1, skill2);
 
-  if (raritySort !== 0) {
+  if (raritySort !== ORDER_EQUAL) {
     return raritySort;
   }
 
@@ -46,11 +46,11 @@ export function compareSkillsByRarity(skill1, skill2) {
  * parse url param which may contain list of skills to include in user's build
  */
 export function parseBuild(input) {
-  if (input === null) {
+  if (null == input) {
     return [];
   }
 
-  const build = input.split('.').map(n => SKILLS.find(s => s.id === parseInt(n))).filter(s => s !== undefined);
+  const build = input.split('.').map(n => SKILLS.find(s => s.id === parseInt(n))).filter(s => null != s);
 
   if (validBuild(build)) {
     return build;
@@ -64,9 +64,9 @@ export function parseBuild(input) {
  */
 export function validBuild(build) {
   if (
-    build.length > 10 ||
-    build.filter(s => s.type === SKILL_TYPES.ACTIVE).length > 5 ||
-    build.filter(s => s.type === SKILL_TYPES.PASSIVE).length > 7
+    build.length > MAX_SKILLS
+    || build.filter(s => s.type === SKILL_TYPES.ACTIVE).length > MAX_ACTIVES
+    || build.filter(s => s.type === SKILL_TYPES.PASSIVE).length > MAX_PASSIVES
   ) {
     return false;
   }

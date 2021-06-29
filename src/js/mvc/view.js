@@ -7,7 +7,7 @@ import {createChosenSkills} from '../components/chosen-skills.js';
 import {createSkills} from '../components/skill-list.js';
 import {createTraits} from '../components/traits.js';
 import {SKILL_ID_PREFIX} from '../constants/constants.js';
-import {appendChildren, replaceChildren} from '../util/util.js';
+import {appendChildren, isEmpty, replaceChildren} from '../util/util.js';
 
 const WRAPPER_ID = 'wrapper';
 const SKILL_AND_FILTER_WRAPPER_ID = 'skill-and-filter-wrapper';
@@ -63,7 +63,7 @@ function initBuildComponents(chosenSkills) {
 }
 
 function createChosenSkillsComponent(chosenSkills) {
-  if (chosenSkills && chosenSkills.length > 0) {
+  if (!isEmpty(chosenSkills)) {
     const component = document.createElement('div');
     component.id = CHOSEN_SKILLS_ID;
     appendChildren(component, createChosenSkills(chosenSkills));

@@ -2,38 +2,41 @@
  * contains functions which create the elements to display trait information based on chosen build
  */
 
-import {TRAITS, TRAIT_IMAGES_DIR, TRAIT_TYPES} from '../constants/constants.js';
+import {ORDER_AFTER, ORDER_BEFORE, ORDER_EQUAL, TRAITS, TRAIT_IMAGES_DIR, TRAIT_TYPES} from '../constants/constants.js';
 import {createImageNode} from '../util/app-util.js';
-import {compareStringsCaseInsensitive} from '../util/util.js';
+import {compareStringsCaseInsensitive, isEmpty} from '../util/util.js';
 
-export function createTraits(skills) {
-  return TRAITS.map(t => {
-    const [count, breakpoint] = getTraitQuantity(t, skills);
-    return {
-      'name': t.name,
-      'type': t.type,
-      'active': count >= t.breakpoints[0],
-      count,
-      breakpoint
-    };
-  }).sort(compareTraits).map(t => createTraitComponent(t));
+class Trait {
+  constructor(trait, skills) {
+    this.name = trait.name;
+    this.type = trait.type;
+    const type = trait.type === TRAIT_TYPES.PRIMARY ? 'primaryTrait' : 'secondaryTrait';
+    this.count = isEmpty(skills) ? 0 : skills.filter(s => s[type] === trait.id).length;
+    this.active = this.count >= trait.breakpoints[0];
+    this.breakpoint = getNextBreakpoint(trait, this.count);
+  }
 }
 
-function getTraitQuantity(trait, skills) {
-  const type = trait.type === TRAIT_TYPES.PRIMARY ? 'primaryTrait' : 'secondaryTrait';
-  const count = skills ? skills.filter(s => s[type] === trait.id).length : 0;
-  const breakpointCandidates = trait.breakpoints.filter(bp => bp >= count);
-  // use highest breakpoint if the number of skills with this trait exceeds it
-  let breakpoint = trait.breakpoints[trait.breakpoints.length - 1];
+export function createTraits(skills) {
+  return TRAITS.map(t => new Trait(t, skills)).sort(compareTraits).map(t => createTraitComponent(t));
+}
 
-  if (breakpointCandidates.length > 1) {
-    // if number of skills equals a breakpoint, use the next highest
-    breakpoint = breakpointCandidates[0] === count ? breakpointCandidates[1] : breakpointCandidates[0];
-  } else if (breakpointCandidates === 1) {
-    breakpoint = breakpointCandidates[0];
+function getNextBreakpoint(trait, numSkillsWithTrait) {
+  const candidates = trait.breakpoints.filter(bp => bp >= numSkillsWithTrait);
+
+  if (isEmpty(candidates)) {
+    // number of skills is higher than the largest breakpoint, return the largest breakpoint
+    return trait.breakpoints[trait.breakpoints.length - 1];
   }
 
-  return [count, breakpoint];
+  if (1 === candidates.length) {
+    // only one candidate, return it
+    return candidates[0];
+  }
+
+  // multiple candidates, use the lowest breakpoint
+  // unless the number of skills is equal to it, then use the next highest
+  return candidates[0] === numSkillsWithTrait ? candidates[1] : candidates[0];
 }
 
 function createTraitComponent(trait) {
@@ -61,19 +64,19 @@ function createTraitComponent(trait) {
 function compareTraits(trait1, trait2) {
   const activeSort = compareTraitsByActive(trait1, trait2);
 
-  if (activeSort !== 0) {
+  if (activeSort !== ORDER_EQUAL) {
     return activeSort;
   }
 
   const countSort = compareTraitsByCount(trait1, trait2);
 
-  if (countSort !== 0) {
+  if (countSort !== ORDER_EQUAL) {
     return countSort;
   }
 
   const typeSort = compareTraitsByType(trait1, trait2);
 
-  if (typeSort !== 0) {
+  if (typeSort !== ORDER_EQUAL) {
     return typeSort;
   }
 
@@ -82,36 +85,36 @@ function compareTraits(trait1, trait2) {
 
 function compareTraitsByActive(trait1, trait2) {
   if (trait1.active === trait2.active) {
-    return 0;
+    return ORDER_EQUAL;
   }
 
   if (trait1.active) {
-    return -1;
+    return ORDER_BEFORE;
   }
 
-  return 1;
+  return ORDER_AFTER;
 }
 
 function compareTraitsByCount(trait1, trait2) {
   if (trait1.count === trait2.count) {
-    return 0;
+    return ORDER_EQUAL;
   }
 
   if (trait1.count > trait2.count) {
-    return -1;
+    return ORDER_BEFORE;
   }
 
-  return 1;
+  return ORDER_AFTER;
 }
 
 function compareTraitsByType(trait1, trait2) {
   if (trait1.type === trait2.type) {
-    return 0;
+    return ORDER_EQUAL;
   }
 
   if (trait1.type === TRAIT_TYPES.PRIMARY) {
-    return -1;
+    return ORDER_BEFORE;
   }
 
-  return 1;
+  return ORDER_AFTER;
 }

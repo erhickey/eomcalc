@@ -23,3 +23,11 @@ export const SKILL_TYPES = skillTypes;
 export const TRAITS = traits;
 export const TRAIT_MAP = arrayToMap(traits, 'id');
 export const TRAIT_TYPES = traitTypes;
+
+export const MAX_SKILLS = 10;
+export const MAX_PASSIVES = 7;
+export const MAX_ACTIVES = 5;
+
+export const ORDER_BEFORE = -1;
+export const ORDER_EQUAL = 0;
+export const ORDER_AFTER = 1;

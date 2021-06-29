@@ -35,7 +35,7 @@ function createSkillListComponent(skill, chosenSkills) {
   component.appendChild(skillImage);
   component.appendChild(footer);
 
-  component.onclick = function () { onSkillClick(skill); };
+  component.onclick = function() { onSkillClick(skill); };
 
   return component;
 }
