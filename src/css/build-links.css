@@ -3,9 +3,9 @@
   border: 2px solid #303031;
   border-radius: 5px;
   width: 100%;
+  box-sizing: border-box;
   margin-top: 6px;
   position: relative;
-  box-sizing: border-box;
 }
 
 .build-link-container > label {
@@ -15,6 +15,7 @@
   position: absolute;
   top: -8px;
   left: 40px;
+  padding: 0 2px;
 }
 
 .build-link-container > input[type=image] {
@@ -37,7 +38,6 @@
   padding-left: 5px;
   padding-top: 2px;
   background: #585859;
-  border-radius: 5px;
   border: none;
   box-sizing: border-box;
   width: 100%;

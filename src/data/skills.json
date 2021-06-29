@@ -8,7 +8,7 @@
       "primaryTrait": 8,
       "secondaryTrait": 14,
       "damage": [ 1 ],
-      "mods": [ "Slow" ],
+      "mods": [ 1 ],
       "cooldown": 40,
       "description": "Summon a massive tsunami wave that slows, and deals {}% magic damage to enemies",
       "stats": [
@@ -23,7 +23,7 @@
       "primaryTrait": 8,
       "secondaryTrait": 12,
       "damage": [ 1 ],
-      "mods": [ "Stun" ],
+      "mods": [ 2 ],
       "cooldown": 15,
       "description": "Throw {} tracking lightning hammer(s) at a target, dealing {}% magic damage plus a {}s stun to all enemies nearby the target",
       "stats": [
@@ -54,7 +54,7 @@
       "primaryTrait": 1,
       "secondaryTrait": 20,
       "damage": [ 2 ],
-      "mods": [ "Attack Speed", "Move Speed", "Attack Increase" ],
+      "mods": [ 3, 4, 5 ],
       "cooldown": 40,
       "description": "Morph into a chaos warrior and deal {}% continual physical damage per second to all nearby enemies. Also boosts attack speed {}%, attack {}%, and move speed {}% for {} seconds",
       "stats": [
@@ -69,7 +69,7 @@
       "primaryTrait": 1,
       "secondaryTrait": 13,
       "damage": [ 2 ],
-      "mods": [ "Self Harm", "Disarm" ],
+      "mods": [ 6, 7 ],
       "cooldown": 15,
       "description": "Sacrifice {}% of your current health to break an enemy's life, charging to a target, dealing {}% physical damage and disarm target {}s.",
       "stats": [
@@ -113,7 +113,7 @@
       "primaryTrait": 2,
       "secondaryTrait": 15,
       "damage": [],
-      "mods": [ "Crit Damage" ],
+      "mods": [ 9 ],
       "description": "Permanently boosts crit damage {}%",
       "stats": [
         [ 60 ]
@@ -127,7 +127,7 @@
       "primaryTrait": 3,
       "secondaryTrait": 17,
       "damage": [ 2 ],
-      "mods": [ "Knockback" ],
+      "mods": [ 8 ],
       "cooldown": 15,
       "description": "With the power of wind charge forward dealing {}% physical damage and knocking back enemies in your path, before releasing {} blast(s) that deal a total of {}% physical damage to nearby enemies",
       "stats": [
@@ -142,7 +142,7 @@
       "primaryTrait": 4,
       "secondaryTrait": 19,
       "damage": [],
-      "mods": [ "Attack Speed" ],
+      "mods": [ 3 ],
       "description": "Attack speed is increased by {}%, but damage of basic attack is decreased by {}%",
       "stats": [
         [ 45, 15 ]
@@ -156,7 +156,7 @@
       "primaryTrait": 6,
       "secondaryTrait": 9,
       "damage": [ 1 ],
-      "mods": [ "Slow" ],
+      "mods": [ 1 ],
       "cooldown": 20,
       "description": "Summon a crater of lava in a target area, dealing {}% magic damage per second for {} seconds, the crater then erupts, dealing {}% magic damage and slowing all enemies in the area by {}% for {} seconds",
       "stats": [
@@ -185,7 +185,7 @@
       "primaryTrait": 1,
       "secondaryTrait": 20,
       "damage": [],
-      "mods": [ "Attack Speed" ],
+      "mods": [ 3 ],
       "description": "Each continuous basic attack boosts attack speed {}% up to {} stacks, but it will drop to zero if you go {} seconds without making a basic attack",
       "stats": [
         [ 5, 6, 3 ]
@@ -230,7 +230,7 @@
       "primaryTrait": 2,
       "secondaryTrait": 17,
       "damage": [],
-      "mods": [ "Dodge", "Crit Chance" ],
+      "mods": [ 15, 10 ],
       "description": "Get a permanent {}% chance of dodging enemy basic attacks. When dodging, get a boost of {}% crit chance for {} seconds, you can accumulate up to {} stacks, and it will drop to zero with a critical strike",
       "stats": [
         [ 4, 4, 5, 10 ]
@@ -244,7 +244,7 @@
       "primaryTrait": 3,
       "secondaryTrait": 19,
       "damage": [],
-      "mods": [ "Damage Reduction" ],
+      "mods": [ 11 ],
       "description": "Increases damage reduction as HP decreases:\nWhen HP is < {}%, gain {}% damage reduction\nWhen HP is < {}% gain {}% damage reduction\nWhen HP is < {}% gain {}% damage reduction",
       "stats": [
         [ 80, 8, 50, 20, 20, 43 ]
@@ -258,7 +258,7 @@
       "primaryTrait": 3,
       "secondaryTrait": 14,
       "damage": [ 2 ],
-      "mods": [ "Stun" ],
+      "mods": [ 2 ],
       "description": "When attacked, there's a {}% chance of dealing {}% physical damage to all nearby enemies, stunning up to {} nearby enemies for {} seconds. {} second cooldown",
       "stats": [
         [ 20, 72, 5, 2, 8 ]
@@ -272,7 +272,7 @@
       "primaryTrait": 3,
       "secondaryTrait": 19,
       "damage": [ 2 ],
-      "mods": [ "Self Harm" ],
+      "mods": [ 6 ],
       "cooldown": 10,
       "description": "Toggle Sacrifice to drain {}% of your current health per second, dealing {}% physical damage per second to all nearby enemies",
       "stats": [
@@ -287,7 +287,7 @@
       "primaryTrait": 3,
       "secondaryTrait": 15,
       "damage": [ 2 ],
-      "mods": [ "Damage Reduction", "Channeled" ],
+      "mods": [ 11, 18 ],
       "cooldown": 20,
       "description": "Summon {} ring of shields around you for {} seconds, gaining {}% damage reduction and reflecting {}% of the damage of all enemy attacks. With a stone spear, rapidly strike {} times for {}% physical damage each. After the duration expires, the shield explodes which deals {}% physical damage",
       "stats": [
@@ -346,7 +346,7 @@
       "primaryTrait": 5,
       "secondaryTrait": 10,
       "damage": [ 1 ],
-      "mods": [ "Shield" ],
+      "mods": [ 12 ],
       "cooldown": 25,
       "description": "Shield yourself and all friendly units in a large area around you for {}% of your ATK and AP. When an individual shield breaks, it deals {}% magic damage to nearby enemies",
       "stats": [
@@ -361,7 +361,7 @@
       "primaryTrait": 5,
       "secondaryTrait": 15,
       "damage": [],
-      "mods": [ "Taunt" ],
+      "mods": [ 13 ],
       "cooldown": 15,
       "description": "Summon an Earth Elemental that taunts enemies and fights using its fists, inherting {}% HP and {}% AP from your character, lasting {} seconds",
       "stats": [
@@ -390,7 +390,7 @@
       "primaryTrait": 6,
       "secondaryTrait": 13,
       "damage": [],
-      "mods": [ "AP Increase" ],
+      "mods": [ 14 ],
       "description": "Each enemy death increases AP by {}% up to {} stacks. After {} seconds without an enemy death, all stacks are removed",
       "stats": [
         [ 1.5, 10, 10 ]
@@ -419,7 +419,7 @@
       "primaryTrait": 6,
       "secondaryTrait": 12,
       "damage": [ 1 ],
-      "mods": [ "Movement" ],
+      "mods": [ 16 ],
       "cooldown": 10,
       "description": "Fold time and space to instantly teleport to a target location dealing {}% magic damage to all nearby units after shifting",
       "stats": [
@@ -449,7 +449,7 @@
       "primaryTrait": 1,
       "secondaryTrait": 17,
       "damage": [ 2 ],
-      "mods": [ "Dodge" ],
+      "mods": [ 15 ],
       "cooldown": 12,
       "description": "Cause a bladestorm of destructive force around you, dealing up to total {}% physical damage to nearby enemy units with {}% chance of dodging enemy basic attacks",
       "stats": [
@@ -465,7 +465,7 @@
       "primaryTrait": 1,
       "secondaryTrait": 18,
       "damage": [ 2 ],
-      "mods": [ "Attack Speed" ],
+      "mods": [ 3 ],
       "cooldown": 9,
       "description": "Charge to an enemy, dealing {}% physical damage, and boosts attack speed {}% for {} basic attacks",
       "stats": [
@@ -495,7 +495,7 @@
       "primaryTrait": 2,
       "secondaryTrait": 17,
       "damage": [ 2 ],
-      "mods": [ "Movement" ],
+      "mods": [ 16 ],
       "cooldown": 5,
       "description": "Dash forward to strike, dealing {}% physical damage to all targets you pass through. If any target dies to Sweeping Blade, its cooldown refreshes",
       "stats": [
@@ -511,7 +511,7 @@
       "primaryTrait": 3,
       "secondaryTrait": 13,
       "damage": [ 2 ],
-      "mods": [ "Self Harm" ],
+      "mods": [ 6 ],
       "cooldown": 10,
       "description": "Strike a mightly blow at melee range, dealing {}% of your current health damage to yourself and {} times of {}% physical damage to all enemies in a small area around you",
       "stats": [
@@ -555,7 +555,7 @@
       "primaryTrait": 4,
       "secondaryTrait": 14,
       "damage": [ 1 ],
-      "mods": [ "Knockback" ],
+      "mods": [ 8 ],
       "cooldown": 8,
       "description": "Wind up before firing a powerful barrage of tide that deals damage to each enemy unit it passes through, dealing magic damage equal to {}% of the sum of your ATK and AP and throwing them back for {}m",
       "stats": [
@@ -601,7 +601,7 @@
       "primaryTrait": 5,
       "secondaryTrait": 16,
       "damage": [],
-      "mods": [ "Healing" ],
+      "mods": [ 17 ],
       "cooldown": 20,
       "description": "Summon a Faerie Dragon which heals allies attacking using ranged magic bolts, inheriting {}% HP and {}% AP from your character, lasting {} seconds. When Faerie Dragon dies, it leaves a magic healing orb that restores HP equal to {}% AP + {}% ATK of the character who touches it",
       "stats": [
@@ -616,7 +616,7 @@
       "primaryTrait": 6,
       "secondaryTrait": 11,
       "damage": [ 1 ],
-      "mods": [ "Channeled" ],
+      "mods": [ 18 ],
       "cooldown": 12,
       "description": "Unleash {} ray of energy which can direct with the virtual joystick for {} seconds, dealing up to total {}% continuous magic damage",
       "stats": [
@@ -631,7 +631,7 @@
       "primaryTrait": 6,
       "secondaryTrait": 10,
       "damage": [ 1 ],
-      "mods": [ "Slow" ],
+      "mods": [ 1 ],
       "description": "When attacked, there's a {}% chance of causing a Frost Nova, dealing {}% magic damage to all neary enemies, and slowing enemies move speed by {}% for {} second(s). {} second cooldown",
       "stats": [
         [ 20, 50, 20, 1, 8 ]
@@ -675,7 +675,7 @@
       "primaryTrait": 8,
       "secondaryTrait": 16,
       "damage": [],
-      "mods": [ "Healing" ],
+      "mods": [ 17 ],
       "cooldown": 30,
       "description": "Conjures a healing magical wind around you, restoring HP equal to {}% of your ATK + AP once per second for {} seconds, up to a total of {}% of your ATK + AP",
       "stats": [
@@ -706,7 +706,7 @@
       "primaryTrait": 2,
       "secondaryTrait": 13,
       "damage": [ 2 ],
-      "mods": [ "Crit Damage" ],
+      "mods": [ 9 ],
       "cooldown": 3,
       "description": "Throw {} long-range kunai that converge on target position, each kunai deals {}% physical damage to all enemies it passes through, and boosts your critical strike damage within the next {} seconds by {}%",
       "stats": [
@@ -722,7 +722,7 @@
       "primaryTrait": 3,
       "secondaryTrait": 14,
       "damage": [ 2 ],
-      "mods": [ "Shield" ],
+      "mods": [ 12 ],
       "cooldown": 16,
       "description": "Throw a shield that returns toward the starting direction after reaching its maximum range, dealing {}% physical damage to enemies it hits. If you catch the returning shield, it will grant you a shield equal to {}% of your ATK + AP and its cooldown is reduced by {}%",
       "stats": [
@@ -737,7 +737,7 @@
       "primaryTrait": 4,
       "secondaryTrait": 10,
       "damage": [ 1 ],
-      "mods": [ "Slow" ],
+      "mods": [ 1 ],
       "cooldown": 3,
       "description": "Fire {} arrow(s) of ice crystal in a straight line. If the arrow collides with an enemy, it explodes and slows all surrounding enemy units, dealing magic damage equal to {}% of your ATK and AP",
       "stats": [
@@ -785,7 +785,7 @@
       "primaryTrait": 7,
       "secondaryTrait": 10,
       "damage": [ 1 ],
-      "mods": [ "Slow" ],
+      "mods": [ 1 ],
       "cooldown": 8,
       "description": "Summon a sphere of ice to a target area that explodes, dealing {}% magic damage to all enemies in the area, plus a {}% slow for {} seconds",
       "stats": [
@@ -801,7 +801,7 @@
       "primaryTrait": 2,
       "secondaryTrait": 18,
       "damage": [ 2 ],
-      "mods": [ "Invulnerability" ],
+      "mods": [ 19 ],
       "cooldown": 30,
       "description": "Leap towards and slashes, attacking a random enemy target nearby {} times, dealing {}% physical damage to all enemy units around the target. Invulnerable for the duration",
       "stats": [
@@ -830,7 +830,7 @@
       "primaryTrait": 3,
       "secondaryTrait": 15,
       "damage": [],
-      "mods": [ "Damage Reduction" ],
+      "mods": [ 11 ],
       "cooldown": 30,
       "description": "For {} seconds, gain {}% damage reduction and immunity to all CC",
       "stats": [
@@ -845,7 +845,7 @@
       "primaryTrait": 4,
       "secondaryTrait": 17,
       "damage": [ 1 ],
-      "mods": [ "Dodge" ],
+      "mods": [ 15 ],
       "cooldown": 30,
       "description": "Call upon the God of Dawn, fire a global shockwave that boosts allies dodge rate by {}%, while throwing enemies caught in the wave back by deaing magic damage equal to {}% of the sum of your ATK and AP",
       "stats": [
@@ -860,7 +860,7 @@
       "primaryTrait": 5,
       "secondaryTrait": 9,
       "damage": [ 1 ],
-      "mods": [ "Stun" ],
+      "mods": [ 2 ],
       "cooldown": 20,
       "description": "Pull a blazing meteor from the sky towards a target area to summon a Hellfire Demon, dealing {}% magic damage and stuns enemies within the impact zone for {} seconds, inherting {}% AP and {}% HP from your character, lasting {} seconds. Hellfire leave a fireland on death",
       "stats": [
@@ -875,7 +875,7 @@
       "primaryTrait": 6,
       "secondaryTrait": 11,
       "damage": [],
-      "mods": [ "AP Increase", "Cooldown Reduction" ],
+      "mods": [ 14, 20 ],
       "cooldown": 40,
       "description": "Unlock your inner mind with an arcane storm that distorts the space-time. While the mindstorm rages, you gain {}% AP, and cooldown time of all active skills is {}% shorter",
       "stats": [
@@ -919,7 +919,7 @@
       "primaryTrait": 2,
       "secondaryTrait": 20,
       "damage": [],
-      "mods": [ "Attack Speed", "Attack Increase", "AP Increase", "Crit Chance", "Cooldown Reduction" ],
+      "mods": [ 3, 5, 14, 10, 20 ],
       "cooldown": 30,
       "description": "Roll the Lucky Dice to activate a boosting ability according to the result for {} seconds\n1-Nothing happens\n2-Boosts DEF by {}%\n3-Boosts attack speed by {}%\n4-Boosts ATK and AP by {}%\n5-Boosts crit chance by {}%\n6-Boosts cooldown reduction by {}%",
       "stats": [
@@ -934,7 +934,7 @@
       "primaryTrait": 3,
       "secondaryTrait": 16,
       "damage": [],
-      "mods": [ "Healing" ],
+      "mods": [ 17 ],
       "description": "When attacked, there's a {}% chance of restoring HP equal to {}% of your ATK + AP once per second for {} seconds, up to a total of {}% of your ATK + AP. {} second cooldown",
       "stats": [
         [ 20, 5.5, 3, 16.5, 10 ]
@@ -962,7 +962,7 @@
       "primaryTrait": 4,
       "secondaryTrait": 17,
       "damage": [ 2 ],
-      "mods": [ "Knockback" ],
+      "mods": [ 8 ],
       "description": "With the help of God of Storm, basic attacks have a {}% chance to add bonus {}% physical damage plus a chance of throwing enemy back",
       "stats": [
         [ 25, 100 ]
@@ -1005,7 +1005,7 @@
       "primaryTrait": 5,
       "secondaryTrait": 13,
       "damage": [ 1 ],
-      "mods": [ "Slow" ],
+      "mods": [ 1 ],
       "cooldown": 20,
       "description": "Summon a vortex that sucks in nearby enemy units, dealing up to {}% magic damage. Enemies affected by Black Hole have their movement speed slowed by {}%",
       "stats": [
@@ -1049,7 +1049,7 @@
       "primaryTrait": 7,
       "secondaryTrait": 15,
       "damage": [ 1 ],
-      "mods": [ "Slow" ],
+      "mods": [ 1 ],
       "description": "When any active skill is used there's a {}% chance of triggering {} earthquakes, each blast dealing {}% magic damage and a {}% slow for {} second(s)",
       "stats": [
         [ 20, 4, 40, 90, 0.5 ]
@@ -1063,7 +1063,7 @@
       "primaryTrait": 8,
       "secondaryTrait": 17,
       "damage": [],
-      "mods": [ "Dodge", "Move Speed" ],
+      "mods": [ 15, 4 ],
       "cooldown": 25,
       "description": "For the next {} seconds, boost move speed {}% and have a {}% chance of dodging enemy basic attacks",
       "stats": [
@@ -1078,7 +1078,7 @@
       "primaryTrait": 1,
       "secondaryTrait": 19,
       "damage": [],
-      "mods": [ "Lifesteal" ],
+      "mods": [ 21 ],
       "description": "By using evil power, there's a {}% chance to enable {}% lifesteal for basic attacks",
       "stats": [
         [ 20, 30 ]
@@ -1107,7 +1107,7 @@
       "primaryTrait": 2,
       "secondaryTrait": 18,
       "damage": [],
-      "mods": [ "Attack Increase" ],
+      "mods": [ 5 ],
       "description": "Each enemy death boosts attack by {}%, up to {} stacks, but it will drop to zero if you go {} seconds with no enemy deaths",
       "stats": [
         [ 1.8, 10, 10 ]
@@ -1136,7 +1136,7 @@
       "primaryTrait": 6,
       "secondaryTrait": 14,
       "damage": [ 1 ],
-      "mods": [ "Slow", "Knockback" ],
+      "mods": [ 1, 8 ],
       "cooldown": 10,
       "description": "Create {} exploding riptide waves around yourself. {} Explosions respectively deal {}% and {}% magic damage and slows enemies. The second explosion will throw enemy back {}m",
       "stats": [
@@ -1151,7 +1151,7 @@
       "primaryTrait": 7,
       "secondaryTrait": 14,
       "damage": [],
-      "mods": [ "Healing" ],
+      "mods": [ 17 ],
       "description": "When any active skill is used, there's a {}% chance of healing for {}% of your AP",
       "stats": [
         [ 25, 16 ]
@@ -1165,7 +1165,7 @@
       "primaryTrait": 7,
       "secondaryTrait": 15,
       "damage": [ 1 ],
-      "mods": [ "Slow" ],
+      "mods": [ 1 ],
       "cooldown": 15,
       "description": "Create several earth protrusions that slow passing enemies. Dealing {}% magic damage when cast, then dealing {}% magic damage per second for up to {} seconds, up to a total of {}% magic damage, before exploding for a burst of {}% magic damage",
       "stats": [
@@ -1180,7 +1180,7 @@
       "primaryTrait": 7,
       "secondaryTrait": 10,
       "damage": [ 1 ],
-      "mods": [ "Slow", "Freeze" ],
+      "mods": [ 1, 22 ],
       "cooldown": 25,
       "description": "Plant an Ice Lotus which flourishes over {} seconds, breeze that surrounds the flourescent lotus, slows and deals {}% magic damage per {} seconds to nearby enemies. The flourescent lotus lasts {} seconds, then it busts and freezes enemies {} seconds by dealing {}% magic damage. If an enemy touches the lotus before its flourescence, the lotus prematurely bursts and freezes enemies for {} seconds",
       "stats": [
@@ -1195,7 +1195,7 @@
       "primaryTrait": 7,
       "secondaryTrait": 16,
       "damage": [ 1 ],
-      "mods": [ "Knockback", "Slow" ],
+      "mods": [ 8, 1 ],
       "cooldown": 20,
       "description": "Surround yourself in a magical storm of nature, throwing enemies back and slowing their move speed by {}% for {} seconds, dealing {}%-{}% magic damage that depends on the distance of enemy knockback",
       "stats": [
@@ -1210,7 +1210,7 @@
       "primaryTrait": 8,
       "secondaryTrait": 9,
       "damage": [ 1 ],
-      "mods": [ "Knockback" ],
+      "mods": [ 8 ],
       "cooldown": 20,
       "description": "Summon {} flaming meteor from the sky onto the target location, dealing {}%-{}% magic damage. Upon landing, the meteor rolls forward, continuously dealing up to a total of {}%-{}% magic damage, finally exploding after {} seconds and dealing {}%-{}% magic damage",
       "stats": [
@@ -1225,7 +1225,7 @@
       "primaryTrait": 8,
       "secondaryTrait": 14,
       "damage": [ 1, 2 ],
-      "mods": [ "Healing" ],
+      "mods": [ 17 ],
       "cooldown": 25,
       "description": "Instantly heals the character for {}% of sum of ATK and AP, also deals {} time of {}% magic damage and {}% physical damage to any surrounding enemies",
       "stats": [
@@ -1240,7 +1240,7 @@
       "primaryTrait": 1,
       "secondaryTrait": 16,
       "damage": [ 2 ],
-      "mods": [ "Stun" ],
+      "mods": [ 2 ],
       "cooldown": 8,
       "description": "Slams the ground, dealing {}% physical damage to nearby enemies all around the caster, plus {} seconds of stun to up to {} enemies",
       "stats": [

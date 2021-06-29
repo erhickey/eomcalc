@@ -1,7 +1,5 @@
 #skill-and-filter-wrapper {
-  overflow-y: scroll;
-  width: fit-content;
-  height: 265px;
+  width: 100%;
 }
 
 @media (min-width: 992px) {

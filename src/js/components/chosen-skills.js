@@ -2,7 +2,7 @@
  * contains functions which create the elements indicating which skills have been chosen
  */
 
-import {RARITIES, SKILL_IMAGES_DIR, SKILL_TYPES} from '../constants/constants.js';
+import {RARITY_MAP, SKILL_IMAGES_DIR, SKILL_TYPES} from '../constants/constants.js';
 import {onChosenSkillClick} from '../mvc/controller.js';
 import {createImageNode, compareSkills} from '../util/app-util.js';
 
@@ -12,15 +12,11 @@ export function createChosenSkills(skills) {
 
 function createChosenSkillComponent(skill) {
   const component = document.createElement('div');
-  component.classList.add('chosen-skill', RARITIES[skill.rarity].toLowerCase());
+  component.classList.add('chosen-skill', RARITY_MAP[skill.rarity].toLowerCase());
+  component.onclick = function() { onChosenSkillClick(skill); };
 
   const skillImage = createImageNode(SKILL_IMAGES_DIR, skill.name);
-
   component.appendChild(skillImage);
-
-  component.onclick = function() {
-    onChosenSkillClick(skill);
-  }
 
   return component;
 }

@@ -20,7 +20,7 @@ export function initialRender(skills, chosenSkills) {
   const df = new DocumentFragment();
   df.appendChild(initSkillAndFilterComponents(skills, chosenSkills));
   df.appendChild(initBuildComponents(chosenSkills));
-  replaceChildren(document.getElementById(WRAPPER_ID), df);
+  appendChildren(document.getElementById(WRAPPER_ID), df);
 }
 
 export function buildChanged(chosenSkills, changedSkill, isRemoved) {
@@ -49,7 +49,7 @@ function initSkillAndFilterComponents(skills, chosenSkills) {
 function createSkillListComponent(skills, chosenSkills) {
   const skillListEl = document.createElement('div');
   skillListEl.id = SKILL_LIST_ID;
-  replaceChildren(skillListEl, createSkills(skills, chosenSkills));
+  appendChildren(skillListEl, createSkills(skills, chosenSkills));
   return skillListEl;
 }
 
@@ -66,7 +66,7 @@ function createChosenSkillsComponent(chosenSkills) {
   if (chosenSkills && chosenSkills.length > 0) {
     const component = document.createElement('div');
     component.id = CHOSEN_SKILLS_ID;
-    replaceChildren(component, createChosenSkills(chosenSkills));
+    appendChildren(component, createChosenSkills(chosenSkills));
     return component;
   }
 
@@ -80,6 +80,6 @@ function createChosenSkillsComponent(chosenSkills) {
 function createTraitsComponent(chosenSkills) {
   const component = document.createElement('div');
   component.id = TRAITS_ID;
-  replaceChildren(component, createTraits(chosenSkills));
+  appendChildren(component, createTraits(chosenSkills));
   return component;
 }

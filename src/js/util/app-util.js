@@ -2,7 +2,7 @@
  * contains app specific utility functions
  */
 
-import {addPathSeparator} from './util.js';
+import {addPathSeparator, compareStringsCaseInsensitive} from './util.js';
 import {SKILLS, SKILL_TYPES} from '../constants/constants.js';
 
 /*
@@ -26,23 +26,19 @@ export function formatImageName(s) {
  * compareFunction for skills
  */
 export function compareSkills(skill1, skill2) {
-  const raritySort = compareSkillRarity(skill1, skill2);
+  const raritySort = compareSkillsByRarity(skill1, skill2);
 
   if (raritySort !== 0) {
     return raritySort;
   }
 
-  if (skill1.name.toUpperCase() < skill2.name.toUpperCase()) {
-    return -1;
-  }
-
-  return 1;
+  return compareStringsCaseInsensitive(skill1.name, skill2.name);
 }
 
 /*
  * compareFunction for skills by rarity
  */
-export function compareSkillRarity(skill1, skill2) {
+export function compareSkillsByRarity(skill1, skill2) {
   return skill2.rarity - skill1.rarity;
 }
 

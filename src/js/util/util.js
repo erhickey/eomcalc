@@ -92,3 +92,10 @@ export function copyInputText(inputId) {
   const input = document.getElementById(inputId);
   navigator.clipboard.writeText(input.value);
 }
+
+/*
+ * compare two strings lexographically, ignoring case
+ */
+export function compareStringsCaseInsensitive(string1, string2) {
+  return string1.toUpperCase().localeCompare(string2.toUpperCase());
+}

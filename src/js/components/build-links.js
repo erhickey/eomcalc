@@ -14,6 +14,7 @@ export function createBuildLinks(skills) {
     'build-link-input');
 
   const discordMsgEl = createBuildLink('Discord Message', generateBuildDiscordMsg(skills), 'discord-msg-input');
+
   return [buildLinkEl, discordMsgEl];
 }
 
@@ -33,9 +34,7 @@ function createBuildLink(label, value, inputId) {
   const copyButton = document.createElement('input');
   copyButton.setAttribute('type', 'image');
   copyButton.src = IMAGES_DIR + 'clipboard.webp';
-  copyButton.onclick = function() {
-    copyInputText(inputId);
-  }
+  copyButton.onclick = function() { copyInputText(inputId); };
 
   container.appendChild(labelEl);
   container.appendChild(copyButton);
