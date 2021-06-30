@@ -1,0 +1,51 @@
+.trait-details {
+  background: rgba(245, 204, 100, 0.8);
+  border: 1px solid #a87b08;
+  padding: 5px;
+  color: #332502;
+  width: min-content;
+  height: min-content;
+}
+
+.trait-details-visible {
+  display: block;
+  z-index: 1;
+  position: absolute;
+}
+
+.trait-details-header {
+  background: rgba(228, 185, 77, 0.9);
+  border: 1px solid #a87b08;
+  padding: 3px;
+  display: flex;
+  font-style: bold;
+  font-size: 1.1em;
+  margin-bottom: 5px;
+}
+
+.trait-details-header > img {
+  height: 25px;
+  width: 25px;
+  margin-right: 5px;
+}
+
+.trait-details-header > span {
+  line-height: 1.5;
+}
+
+.trait-details-body {
+  background: rgb(245, 204, 100, 0.7);
+  border: 1px solid #a87b08;
+  font-size: 0.7em;
+  width: 17em;
+  padding: 2px;
+}
+
+.trait-details-bp-row {
+  margin-top: 1em;
+  color: grey;
+}
+
+.trait-details-bp-row-active {
+  color: green;
+}

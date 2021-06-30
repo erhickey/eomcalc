@@ -115,3 +115,42 @@ export function last(arr) {
   // eslint-disable-next-line no-magic-numbers
   return arr[arr.length - 1];
 }
+
+/**
+ * position hover element relative to parent, offset from top-left by given amount
+ * if the element bleeds outside the right or bottom viewport, it will be repositioned
+ */
+export function positionHoverElement(parentElement, hoverElement, offset) {
+  const parentOffset = getAbsolutePosition(parentElement);
+
+  let tipX = parentOffset.x + offset;
+  hoverElement.style.left = tipX + 'px';
+
+  let tipY = parentOffset.y + offset;
+  hoverElement.style.top = tipY + 'px';
+
+  const hoverRect = hoverElement.getBoundingClientRect();
+
+  if (hoverRect.bottom > window.innerHeight) {
+    tipY -= hoverRect.height;
+  }
+
+  if (hoverRect.right > window.innerWidth) {
+    tipX -= hoverRect.width;
+  }
+
+  hoverElement.style.left = tipX + 'px';
+  hoverElement.style.top = tipY + 'px';
+}
+
+/*
+ * returns the absolute position (top-left x and y) of an element
+ */
+export function getAbsolutePosition(el) {
+  const rect = el.getBoundingClientRect();
+
+  return {
+    x: rect.left + window.scrollX
+    , y: rect.top + window.scrollY
+  };
+}

@@ -2,14 +2,22 @@
  * contains functions which create the elements indicating which skills have been chosen
  */
 
-import {ORDER_AFTER, ORDER_BEFORE, RARITY_MAP, SKILL_IMAGES_DIR, SKILL_TYPES} from '../constants/constants.js';
+import {RARITY_MAP} from '../constants/data.js';
+import {SKILL_IMAGES_DIR} from '../constants/resources.js';
+import {compareChosenSkills} from '../helpers/chosen-skills.js';
+import {createImageNode} from '../helpers/components.js';
 import {onChosenSkillClick} from '../mvc/controller.js';
-import {createImageNode, compareSkills} from '../util/app-util.js';
 
+/*
+ * creates all chosen skill components
+ */
 export function createChosenSkills(skills) {
   return skills.sort(compareChosenSkills).map(s => createChosenSkillComponent(s));
 }
 
+/*
+ * create a single chosen skill component
+ */
 function createChosenSkillComponent(skill) {
   const component = document.createElement('div');
   component.classList.add('chosen-skill', RARITY_MAP[skill.rarity].toLowerCase());
@@ -19,16 +27,4 @@ function createChosenSkillComponent(skill) {
   component.appendChild(skillImage);
 
   return component;
-}
-
-function compareChosenSkills(skill1, skill2) {
-  if (skill1.type === skill2.type) {
-    return compareSkills(skill1, skill2);
-  }
-
-  if (skill1.type === SKILL_TYPES.ACTIVE) {
-    return ORDER_BEFORE;
-  }
-
-  return ORDER_AFTER;
 }

@@ -2,10 +2,13 @@
  * contains functions which create the elements to display build links
  */
 
-import {IMAGES_DIR} from '../constants/constants.js';
-import {generateBuildDiscordMsg, generateBuildUrlParam} from '../util/app-util.js';
+import {IMAGES_DIR} from '../constants/resources.js';
+import {generateBuildDiscordMsg, generateBuildUrlParam} from '../helpers/build-strings.js';
 import {copyInputText, isEmpty} from '../util/util.js';
 
+/*
+ * creates all discord message and build url components
+ */
 export function createBuildLinks(skills) {
   const buildParam = isEmpty(skills) ? '' : '?b=' + generateBuildUrlParam(skills);
   const buildLinkEl = createBuildLink(
@@ -19,6 +22,9 @@ export function createBuildLinks(skills) {
   return [buildLinkEl, discordMsgEl];
 }
 
+/*
+ * creates a standard build link component
+ */
 function createBuildLink(label, value, inputId) {
   const container = document.createElement('div');
   container.classList.add('build-link-container');

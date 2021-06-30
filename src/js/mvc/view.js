@@ -6,16 +6,21 @@ import {createBuildLinks} from '../components/build-links.js';
 import {createChosenSkills} from '../components/chosen-skills.js';
 import {createSkills} from '../components/skill-list.js';
 import {createTraits} from '../components/traits.js';
-import {SKILL_ID_PREFIX} from '../constants/constants.js';
+import {
+  BUILD_WRAPPER_ID,
+  CHOSEN_SKILLS_ID,
+  SKILL_AND_FILTER_WRAPPER_ID,
+  SKILL_ID_PREFIX,
+  SKILL_LIST_ID,
+  TRAITS_ID,
+  WRAPPER_ID
+} from '../constants/html.js';
 import {appendChildren, isEmpty, replaceChildren} from '../util/util.js';
 
-const WRAPPER_ID = 'wrapper';
-const SKILL_AND_FILTER_WRAPPER_ID = 'skill-and-filter-wrapper';
-const SKILL_LIST_ID = 'skill-list';
-const BUILD_WRAPPER_ID = 'build-wrapper';
-const CHOSEN_SKILLS_ID = 'chosen-skills';
-const TRAITS_ID = 'traits';
-
+/*
+ * called once when the application starts
+ * build and add all elements to the DOM
+ */
 export function initialRender(skills, chosenSkills) {
   const df = new DocumentFragment();
   df.appendChild(initSkillAndFilterComponents(skills, chosenSkills));
@@ -23,6 +28,33 @@ export function initialRender(skills, chosenSkills) {
   appendChildren(document.getElementById(WRAPPER_ID), df);
 }
 
+/*
+ * called once when application starts to initialize the skill list and filter
+ */
+function initSkillAndFilterComponents(skills, chosenSkills) {
+  const component = document.createElement('div');
+  component.id = SKILL_AND_FILTER_WRAPPER_ID;
+  component.appendChild(createSkillListComponent(skills, chosenSkills));
+  return component;
+}
+
+/*
+ * called once when application starts to initialize all build components
+ * chosen skill list or informational text, traits and details, and build links
+ */
+function initBuildComponents(chosenSkills) {
+  const component = document.createElement('div');
+  component.id = BUILD_WRAPPER_ID;
+  component.appendChild(createChosenSkillsComponent(chosenSkills));
+  component.appendChild(createTraitsComponent(chosenSkills));
+  appendChildren(component, createBuildLinks(chosenSkills));
+  return component;
+}
+
+/*
+ * called when the build changes, redraws the components of the build
+ * chosen skill list or informational text, traits and details, and build links
+ */
 export function buildChanged(chosenSkills, changedSkill, isRemoved) {
   const df = new DocumentFragment();
   df.appendChild(createChosenSkillsComponent(chosenSkills));
@@ -39,13 +71,9 @@ export function buildChanged(chosenSkills, changedSkill, isRemoved) {
   }
 }
 
-function initSkillAndFilterComponents(skills, chosenSkills) {
-  const component = document.createElement('div');
-  component.id = SKILL_AND_FILTER_WRAPPER_ID;
-  component.appendChild(createSkillListComponent(skills, chosenSkills));
-  return component;
-}
-
+/*
+ * create components of the skill list
+ */
 function createSkillListComponent(skills, chosenSkills) {
   const skillListEl = document.createElement('div');
   skillListEl.id = SKILL_LIST_ID;
@@ -53,15 +81,9 @@ function createSkillListComponent(skills, chosenSkills) {
   return skillListEl;
 }
 
-function initBuildComponents(chosenSkills) {
-  const component = document.createElement('div');
-  component.id = BUILD_WRAPPER_ID;
-  component.appendChild(createChosenSkillsComponent(chosenSkills));
-  component.appendChild(createTraitsComponent(chosenSkills));
-  appendChildren(component, createBuildLinks(chosenSkills));
-  return component;
-}
-
+/*
+ * create components of the chosen skills, or informational text
+ */
 function createChosenSkillsComponent(chosenSkills) {
   if (!isEmpty(chosenSkills)) {
     const component = document.createElement('div');
@@ -77,6 +99,9 @@ function createChosenSkillsComponent(chosenSkills) {
   return info;
 }
 
+/*
+ * create trait components reflecting data about the build
+ */
 function createTraitsComponent(chosenSkills) {
   const component = document.createElement('div');
   component.id = TRAITS_ID;

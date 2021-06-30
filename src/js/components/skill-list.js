@@ -2,14 +2,23 @@
  * contains functions which create the elements that make up the list of skills to choose from
  */
 
-import {RARITY_MAP, SKILL_ID_PREFIX, SKILL_IMAGES_DIR, TRAIT_MAP, TRAIT_IMAGES_DIR} from '../constants/constants.js';
+import {RARITY_MAP, TRAIT_MAP} from '../constants/data.js';
+import {SKILL_ID_PREFIX} from '../constants/html.js';
+import {SKILL_IMAGES_DIR, TRAIT_IMAGES_DIR} from '../constants/resources.js';
+import {createImageNode} from '../helpers/components.js';
+import {compareSkills} from '../helpers/skills.js';
 import {onSkillClick} from '../mvc/controller.js';
-import {createImageNode, compareSkills} from '../util/app-util.js';
 
+/*
+ * creates skill list components
+ */
 export function createSkills(skills, chosenSkills) {
   return skills.sort(compareSkills).map(s => createSkillListComponent(s, chosenSkills));
 }
 
+/*
+ * create a single skill list component
+ */
 function createSkillListComponent(skill, chosenSkills) {
   const component = document.createElement('div');
   component.id = SKILL_ID_PREFIX + skill.id;
