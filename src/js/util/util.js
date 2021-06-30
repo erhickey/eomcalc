@@ -107,3 +107,11 @@ export function compareStringsCaseInsensitive(string1, string2) {
 export function isEmpty(arr) {
   return !arr || !arr.length;
 }
+
+/*
+ * return the last element of an array
+ */
+export function last(arr) {
+  // eslint-disable-next-line no-magic-numbers
+  return arr[arr.length - 1];
+}

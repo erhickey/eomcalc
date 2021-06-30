@@ -4,13 +4,14 @@
 
 import {ORDER_AFTER, ORDER_BEFORE, ORDER_EQUAL, TRAITS, TRAIT_IMAGES_DIR, TRAIT_TYPES} from '../constants/constants.js';
 import {createImageNode} from '../util/app-util.js';
-import {compareStringsCaseInsensitive, isEmpty} from '../util/util.js';
+import {compareStringsCaseInsensitive, isEmpty, last} from '../util/util.js';
 
 class Trait {
   constructor(trait, skills) {
     this.name = trait.name;
     this.type = trait.type;
     const type = trait.type === TRAIT_TYPES.PRIMARY ? 'primaryTrait' : 'secondaryTrait';
+    // eslint-disable-next-line no-magic-numbers
     this.count = isEmpty(skills) ? 0 : skills.filter(s => s[type] === trait.id).length;
     this.active = this.count >= trait.breakpoints[0];
     this.breakpoint = getNextBreakpoint(trait, this.count);
@@ -21,22 +22,18 @@ export function createTraits(skills) {
   return TRAITS.map(t => new Trait(t, skills)).sort(compareTraits).map(t => createTraitComponent(t));
 }
 
+/*
+ * find the lowest breakpoint that is greater than the number of skills with the given trait
+ * or the highest breakpoint if the number of skills is greater than that
+ */
 function getNextBreakpoint(trait, numSkillsWithTrait) {
-  const candidates = trait.breakpoints.filter(bp => bp >= numSkillsWithTrait);
-
-  if (isEmpty(candidates)) {
-    // number of skills is higher than the largest breakpoint, return the largest breakpoint
-    return trait.breakpoints[trait.breakpoints.length - 1];
+  for (const breakpoint of trait.breakpoints) {
+    if (breakpoint > numSkillsWithTrait) {
+      return breakpoint;
+    }
   }
 
-  if (1 === candidates.length) {
-    // only one candidate, return it
-    return candidates[0];
-  }
-
-  // multiple candidates, use the lowest breakpoint
-  // unless the number of skills is equal to it, then use the next highest
-  return candidates[0] === numSkillsWithTrait ? candidates[1] : candidates[0];
+  return last(trait.breakpoints);
 }
 
 function createTraitComponent(trait) {
