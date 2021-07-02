@@ -5,13 +5,13 @@ const path = require('path');
 
 const buildOptions = {
   entryPoints: [
-    './src/js/app.js'
-    , './src/css/styles.css'
-  ]
-  , outdir: './dist/assets/'
-  , sourcemap: false
-  , minify: true
-  , bundle: true
+    './src/js/app.js',
+    './src/css/styles.css'
+  ],
+  outdir: './dist/assets/',
+  sourcemap: false,
+  minify: true,
+  bundle: true
 };
 
 fs.rmdirSync('./dist', {recursive: true});
