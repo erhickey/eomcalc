@@ -33,9 +33,6 @@ rules:
     - error
   comma-spacing:
     - error
-  comma-style:
-    - error
-    - first
   complexity:
     - warn
     - 20
