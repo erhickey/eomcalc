@@ -129,7 +129,7 @@
       "name": "Arcane",
       "id": 11,
       "type": 2,
-      "desc": "Gives a chacne to gain a buff on active skill cast that guarantees your next active skill will critically hit. Dodging and non-damaging active skills will consume the buff",
+      "desc": "Gives a chance to gain a buff on active skill cast that guarantees your next active skill will critically hit. Dodging and non-damaging active skills will consume the buff",
       "breakpoints": [ 2, 4 ],
       "effect": "{}% Chance to gain buff",
       "stats": [

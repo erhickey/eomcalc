@@ -4,7 +4,7 @@
 
 import {createBuildLinks} from '../components/build-links.js';
 import {createChosenSkills} from '../components/chosen-skills.js';
-import {createSkills} from '../components/skill-list.js';
+import {createSkills} from '../components/skills.js';
 import {createTraits} from '../components/traits.js';
 import {
   BUILD_WRAPPER_ID,

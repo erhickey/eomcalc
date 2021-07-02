@@ -117,40 +117,51 @@ export function last(arr) {
 }
 
 /**
- * position hover element relative to parent, offset from top-left by given amount
- * if the element bleeds outside the right or bottom viewport, it will be repositioned
+ * position element relative to another element, offset from top-left by given amount
+ * attempts to keep the element in the viewport
  */
-export function positionHoverElement(parentElement, hoverElement, offset) {
-  const parentOffset = getAbsolutePosition(parentElement);
+export function positionElementRelativeTo(relativeElement, hoverElement, offset) {
+  const relativePos = relativeElement.getBoundingClientRect();
 
-  let tipX = parentOffset.x + offset;
+  // first attempt to position element down and to the right
+  let tipX = relativePos.left + offset;
   hoverElement.style.left = tipX + 'px';
-
-  let tipY = parentOffset.y + offset;
+  let tipY = relativePos.top + offset;
   hoverElement.style.top = tipY + 'px';
 
-  const hoverRect = hoverElement.getBoundingClientRect();
+  let hoverRect = hoverElement.getBoundingClientRect();
 
+  // if the element is outside the bottom of the viewport
+  // position is above
   if (hoverRect.bottom > window.innerHeight) {
     tipY -= hoverRect.height;
   }
 
+  // if the element is outside the right of the viewport
+  // position it to the left
   if (hoverRect.right > window.innerWidth) {
     tipX -= hoverRect.width;
   }
 
   hoverElement.style.left = tipX + 'px';
   hoverElement.style.top = tipY + 'px';
-}
 
-/*
- * returns the absolute position (top-left x and y) of an element
- */
-export function getAbsolutePosition(el) {
-  const rect = el.getBoundingClientRect();
+  hoverRect = hoverElement.getBoundingClientRect();
 
-  return {
-    x: rect.left + window.scrollX
-    , y: rect.top + window.scrollY
-  };
+  // if the element is outside the top of the viewport
+  // move it down by the amount it sits outside
+  // eslint-disable-next-line no-magic-numbers
+  if (0 > hoverRect.top) {
+    tipY -= hoverRect.top;
+  }
+
+  // if the element is outside the left of the viewport
+  // move it right by the amount it sits outside
+  // eslint-disable-next-line no-magic-numbers
+  if (0 > hoverRect.left) {
+    tipX -= hoverRect.width;
+  }
+
+  hoverElement.style.left = tipX + 'px';
+  hoverElement.style.top = tipY + 'px';
 }

@@ -17,6 +17,7 @@
 
 .trait > span {
   line-height: 2;
+  cursor: default;
 }
 
 .trait-inactive {

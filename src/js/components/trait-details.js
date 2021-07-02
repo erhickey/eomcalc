@@ -42,6 +42,9 @@ export function createTraitDetailsComponent(trait) {
   return component;
 }
 
+/*
+ * create row detailing effects of the trait at a certain breakpoint
+ */
 function createTraitStatsRow(breakpoint, effect, stats, isActive) {
   const row = document.createElement('div');
   row.classList.add('trait-details-bp-row');

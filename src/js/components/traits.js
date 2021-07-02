@@ -8,7 +8,7 @@ import {TRAIT_IMAGES_DIR} from '../constants/resources.js';
 import {TRAITS, TRAIT_TYPES} from '../constants/data.js';
 import {createImageNode} from '../helpers/components.js';
 import {compareTraits, Trait} from '../helpers/traits.js';
-import {positionHoverElement} from '../util/util.js';
+import {positionElementRelativeTo} from '../util/util.js';
 
 // number of pixels to offset the details element by
 const DETAIL_HOVER_OFFSET = 15;
@@ -32,29 +32,29 @@ function createTraitComponent(trait) {
     component.classList.add('trait-inactive');
   }
 
-  const textEl = document.createElement('span');
-  textEl.innerHTML = trait.count + '/' + trait.nextBreakpoint;
+  const description = document.createElement('span');
+  description.innerHTML = trait.count + '/' + trait.nextBreakpoint;
 
-  const detailEl = createTraitDetailsComponent(trait);
+  const details = createTraitDetailsComponent(trait);
 
   component.appendChild(createImageNode(TRAIT_IMAGES_DIR, trait.name));
-  component.appendChild(textEl);
-  component.appendChild(detailEl);
+  component.appendChild(description);
+  component.appendChild(details);
 
   component.addEventListener(
     'mouseenter',
     () => {
-      detailEl.classList.remove(HIDDEN_CLASS);
-      detailEl.classList.add('trait-details-visible');
-      positionHoverElement(component, detailEl, DETAIL_HOVER_OFFSET);
+      details.classList.remove(HIDDEN_CLASS);
+      details.classList.add('trait-details-visible');
+      positionElementRelativeTo(component, details, DETAIL_HOVER_OFFSET);
     }
   );
 
   component.addEventListener(
     'mouseleave',
     () => {
-      detailEl.classList.add(HIDDEN_CLASS);
-      detailEl.classList.remove('trait-details-visible');
+      details.classList.add(HIDDEN_CLASS);
+      details.classList.remove('trait-details-visible');
     }
   );
 

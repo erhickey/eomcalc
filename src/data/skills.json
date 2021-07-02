@@ -935,7 +935,8 @@
       "secondaryTrait": 16,
       "damage": [],
       "mods": [ 17 ],
-      "description": "When attacked, there's a {}% chance of restoring HP equal to {}% of your ATK + AP once per second for {} seconds, up to a total of {}% of your ATK + AP. {} second cooldown",
+      "cooldown": 10,
+      "description": "When attacked, there's a {}% chance of restoring HP equal to {}% of your ATK + AP once per second for {} seconds, up to a total of {}% of your ATK + AP.",
       "stats": [
         [ 20, 5.5, 3, 16.5, 10 ]
       ]

@@ -41,7 +41,7 @@ function createBuildLink(label, value, inputId) {
   const copyButton = document.createElement('input');
   copyButton.setAttribute('type', 'image');
   copyButton.src = IMAGES_DIR + 'clipboard.webp';
-  copyButton.onclick = function() { copyInputText(inputId); };
+  copyButton.onclick = () => copyInputText(inputId);
 
   container.appendChild(labelEl);
   container.appendChild(copyButton);

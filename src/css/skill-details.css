@@ -1,0 +1,88 @@
+.skill-details {
+  background: rgb(245, 204, 100);
+  border-radius: 5px;
+  border: 2px solid #a87b08;
+  padding: 5px;
+  color: #332502;
+  width: fit-content;
+  max-width: 18em;
+  pointer-events: none;
+}
+
+.skill-details-visible {
+  display: block;
+  z-index: 2;
+  position: fixed;
+}
+
+.skill-details-header {
+  padding: 3px;
+  display: flex;
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-bottom: 5px;
+  color: #d98107;
+  white-space: nowrap;
+  cursor: default;
+}
+
+.skill-details-header > img {
+  height: 50px;
+  width: 50px;
+  margin-right: 5px;
+}
+
+.skill-details-traits {
+  display: flex;
+  margin-top: 5px;
+}
+
+.skill-details-primary-trait {
+  height: 19px;
+  width: 19px;
+  margin-right: 7px;
+}
+
+.skill-details-secondary-trait {
+  height: 17px;
+  width: 17px;
+  opacity: 0.7;
+  margin-top: 1px;
+}
+
+.skill-details-misc {
+  padding: 0 4px;
+  font-size: 0.9em;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.skill-details-misc-level {
+  margin-right: 15px;
+  cursor: default;
+}
+
+.skill-details-misc-type {
+  color: #d98107;
+  margin: 0 auto;
+  font-weight: bold;
+  cursor: default;
+}
+
+.skill-details-misc-cooldown {
+  margin-left: 15px;
+  cursor: default;
+}
+
+.skill-details-misc-dynamic-text {
+  color: #d98107;
+  font-weight: bold;
+  cursor: default;
+}
+
+.skill-details-description {
+  margin-top: 8px;
+  font-size: 0.75em;
+  padding: 5px;
+  cursor: default;
+}

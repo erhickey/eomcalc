@@ -23,6 +23,7 @@
   cursor: pointer;
   padding: 4px;
   background: #404041;
+  border-radius: 3px 0 0 3px;
 }
 
 .build-link-container > input[type=image]:hover {
@@ -30,7 +31,7 @@
 }
 
 .build-link-container > input[type=image]:active {
-  border-radius: 5px;
+  border-radius: 3px 0 0 3px;
   background: #606061;
 }
 

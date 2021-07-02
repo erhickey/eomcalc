@@ -1,5 +1,6 @@
 .trait-details {
-  background: rgba(245, 204, 100, 0.8);
+  background: rgb(245, 204, 100);
+  border-radius: 5px;
   border: 1px solid #a87b08;
   padding: 5px;
   color: #332502;
@@ -10,15 +11,16 @@
 .trait-details-visible {
   display: block;
   z-index: 1;
-  position: absolute;
+  position: fixed;
 }
 
 .trait-details-header {
-  background: rgba(228, 185, 77, 0.9);
+  background: rgb(228, 185, 77);
+  border-radius: 5px;
   border: 1px solid #a87b08;
   padding: 3px;
   display: flex;
-  font-style: bold;
+  font-weight: bold;
   font-size: 1.1em;
   margin-bottom: 5px;
 }
@@ -31,19 +33,23 @@
 
 .trait-details-header > span {
   line-height: 1.5;
+  cursor: default;
 }
 
 .trait-details-body {
-  background: rgb(245, 204, 100, 0.7);
+  background: rgb(245, 204, 100);
+  border-radius: 5px;
   border: 1px solid #a87b08;
   font-size: 0.7em;
   width: 17em;
   padding: 2px;
+  cursor: default;
 }
 
 .trait-details-bp-row {
   margin-top: 1em;
   color: grey;
+  cursor: default;
 }
 
 .trait-details-bp-row-active {
