@@ -1,1266 +1,854 @@
 {
   "skills": [
     {
-      "name": "Tsunami",
-      "id": 1,
-      "type": 1,
+      "skillName": "Tsunami",
+      "skillId": 1,
+      "skillType": 1,
       "rarity": 5,
       "primaryTrait": 8,
       "secondaryTrait": 14,
       "damage": [ 1 ],
-      "mods": [ 1 ],
-      "cooldown": 40,
-      "description": "Summon a massive tsunami wave that slows, and deals {}% magic damage to enemies",
-      "stats": [
-        [ 350 ]
-      ]
+      "mods": [ 1 ]
     },
     {
-      "name": "Stormhammer",
-      "id": 2,
-      "type": 1,
+      "skillName": "Stormhammer",
+      "skillId": 2,
+      "skillType": 1,
       "rarity": 4,
       "primaryTrait": 8,
       "secondaryTrait": 12,
       "damage": [ 1 ],
-      "mods": [ 2 ],
-      "cooldown": 15,
-      "description": "Throw {} tracking lightning hammer(s) at a target, dealing {}% magic damage plus a {}s stun to all enemies nearby the target",
-      "stats": [
-        [ 1, 145, 2 ]
-      ]
+      "mods": [ 2 ]
     },
     {
-      "name": "Starfall",
-      "id": 3,
-      "type": 1,
+      "skillName": "Starfall",
+      "skillId": 3,
+      "skillType": 1,
       "rarity": 1,
       "primaryTrait": 8,
       "secondaryTrait": 11,
       "damage": [ 1 ],
-      "mods": [],
-      "cooldown": 6,
-      "description": "Call down a wave of shooting stars to damage up to {} enemy units, dealing {}% magic damage",
-      "stats": [
-        [ 6, 45 ],
-        [ 8, 60 ]
-      ]
+      "mods": []
     },
     {
-      "name": "Chaos",
-      "id": 4,
-      "type": 1,
+      "skillName": "Chaos",
+      "skillId": 4,
+      "skillType": 1,
       "rarity": 5,
       "primaryTrait": 1,
       "secondaryTrait": 20,
       "damage": [ 2 ],
-      "mods": [ 3, 4, 5 ],
-      "cooldown": 40,
-      "description": "Morph into a chaos warrior and deal {}% continual physical damage per second to all nearby enemies. Also boosts attack speed {}%, attack {}%, and move speed {}% for {} seconds",
-      "stats": [
-        [ 32, 10, 25, 20, 8 ]
-      ]
+      "mods": [ 3, 4, 5 ]
     },
     {
-      "name": "Life Break",
-      "id": 5,
-      "type": 1,
+      "skillName": "Life Break",
+      "skillId": 5,
+      "skillType": 1,
       "rarity": 4,
       "primaryTrait": 1,
       "secondaryTrait": 13,
       "damage": [ 2 ],
-      "mods": [ 6, 7 ],
-      "cooldown": 15,
-      "description": "Sacrifice {}% of your current health to break an enemy's life, charging to a target, dealing {}% physical damage and disarm target {}s.",
-      "stats": [
-        [ 20, 250, 3 ]
-      ]
+      "mods": [ 6, 7 ]
     },
     {
-      "name": "Void Thrust",
-      "id": 6,
-      "type": 1,
+      "skillName": "Void Thrust",
+      "skillId": 6,
+      "skillType": 1,
       "rarity": 4,
       "primaryTrait": 1,
       "secondaryTrait": 18,
       "damage": [ 2 ],
-      "mods": [],
-      "cooldown": 5,
-      "description": "Thrust by using void power to {} enemy units in a line, dealing {} times of {}% physical damage the first of which counts as basic attack damage and applies all your on-hit effects",
-      "stats": [
-        [ 7, 3, 25 ]
-      ]
+      "mods": []
     },
     {
-      "name": "Crush",
-      "id": 7,
-      "type": 2,
+      "skillName": "Crush",
+      "skillId": 7,
+      "skillType": 2,
       "rarity": 4,
       "primaryTrait": 1,
       "secondaryTrait": 15,
       "damage": [ 2 ],
-      "mods": [],
-      "description": "Basic attacks have a {}% chance of making a shockwave, dealing bonus {}% physical damage to enemies near the target",
-      "stats": [
-        [ 20, 70 ]
-      ]
+      "mods": []
     },
     {
-      "name": "Grim",
-      "id": 8,
-      "type": 2,
+      "skillName": "Grim",
+      "skillId": 8,
+      "skillType": 2,
       "rarity": 4,
       "primaryTrait": 2,
       "secondaryTrait": 15,
       "damage": [],
-      "mods": [ 9 ],
-      "description": "Permanently boosts crit damage {}%",
-      "stats": [
-        [ 60 ]
-      ]
+      "mods": [ 9 ]
     },
     {
-      "name": "Rude Counter",
-      "id": 9,
-      "type": 1,
+      "skillName": "Rude Counter",
+      "skillId": 9,
+      "skillType": 1,
       "rarity": 4,
       "primaryTrait": 3,
       "secondaryTrait": 17,
       "damage": [ 2 ],
-      "mods": [ 8 ],
-      "cooldown": 15,
-      "description": "With the power of wind charge forward dealing {}% physical damage and knocking back enemies in your path, before releasing {} blast(s) that deal a total of {}% physical damage to nearby enemies",
-      "stats": [
-        [ 52, 1, 130 ]
-      ]
+      "mods": [ 8 ]
     },
     {
-      "name": "Fanatic",
-      "id": 10,
-      "type": 2,
+      "skillName": "Fanatic",
+      "skillId": 10,
+      "skillType": 2,
       "rarity": 4,
       "primaryTrait": 4,
       "secondaryTrait": 19,
       "damage": [],
-      "mods": [ 3 ],
-      "description": "Attack speed is increased by {}%, but damage of basic attack is decreased by {}%",
-      "stats": [
-        [ 45, 15 ]
-      ]
+      "mods": [ 3 ]
     },
     {
-      "name": "Pyroblast",
-      "id": 11,
-      "type": 1,
+      "skillName": "Pyroblast",
+      "skillId": 11,
+      "skillType": 1,
       "rarity": 4,
       "primaryTrait": 6,
       "secondaryTrait": 9,
       "damage": [ 1 ],
-      "mods": [ 1 ],
-      "cooldown": 20,
-      "description": "Summon a crater of lava in a target area, dealing {}% magic damage per second for {} seconds, the crater then erupts, dealing {}% magic damage and slowing all enemies in the area by {}% for {} seconds",
-      "stats": [
-        [ 22, 3, 110, 20, 0.5 ]
-      ]
+      "mods": [ 1 ]
     },
     {
-      "name": "Wrath",
-      "id": 12,
-      "type": 2,
+      "skillName": "Wrath",
+      "skillId": 12,
+      "skillType": 2,
       "rarity": 4,
       "primaryTrait": 7,
       "secondaryTrait": 16,
       "damage": [ 1 ],
-      "mods": [],
-      "description": "When any active skill is used there's a {}% chance of firing {} tracking energy balls of condensed wrath, each blast dealing {}% magic damage to {} random enemy within range",
-      "stats": [
-        [ 45, 5, 30, 1 ]
-      ]
+      "mods": []
     },
     {
-      "name": "Combat Focus",
-      "id": 13,
-      "type": 2,
+      "skillName": "Combat Focus",
+      "skillId": 13,
+      "skillType": 2,
       "rarity": 3,
       "primaryTrait": 1,
       "secondaryTrait": 20,
       "damage": [],
-      "mods": [ 3 ],
-      "description": "Each continuous basic attack boosts attack speed {}% up to {} stacks, but it will drop to zero if you go {} seconds without making a basic attack",
-      "stats": [
-        [ 5, 6, 3 ]
-      ]
+      "mods": [ 3 ]
     },
     {
-      "name": "Phantom Sword",
-      "id": 14,
-      "type": 1,
+      "skillName": "Phantom Sword",
+      "skillId": 14,
+      "skillType": 1,
       "rarity": 3,
       "primaryTrait": 1,
       "secondaryTrait": 13,
       "damage": [ 2 ],
-      "mods": [],
-      "cooldown": 10,
-      "description": "Throw a giant Phantom Sword that deals {}% physical damage every {} seconds to each enemy it hits, the sword returns back to you with an accelerated speed after {} seconds. The returning sword deals {}% - {}% physical damage to each enemy hit, gaining damage over the first {} seconds of travel time",
-      "stats": [
-        [ 10, 0.5, 3, 15, 75, 2 ]
-      ]
+      "mods": []
     },
     {
-      "name": "Boomerang Blade",
-      "id": 15,
-      "type": 1,
+      "skillName": "Boomerang Blade",
+      "skillId": 15,
+      "skillType": 1,
       "rarity": 3,
       "primaryTrait": 2,
       "secondaryTrait": 13,
       "damage": [ 2 ],
-      "mods": [],
-      "cooldown": 15,
-      "description": "Send out {} magic blades that deal {} physical damage every {} second(s), then they return back to you after a few moments. The returning blades deal a bonus {} physical damage to units hit",
-      "stats": [
-        [ 3, 5, 0.5, 30 ],
-        [ 3, 10, 0.5, 60 ]
-      ]
+      "mods": []
     },
     {
-      "name": "Shadow Chaser",
-      "id": 16,
-      "type": 2,
+      "skillName": "Shadow Chaser",
+      "skillId": 16,
+      "skillType": 2,
       "rarity": 3,
       "primaryTrait": 2,
       "secondaryTrait": 17,
       "damage": [],
-      "mods": [ 15, 10 ],
-      "description": "Get a permanent {}% chance of dodging enemy basic attacks. When dodging, get a boost of {}% crit chance for {} seconds, you can accumulate up to {} stacks, and it will drop to zero with a critical strike",
-      "stats": [
-        [ 4, 4, 5, 10 ]
-      ]
+      "mods": [ 15, 10 ]
     },
     {
-      "name": "Endure",
-      "id": 17,
-      "type": 2,
+      "skillName": "Endure",
+      "skillId": 17,
+      "skillType": 2,
       "rarity": 3,
       "primaryTrait": 3,
       "secondaryTrait": 19,
       "damage": [],
-      "mods": [ 11 ],
-      "description": "Increases damage reduction as HP decreases:\nWhen HP is < {}%, gain {}% damage reduction\nWhen HP is < {}% gain {}% damage reduction\nWhen HP is < {}% gain {}% damage reduction",
-      "stats": [
-        [ 80, 8, 50, 20, 20, 43 ]
-      ]
+      "mods": [ 11 ]
     },
     {
-      "name": "Kraken Shell",
-      "id": 18,
-      "type": 2,
+      "skillName": "Kraken Shell",
+      "skillId": 18,
+      "skillType": 2,
       "rarity": 3,
       "primaryTrait": 3,
       "secondaryTrait": 14,
       "damage": [ 2 ],
-      "mods": [ 2 ],
-      "description": "When attacked, there's a {}% chance of dealing {}% physical damage to all nearby enemies, stunning up to {} nearby enemies for {} seconds. {} second cooldown",
-      "stats": [
-        [ 20, 72, 5, 2, 8 ]
-      ]
+      "mods": [ 2 ]
     },
     {
-      "name": "Sacrifice",
-      "id": 19,
-      "type": 1,
+      "skillName": "Sacrifice",
+      "skillId": 19,
+      "skillType": 1,
       "rarity": 3,
       "primaryTrait": 3,
       "secondaryTrait": 19,
       "damage": [ 2 ],
-      "mods": [ 6 ],
-      "cooldown": 10,
-      "description": "Toggle Sacrifice to drain {}% of your current health per second, dealing {}% physical damage per second to all nearby enemies",
-      "stats": [
-        [ 0.9, 30 ]
-      ]
+      "mods": [ 6 ]
     },
     {
-      "name": "Shelter",
-      "id": 20,
-      "type": 1,
+      "skillName": "Shelter",
+      "skillId": 20,
+      "skillType": 1,
       "rarity": 3,
       "primaryTrait": 3,
       "secondaryTrait": 15,
       "damage": [ 2 ],
-      "mods": [ 11, 18 ],
-      "cooldown": 20,
-      "description": "Summon {} ring of shields around you for {} seconds, gaining {}% damage reduction and reflecting {}% of the damage of all enemy attacks. With a stone spear, rapidly strike {} times for {}% physical damage each. After the duration expires, the shield explodes which deals {}% physical damage",
-      "stats": [
-        [ 1, 5, 50, 100, 25, 8, 80 ]
-      ]
+      "mods": [ 11, 18 ]
     },
     {
-      "name": "Hunt",
-      "id": 21,
-      "type": 2,
+      "skillName": "Hunt",
+      "skillId": 21,
+      "skillType": 2,
       "rarity": 3,
       "primaryTrait": 4,
       "secondaryTrait": 20,
       "damage": [],
-      "mods": [],
-      "description": "Periodically marks enemies nearby for {} seconds. Marked targets will recieve {}% extra damage",
-      "stats": [
-        [ 4, 25 ]
-      ]
+      "mods": []
     },
     {
-      "name": "Lightning Field",
-      "id": 22,
-      "type": 1,
+      "skillName": "Lightning Field",
+      "skillId": 22,
+      "skillType": 1,
       "rarity": 3,
       "primaryTrait": 4,
       "secondaryTrait": 12,
       "damage": [ 1 ],
-      "mods": [],
-      "cooldown": 15,
-      "description": "Summon an arrow of lightning from the sky dealing magic damage equal to {}% of the sum of your ATK and AP to the target area, and continuous discharge to enemies with {}% of the damage when arrow grounded, once per {} second(s) for {} seconds",
-      "stats": [
-        [ 25, 14, 0.5, 2.5 ]
-      ]
+      "mods": []
     },
     {
-      "name": "Water Elemental",
-      "id": 23,
-      "type": 1,
+      "skillName": "Water Elemental",
+      "skillId": 23,
+      "skillType": 1,
       "rarity": 3,
       "primaryTrait": 5,
       "secondaryTrait": 14,
       "damage": [],
-      "mods": [],
-      "cooldown": 10,
-      "description": "Summon one water elemental which fights using ranged magic bolts, inherting {}% HP and {}% AP from your character, lasting {} seconds",
-      "stats": [
-        [ 20, 250, 20 ]
-      ]
+      "mods": []
     },
     {
-      "name": "Ice Thorn Shield",
-      "id": 24,
-      "type": 1,
+      "skillName": "Ice Thorn Shield",
+      "skillId": 24,
+      "skillType": 1,
       "rarity": 3,
       "primaryTrait": 5,
       "secondaryTrait": 10,
       "damage": [ 1 ],
-      "mods": [ 12 ],
-      "cooldown": 25,
-      "description": "Shield yourself and all friendly units in a large area around you for {}% of your ATK and AP. When an individual shield breaks, it deals {}% magic damage to nearby enemies",
-      "stats": [
-        [ 40, 20 ]
-      ]
+      "mods": [ 12 ]
     },
     {
-      "name": "Earth Elemental",
-      "id": 25,
-      "type": 1,
+      "skillName": "Earth Elemental",
+      "skillId": 25,
+      "skillType": 1,
       "rarity": 3,
       "primaryTrait": 5,
       "secondaryTrait": 15,
       "damage": [],
-      "mods": [ 13 ],
-      "cooldown": 15,
-      "description": "Summon an Earth Elemental that taunts enemies and fights using its fists, inherting {}% HP and {}% AP from your character, lasting {} seconds",
-      "stats": [
-        [ 40, 300, 15 ]
-      ]
+      "mods": [ 13 ]
     },
     {
-      "name": "Hell Flame",
-      "id": 26,
-      "type": 2,
+      "skillName": "Hell Flame",
+      "skillId": 26,
+      "skillType": 2,
       "rarity": 3,
       "primaryTrait": 5,
       "secondaryTrait": 9,
       "damage": [ 1 ],
-      "mods": [],
-      "description": "When any active skill is used, there's a {}% chance of creating a pillar of flame, dealing {}% magic damage to surrounding enemies",
-      "stats": [
-        [ 30, 85 ]
-      ]
+      "mods": []
     },
     {
-      "name": "Dead Domination",
-      "id": 27,
-      "type": 2,
+      "skillName": "Dead Domination",
+      "skillId": 27,
+      "skillType": 2,
       "rarity": 3,
       "primaryTrait": 6,
       "secondaryTrait": 13,
       "damage": [],
-      "mods": [ 14 ],
-      "description": "Each enemy death increases AP by {}% up to {} stacks. After {} seconds without an enemy death, all stacks are removed",
-      "stats": [
-        [ 1.5, 10, 10 ]
-      ]
+      "mods": [ 14 ]
     },
     {
-      "name": "Blizzard",
-      "id": 28,
-      "type": 1,
+      "skillName": "Blizzard",
+      "skillId": 28,
+      "skillType": 1,
       "rarity": 3,
       "primaryTrait": 6,
       "secondaryTrait": 10,
       "damage": [ 1 ],
-      "mods": [],
-      "cooldown": 15,
-      "description": "Rapidly summon a blizzard {} times in the target area, each blast dealing {}% magic damage to enemies",
-      "stats": [
-        [ 6, 18 ]
-      ]
+      "mods": []
     },
     {
-      "name": "SpaceTime Shift",
-      "id": 29,
-      "type": 1,
+      "skillName": "SpaceTime Shift",
+      "skillId": 29,
+      "skillType": 1,
       "rarity": 3,
       "primaryTrait": 6,
       "secondaryTrait": 12,
       "damage": [ 1 ],
-      "mods": [ 16 ],
-      "cooldown": 10,
-      "description": "Fold time and space to instantly teleport to a target location dealing {}% magic damage to all nearby units after shifting",
-      "stats": [
-        [ 110 ]
-      ]
+      "mods": [ 16 ]
     },
     {
-      "name": "Forked Lightning",
-      "id": 30,
-      "type": 1,
+      "skillName": "Forked Lightning",
+      "skillId": 30,
+      "skillType": 1,
       "rarity": 3,
       "primaryTrait": 7,
       "secondaryTrait": 12,
       "damage": [ 1 ],
-      "mods": [],
-      "cooldown": 8,
-      "description": "Cast several bolts of eldritch lightning power that pierce through enemies, dealing {} times of {}% magic damage to targets in the area",
-      "stats": [
-        [ 3, 26 ]
-      ]
+      "mods": []
     },
     {
-      "name": "Whirlwind",
-      "id": 31,
-      "type": 1,
+      "skillName": "Whirlwind",
+      "skillId": 31,
+      "skillType": 1,
       "rarity": 2,
       "primaryTrait": 1,
       "secondaryTrait": 17,
       "damage": [ 2 ],
-      "mods": [ 15 ],
-      "cooldown": 12,
-      "description": "Cause a bladestorm of destructive force around you, dealing up to total {}% physical damage to nearby enemy units with {}% chance of dodging enemy basic attacks",
-      "stats": [
-        [ 90, 50 ],
-        [ 180, 60 ]
-      ]
+      "mods": [ 15 ]
     },
     {
-      "name": "Assault Charge",
-      "id": 32,
-      "type": 1,
+      "skillName": "Assault Charge",
+      "skillId": 32,
+      "skillType": 1,
       "rarity": 2,
       "primaryTrait": 1,
       "secondaryTrait": 18,
       "damage": [ 2 ],
-      "mods": [ 3 ],
-      "cooldown": 9,
-      "description": "Charge to an enemy, dealing {}% physical damage, and boosts attack speed {}% for {} basic attacks",
-      "stats": [
-        [ 60, 200, 3 ]
-      ]
+      "mods": [ 3 ]
     },
     {
-      "name": "Swordfall",
-      "id": 33,
-      "type": 1,
+      "skillName": "Swordfall",
+      "skillId": 33,
+      "skillType": 1,
       "rarity": 2,
       "primaryTrait": 2,
       "secondaryTrait": 16,
       "damage": [ 2 ],
-      "mods": [],
-      "cooldown": 8,
-      "description": "{} Swords raze the ground directly in front of you, each sword deals {}% physical damage and {}% blast damage",
-      "stats": [
-        [ 2, 30, 30 ]
-      ]
+      "mods": []
     },
     {
-      "name": "Sweeping Blade",
-      "id": 34,
-      "type": 1,
+      "skillName": "Sweeping Blade",
+      "skillId": 34,
+      "skillType": 1,
       "rarity": 2,
       "primaryTrait": 2,
       "secondaryTrait": 17,
       "damage": [ 2 ],
-      "mods": [ 16 ],
-      "cooldown": 5,
-      "description": "Dash forward to strike, dealing {}% physical damage to all targets you pass through. If any target dies to Sweeping Blade, its cooldown refreshes",
-      "stats": [
-        [ 30 ],
-        [ 60 ]
-      ]
+      "mods": [ 16 ]
     },
     {
-      "name": "Double Edge",
-      "id": 35,
-      "type": 1,
+      "skillName": "Double Edge",
+      "skillId": 35,
+      "skillType": 1,
       "rarity": 2,
       "primaryTrait": 3,
       "secondaryTrait": 13,
       "damage": [ 2 ],
-      "mods": [ 6 ],
-      "cooldown": 10,
-      "description": "Strike a mightly blow at melee range, dealing {}% of your current health damage to yourself and {} times of {}% physical damage to all enemies in a small area around you",
-      "stats": [
-        [ 6, 4, 36 ]
-      ]
+      "mods": [ 6 ]
     },
     {
-      "name": "Counter Helix",
-      "id": 36,
-      "type": 2,
+      "skillName": "Counter Helix",
+      "skillId": 36,
+      "skillType": 2,
       "rarity": 2,
       "primaryTrait": 3,
       "secondaryTrait": 20,
       "damage": [ 2 ],
-      "mods": [],
-      "description": "When attacked, there's a {}% chance of performing a helix counter, dealing {}% physical damage to all nearby enemies. {} second cooldown",
-      "stats": [
-        [ 30, 70, 8 ],
-        [ 40, 140, 8 ]
-      ]
+      "mods": []
     },
     {
-      "name": "Lightning Rod",
-      "id": 37,
-      "type": 2,
+      "skillName": "Lightning Rod",
+      "skillId": 37,
+      "skillType": 2,
       "rarity": 2,
       "primaryTrait": 4,
       "secondaryTrait": 12,
       "damage": [ 1 ],
-      "mods": [],
-      "description": "When any active skill casts, your next basic attacks will summon a lightning bolt, dealing {}% magic damage to all the enemy units around the target",
-      "stats": [
-        [ 35 ]
-      ]
+      "mods": []
     },
     {
-      "name": "Tide Arrow",
-      "id": 38,
-      "type": 1,
+      "skillName": "Tide Arrow",
+      "skillId": 38,
+      "skillType": 1,
       "rarity": 2,
       "primaryTrait": 4,
       "secondaryTrait": 14,
       "damage": [ 1 ],
-      "mods": [ 8 ],
-      "cooldown": 8,
-      "description": "Wind up before firing a powerful barrage of tide that deals damage to each enemy unit it passes through, dealing magic damage equal to {}% of the sum of your ATK and AP and throwing them back for {}m",
-      "stats": [
-        [ 50, 3 ]
-      ]
+      "mods": [ 8 ]
     },
     {
-      "name": "Escape Plan",
-      "id": 39,
-      "type": 1,
+      "skillName": "Escape Plan",
+      "skillId": 39,
+      "skillType": 1,
       "rarity": 2,
       "primaryTrait": 4,
       "secondaryTrait": 15,
       "damage": [],
-      "mods": [],
-      "cooldown": 12,
-      "description": "Dash in a direction, leaving behind {} clone(s) that will attack enemies for {} seconds. Clones recieve {}% more damage from enemies and explode dealing {}% damage on death",
-      "stats": [
-        [ 1, 3, 900, 15 ],
-        [ 2, 3, 750, 30 ]
-      ]
+      "mods": []
     },
     {
-      "name": "Dead Reborn",
-      "id": 40,
-      "type": 2,
+      "skillName": "Dead Reborn",
+      "skillId": 40,
+      "skillType": 2,
       "rarity": 2,
       "primaryTrait": 5,
       "secondaryTrait": 15,
       "damage": [],
-      "mods": [],
-      "description": "When an enemy is killed, there's a {}% chance of summoning an Ancient Skeleton Guard that fights enemies for {} seconds, inheriting {}% HP and {}% AP from your character",
-      "stats": [
-        [ 50, 6, 15, 100 ],
-        [ 50, 6, 30, 200 ]
-      ]
+      "mods": []
     },
     {
-      "name": "Faerie Dragon",
-      "id": 41,
-      "type": 1,
+      "skillName": "Faerie Dragon",
+      "skillId": 41,
+      "skillType": 1,
       "rarity": 2,
       "primaryTrait": 5,
       "secondaryTrait": 16,
       "damage": [],
-      "mods": [ 17 ],
-      "cooldown": 20,
-      "description": "Summon a Faerie Dragon which heals allies attacking using ranged magic bolts, inheriting {}% HP and {}% AP from your character, lasting {} seconds. When Faerie Dragon dies, it leaves a magic healing orb that restores HP equal to {}% AP + {}% ATK of the character who touches it",
-      "stats": [
-        [ 15, 100, 20, 10, 10 ]
-      ]
+      "mods": [ 17 ]
     },
     {
-      "name": "Laser",
-      "id": 42,
-      "type": 1,
+      "skillName": "Laser",
+      "skillId": 42,
+      "skillType": 1,
       "rarity": 2,
       "primaryTrait": 6,
       "secondaryTrait": 11,
       "damage": [ 1 ],
-      "mods": [ 18 ],
-      "cooldown": 12,
-      "description": "Unleash {} ray of energy which can direct with the virtual joystick for {} seconds, dealing up to total {}% continuous magic damage",
-      "stats": [
-        [ 1, 3, 140 ]
-      ]
+      "mods": [ 18 ]
     },
     {
-      "name": "Frost Nova",
-      "id": 43,
-      "type": 2,
+      "skillName": "Frost Nova",
+      "skillId": 43,
+      "skillType": 2,
       "rarity": 2,
       "primaryTrait": 6,
       "secondaryTrait": 10,
       "damage": [ 1 ],
-      "mods": [ 1 ],
-      "description": "When attacked, there's a {}% chance of causing a Frost Nova, dealing {}% magic damage to all neary enemies, and slowing enemies move speed by {}% for {} second(s). {} second cooldown",
-      "stats": [
-        [ 20, 50, 20, 1, 8 ]
-      ]
+      "mods": [ 1 ]
     },
     {
-      "name": "Shadow Strike",
-      "id": 44,
-      "type": 1,
+      "skillName": "Shadow Strike",
+      "skillId": 44,
+      "skillType": 1,
       "rarity": 2,
       "primaryTrait": 7,
       "secondaryTrait": 13,
       "damage": [ 1 ],
-      "mods": [],
-      "cooldown": 15,
-      "description": "Open a rift to the darkness with magic force, dealing {}% magic damage to all enemy units nearby",
-      "stats": [
-        [ 116 ]
-      ]
+      "mods": []
     },
     {
-      "name": "Arcane Strike",
-      "id": 45,
-      "type": 1,
+      "skillName": "Arcane Strike",
+      "skillId": 45,
+      "skillType": 1,
       "rarity": 2,
       "primaryTrait": 8,
       "secondaryTrait": 11,
       "damage": [ 1 ],
-      "mods": [],
-      "cooldown": 8,
-      "description": "Fire {} arcane energy ball at a target enemy, dealing {}% magic damage to all enemies near the target",
-      "stats": [
-        [ 1, 70 ]
-      ]
+      "mods": []
     },
     {
-      "name": "Rejuvenate",
-      "id": 46,
-      "type": 1,
+      "skillName": "Rejuvenate",
+      "skillId": 46,
+      "skillType": 1,
       "rarity": 2,
       "primaryTrait": 8,
       "secondaryTrait": 16,
       "damage": [],
-      "mods": [ 17 ],
-      "cooldown": 30,
-      "description": "Conjures a healing magical wind around you, restoring HP equal to {}% of your ATK + AP once per second for {} seconds, up to a total of {}% of your ATK + AP",
-      "stats": [
-        [ 6, 5, 30 ]
-      ]
+      "mods": [ 17 ]
     },
     {
-      "name": "Cleave",
-      "id": 47,
-      "type": 1,
+      "skillName": "Cleave",
+      "skillId": 47,
+      "skillType": 1,
       "rarity": 1,
       "primaryTrait": 1,
       "secondaryTrait": 19,
       "damage": [ 2 ],
-      "mods": [],
-      "cooldown": 3,
-      "description": "Swipe at those around you with great force, dealing {} times of {}% physical damage",
-      "stats": [
-        [ 1, 16 ],
-        [ 2, 16 ]
-      ]
+      "mods": []
     },
     {
-      "name": "Shadow Kunai",
-      "id": 48,
-      "type": 1,
+      "skillName": "Shadow Kunai",
+      "skillId": 48,
+      "skillType": 1,
       "rarity": 1,
       "primaryTrait": 2,
       "secondaryTrait": 13,
       "damage": [ 2 ],
-      "mods": [ 9 ],
-      "cooldown": 3,
-      "description": "Throw {} long-range kunai that converge on target position, each kunai deals {}% physical damage to all enemies it passes through, and boosts your critical strike damage within the next {} seconds by {}%",
-      "stats": [
-        [ 3, 5, 2, 10 ],
-        [ 5, 6, 2, 10 ]
-      ]
+      "mods": [ 9 ]
     },
     {
-      "name": "Boomerang Shield",
-      "id": 49,
-      "type": 1,
+      "skillName": "Boomerang Shield",
+      "skillId": 49,
+      "skillType": 1,
       "rarity": 1,
       "primaryTrait": 3,
       "secondaryTrait": 14,
       "damage": [ 2 ],
-      "mods": [ 12 ],
-      "cooldown": 16,
-      "description": "Throw a shield that returns toward the starting direction after reaching its maximum range, dealing {}% physical damage to enemies it hits. If you catch the returning shield, it will grant you a shield equal to {}% of your ATK + AP and its cooldown is reduced by {}%",
-      "stats": [
-        [ 13, 11, 50 ]
-      ]
+      "mods": [ 12 ]
     },
     {
-      "name": "Crystal Arrow",
-      "id": 50,
-      "type": 1,
+      "skillName": "Crystal Arrow",
+      "skillId": 50,
+      "skillType": 1,
       "rarity": 1,
       "primaryTrait": 4,
       "secondaryTrait": 10,
       "damage": [ 1 ],
-      "mods": [ 1 ],
-      "cooldown": 3,
-      "description": "Fire {} arrow(s) of ice crystal in a straight line. If the arrow collides with an enemy, it explodes and slows all surrounding enemy units, dealing magic damage equal to {}% of your ATK and AP",
-      "stats": [
-        [ 1, 10 ],
-        [ 1, 15 ]
-      ]
+      "mods": [ 1 ]
     },
     {
-      "name": "Skeleton Guard",
-      "id": 51,
-      "type": 1,
+      "skillName": "Skeleton Guard",
+      "skillId": 51,
+      "skillType": 1,
       "rarity": 1,
       "primaryTrait": 5,
       "secondaryTrait": 15,
       "damage": [],
-      "mods": [],
-      "cooldown": 10,
-      "description": "Summon an Ancient Skeleton Guard that fights in melee range, inheriting {}% HP and {}% AP from your character, lasting {} seconds",
-      "stats": [
-        [ 15, 100, 20 ],
-        [ 30, 200, 20 ]
-      ]
+      "mods": []
     },
     {
-      "name": "Flame Phoenix",
-      "id": 52,
-      "type": 1,
+      "skillName": "Flame Phoenix",
+      "skillId": 52,
+      "skillType": 1,
       "rarity": 1,
       "primaryTrait": 6,
       "secondaryTrait": 9,
       "damage": [ 1 ],
-      "mods": [],
-      "cooldown": 3,
-      "description": "Channel the breath of a phoenix, sending out {} wave(s) of fire scorching every enemy in its path, dealing {}% magic damage",
-      "stats": [
-        [ 1, 16 ],
-        [ 1, 32 ]
-      ]
+      "mods": []
     },
     {
-      "name": "Icy Burst",
-      "id": 53,
-      "type": 1,
+      "skillName": "Icy Burst",
+      "skillId": 53,
+      "skillType": 1,
       "rarity": 1,
       "primaryTrait": 7,
       "secondaryTrait": 10,
       "damage": [ 1 ],
-      "mods": [ 1 ],
-      "cooldown": 8,
-      "description": "Summon a sphere of ice to a target area that explodes, dealing {}% magic damage to all enemies in the area, plus a {}% slow for {} seconds",
-      "stats": [
-        [ 30, 20, 3 ],
-        [ 60, 20, 3 ]
-      ]
+      "mods": [ 1 ]
     },
     {
-      "name": "Omnislash",
-      "id": 54,
-      "type": 1,
+      "skillName": "Omnislash",
+      "skillId": 54,
+      "skillType": 1,
       "rarity": 5,
       "primaryTrait": 2,
       "secondaryTrait": 18,
       "damage": [ 2 ],
-      "mods": [ 19 ],
-      "cooldown": 30,
-      "description": "Leap towards and slashes, attacking a random enemy target nearby {} times, dealing {}% physical damage to all enemy units around the target. Invulnerable for the duration",
-      "stats": [
-        [ 9, 45 ]
-      ]
+      "mods": [ 19 ]
     },
     {
-      "name": "Borrowed Time",
-      "id": 55,
-      "type": 2,
+      "skillName": "Borrowed Time",
+      "skillId": 55,
+      "skillType": 2,
       "rarity": 5,
       "primaryTrait": 3,
       "secondaryTrait": 18,
       "damage": [],
-      "mods": [],
-      "description": "When killed, prevent your death and immediately recover {}% of your max HP. {} second cooldown",
-      "stats": [
-        [ 16, 90 ]
-      ]
+      "mods": []
     },
     {
-      "name": "Shield Wall",
-      "id": 56,
-      "type": 1,
+      "skillName": "Shield Wall",
+      "skillId": 56,
+      "skillType": 1,
       "rarity": 5,
       "primaryTrait": 3,
       "secondaryTrait": 15,
       "damage": [],
-      "mods": [ 11 ],
-      "cooldown": 30,
-      "description": "For {} seconds, gain {}% damage reduction and immunity to all CC",
-      "stats": [
-        [ 5, 50 ]
-      ]
+      "mods": [ 11 ]
     },
     {
-      "name": "Dawn Shockwave",
-      "id": 57,
-      "type": 1,
+      "skillName": "Dawn Shockwave",
+      "skillId": 57,
+      "skillType": 1,
       "rarity": 5,
       "primaryTrait": 4,
       "secondaryTrait": 17,
       "damage": [ 1 ],
-      "mods": [ 15 ],
-      "cooldown": 30,
-      "description": "Call upon the God of Dawn, fire a global shockwave that boosts allies dodge rate by {}%, while throwing enemies caught in the wave back by deaing magic damage equal to {}% of the sum of your ATK and AP",
-      "stats": [
-        [ 20, 110 ]
-      ]
+      "mods": [ 15 ]
     },
     {
-      "name": "Hellfire",
-      "id": 58,
-      "type": 1,
+      "skillName": "Hellfire",
+      "skillId": 58,
+      "skillType": 1,
       "rarity": 5,
       "primaryTrait": 5,
       "secondaryTrait": 9,
       "damage": [ 1 ],
-      "mods": [ 2 ],
-      "cooldown": 20,
-      "description": "Pull a blazing meteor from the sky towards a target area to summon a Hellfire Demon, dealing {}% magic damage and stuns enemies within the impact zone for {} seconds, inherting {}% AP and {}% HP from your character, lasting {} seconds. Hellfire leave a fireland on death",
-      "stats": [
-        [ 140, 2, 400, 50, 20 ]
-      ]
+      "mods": [ 2 ]
     },
     {
-      "name": "Overload",
-      "id": 59,
-      "type": 1,
+      "skillName": "Overload",
+      "skillId": 59,
+      "skillType": 1,
       "rarity": 5,
       "primaryTrait": 6,
       "secondaryTrait": 11,
       "damage": [],
-      "mods": [ 14, 20 ],
-      "cooldown": 40,
-      "description": "Unlock your inner mind with an arcane storm that distorts the space-time. While the mindstorm rages, you gain {}% AP, and cooldown time of all active skills is {}% shorter",
-      "stats": [
-        [ 10, 40 ]
-      ]
+      "mods": [ 14, 20 ]
     },
     {
-      "name": "Torrent Wave",
-      "id": 60,
-      "type": 1,
+      "skillName": "Torrent Wave",
+      "skillId": 60,
+      "skillType": 1,
       "rarity": 5,
       "primaryTrait": 7,
       "secondaryTrait": 14,
       "damage": [ 1 ],
-      "mods": [],
-      "cooldown": 30,
-      "description": "Summons {} torrent swell(s) that, after a short delay, deal {}% magic damage to all enemy units in a target area",
-      "stats": [
-        [ 1, 285 ]
-      ]
+      "mods": []
     },
     {
-      "name": "Impale",
-      "id": 61,
-      "type": 2,
+      "skillName": "Impale",
+      "skillId": 61,
+      "skillType": 2,
       "rarity": 4,
       "primaryTrait": 2,
       "secondaryTrait": 19,
       "damage": [ 2 ],
-      "mods": [],
-      "description": "Basic attacks have a {}% chance of impaling the enemy, dealing {}% bonus physical damage to the target",
-      "stats": [
-        [ 25, 90 ]
-      ]
+      "mods": []
     },
     {
-      "name": "Lucky Dice",
-      "id": 62,
-      "type": 1,
+      "skillName": "Lucky Dice",
+      "skillId": 62,
+      "skillType": 1,
       "rarity": 4,
       "primaryTrait": 2,
       "secondaryTrait": 20,
       "damage": [],
-      "mods": [ 3, 5, 14, 10, 20 ],
-      "cooldown": 30,
-      "description": "Roll the Lucky Dice to activate a boosting ability according to the result for {} seconds\n1-Nothing happens\n2-Boosts DEF by {}%\n3-Boosts attack speed by {}%\n4-Boosts ATK and AP by {}%\n5-Boosts crit chance by {}%\n6-Boosts cooldown reduction by {}%",
-      "stats": [
-        [ 30, 5, 20, 7, 8, 16 ]
-      ]
+      "mods": [ 3, 5, 14, 10, 20 ]
     },
     {
-      "name": "Regeneration",
-      "id": 63,
-      "type": 2,
+      "skillName": "Regeneration",
+      "skillId": 63,
+      "skillType": 2,
       "rarity": 4,
       "primaryTrait": 3,
       "secondaryTrait": 16,
       "damage": [],
-      "mods": [ 17 ],
-      "cooldown": 10,
-      "description": "When attacked, there's a {}% chance of restoring HP equal to {}% of your ATK + AP once per second for {} seconds, up to a total of {}% of your ATK + AP.",
-      "stats": [
-        [ 20, 5.5, 3, 16.5, 10 ]
-      ]
+      "mods": [ 17 ]
     },
     {
-      "name": "Arcane Volley",
-      "id": 64,
-      "type": 1,
+      "skillName": "Arcane Volley",
+      "skillId": 64,
+      "skillType": 1,
       "rarity": 4,
       "primaryTrait": 4,
       "secondaryTrait": 11,
       "damage": [ 1 ],
-      "mods": [],
-      "cooldown": 35,
-      "description": "Rapidly unleash a {} arrow shots from arcane power source in a single direction, move freely while firing, each arrow deals magic damage equal to {}% of the sum or your ATK and AP",
-      "stats": [
-        [ 1, 7 ]
-      ] },
+      "mods": []
+    },
     {
-      "name": "Storm Roar",
-      "id": 65,
-      "type": 2,
+      "skillName": "Storm Roar",
+      "skillId": 65,
+      "skillType": 2,
       "rarity": 4,
       "primaryTrait": 4,
       "secondaryTrait": 17,
       "damage": [ 2 ],
-      "mods": [ 8 ],
-      "description": "With the help of God of Storm, basic attacks have a {}% chance to add bonus {}% physical damage plus a chance of throwing enemy back",
-      "stats": [
-        [ 25, 100 ]
-      ]
+      "mods": [ 8 ]
     },
     {
-      "name": "Energy Concentration",
-      "id": 66,
-      "type": 2,
+      "skillName": "Energy Concentration",
+      "skillId": 66,
+      "skillType": 2,
       "rarity": 4,
       "primaryTrait": 5,
       "secondaryTrait": 11,
       "damage": [],
-      "mods": [],
-      "description": "When any active skill is used, there's a {}% chance to summon an Ancient Skeleton Mage who fights enemies with ranged magic bolts for {} seconds, inherting {}% HP and {}% AP from your character",
-      "stats": [
-        [ 50, 5, 20, 250 ]
-      ]
+      "mods": []
     },
     {
-      "name": "Thunder Elemental",
-      "id": 67,
-      "type": 1,
+      "skillName": "Thunder Elemental",
+      "skillId": 67,
+      "skillType": 1,
       "rarity": 4,
       "primaryTrait": 5,
       "secondaryTrait": 12,
       "damage": [ 1 ],
-      "mods": [],
-      "cooldown": 20,
-      "description": "Summon {} Thunder Elementals which inherit {}% HP and {}% AP from your character, lasting {} seconds. Thunder Elementals generate a lightning chain between itself and your character, boosting character's damage dealt by {}% and dealing {}% magic damage every {} seconds to enemies touching the chain",
-      "stats": [
-        [ 2, 20, 50, 15, 8, 5, 0.4 ]
-      ]
+      "mods": []
     },
     {
-      "name": "Black Hole",
-      "id": 68,
-      "type": 1,
+      "skillName": "Black Hole",
+      "skillId": 68,
+      "skillType": 1,
       "rarity": 4,
       "primaryTrait": 5,
       "secondaryTrait": 13,
       "damage": [ 1 ],
-      "mods": [ 1 ],
-      "cooldown": 20,
-      "description": "Summon a vortex that sucks in nearby enemy units, dealing up to {}% magic damage. Enemies affected by Black Hole have their movement speed slowed by {}%",
-      "stats": [
-        [ 196, 50 ]
-      ]
+      "mods": [ 1 ]
     },
     {
-      "name": "Dark Rift",
-      "id": 69,
-      "type": 1,
+      "skillName": "Dark Rift",
+      "skillId": 69,
+      "skillType": 1,
       "rarity": 4,
       "primaryTrait": 6,
       "secondaryTrait": 13,
       "damage": [ 1 ],
-      "mods": [],
-      "cooldown": 15,
-      "description": "Open {} rift to the darkness dealing an initial burst of {}% magic damage, then explodes for a second burst of {}% magic damage after a delay",
-      "stats": [
-        [ 1, 75, 100 ]
-      ]
+      "mods": []
     },
     {
-      "name": "Arc Lightning",
-      "id": 70,
-      "type": 2,
+      "skillName": "Arc Lightning",
+      "skillId": 70,
+      "skillType": 2,
       "rarity": 4,
       "primaryTrait": 6,
       "secondaryTrait": 12,
       "damage": [ 1 ],
-      "mods": [],
-      "description": "Causes a lightning explosion to {} enemies nearby every {} second(s), dealing {}% magic damage and increasing damage recieved by {}%, lasting {} seconds",
-      "stats": [
-        [ 5, 1, 15, 5, 3 ]
-      ]
+      "mods": []
     },
     {
-      "name": "Earthquake",
-      "id": 71,
-      "type": 2,
+      "skillName": "Earthquake",
+      "skillId": 71,
+      "skillType": 2,
       "rarity": 4,
       "primaryTrait": 7,
       "secondaryTrait": 15,
       "damage": [ 1 ],
-      "mods": [ 1 ],
-      "description": "When any active skill is used there's a {}% chance of triggering {} earthquakes, each blast dealing {}% magic damage and a {}% slow for {} second(s)",
-      "stats": [
-        [ 20, 4, 40, 90, 0.5 ]
-      ]
+      "mods": [ 1 ]
     },
     {
-      "name": "Windrun",
-      "id": 72,
-      "type": 1,
+      "skillName": "Windrun",
+      "skillId": 72,
+      "skillType": 1,
       "rarity": 4,
       "primaryTrait": 8,
       "secondaryTrait": 17,
       "damage": [],
-      "mods": [ 15, 4 ],
-      "cooldown": 25,
-      "description": "For the next {} seconds, boost move speed {}% and have a {}% chance of dodging enemy basic attacks",
-      "stats": [
-        [ 7, 40, 50 ]
-      ]
+      "mods": [ 15, 4 ]
     },
     {
-      "name": "Feast",
-      "id": 73,
-      "type": 2,
+      "skillName": "Feast",
+      "skillId": 73,
+      "skillType": 2,
       "rarity": 3,
       "primaryTrait": 1,
       "secondaryTrait": 19,
       "damage": [],
-      "mods": [ 21 ],
-      "description": "By using evil power, there's a {}% chance to enable {}% lifesteal for basic attacks",
-      "stats": [
-        [ 20, 30 ]
-      ]
+      "mods": [ 21 ]
     },
     {
-      "name": "Super Strike",
-      "id": 74,
-      "type": 1,
+      "skillName": "Super Strike",
+      "skillId": 74,
+      "skillType": 1,
       "rarity": 3,
       "primaryTrait": 2,
       "secondaryTrait": 20,
       "damage": [ 2 ],
-      "mods": [],
-      "cooldown": 10,
-      "description": "Gives your next basic attack strike a fan-shaped splash damage effect, dealing {}% physical damage",
-      "stats": [
-        [ 100 ]
-      ]
+      "mods": []
     },
     {
-      "name": "Vortex",
-      "id": 75,
-      "type": 2,
+      "skillName": "Vortex",
+      "skillId": 75,
+      "skillType": 2,
       "rarity": 3,
       "primaryTrait": 2,
       "secondaryTrait": 18,
       "damage": [],
-      "mods": [ 5 ],
-      "description": "Each enemy death boosts attack by {}%, up to {} stacks, but it will drop to zero if you go {} seconds with no enemy deaths",
-      "stats": [
-        [ 1.8, 10, 10 ]
-      ]
+      "mods": [ 5 ]
     },
     {
-      "name": "Explosion Fruit",
-      "id": 76,
-      "type": 1,
+      "skillName": "Explosion Fruit",
+      "skillId": 76,
+      "skillType": 1,
       "rarity": 3,
       "primaryTrait": 4,
       "secondaryTrait": 16,
       "damage": [ 1 ],
-      "mods": [],
-      "cooldown": 5,
-      "description": "Place a fruit trap that blooms when walked over, dealing magic damage equal to {}% of the sum of your ATK and AP with an explosion",
-      "stats": [
-        [ 38 ]
-      ]
+      "mods": []
     },
     {
-      "name": "Riptide Strike",
-      "id": 77,
-      "type": 1,
+      "skillName": "Riptide Strike",
+      "skillId": 77,
+      "skillType": 1,
       "rarity": 3,
       "primaryTrait": 6,
       "secondaryTrait": 14,
       "damage": [ 1 ],
-      "mods": [ 1, 8 ],
-      "cooldown": 10,
-      "description": "Create {} exploding riptide waves around yourself. {} Explosions respectively deal {}% and {}% magic damage and slows enemies. The second explosion will throw enemy back {}m",
-      "stats": [
-        [ 2, 2, 75, 125, 3 ]
-      ]
+      "mods": [ 1, 8 ]
     },
     {
-      "name": "Surge",
-      "id": 78,
-      "type": 2,
+      "skillName": "Surge",
+      "skillId": 78,
+      "skillType": 2,
       "rarity": 3,
       "primaryTrait": 7,
       "secondaryTrait": 14,
       "damage": [],
-      "mods": [ 17 ],
-      "description": "When any active skill is used, there's a {}% chance of healing for {}% of your AP",
-      "stats": [
-        [ 25, 16 ]
-      ]
+      "mods": [ 17 ]
     },
     {
-      "name": "Earth Knoll",
-      "id": 79,
-      "type": 1,
+      "skillName": "Earth Knoll",
+      "skillId": 79,
+      "skillType": 1,
       "rarity": 3,
       "primaryTrait": 7,
       "secondaryTrait": 15,
       "damage": [ 1 ],
-      "mods": [ 1 ],
-      "cooldown": 15,
-      "description": "Create several earth protrusions that slow passing enemies. Dealing {}% magic damage when cast, then dealing {}% magic damage per second for up to {} seconds, up to a total of {}% magic damage, before exploding for a burst of {}% magic damage",
-      "stats": [
-        [ 20, 15, 5, 75, 40 ]
-      ]
+      "mods": [ 1 ]
     },
     {
-      "name": "Ice Lotus",
-      "id": 80,
-      "type": 1,
+      "skillName": "Ice Lotus",
+      "skillId": 80,
+      "skillType": 1,
       "rarity": 3,
       "primaryTrait": 7,
       "secondaryTrait": 10,
       "damage": [ 1 ],
-      "mods": [ 1, 22 ],
-      "cooldown": 25,
-      "description": "Plant an Ice Lotus which flourishes over {} seconds, breeze that surrounds the flourescent lotus, slows and deals {}% magic damage per {} seconds to nearby enemies. The flourescent lotus lasts {} seconds, then it busts and freezes enemies {} seconds by dealing {}% magic damage. If an enemy touches the lotus before its flourescence, the lotus prematurely bursts and freezes enemies for {} seconds",
-      "stats": [
-        [ 5, 7, 0.5, 15, 0.5, 30, 2 ]
-      ]
+      "mods": [ 1, 22 ]
     },
     {
-      "name": "Wrath of Nature",
-      "id": 81,
-      "type": 1,
+      "skillName": "Wrath of Nature",
+      "skillId": 81,
+      "skillType": 1,
       "rarity": 3,
       "primaryTrait": 7,
       "secondaryTrait": 16,
       "damage": [ 1 ],
-      "mods": [ 8, 1 ],
-      "cooldown": 20,
-      "description": "Surround yourself in a magical storm of nature, throwing enemies back and slowing their move speed by {}% for {} seconds, dealing {}%-{}% magic damage that depends on the distance of enemy knockback",
-      "stats": [
-        [ 50, 5, 45, 150 ]
-      ]
+      "mods": [ 8, 1 ]
     },
     {
-      "name": "Meteor",
-      "id": 82,
-      "type": 1,
+      "skillName": "Meteor",
+      "skillId": 82,
+      "skillType": 1,
       "rarity": 3,
       "primaryTrait": 8,
       "secondaryTrait": 9,
       "damage": [ 1 ],
-      "mods": [ 8 ],
-      "cooldown": 20,
-      "description": "Summon {} flaming meteor from the sky onto the target location, dealing {}%-{}% magic damage. Upon landing, the meteor rolls forward, continuously dealing up to a total of {}%-{}% magic damage, finally exploding after {} seconds and dealing {}%-{}% magic damage",
-      "stats": [
-        [ 1, 24, 80, 15, 50, 1.5, 6, 20 ]
-      ]
+      "mods": [ 8 ]
     },
     {
-      "name": "Purify",
-      "id": 83,
-      "type": 1,
+      "skillName": "Purify",
+      "skillId": 83,
+      "skillType": 1,
       "rarity": 3,
       "primaryTrait": 8,
       "secondaryTrait": 14,
       "damage": [ 1, 2 ],
-      "mods": [ 17 ],
-      "cooldown": 25,
-      "description": "Instantly heals the character for {}% of sum of ATK and AP, also deals {} time of {}% magic damage and {}% physical damage to any surrounding enemies",
-      "stats": [
-        [ 18, 1, 45, 45 ]
-      ]
+      "mods": [ 17 ]
     },
     {
-      "name": "War Stomp",
-      "id": 84,
-      "type": 1,
+      "skillName": "War Stomp",
+      "skillId": 84,
+      "skillType": 1,
       "rarity": 2,
       "primaryTrait": 1,
       "secondaryTrait": 16,
       "damage": [ 2 ],
-      "mods": [ 2 ],
-      "cooldown": 8,
-      "description": "Slams the ground, dealing {}% physical damage to nearby enemies all around the caster, plus {} seconds of stun to up to {} enemies",
-      "stats": [
-        [ 60, 2, 5 ]
-      ]
+      "mods": [ 2 ]
     },
     {
-      "name": "Lightning Orbs",
-      "id": 85,
-      "type": 2,
+      "skillName": "Lightning Orbs",
+      "skillId": 85,
+      "skillType": 2,
       "rarity": 2,
       "primaryTrait": 7,
       "secondaryTrait": 12,
       "damage": [ 1 ],
-      "mods": [],
-      "description": "Summon {} lightning balls that orbit you, dealing {}% magic damage per {} seconds when they hit an enemy",
-      "stats": [
-        [ 2, 6, 0.3 ]
-      ]
+      "mods": []
     }
   ]
 }
