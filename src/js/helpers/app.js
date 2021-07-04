@@ -11,8 +11,8 @@ import {SKILL_TYPES} from '../constants/data.js';
 export function validBuild(build) {
   if (
     build.length > MAX_SKILLS
-    || build.filter(s => s.type === SKILL_TYPES.ACTIVE).length > MAX_ACTIVES
-    || build.filter(s => s.type === SKILL_TYPES.PASSIVE).length > MAX_PASSIVES
+    || build.filter(s => s.skillType === SKILL_TYPES.ACTIVE).length > MAX_ACTIVES
+    || build.filter(s => s.skillType === SKILL_TYPES.PASSIVE).length > MAX_PASSIVES
   ) {
     return false;
   }

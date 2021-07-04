@@ -28,7 +28,7 @@ export function createSkillDetailsComponent(skill) {
 function createDescriptionComponent(skill) {
   const component = document.createElement('div');
   component.classList.add('skill-details-description');
-  component.innerHTML = format(skill.description, skill.stats[0]);
+  component.innerHTML = skill.descriptions[0];
   return component;
 }
 
@@ -52,12 +52,12 @@ function createMiscComponent(skill) {
 
   const type = document.createElement('div');
   type.classList.add('skill-details-misc-type');
-  type.innerHTML = SKILL_TYPES.ACTIVE === skill.type ? 'Active' : 'Passive';
+  type.innerHTML = SKILL_TYPES.ACTIVE === skill.skillType ? 'Active' : 'Passive';
 
   component.appendChild(level);
   component.appendChild(type);
 
-  if (skill.cooldown) {
+  if (SKILL_TYPES.ACTIVE === skill.skillType) {
     const cooldown = document.createElement('div');
     cooldown.classList.add('skill-details-misc-cooldown');
 
@@ -66,7 +66,7 @@ function createMiscComponent(skill) {
 
     const cooldownNumber = document.createElement('span');
     cooldownNumber.classList.add('skill-details-misc-dynamic-text');
-    cooldownNumber.innerHTML = skill.cooldown + 's';
+    cooldownNumber.innerHTML = skill.cooldowns[0] + 's';
 
     cooldown.appendChild(cooldownLabel);
     cooldown.appendChild(cooldownNumber);
@@ -87,12 +87,12 @@ function createHeaderComponent(skill) {
   const headerRight = document.createElement('div');
 
   const headerText = document.createElement('div');
-  headerText.innerHTML = skill.name;
+  headerText.innerHTML = skill.skillName;
 
   headerRight.appendChild(headerText);
   headerRight.appendChild(createTraitsComponent(skill));
 
-  header.appendChild(createImageNode(SKILL_IMAGES_DIR, skill.name));
+  header.appendChild(createImageNode(SKILL_IMAGES_DIR, skill.skillName));
   header.appendChild(headerRight);
 
   return header;

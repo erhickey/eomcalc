@@ -27,14 +27,14 @@ export function createSkills(skills, chosenSkills) {
  */
 function createSkillListComponent(skill, chosenSkills) {
   const component = document.createElement('div');
-  component.id = SKILL_ID_PREFIX + skill.id;
+  component.id = SKILL_ID_PREFIX + skill.skillId;
   component.classList.add('skill-list-skill', RARITY_MAP[skill.rarity].toLowerCase());
 
-  if (chosenSkills && chosenSkills.some(s => s.id === skill.id)) {
+  if (chosenSkills && chosenSkills.some(s => s.id === skill.skillId)) {
     component.classList.add('chosen-skill-list-skill');
   }
 
-  const skillImage = createImageNode(SKILL_IMAGES_DIR, skill.name);
+  const skillImage = createImageNode(SKILL_IMAGES_DIR, skill.skillName);
 
   const footer = document.createElement('div');
   footer.classList.add('skill-list-skill-footer');

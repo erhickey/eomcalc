@@ -13,11 +13,11 @@ import {SKILL_TYPES} from '../constants/data.js';
  * then follow the same order as the skill list
  */
 export function compareChosenSkills(skill1, skill2) {
-  if (skill1.type === skill2.type) {
+  if (skill1.skillType === skill2.skillType) {
     return compareSkills(skill1, skill2);
   }
 
-  if (skill1.type === SKILL_TYPES.ACTIVE) {
+  if (SKILL_TYPES.ACTIVE === skill1.skillType) {
     return ORDER_BEFORE;
   }
 

@@ -5,7 +5,7 @@
 import {arrayToMap, objectToMapByValues} from '../util/util.js';
 
 import {rarities, skillTypes, traitTypes} from '../../data/enums.json';
-import {skills} from '../../data/skills.json';
+import {skills} from '../../data/skills-generated.json';
 import {traits} from '../../data/traits.json';
 
 export const RARITY_MAP = objectToMapByValues(rarities);

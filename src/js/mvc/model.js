@@ -21,7 +21,7 @@ export function initializeState(build) {
  * adds or removes a skill from the build based on the currently chosen skills
  */
 export function addOrRemoveSkill(skill) {
-  if (chosenSkills.some(s => s.id === skill.id)) {
+  if (chosenSkills.some(s => s.skillId === skill.skillId)) {
     return [removeSkill(skill), SKILL_REMOVED];
   }
 
@@ -39,6 +39,6 @@ export function addOrRemoveSkill(skill) {
  * removes a skill from the build
  */
 export function removeSkill(skill) {
-  chosenSkills = chosenSkills.filter(s => s.id !== skill.id);
+  chosenSkills = chosenSkills.filter(s => s.skillId !== skill.skillId);
   return chosenSkills;
 }

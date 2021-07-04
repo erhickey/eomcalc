@@ -17,7 +17,7 @@ export function compareSkills(skill1, skill2) {
     return raritySort;
   }
 
-  return compareStringsCaseInsensitive(skill1.name, skill2.name);
+  return compareStringsCaseInsensitive(skill1.skillName, skill2.skillName);
 }
 
 /*

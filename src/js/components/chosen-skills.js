@@ -23,7 +23,7 @@ function createChosenSkillComponent(skill) {
   component.classList.add('chosen-skill', RARITY_MAP[skill.rarity].toLowerCase());
   component.onclick = () => onChosenSkillClick(skill);
 
-  const skillImage = createImageNode(SKILL_IMAGES_DIR, skill.name);
+  const skillImage = createImageNode(SKILL_IMAGES_DIR, skill.skillName);
   component.appendChild(skillImage);
 
   return component;

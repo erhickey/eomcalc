@@ -62,7 +62,7 @@ export function buildChanged(chosenSkills, changedSkill, isRemoved) {
   appendChildren(df, createBuildLinks(chosenSkills));
   replaceChildren(document.getElementById(BUILD_WRAPPER_ID), df);
 
-  const skillEl = document.getElementById(SKILL_ID_PREFIX + changedSkill.id);
+  const skillEl = document.getElementById(SKILL_ID_PREFIX + changedSkill.skillId);
 
   if (isRemoved) {
     skillEl.classList.remove('chosen-skill-list-skill');

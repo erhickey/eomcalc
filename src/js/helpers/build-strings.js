@@ -13,7 +13,7 @@ export function parseBuild(input) {
     return [];
   }
 
-  const build = input.split('.').map(n => SKILLS.find(s => s.id === parseInt(n))).filter(s => null != s);
+  const build = input.split('.').map(n => SKILLS.find(s => s.skillId === parseInt(n))).filter(s => null != s);
 
   if (validBuild(build)) {
     return build;
@@ -26,12 +26,12 @@ export function parseBuild(input) {
  * generate build url param from list of skills
  */
 export function generateBuildUrlParam(build) {
-  return build.map(s => s.id).join('.');
+  return build.map(s => s.skillId).join('.');
 }
 
 /*
  * generate discord message from list of skills
  */
 export function generateBuildDiscordMsg(build) {
-  return build.map(s => ':' + s.name.replace(/ /g, '') + ':').join('');
+  return build.map(s => ':' + s.skillName.replace(/ /g, '') + ':').join('');
 }
