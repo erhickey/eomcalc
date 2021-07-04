@@ -12,13 +12,13 @@ import Data.IntMap (IntMap)
 import Data.IntMap as IM (empty, findWithDefault, fromList, toAscList)
 import Data.Map (Map)
 import Data.Map as M (empty, findWithDefault, insert)
-import Data.Maybe (fromMaybe, mapMaybe)
+import Data.Maybe (catMaybes, fromMaybe, mapMaybe)
 import Data.Text (Text)
 import qualified Data.Text as T (lines, pack, unpack)
 import GHC.Generics (Generic)
 import System.IO (latin1, hSetEncoding, openFile, hGetContents, IOMode(ReadMode))
 
-import Data.Attoparsec.Text (anyChar, char, endOfLine, many', manyTill, decimal, parseOnly, Parser, string)
+import Data.Attoparsec.Text (anyChar, char, decimal, double, many', manyTill, parseOnly, Parser, string, takeTill)
 import Data.Aeson ((.:), (.:?), decode, encode, FromJSON, parseJSON, ToJSON, Value(Object))
 
 newtype Skills = Skills { skills :: [Skill] } deriving (Eq, FromJSON, Generic, Show, ToJSON)
@@ -32,7 +32,7 @@ data Skill = Skill
   , secondaryTrait :: Int
   , damage :: [Int]
   , mods :: [Int]
-  , cooldowns :: [Int]
+  , cooldowns :: [Double]
   , descriptions :: [String]
   } deriving (Eq, Generic, Show, ToJSON)
 
@@ -55,7 +55,7 @@ data SkillDetail = SkillDetail
   { skillDetailName :: String
   , skillIds :: [Int]
   , skillDetailDescriptions :: [String]
-  , skillDetailCooldowns :: [Int]
+  , skillDetailCooldowns :: [Double]
   }
 
 data ParsedDataType = Name | Description | InvalidLine deriving (Eq)
@@ -84,21 +84,23 @@ skillDescriptionParser = do
   pure (sId, description, Description)
 
 -- attempt to parse game data file for skill cooldowns
-skillCooldownsParser :: Parser [(Int, Int)]
-skillCooldownsParser = many' skillCooldownParser
+skillCooldownsParser :: Parser [(Int, Double)]
+skillCooldownsParser = catMaybes <$> many' (pure <$> skillCooldownParser <|> (detailsLine >> pure Nothing))
 
 -- attempt to parse next id and cooldown in game data file
-skillCooldownParser :: Parser (Int, Int)
+skillCooldownParser :: Parser (Int, Double)
 skillCooldownParser = do
-  _ <- manyTill anyChar (string "\t\tID = ")
+  _ <- string "\t\tID = "
   sId <- decimal
   _ <- char ','
-  endOfLine
-  _ <- manyTill anyChar (string "\t\tCD = ")
-  cd <- decimal
+  _ <- manyTill detailsLine (string "\t\tCD = ")
+  cd <- double
   _ <- char ','
-  endOfLine
   pure (sId, cd)
+
+-- match on a line from the details file (has no newline characters)
+detailsLine :: Parser Text
+detailsLine = takeTill ('\r' ==) <* char '\r'
 
 -- get maps of skill id to names and descriptions from game data file
 getSkillNamesAndDescriptions :: String -> IO (IntMap String, IntMap String)
@@ -116,7 +118,7 @@ getSkillNamesAndDescriptions file = do
       | otherwise = Nothing
 
 -- get map of skill id to cooldowns from game data file
-getSkillCooldowns :: String -> IO (IntMap Int)
+getSkillCooldowns :: String -> IO (IntMap Double)
 getSkillCooldowns file = do
   h <- openFile file ReadMode
   hSetEncoding h latin1
@@ -129,7 +131,7 @@ getSkillCooldowns file = do
 buildSkillDetailMap
   :: IntMap String          -- map of id to skill name
   -> IntMap String          -- map of id to skill descriptions
-  -> IntMap Int             -- map of id to cooldowns
+  -> IntMap Double             -- map of id to cooldowns
   -> Map String SkillDetail -- map of skill name to aggregated skill details
 buildSkillDetailMap sm dm cm = foldl go M.empty $ IM.toAscList sm
   where
@@ -150,14 +152,12 @@ parseSkillsJSON :: String -> IO [Skill]
 parseSkillsJSON s = skills . fromMaybe (Skills []) . decode <$> BS.readFile s
 
 -- combine skills.json and data from game files
-combineSkillsAndDetails :: [Skill] -> Map String SkillDetail -> ([Skill], Int, Int)
-combineSkillsAndDetails ss sm = foldl go ([], 0, 0) ss
-  where go (acc, nd, nc) s = (skill:acc, nd', nc')
+combineSkillsAndDetails :: [Skill] -> Map String SkillDetail -> [Skill]
+combineSkillsAndDetails ss sm = foldl go [] ss
+  where go acc s = skill:acc
           where sd = M.findWithDefault (SkillDetail "" [] [] []) (T.unpack $ skillName s) sm
                 ds = skillDetailDescriptions sd
                 cs = skillDetailCooldowns sd
-                nd' = nd + length ds
-                nc' = nc + length cs
                 skill = Skill
                   { skillName = skillName s
                   , skillId = skillId s
@@ -181,7 +181,5 @@ main = do
   (nm, dm) <- getSkillNamesAndDescriptions "src/data/skill-descriptions"
   cm <- getSkillCooldowns "src/data/skill-details"
   let sdm = buildSkillDetailMap nm dm cm
-      (output, nd, nc) = combineSkillsAndDetails ss sdm
+      output = combineSkillsAndDetails ss sdm
   writeSkills "src/data/skills-generated.json" output
-  print $ concat ["Found ", show nd, "/", show (4 * length ss), " descriptions for ", show $ length ss, " skills."]
-  print $ concat ["Found ", show nc, "/", show (4 * length ss), " cooldowns for ", show $ length ss, " skills."]
