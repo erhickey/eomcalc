@@ -12,20 +12,19 @@ import {
   SKILL_AND_FILTER_WRAPPER_ID,
   SKILL_ID_PREFIX,
   SKILL_LIST_ID,
-  TRAITS_ID,
-  WRAPPER_ID
+  TRAITS_ID
 } from '../constants/html.js';
 import {appendChildren, isEmpty, replaceChildren} from '../util/util.js';
 
 /*
  * called once when the application starts
- * build and add all elements to the DOM
+ * build and add all elements to the given container
  */
-export function initialRender(skills, chosenSkills) {
+export function initialRender(container, skills, chosenSkills) {
   const df = new DocumentFragment();
   df.appendChild(initSkillAndFilterComponents(skills, chosenSkills));
   df.appendChild(initBuildComponents(chosenSkills));
-  appendChildren(document.getElementById(WRAPPER_ID), df);
+  appendChildren(container, df);
 }
 
 /*

@@ -5,7 +5,7 @@ const path = require('path');
 
 const buildOptions = {
   entryPoints: [
-    './src/js/app.js',
+    './src/js/eom-calc.js',
     './src/css/styles.css'
   ],
   outdir: './dist/assets/',

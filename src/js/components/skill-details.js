@@ -6,7 +6,6 @@ import {HIDDEN_CLASS} from '../constants/css.js';
 import {SKILL_TYPES, TRAIT_MAP} from '../constants/data.js';
 import {SKILL_IMAGES_DIR, TRAIT_IMAGES_DIR} from '../constants/resources.js';
 import {createImageNode} from '../helpers/components.js';
-import {format} from '../util/util.js';
 
 /*
  * create skill details component

@@ -8,11 +8,12 @@ import {NO_CHANGE, SKILL_REMOVED} from '../constants/app.js';
 
 /*
  * called once when app starts
- * accepts a build that user may have passed in as the build param
+ * first argument is the html element the calculator will be inserted into
+ * second argument is a build that from the build param
  */
-export function initializeApp(build) {
+export function initializeApp(container, build) {
   const [skills, chosenSkills] = initializeState(build);
-  initialRender(skills, chosenSkills);
+  initialRender(container, skills, chosenSkills);
 }
 
 /*
