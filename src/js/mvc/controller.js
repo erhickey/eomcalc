@@ -4,6 +4,7 @@
 
 import {
   addOrRemoveSkill,
+  getCurrentSkillDetail,
   getSkillLevel,
   initializeState,
   removeSkill,
@@ -14,10 +15,11 @@ import {
   buildChanged,
   hideSkillDetailsComponent,
   initialRender,
-  showSkillDetailsComponent,
+  updateSkillDetailsComponent,
   toggleSkillDetailsComponent
 } from './view.js';
 import {NO_CHANGE, SKILL_REMOVED} from '../constants/app.js';
+import {ESCAPE_KEY} from '../constants/constants.js';
 
 /*
  * called once when app starts
@@ -27,6 +29,15 @@ import {NO_CHANGE, SKILL_REMOVED} from '../constants/app.js';
 export function initializeApp(container, build) {
   const [skills, chosenSkills] = initializeState(build);
   initialRender(container, skills, chosenSkills);
+
+  // hide skill details when esc is pressed
+  document.onkeydown = evt => {
+    const evnt = evt || window.event;
+
+    if (ESCAPE_KEY === evnt.keyCode) {
+      hideSkillDetailsComponent();
+    }
+  };
 }
 
 /*
@@ -58,7 +69,7 @@ export function onSkillDetailsClick(skill, level = null) {
   }
 
   if (updateSkillDetails(skill)) {
-    showSkillDetailsComponent(skill, getSkillLevel());
+    updateSkillDetailsComponent(skill, getSkillLevel());
   } else {
     toggleSkillDetailsComponent();
   }
@@ -69,4 +80,24 @@ export function onSkillDetailsClick(skill, level = null) {
  */
 export function hideSkillDetails() {
   hideSkillDetailsComponent();
+}
+
+/*
+ * increase the skill detail level
+ */
+export function increaseSkillLevel() {
+  // eslint-disable-next-line no-magic-numbers
+  if (setSkillLevel(getSkillLevel() + 1)) {
+    updateSkillDetailsComponent(getCurrentSkillDetail(), getSkillLevel());
+  }
+}
+
+/*
+ * decrease the skill detail level
+ */
+export function decreaseSkillLevel() {
+  // eslint-disable-next-line no-magic-numbers
+  if (setSkillLevel(getSkillLevel() - 1)) {
+    updateSkillDetailsComponent(getCurrentSkillDetail(), getSkillLevel());
+  }
 }

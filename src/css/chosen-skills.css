@@ -49,6 +49,7 @@
   color: #ddd;
   font-weight: bold;
   text-align: right;
+  user-select: none;
 }
 
 .chosen-skill-info > span {

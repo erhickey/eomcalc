@@ -131,9 +131,9 @@ export function toggleSkillDetailsComponent() {
 }
 
 /*
- * show component to display details about selected skill
+ * recreate and show component to display details about selected skill
  */
-export function showSkillDetailsComponent(skill, level) {
+export function updateSkillDetailsComponent(skill, level) {
   const skillDetails = document.getElementById(SKILL_DETAILS_ID);
   replaceChildren(skillDetails, createSkillDetails(skill, level));
   skillDetails.classList.remove(HIDDEN_CLASS);

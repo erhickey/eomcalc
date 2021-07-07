@@ -14,7 +14,7 @@ let chosenSkills = [];
 
 // id of skill that details may currently be displayed for
 // track this so we know when to show/hide the details
-let currentSkillDetail = -1;
+let currentSkillDetail = null;
 
 // the level of the skill to display details for
 let skillLevel = 0;
@@ -55,11 +55,17 @@ export function removeSkill(skill) {
 
 /*
  * set the level of the skill to display details for
+ * return true if the skill level changed, otherwise returns false
  */
 export function setSkillLevel(level) {
   let lvl = level > MAX_SKILL_LEVEL ? MAX_SKILL_LEVEL : level;
   lvl = level < MIN_SKILL_LEVEL ? MIN_SKILL_LEVEL : level;
+  if (skillLevel === lvl) {
+    return false;
+  }
+
   skillLevel = lvl;
+  return true;
 }
 
 /*
@@ -75,10 +81,14 @@ export function getSkillLevel() {
  * returns false if the skill didn't change
  */
 export function updateSkillDetails(skill) {
-  if (currentSkillDetail === skill.skillId) {
+  if (currentSkillDetail && currentSkillDetail.skillId === skill.skillId) {
     return false;
   }
 
-  currentSkillDetail = skill.skillId;
+  currentSkillDetail = skill;
   return true;
+}
+
+export function getCurrentSkillDetail() {
+  return currentSkillDetail;
 }

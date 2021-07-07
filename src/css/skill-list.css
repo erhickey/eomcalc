@@ -71,6 +71,8 @@
   color: #ddd;
   font-weight: bold;
   text-align: right;
+  user-select: none;
+  z-index: 1;
 }
 
 .skill-list-info > span {
