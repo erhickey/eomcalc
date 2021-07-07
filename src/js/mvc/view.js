@@ -5,11 +5,14 @@
 import {createBuildLinks} from '../components/build-links.js';
 import {createChosenSkills} from '../components/chosen-skills.js';
 import {createSkills} from '../components/skills.js';
+import {createSkillDetails} from '../components/skill-details.js';
 import {createTraits} from '../components/traits.js';
+import {HIDDEN_CLASS} from '../constants/css.js';
 import {
   BUILD_WRAPPER_ID,
   CHOSEN_SKILLS_ID,
   SKILL_AND_FILTER_WRAPPER_ID,
+  SKILL_DETAILS_ID,
   SKILL_ID_PREFIX,
   SKILL_LIST_ID,
   TRAITS_ID
@@ -22,6 +25,7 @@ import {appendChildren, isEmpty, replaceChildren} from '../util/util.js';
  */
 export function initialRender(container, skills, chosenSkills) {
   const df = new DocumentFragment();
+  df.appendChild(initSkillDetailsComponent());
   df.appendChild(initSkillAndFilterComponents(skills, chosenSkills));
   df.appendChild(initBuildComponents(chosenSkills));
   appendChildren(container, df);
@@ -38,7 +42,7 @@ function initSkillAndFilterComponents(skills, chosenSkills) {
 }
 
 /*
- * called once when application starts to initialize all build components
+ * called once when application starts to initialize components for
  * chosen skill list or informational text, traits and details, and build links
  */
 function initBuildComponents(chosenSkills) {
@@ -47,6 +51,17 @@ function initBuildComponents(chosenSkills) {
   component.appendChild(createChosenSkillsComponent(chosenSkills));
   component.appendChild(createTraitsComponent(chosenSkills));
   appendChildren(component, createBuildLinks(chosenSkills));
+  return component;
+}
+
+/*
+ * called once when application starts to initialize the skill details component
+ */
+function initSkillDetailsComponent() {
+  const component = document.createElement('div');
+  component.id = SKILL_DETAILS_ID;
+  component.classList.add('skill-details');
+  component.classList.add(HIDDEN_CLASS);
   return component;
 }
 
@@ -92,7 +107,7 @@ function createChosenSkillsComponent(chosenSkills) {
   }
 
   const info = document.createElement('div');
-  info.classList.add('chosen-skills-info');
+  info.classList.add('chosen-skills-text');
   info.innerHTML = 'Choose skills from above to create your build.';
   info.innerHTML += '\nShare your build with the link or discord message below.';
   return info;
@@ -106,4 +121,24 @@ function createTraitsComponent(chosenSkills) {
   component.id = TRAITS_ID;
   appendChildren(component, createTraits(chosenSkills));
   return component;
+}
+
+/*
+ * toggle component to display details about selected skill
+ */
+export function toggleSkillDetailsComponent() {
+  document.getElementById(SKILL_DETAILS_ID).classList.toggle(HIDDEN_CLASS);
+}
+
+/*
+ * show component to display details about selected skill
+ */
+export function showSkillDetailsComponent(skill, level) {
+  const skillDetails = document.getElementById(SKILL_DETAILS_ID);
+  replaceChildren(skillDetails, createSkillDetails(skill, level));
+  skillDetails.classList.remove(HIDDEN_CLASS);
+}
+
+export function hideSkillDetailsComponent() {
+  document.getElementById(SKILL_DETAILS_ID).classList.add(HIDDEN_CLASS);
 }

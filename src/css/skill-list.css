@@ -71,11 +71,17 @@
   color: #ddd;
   font-weight: bold;
   text-align: right;
-  z-index: 1;
 }
 
 .skill-list-info > span {
   position: absolute;
   right: -17px;
   cursor: default;
+}
+
+@media (pointer: fine) {
+  .skill-list-info:hover {
+    border-right-color: rgba(200, 200, 200, 0.8);
+    color: #222;
+  }
 }

@@ -2,58 +2,64 @@
  * contains functions which create the elements to display skill details
  */
 
-import {HIDDEN_CLASS} from '../constants/css.js';
-import {SKILL_TYPES, TRAIT_MAP} from '../constants/data.js';
+import {LEVELS, SKILL_TYPES, TRAIT_MAP} from '../constants/data.js';
 import {SKILL_IMAGES_DIR, TRAIT_IMAGES_DIR} from '../constants/resources.js';
 import {createImageNode} from '../helpers/components.js';
+import {hideSkillDetails} from '../mvc/controller.js';
 
 /*
  * create skill details component
  */
-export function createSkillDetailsComponent(skill) {
-  const component = document.createElement('div');
-  component.classList.add('skill-details', HIDDEN_CLASS);
+export function createSkillDetails(skill, level) {
+  const closeButton = document.createElement('div');
+  closeButton.classList.add('skill-details-close');
+  closeButton.innerHTML = 'x';
+  closeButton.onclick = (e) => {
+    e.stopPropagation();
+    hideSkillDetails();
+  };
 
-  component.appendChild(createHeaderComponent(skill));
-  component.appendChild(createMiscComponent(skill));
-  component.appendChild(createDescriptionComponent(skill));
-
-  return component;
+  const df = new DocumentFragment();
+  df.appendChild(closeButton);
+  df.appendChild(createHeaderComponent(skill));
+  df.appendChild(createMiscComponent(skill, level));
+  df.appendChild(createDescriptionComponent(skill, level));
+  return df;
 }
 
 /*
  * create component with skill description
  */
-function createDescriptionComponent(skill) {
+function createDescriptionComponent(skill, level) {
   const component = document.createElement('div');
   component.classList.add('skill-details-description');
-  component.innerHTML = skill.descriptions[0];
+  component.innerHTML = skill.descriptions[level];
   return component;
 }
 
 /*
  * create component with misc data, level, skill type, cooldown
  */
-function createMiscComponent(skill) {
+function createMiscComponent(skill, level) {
   const component = document.createElement('div');
   component.classList.add('skill-details-misc');
 
-  const level = document.createElement('div');
-  level.classList.add('skill-details-misc-level');
+  const levelEl = document.createElement('div');
+  levelEl.classList.add('skill-details-misc-level');
   const levelLabel = document.createElement('span');
   levelLabel.innerHTML = 'Level ';
   const levelNumber = document.createElement('span');
   levelNumber.classList.add('skill-details-misc-dynamic-text');
-  levelNumber.innerHTML = '1';
+  levelNumber.innerHTML = LEVELS[level];
 
-  level.appendChild(levelLabel);
-  level.appendChild(levelNumber);
+  levelEl.appendChild(levelLabel);
+  levelEl.appendChild(levelNumber);
 
   const type = document.createElement('div');
   type.classList.add('skill-details-misc-type');
   type.innerHTML = SKILL_TYPES.ACTIVE === skill.skillType ? 'Active' : 'Passive';
 
-  component.appendChild(level);
+  component.appendChild(levelEl);
   component.appendChild(type);
 
   if (SKILL_TYPES.ACTIVE === skill.skillType) {
@@ -65,7 +71,7 @@ function createMiscComponent(skill) {
 
     const cooldownNumber = document.createElement('span');
     cooldownNumber.classList.add('skill-details-misc-dynamic-text');
-    cooldownNumber.innerHTML = skill.cooldowns[0] + 's';
+    cooldownNumber.innerHTML = skill.cooldowns[level] + 's';
 
     cooldown.appendChild(cooldownLabel);
     cooldown.appendChild(cooldownNumber);
@@ -97,6 +103,9 @@ function createHeaderComponent(skill) {
   return header;
 }
 
+/*
+ * create trait image elements
+ */
 function createTraitsComponent(skill) {
   const component = document.createElement('div');
   component.classList.add('skill-details-traits');

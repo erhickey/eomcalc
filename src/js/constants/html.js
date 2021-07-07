@@ -9,3 +9,5 @@ export const SKILL_ID_PREFIX = 'skill-';
 export const BUILD_WRAPPER_ID = 'build-wrapper';
 export const CHOSEN_SKILLS_ID = 'chosen-skills';
 export const TRAITS_ID = 'traits';
+
+export const SKILL_DETAILS_ID = 'skill-details';

@@ -2,8 +2,21 @@
  * responsible for responding to user input
  */
 
-import {addOrRemoveSkill, initializeState, removeSkill} from './model.js';
-import {buildChanged, initialRender} from './view.js';
+import {
+  addOrRemoveSkill,
+  getSkillLevel,
+  initializeState,
+  removeSkill,
+  setSkillLevel,
+  updateSkillDetails
+} from './model.js';
+import {
+  buildChanged,
+  hideSkillDetailsComponent,
+  initialRender,
+  showSkillDetailsComponent,
+  toggleSkillDetailsComponent
+} from './view.js';
 import {NO_CHANGE, SKILL_REMOVED} from '../constants/app.js';
 
 /*
@@ -34,4 +47,26 @@ export function onSkillClick(skill) {
  */
 export function onChosenSkillClick(skill) {
   buildChanged(removeSkill(skill), skill, true);
+}
+
+/*
+ * called when skill info button is clicked on a skill list skill or chosen skill
+ */
+export function onSkillDetailsClick(skill, level = null) {
+  if (level) {
+    setSkillLevel(level);
+  }
+
+  if (updateSkillDetails(skill)) {
+    showSkillDetailsComponent(skill, getSkillLevel());
+  } else {
+    toggleSkillDetailsComponent();
+  }
+}
+
+/*
+ * hide the skill details component
+ */
+export function hideSkillDetails() {
+  hideSkillDetailsComponent();
 }

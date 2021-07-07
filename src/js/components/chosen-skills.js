@@ -2,6 +2,7 @@
  * contains functions which create the elements indicating which skills have been chosen
  */
 
+import {createSkillInfoComponent} from './skill-info.js';
 import {RARITY_MAP} from '../constants/data.js';
 import {SKILL_IMAGES_DIR} from '../constants/resources.js';
 import {compareChosenSkills} from '../helpers/chosen-skills.js';
@@ -24,6 +25,7 @@ function createChosenSkillComponent(skill) {
   component.onclick = () => onChosenSkillClick(skill);
 
   const skillImage = createImageNode(SKILL_IMAGES_DIR, skill.skillName);
+  component.appendChild(createSkillInfoComponent(skill, 'chosen-skill-info'));
   component.appendChild(skillImage);
 
   return component;
