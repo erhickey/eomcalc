@@ -31,7 +31,7 @@ function createDescriptionComponent(skill, level) {
   const component = document.createElement('div');
   component.classList.add('skill-details-description');
   // eslint-disable-next-line no-magic-numbers
-  component.innerHTML = skill.descriptions[level - 1];
+  component.innerHTML = skill.descriptions[level - 1].replace(/\\n/g, '\n');
   return component;
 }
 
