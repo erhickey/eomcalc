@@ -8,13 +8,8 @@
 @import './trait-details.css';
 @import './traits.css';
 
-body {
-  font-family: "arial";
-}
-
-#wrapper {
-  width: 95%;
-  margin: 1em auto;
+eom-calc {
+  font-family: arial;
 }
 
 .hidden {

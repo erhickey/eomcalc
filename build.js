@@ -6,7 +6,7 @@ const path = require('path');
 const buildOptions = {
   entryPoints: [
     './src/js/eom-calc.js',
-    './src/css/styles.css'
+    './src/css/eom-calc.css'
   ],
   outdir: './dist/assets/',
   sourcemap: false,
