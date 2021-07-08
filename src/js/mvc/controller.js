@@ -83,21 +83,10 @@ export function hideSkillDetails() {
 }
 
 /*
- * increase the skill detail level
+ * set skill detail level
  */
-export function increaseSkillLevel() {
-  // eslint-disable-next-line no-magic-numbers
-  if (setSkillLevel(getSkillLevel() + 1)) {
-    updateSkillDetailsComponent(getCurrentSkillDetail(), getSkillLevel());
-  }
-}
-
-/*
- * decrease the skill detail level
- */
-export function decreaseSkillLevel() {
-  // eslint-disable-next-line no-magic-numbers
-  if (setSkillLevel(getSkillLevel() - 1)) {
+export function onSkillLevelClick(level) {
+  if (setSkillLevel(level)) {
     updateSkillDetailsComponent(getCurrentSkillDetail(), getSkillLevel());
   }
 }

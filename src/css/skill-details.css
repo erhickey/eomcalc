@@ -15,7 +15,7 @@
 }
 
 .skill-details-close {
-  color: #dd3333;
+  color: #cc3333;
   font-weight: 300;
   font-family: Arial, sans-serif;
   border-radius: 5px;
@@ -25,6 +25,12 @@
   position: absolute;
   right: 5px;
   user-select: none;
+}
+
+@media (pointer: fine) {
+  .skill-details-close:hover {
+    background: rgba(50, 50, 50, 0.3);
+  }
 }
 
 .skill-details-header {
@@ -42,12 +48,6 @@
   height: 50px;
   width: 50px;
   margin-right: 5px;
-}
-
-@media (pointer: fine) {
-  .skill-details-close:hover {
-    background: rgba(50, 50, 50, 0.7);
-  }
 }
 
 .skill-details-traits {
@@ -73,6 +73,9 @@
   font-size: 0.9em;
   display: flex;
   flex-wrap: nowrap;
+  border-width: 0 0 1px 0;
+  border-color: #444;
+  border-style: solid;
 }
 
 .skill-details-misc-level {
@@ -92,7 +95,7 @@
   cursor: default;
 }
 
-.skill-details-misc-dynamic-text {
+.skill-details-misc-cooldown-text {
   color: #d98107;
   font-weight: bold;
   cursor: default;
@@ -103,4 +106,28 @@
   font-size: 0.75em;
   padding: 5px;
   cursor: default;
+}
+
+.level-text {
+  padding: 0 7px;
+  border-style: solid;
+  border-width: 1px 1px 0 1px;
+}
+
+.active-level-text {
+  padding-top: 2px;
+  border-color: #444;
+  border-bottom-width: 2px;
+  border-bottom-color: rgb(245, 204, 100);
+}
+
+.inactive-level-text {
+  border-color: #707071;
+  color: #707071;
+}
+
+@media (pointer: fine) {
+  .inactive-level-text:hover {
+    background: rgba(50, 50, 50, 0.3);
+  }
 }

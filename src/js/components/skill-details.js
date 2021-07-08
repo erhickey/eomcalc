@@ -5,7 +5,7 @@
 import {LEVELS, SKILL_TYPES, TRAIT_MAP} from '../constants/data.js';
 import {SKILL_IMAGES_DIR, TRAIT_IMAGES_DIR} from '../constants/resources.js';
 import {createImageNode} from '../helpers/components.js';
-import {hideSkillDetails} from '../mvc/controller.js';
+import {hideSkillDetails, onSkillLevelClick} from '../mvc/controller.js';
 
 /*
  * create skill details component
@@ -14,10 +14,7 @@ export function createSkillDetails(skill, level) {
   const closeButton = document.createElement('div');
   closeButton.classList.add('skill-details-close');
   closeButton.innerHTML = 'x';
-  closeButton.onclick = (e) => {
-    e.stopPropagation();
-    hideSkillDetails();
-  };
+  closeButton.onclick = () => hideSkillDetails();
 
   const df = new DocumentFragment();
   df.appendChild(closeButton);
@@ -33,7 +30,8 @@ export function createSkillDetails(skill, level) {
 function createDescriptionComponent(skill, level) {
   const component = document.createElement('div');
   component.classList.add('skill-details-description');
-  component.innerHTML = skill.descriptions[level];
+  // eslint-disable-next-line no-magic-numbers
+  component.innerHTML = skill.descriptions[level - 1];
   return component;
 }
 
@@ -48,12 +46,19 @@ function createMiscComponent(skill, level) {
   levelEl.classList.add('skill-details-misc-level');
   const levelLabel = document.createElement('span');
   levelLabel.innerHTML = 'Level ';
-  const levelNumber = document.createElement('span');
-  levelNumber.classList.add('skill-details-misc-dynamic-text');
-  levelNumber.innerHTML = LEVELS[level];
 
   levelEl.appendChild(levelLabel);
-  levelEl.appendChild(levelNumber);
+
+  for (let i = 0; i < LEVELS.length; i++) {
+    const levelNumber = document.createElement('span');
+    levelNumber.classList.add('level-text');
+    levelNumber.classList.add(LEVELS[i] === level ? 'active-level-text' : 'inactive-level-text');
+    levelNumber.innerHTML = LEVELS[i];
+
+    levelNumber.onclick = () => onSkillLevelClick(LEVELS[i]);
+
+    levelEl.appendChild(levelNumber);
+  }
 
   const type = document.createElement('div');
   type.classList.add('skill-details-misc-type');
@@ -70,8 +75,9 @@ function createMiscComponent(skill, level) {
     cooldownLabel.innerHTML = 'CD: ';
 
     const cooldownNumber = document.createElement('span');
-    cooldownNumber.classList.add('skill-details-misc-dynamic-text');
-    cooldownNumber.innerHTML = skill.cooldowns[level] + 's';
+    cooldownNumber.classList.add('skill-details-misc-cooldown-text');
+    // eslint-disable-next-line no-magic-numbers
+    cooldownNumber.innerHTML = skill.cooldowns[level - 1] + 's';
 
     cooldown.appendChild(cooldownLabel);
     cooldown.appendChild(cooldownNumber);

@@ -139,6 +139,9 @@ export function updateSkillDetailsComponent(skill, level) {
   skillDetails.classList.remove(HIDDEN_CLASS);
 }
 
+/*
+ * hide skill details
+ */
 export function hideSkillDetailsComponent() {
   document.getElementById(SKILL_DETAILS_ID).classList.add(HIDDEN_CLASS);
 }

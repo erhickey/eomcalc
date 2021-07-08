@@ -6,9 +6,6 @@ import {MAX_SKILL_LEVEL, MIN_SKILL_LEVEL, NO_CHANGE, SKILL_ADDED, SKILL_REMOVED}
 import {SKILLS} from '../constants/data.js';
 import {validBuild} from '../helpers/app.js';
 
-// all the skills
-const skills = SKILLS;
-
 // current chosen skill
 let chosenSkills = [];
 
@@ -17,14 +14,14 @@ let chosenSkills = [];
 let currentSkillDetail = null;
 
 // the level of the skill to display details for
-let skillLevel = 0;
+let skillLevel = MIN_SKILL_LEVEL;
 
 /*
  * called once when application starts
  */
 export function initializeState(build) {
   chosenSkills = build;
-  return [skills, chosenSkills];
+  return [SKILLS, chosenSkills];
 }
 
 /*
@@ -60,6 +57,7 @@ export function removeSkill(skill) {
 export function setSkillLevel(level) {
   let lvl = level > MAX_SKILL_LEVEL ? MAX_SKILL_LEVEL : level;
   lvl = level < MIN_SKILL_LEVEL ? MIN_SKILL_LEVEL : level;
+
   if (skillLevel === lvl) {
     return false;
   }
