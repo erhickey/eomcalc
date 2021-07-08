@@ -39,3 +39,19 @@
   height: 22px;
   margin: 5px 5px 0 6px;
 }
+
+@media (pointer: fine) {
+  .trait-primary > img:hover {
+    background: rgba(180, 180, 180, 0.7);
+    box-shadow: 0 0 5px #fff;
+    border-radius: 100%;
+    opacity: 0.8;
+  }
+
+  .trait-secondary > img:hover {
+    background: rgba(180, 180, 180, 0.7);
+    box-shadow: 0 0 12px #fff;
+    border-radius: 50%;
+    opacity: 0.6;
+  }
+}

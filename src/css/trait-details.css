@@ -6,12 +6,29 @@
   color: #332502;
   width: min-content;
   height: min-content;
+  display: block;
+  z-index: 2;
+  position: fixed;
 }
 
-.trait-details-visible {
-  display: block;
-  z-index: 1;
-  position: fixed;
+.trait-details-close {
+  color: #cc3333;
+  font-weight: 300;
+  font-family: Arial, sans-serif;
+  border-radius: 5px;
+  background: rgba(50, 50, 50, 0.1);
+  padding: 0 3px;
+  cursor: default;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  user-select: none;
+}
+
+@media (pointer: fine) {
+  .trait-details-close:hover {
+    background: rgba(50, 50, 50, 0.3);
+  }
 }
 
 .trait-details-header {

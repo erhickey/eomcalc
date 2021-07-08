@@ -9,14 +9,18 @@ import {
   initializeState,
   removeSkill,
   setSkillLevel,
-  updateSkillDetails
+  updateSkillDetails,
+  updateTraitDetails
 } from './model.js';
 import {
   buildChanged,
   hideSkillDetailsComponent,
+  hideTraitDetailsComponent,
   initialRender,
+  toggleSkillDetailsComponent,
+  toggleTraitDetailsComponent,
   updateSkillDetailsComponent,
-  toggleSkillDetailsComponent
+  updateTraitDetailsComponent
 } from './view.js';
 import {NO_CHANGE, SKILL_REMOVED} from '../constants/app.js';
 import {ESCAPE_KEY} from '../constants/constants.js';
@@ -36,6 +40,7 @@ export function initializeApp(container, build) {
 
     if (ESCAPE_KEY === evnt.keyCode) {
       hideSkillDetailsComponent();
+      hideTraitDetailsComponent();
     }
   };
 }
@@ -89,4 +94,22 @@ export function onSkillLevelClick(level) {
   if (setSkillLevel(level)) {
     updateSkillDetailsComponent(getCurrentSkillDetail(), getSkillLevel());
   }
+}
+
+/*
+ * called when user clicks on a trait to display the trait details
+ */
+export function onTraitClick(anchorElement, trait) {
+  if (updateTraitDetails(trait)) {
+    updateTraitDetailsComponent(anchorElement, trait);
+  } else {
+    toggleTraitDetailsComponent();
+  }
+}
+
+/*
+ * hide the trait details component
+ */
+export function hideTraitDetails() {
+  hideTraitDetailsComponent();
 }

@@ -12,6 +12,7 @@ import {compareStringsCaseInsensitive, isEmpty, last} from '../util/util.js';
 export class Trait {
   constructor(trait, skills) {
     this.name = trait.name;
+    this.id = trait.id;
     this.type = trait.type;
     this.description = trait.desc;
     this.breakpoints = trait.breakpoints;

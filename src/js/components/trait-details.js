@@ -2,17 +2,16 @@
  * contains functions which create the elements to display trait details
  */
 
-import {HIDDEN_CLASS} from '../constants/css.js';
 import {TRAIT_IMAGES_DIR} from '../constants/resources.js';
 import {createImageNode} from '../helpers/components.js';
+import {hideTraitDetails} from '../mvc/controller.js';
 import {format} from '../util/util.js';
 
 /*
  * create trait details component
  */
 export function createTraitDetailsComponent(trait) {
-  const component = document.createElement('div');
-  component.classList.add('trait-details', HIDDEN_CLASS);
+  const df = new DocumentFragment();
 
   const header = document.createElement('div');
   header.classList.add('trait-details-header');
@@ -20,6 +19,11 @@ export function createTraitDetailsComponent(trait) {
   headerText.innerHTML = trait.name;
   header.appendChild(createImageNode(TRAIT_IMAGES_DIR, trait.name));
   header.appendChild(headerText);
+
+  const closeButton = document.createElement('div');
+  closeButton.classList.add('trait-details-close');
+  closeButton.innerHTML = 'x';
+  closeButton.onclick = () => hideTraitDetails();
 
   const body = document.createElement('div');
   body.classList.add('trait-details-body');
@@ -36,10 +40,11 @@ export function createTraitDetailsComponent(trait) {
     ));
   }
 
-  component.appendChild(header);
-  component.appendChild(body);
+  df.appendChild(closeButton);
+  df.appendChild(header);
+  df.appendChild(body);
 
-  return component;
+  return df;
 }
 
 /*

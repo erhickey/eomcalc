@@ -7,6 +7,7 @@ import {createChosenSkills} from '../components/chosen-skills.js';
 import {createSkills} from '../components/skills.js';
 import {createSkillDetails} from '../components/skill-details.js';
 import {createTraits} from '../components/traits.js';
+import {createTraitDetailsComponent} from '../components/trait-details.js';
 import {HIDDEN_CLASS} from '../constants/css.js';
 import {
   BUILD_WRAPPER_ID,
@@ -15,9 +16,13 @@ import {
   SKILL_DETAILS_ID,
   SKILL_ID_PREFIX,
   SKILL_LIST_ID,
+  TRAIT_DETAILS_ID,
   TRAITS_ID
 } from '../constants/html.js';
-import {appendChildren, isEmpty, replaceChildren} from '../util/util.js';
+import {appendChildren, isEmpty, positionElementRelativeTo, replaceChildren} from '../util/util.js';
+
+// number of pixels to offset trait details by
+const DETAIL_HOVER_OFFSET = 15;
 
 /*
  * called once when the application starts
@@ -26,6 +31,7 @@ import {appendChildren, isEmpty, replaceChildren} from '../util/util.js';
 export function initialRender(container, skills, chosenSkills) {
   const df = new DocumentFragment();
   df.appendChild(initSkillDetailsComponent());
+  df.appendChild(initTraitDetailsComponent());
   df.appendChild(initSkillAndFilterComponents(skills, chosenSkills));
   df.appendChild(initBuildComponents(chosenSkills));
   appendChildren(container, df);
@@ -61,6 +67,17 @@ function initSkillDetailsComponent() {
   const component = document.createElement('div');
   component.id = SKILL_DETAILS_ID;
   component.classList.add('skill-details');
+  component.classList.add(HIDDEN_CLASS);
+  return component;
+}
+
+/*
+ * called once when application starts to initialize the trait details component
+ */
+function initTraitDetailsComponent() {
+  const component = document.createElement('div');
+  component.id = TRAIT_DETAILS_ID;
+  component.classList.add('trait-details');
   component.classList.add(HIDDEN_CLASS);
   return component;
 }
@@ -144,4 +161,28 @@ export function updateSkillDetailsComponent(skill, level) {
  */
 export function hideSkillDetailsComponent() {
   document.getElementById(SKILL_DETAILS_ID).classList.add(HIDDEN_CLASS);
+}
+
+/*
+ * toggle component to display details about selected trait
+ */
+export function toggleTraitDetailsComponent() {
+  document.getElementById(TRAIT_DETAILS_ID).classList.toggle(HIDDEN_CLASS);
+}
+
+/*
+ * recreate and show component to display details about selected trait
+ */
+export function updateTraitDetailsComponent(anchorElement, trait) {
+  const traitDetails = document.getElementById(TRAIT_DETAILS_ID);
+  replaceChildren(traitDetails, createTraitDetailsComponent(trait));
+  traitDetails.classList.remove(HIDDEN_CLASS);
+  positionElementRelativeTo(anchorElement, traitDetails, DETAIL_HOVER_OFFSET);
+}
+
+/*
+ * hide trait details
+ */
+export function hideTraitDetailsComponent() {
+  document.getElementById(TRAIT_DETAILS_ID).classList.add(HIDDEN_CLASS);
 }

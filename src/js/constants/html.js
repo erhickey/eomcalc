@@ -11,3 +11,4 @@ export const CHOSEN_SKILLS_ID = 'chosen-skills';
 export const TRAITS_ID = 'traits';
 
 export const SKILL_DETAILS_ID = 'skill-details';
+export const TRAIT_DETAILS_ID = 'trait-details';

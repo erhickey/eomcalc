@@ -9,12 +9,16 @@ import {validBuild} from '../helpers/app.js';
 // current chosen skill
 let chosenSkills = [];
 
-// id of skill that details may currently be displayed for
+// skill that details may currently be displayed for
 // track this so we know when to show/hide the details
 let currentSkillDetail = null;
 
 // the level of the skill to display details for
 let skillLevel = MIN_SKILL_LEVEL;
+
+// trait that details may currently be displayed for
+// track this so we know when to show/hide the details
+let currentTrait = null;
 
 /*
  * called once when application starts
@@ -87,6 +91,23 @@ export function updateSkillDetails(skill) {
   return true;
 }
 
+/*
+ * return the skill that the user last clicked the info button for
+ */
 export function getCurrentSkillDetail() {
   return currentSkillDetail;
+}
+
+/*
+ * update the trait to display details for
+ * returns true if the trait has changed
+ * returns false if the trait didn't change
+ */
+export function updateTraitDetails(trait) {
+  if (currentTrait && currentTrait.id === trait.id) {
+    return false;
+  }
+
+  currentTrait = trait;
+  return true;
 }
