@@ -13,7 +13,7 @@ import Data.IntMap as IM (empty, findWithDefault, fromList, toAscList)
 import Data.Map (Map)
 import Data.Map as M (empty, findWithDefault, insert)
 import Data.Maybe (catMaybes, fromMaybe, mapMaybe)
-import Data.Text (Text)
+import Data.Text (replace, Text)
 import qualified Data.Text as T (lines, pack, unpack)
 import GHC.Generics (Generic)
 import System.IO (latin1, hSetEncoding, openFile, hGetContents, IOMode(ReadMode))
@@ -81,7 +81,16 @@ skillDescriptionParser = do
   sId <- decimal
   _ <- string "\"] = \""
   description <- manyTill anyChar (string "\",")
-  pure (sId, description, Description)
+  pure (sId, fixLuckyDice $ replaceSmartQuotes description, Description)
+
+-- remove erroneous < from Lucky Dice descriptions
+fixLuckyDice :: String -> String
+fixLuckyDice = T.unpack . replace "<DEF" "DEF" . T.pack
+
+-- replace multi-byte smart quote charactes with apostrophe
+replaceSmartQuotes :: String -> String
+replaceSmartQuotes = T.unpack . replace smartQuote "'" . T.pack
+  where smartQuote = T.pack "\226\128\153"
 
 -- attempt to parse game data file for skill cooldowns
 skillCooldownsParser :: Parser [(Int, Double)]

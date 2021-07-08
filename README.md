@@ -19,4 +19,3 @@ Also present in this project is Haskell code which parses data from multiple gam
 6. Find a file containing attributes for each skill. The attributes include an ID, which matches the numbers found in the previous file, and several other attributes such as Desc, quality, SkillType, IsActive, Buy, Sell, CD
 7. Once you find the file, copy it to src/data/skill-details
 8. Run the Haskell code to generate src/data/skills-generated.json. A cabal file is included to easily execute the code.
-9. Some modifications may need to be made. Multi-byte smart quotes should be replaced, and erroneous open angle brackets should be removed, as found in Lucky Dice.
