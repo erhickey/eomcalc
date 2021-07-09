@@ -1,7 +1,3 @@
-/*
- * helper classes/functions for creating trait components
- */
-
 import {ORDER_AFTER, ORDER_BEFORE, ORDER_EQUAL} from '../constants/constants.js';
 import {TRAIT_TYPES} from '../constants/data.js';
 import {compareStringsCaseInsensitive, isEmpty, last} from '../util/util.js';

@@ -1,4 +1,4 @@
-.skill-details {
+.skill-detail {
   display: block;
   background: rgb(245, 204, 100);
   border-radius: 5px;
@@ -14,7 +14,7 @@
   left: 15px;
 }
 
-.skill-details-close {
+.skill-detail-close {
   color: #cc3333;
   font-weight: 300;
   font-family: Arial, sans-serif;
@@ -28,12 +28,12 @@
 }
 
 @media (pointer: fine) {
-  .skill-details-close:hover {
+  .skill-detail-close:hover {
     background: rgba(50, 50, 50, 0.3);
   }
 }
 
-.skill-details-header {
+.skill-detail-header {
   padding: 3px;
   display: flex;
   font-weight: bold;
@@ -44,24 +44,24 @@
   cursor: default;
 }
 
-.skill-details-header > img {
+.skill-detail-header > img {
   height: 50px;
   width: 50px;
   margin-right: 5px;
 }
 
-.skill-details-traits {
+.skill-detail-traits {
   display: flex;
   margin-top: 5px;
 }
 
-.skill-details-traits > img {
+.skill-detail-traits > img {
   height: 25px;
   width: 25px;
   margin-right: 7px;
 }
 
-.skill-details-misc {
+.skill-detail-middle {
   padding: 0 4px;
   font-size: 0.9em;
   display: flex;
@@ -71,30 +71,30 @@
   border-style: solid;
 }
 
-.skill-details-misc-level {
+.skill-detail-levels {
   margin-right: 15px;
   cursor: default;
 }
 
-.skill-details-misc-type {
+.skill-detail-type {
   color: #d98107;
   margin: 0 auto;
   font-weight: bold;
   cursor: default;
 }
 
-.skill-details-misc-cooldown {
+.skill-detail-cooldown {
   margin-left: 15px;
   cursor: default;
 }
 
-.skill-details-misc-cooldown-text {
+.skill-detail-cooldown-text {
   color: #d98107;
   font-weight: bold;
   cursor: default;
 }
 
-.skill-details-description {
+.skill-detail-description {
   margin-top: 8px;
   font-size: 0.75em;
   padding: 5px;

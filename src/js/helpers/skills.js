@@ -1,7 +1,3 @@
-/**
- * helper classes/functions for creating skill components
- */
-
 import {ORDER_EQUAL} from '../constants/constants.js';
 import {compareStringsCaseInsensitive} from '../util/util.js';
 

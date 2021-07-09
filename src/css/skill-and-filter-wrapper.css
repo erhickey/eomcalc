@@ -1,9 +1,0 @@
-#skill-and-filter-wrapper {
-  width: 100%;
-}
-
-@media (min-width: 992px) {
-  #skill-and-filter-wrapper {
-    width: 60%;
-  }
-}

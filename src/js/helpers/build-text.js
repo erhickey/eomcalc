@@ -25,13 +25,13 @@ export function parseBuild(input) {
 /*
  * generate build url param from list of skills
  */
-export function generateBuildUrlParam(build) {
-  return build.map(s => s.skillId).join('.');
+export function generateBuildUrlParam(skills) {
+  return skills.map(s => s.skillId).join('.');
 }
 
 /*
  * generate discord message from list of skills
  */
-export function generateBuildDiscordMsg(build) {
-  return build.map(s => ':' + s.skillName.replace(/ /g, '') + ':').join('');
+export function generateBuildDiscordMsg(skills) {
+  return skills.map(s => ':' + s.skillName.replace(/ /g, '') + ':').join('');
 }

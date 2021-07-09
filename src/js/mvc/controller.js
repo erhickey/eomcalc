@@ -1,5 +1,7 @@
 /**
  * responsible for responding to user input
+ *
+ * updates the model as necessary, and calls appropriate functions in view
  */
 
 import {
@@ -7,46 +9,46 @@ import {
   getCurrentSkillDetail,
   getSkillLevel,
   initializeState,
-  removeSkill,
   setSkillLevel,
-  updateSkillDetails,
-  updateTraitDetails
+  updateSkillDetail,
+  updateTraitDetail
 } from './model.js';
 import {
   buildChanged,
-  hideSkillDetailsComponent,
-  hideTraitDetailsComponent,
+  hideSkillDetailComponent,
+  hideTraitDetailComponent,
   initialRender,
-  toggleSkillDetailsComponent,
-  toggleTraitDetailsComponent,
-  updateSkillDetailsComponent,
-  updateTraitDetailsComponent
+  toggleSkillDetailComponent,
+  toggleTraitDetailComponent,
+  updateSkillDetailComponent,
+  updateTraitDetailComponent
 } from './view.js';
 import {NO_CHANGE, SKILL_REMOVED} from '../constants/app.js';
 import {ESCAPE_KEY} from '../constants/constants.js';
 
 /*
- * called once when app starts
+ * called once when the app starts
+ *
  * first argument is the html element the calculator will be inserted into
- * second argument is a build that from the build param
+ * second argument may be a build that the user provided
  */
 export function initializeApp(container, build) {
   const [skills, chosenSkills] = initializeState(build);
   initialRender(container, skills, chosenSkills);
 
-  // hide skill details when esc is pressed
+  // hide skill detail when esc is pressed
   document.onkeydown = evt => {
     const evnt = evt || window.event;
 
     if (ESCAPE_KEY === evnt.keyCode) {
-      hideSkillDetailsComponent();
-      hideTraitDetailsComponent();
+      hideSkillDetailComponent();
+      hideTraitDetailComponent();
     }
   };
 }
 
 /*
- * called when user clicks a skill in the skill list
+ * called when a skill card is clicked
  */
 export function onSkillClick(skill) {
   const [chosenSkills, change] = addOrRemoveSkill(skill);
@@ -59,57 +61,50 @@ export function onSkillClick(skill) {
 }
 
 /*
- * called when user clicks a skill in the chosen skills list
+ * called when skill card detail button is clicked
  */
-export function onChosenSkillClick(skill) {
-  buildChanged(removeSkill(skill), skill, true);
-}
-
-/*
- * called when skill info button is clicked on a skill list skill or chosen skill
- */
-export function onSkillDetailsClick(skill, level = null) {
+export function onSkillDetailClick(skill, level = null) {
   if (level) {
     setSkillLevel(level);
   }
 
-  if (updateSkillDetails(skill)) {
-    updateSkillDetailsComponent(skill, getSkillLevel());
+  if (updateSkillDetail(skill)) {
+    updateSkillDetailComponent(skill, getSkillLevel());
   } else {
-    toggleSkillDetailsComponent();
+    toggleSkillDetailComponent();
   }
 }
 
 /*
- * hide the skill details component
+ * called when the skill detail close button is clicked
  */
-export function hideSkillDetails() {
-  hideSkillDetailsComponent();
+export function hideSkillDetail() {
+  hideSkillDetailComponent();
 }
 
 /*
- * set skill detail level
+ * called when a skill detail level is clicked
  */
 export function onSkillLevelClick(level) {
   if (setSkillLevel(level)) {
-    updateSkillDetailsComponent(getCurrentSkillDetail(), getSkillLevel());
+    updateSkillDetailComponent(getCurrentSkillDetail(), getSkillLevel());
   }
 }
 
 /*
- * called when user clicks on a trait to display the trait details
+ * called when a trait is clicked
  */
 export function onTraitClick(anchorElement, trait) {
-  if (updateTraitDetails(trait)) {
-    updateTraitDetailsComponent(anchorElement, trait);
+  if (updateTraitDetail(trait)) {
+    updateTraitDetailComponent(anchorElement, trait);
   } else {
-    toggleTraitDetailsComponent();
+    toggleTraitDetailComponent();
   }
 }
 
 /*
- * hide the trait details component
+ * called when the trait detail close button is clicked
  */
-export function hideTraitDetails() {
-  hideTraitDetailsComponent();
+export function hideTraitDetail() {
+  hideTraitDetailComponent();
 }

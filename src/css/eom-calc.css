@@ -1,12 +1,11 @@
-@import './build-wrapper.css';
-@import './build-links.css';
-@import './chosen-skills.css';
-@import './rarity.css';
-@import './skill-and-filter-wrapper.css';
-@import './skill-details.css';
-@import './skill-list.css';
-@import './trait-details.css';
-@import './traits.css';
+@import './components/build-text.css';
+@import './components/skill-card.css';
+@import './components/skill-detail.css';
+@import './components/trait-detail.css';
+@import './components/trait.css';
+@import './containers/build.css';
+@import './containers/skill-and-filter.css';
+@import './misc/rarity.css';
 
 eom-calc {
   font-family: arial;

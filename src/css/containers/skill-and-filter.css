@@ -1,0 +1,21 @@
+#skill-and-filter-container {
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  #skill-and-filter-container {
+    width: 60%;
+  }
+}
+
+#skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2px 0;
+  background: #585859;
+  border-radius: 5px;
+  border: 1px solid #303031;
+  height: 265px;
+  overflow-y: scroll;
+}

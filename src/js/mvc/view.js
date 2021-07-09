@@ -1,115 +1,103 @@
 /**
- * contains fuctions responsible for rendering the page
+ * responsible for rendering the page
  */
 
-import {createBuildLinks} from '../components/build-links.js';
-import {createChosenSkills} from '../components/chosen-skills.js';
-import {createSkills} from '../components/skills.js';
-import {createSkillDetails} from '../components/skill-details.js';
-import {createTraits} from '../components/traits.js';
-import {createTraitDetailsComponent} from '../components/trait-details.js';
-import {HIDDEN_CLASS} from '../constants/css.js';
+import {createBuildTexts} from '../components/build-text.js';
+import {createSkillCards} from '../components/skill-card.js';
+import {createSkillDetail} from '../components/skill-detail.js';
+import {createTraits} from '../components/trait.js';
+import {createTraitDetail} from '../components/trait-detail.js';
+import {CHOSEN_SKILL_CLASS, HIDDEN_CLASS} from '../constants/css.js';
 import {
-  BUILD_WRAPPER_ID,
+  BUILD_SKILL_PREFIX,
+  BUILD_CONTAINER_ID,
   CHOSEN_SKILLS_ID,
-  SKILL_AND_FILTER_WRAPPER_ID,
-  SKILL_DETAILS_ID,
+  SKILL_AND_FILTER_CONTAINER_ID,
+  SKILL_DETAIL_ID,
   SKILL_ID_PREFIX,
   SKILL_LIST_ID,
-  TRAIT_DETAILS_ID,
+  SKILL_LIST_SKILL_PREFIX,
+  TRAIT_DETAIL_ID,
   TRAITS_ID
 } from '../constants/html.js';
 import {appendChildren, isEmpty, positionElementRelativeTo, replaceChildren} from '../util/util.js';
 
-// number of pixels to offset trait details by
+// number of pixels to offset trait detail from the trait by
 const DETAIL_HOVER_OFFSET = 15;
 
 /*
  * called once when the application starts
+ *
  * build and add all elements to the given container
  */
 export function initialRender(container, skills, chosenSkills) {
   const df = new DocumentFragment();
-  df.appendChild(initSkillDetailsComponent());
-  df.appendChild(initTraitDetailsComponent());
+  df.appendChild(initSkillDetailComponent());
+  df.appendChild(initTraitDetailComponent());
   df.appendChild(initSkillAndFilterComponents(skills, chosenSkills));
   df.appendChild(initBuildComponents(chosenSkills));
   appendChildren(container, df);
 }
 
-/*
- * called once when application starts to initialize the skill list and filter
- */
 function initSkillAndFilterComponents(skills, chosenSkills) {
   const component = document.createElement('div');
-  component.id = SKILL_AND_FILTER_WRAPPER_ID;
-  component.appendChild(createSkillListComponent(skills, chosenSkills));
+  component.id = SKILL_AND_FILTER_CONTAINER_ID;
+  component.appendChild(createSkillList(skills, chosenSkills));
   return component;
 }
 
-/*
- * called once when application starts to initialize components for
- * chosen skill list or informational text, traits and details, and build links
- */
 function initBuildComponents(chosenSkills) {
   const component = document.createElement('div');
-  component.id = BUILD_WRAPPER_ID;
+  component.id = BUILD_CONTAINER_ID;
   component.appendChild(createChosenSkillsComponent(chosenSkills));
   component.appendChild(createTraitsComponent(chosenSkills));
-  appendChildren(component, createBuildLinks(chosenSkills));
+  appendChildren(component, createBuildTexts(chosenSkills));
   return component;
 }
 
-/*
- * called once when application starts to initialize the skill details component
- */
-function initSkillDetailsComponent() {
+function initSkillDetailComponent() {
   const component = document.createElement('div');
-  component.id = SKILL_DETAILS_ID;
-  component.classList.add('skill-details');
+  component.id = SKILL_DETAIL_ID;
+  component.classList.add('skill-detail');
+  component.classList.add(HIDDEN_CLASS);
+  return component;
+}
+
+function initTraitDetailComponent() {
+  const component = document.createElement('div');
+  component.id = TRAIT_DETAIL_ID;
+  component.classList.add('trait-detail');
   component.classList.add(HIDDEN_CLASS);
   return component;
 }
 
 /*
- * called once when application starts to initialize the trait details component
- */
-function initTraitDetailsComponent() {
-  const component = document.createElement('div');
-  component.id = TRAIT_DETAILS_ID;
-  component.classList.add('trait-details');
-  component.classList.add(HIDDEN_CLASS);
-  return component;
-}
-
-/*
- * called when the build changes, redraws the components of the build
- * chosen skill list or informational text, traits and details, and build links
+ * called when the build changes, redraws the components in the build wrapper:
+ * chosen skills or information text, traits, and build texts
+ *
+ * also adds/removes the chosen-skill class to skill cards in the skill list that have been chosen
  */
 export function buildChanged(chosenSkills, changedSkill, isRemoved) {
   const df = new DocumentFragment();
   df.appendChild(createChosenSkillsComponent(chosenSkills));
   df.appendChild(createTraitsComponent(chosenSkills));
-  appendChildren(df, createBuildLinks(chosenSkills));
-  replaceChildren(document.getElementById(BUILD_WRAPPER_ID), df);
+  appendChildren(df, createBuildTexts(chosenSkills));
+  replaceChildren(document.getElementById(BUILD_CONTAINER_ID), df);
 
-  const skillEl = document.getElementById(SKILL_ID_PREFIX + changedSkill.skillId);
+  const skillEl = document.getElementById(SKILL_LIST_SKILL_PREFIX + SKILL_ID_PREFIX + changedSkill.skillId);
 
   if (isRemoved) {
-    skillEl.classList.remove('chosen-skill-list-skill');
+    skillEl.classList.remove(CHOSEN_SKILL_CLASS);
   } else {
-    skillEl.classList.add('chosen-skill-list-skill');
+    skillEl.classList.add(CHOSEN_SKILL_CLASS);
   }
 }
 
-/*
- * create components of the skill list
- */
-function createSkillListComponent(skills, chosenSkills) {
-  const skillListEl = document.createElement('div');
-  skillListEl.id = SKILL_LIST_ID;
-  appendChildren(skillListEl, createSkills(skills, chosenSkills));
-  return skillListEl;
+function createSkillList(skills, chosenSkills) {
+  const component = document.createElement('div');
+  component.id = SKILL_LIST_ID;
+  appendChildren(component, createSkillCards(skills, SKILL_LIST_SKILL_PREFIX, chosenSkills));
+  return component;
 }
 
 /*
@@ -119,7 +107,7 @@ function createChosenSkillsComponent(chosenSkills) {
   if (!isEmpty(chosenSkills)) {
     const component = document.createElement('div');
     component.id = CHOSEN_SKILLS_ID;
-    appendChildren(component, createChosenSkills(chosenSkills));
+    appendChildren(component, createSkillCards(chosenSkills, BUILD_SKILL_PREFIX));
     return component;
   }
 
@@ -130,9 +118,6 @@ function createChosenSkillsComponent(chosenSkills) {
   return info;
 }
 
-/*
- * create trait components reflecting data about the build
- */
 function createTraitsComponent(chosenSkills) {
   const component = document.createElement('div');
   component.id = TRAITS_ID;
@@ -140,49 +125,31 @@ function createTraitsComponent(chosenSkills) {
   return component;
 }
 
-/*
- * toggle component to display details about selected skill
- */
-export function toggleSkillDetailsComponent() {
-  document.getElementById(SKILL_DETAILS_ID).classList.toggle(HIDDEN_CLASS);
+export function toggleSkillDetailComponent() {
+  document.getElementById(SKILL_DETAIL_ID).classList.toggle(HIDDEN_CLASS);
 }
 
-/*
- * recreate and show component to display details about selected skill
- */
-export function updateSkillDetailsComponent(skill, level) {
-  const skillDetails = document.getElementById(SKILL_DETAILS_ID);
-  replaceChildren(skillDetails, createSkillDetails(skill, level));
-  skillDetails.classList.remove(HIDDEN_CLASS);
+export function updateSkillDetailComponent(skill, level) {
+  const component = document.getElementById(SKILL_DETAIL_ID);
+  replaceChildren(component, createSkillDetail(skill, level));
+  component.classList.remove(HIDDEN_CLASS);
 }
 
-/*
- * hide skill details
- */
-export function hideSkillDetailsComponent() {
-  document.getElementById(SKILL_DETAILS_ID).classList.add(HIDDEN_CLASS);
+export function hideSkillDetailComponent() {
+  document.getElementById(SKILL_DETAIL_ID).classList.add(HIDDEN_CLASS);
 }
 
-/*
- * toggle component to display details about selected trait
- */
-export function toggleTraitDetailsComponent() {
-  document.getElementById(TRAIT_DETAILS_ID).classList.toggle(HIDDEN_CLASS);
+export function toggleTraitDetailComponent() {
+  document.getElementById(TRAIT_DETAIL_ID).classList.toggle(HIDDEN_CLASS);
 }
 
-/*
- * recreate and show component to display details about selected trait
- */
-export function updateTraitDetailsComponent(anchorElement, trait) {
-  const traitDetails = document.getElementById(TRAIT_DETAILS_ID);
-  replaceChildren(traitDetails, createTraitDetailsComponent(trait));
-  traitDetails.classList.remove(HIDDEN_CLASS);
-  positionElementRelativeTo(anchorElement, traitDetails, DETAIL_HOVER_OFFSET);
+export function updateTraitDetailComponent(anchorElement, trait) {
+  const component = document.getElementById(TRAIT_DETAIL_ID);
+  replaceChildren(component, createTraitDetail(trait));
+  component.classList.remove(HIDDEN_CLASS);
+  positionElementRelativeTo(anchorElement, component, DETAIL_HOVER_OFFSET);
 }
 
-/*
- * hide trait details
- */
-export function hideTraitDetailsComponent() {
-  document.getElementById(TRAIT_DETAILS_ID).classList.add(HIDDEN_CLASS);
+export function hideTraitDetailComponent() {
+  document.getElementById(TRAIT_DETAIL_ID).classList.add(HIDDEN_CLASS);
 }

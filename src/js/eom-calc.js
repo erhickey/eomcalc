@@ -3,7 +3,7 @@
  */
 
 import {initializeApp} from './mvc/controller.js';
-import {parseBuild} from './helpers/build-strings.js';
+import {parseBuild} from './helpers/build-text.js';
 
 window.customElements.define('eom-calc', class extends HTMLElement {
   connectedCallback() {

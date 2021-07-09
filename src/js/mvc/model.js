@@ -6,30 +6,35 @@ import {MAX_SKILL_LEVEL, MIN_SKILL_LEVEL, NO_CHANGE, SKILL_ADDED, SKILL_REMOVED}
 import {SKILLS} from '../constants/data.js';
 import {validBuild} from '../helpers/app.js';
 
-// current chosen skill
+// user's current build
 let chosenSkills = [];
 
-// skill that details may currently be displayed for
-// track this so we know when to show/hide the details
+// skill that skill detail component may be displaying
 let currentSkillDetail = null;
 
-// the level of the skill to display details for
+// level of the skill that skill detail may be displaying
 let skillLevel = MIN_SKILL_LEVEL;
 
-// trait that details may currently be displayed for
-// track this so we know when to show/hide the details
+// trait that trait detail component may be displaying
 let currentTrait = null;
 
 /*
  * called once when application starts
+ *
+ * returns the full list of skills, and the user's current build
  */
-export function initializeState(build) {
+export function initializeState(build = []) {
   chosenSkills = build;
   return [SKILLS, chosenSkills];
 }
 
 /*
- * adds or removes a skill from the build based on the currently chosen skills
+ * add or remove a skill from the build
+ *
+ * if the skill is already in the build it will be removed, otherwise it will be added
+ * no change to the build will be made if the resulting build is invalid
+ *
+ * returns the updated build and a value indicating what change took place
  */
 export function addOrRemoveSkill(skill) {
   if (chosenSkills.some(s => s.skillId === skill.skillId)) {
@@ -47,15 +52,18 @@ export function addOrRemoveSkill(skill) {
 }
 
 /*
- * removes a skill from the build
+ * remove skill from the build
+ *
+ * returns the updated build
  */
-export function removeSkill(skill) {
+function removeSkill(skill) {
   chosenSkills = chosenSkills.filter(s => s.skillId !== skill.skillId);
   return chosenSkills;
 }
 
 /*
- * set the level of the skill to display details for
+ * set the level of the skill to display in skill detail
+ *
  * return true if the skill level changed, otherwise returns false
  */
 export function setSkillLevel(level) {
@@ -71,18 +79,19 @@ export function setSkillLevel(level) {
 }
 
 /*
- * get the level of the skill to display details for
+ * get the level of the skill to display in skill detail
  */
 export function getSkillLevel() {
   return skillLevel;
 }
 
 /*
- * update the skill to display details for
+ * update the skill to display in skill detail
+ *
  * returns true if the skill has changed
  * returns false if the skill didn't change
  */
-export function updateSkillDetails(skill) {
+export function updateSkillDetail(skill) {
   if (currentSkillDetail && currentSkillDetail.skillId === skill.skillId) {
     return false;
   }
@@ -92,18 +101,19 @@ export function updateSkillDetails(skill) {
 }
 
 /*
- * return the skill that the user last clicked the info button for
+ * return the skill that should be currently displayed in skill detail
  */
 export function getCurrentSkillDetail() {
   return currentSkillDetail;
 }
 
 /*
- * update the trait to display details for
+ * update the trait to display in trait detail
+ *
  * returns true if the trait has changed
  * returns false if the trait didn't change
  */
-export function updateTraitDetails(trait) {
+export function updateTraitDetail(trait) {
   if (currentTrait && currentTrait.id === trait.id) {
     return false;
   }

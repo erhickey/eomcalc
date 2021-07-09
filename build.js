@@ -11,7 +11,10 @@ const buildOptions = {
   outdir: './dist/assets/',
   sourcemap: false,
   minify: true,
-  bundle: true
+  bundle: true,
+  loader: {
+    ".webp": "file"
+  }
 };
 
 fs.rmdirSync('./dist', {recursive: true});
