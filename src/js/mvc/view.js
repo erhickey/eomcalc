@@ -20,6 +20,8 @@ import {
   TRAIT_DETAIL_ID,
   TRAITS_ID
 } from '../constants/html.js';
+import {compareChosenSkills} from '../helpers/chosen-skills.js';
+import {compareSkills} from '../helpers/skills.js';
 import {appendChildren, isEmpty, positionElementRelativeTo, replaceChildren} from '../util/util.js';
 
 // number of pixels to offset trait detail from the trait by
@@ -96,7 +98,7 @@ export function buildChanged(chosenSkills, changedSkill, isRemoved) {
 function createSkillList(skills, chosenSkills) {
   const component = document.createElement('div');
   component.id = SKILL_LIST_ID;
-  appendChildren(component, createSkillCards(skills, SKILL_LIST_SKILL_PREFIX, chosenSkills));
+  appendChildren(component, createSkillCards(skills.sort(compareSkills), SKILL_LIST_SKILL_PREFIX, chosenSkills));
   return component;
 }
 
@@ -107,7 +109,7 @@ function createChosenSkillsComponent(chosenSkills) {
   if (!isEmpty(chosenSkills)) {
     const component = document.createElement('div');
     component.id = CHOSEN_SKILLS_ID;
-    appendChildren(component, createSkillCards(chosenSkills, BUILD_SKILL_PREFIX));
+    appendChildren(component, createSkillCards(chosenSkills.sort(compareChosenSkills), BUILD_SKILL_PREFIX));
     return component;
   }
 

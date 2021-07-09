@@ -5,7 +5,7 @@ import {compareTraits, Trait} from '../helpers/traits.js';
 import {onTraitClick} from '../mvc/controller.js';
 
 /*
- * creates all trait components and orders them
+ * create all trait components and order them
  */
 export function createTraits(skills) {
   return TRAITS.map(t => new Trait(t, skills)).sort(compareTraits).map(t => createTrait(t));

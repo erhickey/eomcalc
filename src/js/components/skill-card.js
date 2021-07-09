@@ -3,14 +3,10 @@ import {RARITY_MAP, TRAIT_MAP} from '../constants/data.js';
 import {SKILL_ID_PREFIX} from '../constants/html.js';
 import {SKILL_IMAGES_DIR, TRAIT_IMAGES_DIR} from '../constants/resources.js';
 import {createImageNode} from '../helpers/images.js';
-import {compareSkills} from '../helpers/skills.js';
 import {onSkillClick, onSkillDetailClick} from '../mvc/controller.js';
 
-/*
- * create skill cards and order them
- */
 export function createSkillCards(skills, idPrefix, chosenSkills = []) {
-  return skills.sort(compareSkills).map(s => createSkillCard(s, idPrefix, chosenSkills));
+  return skills.map(s => createSkillCard(s, idPrefix, chosenSkills));
 }
 
 /*
