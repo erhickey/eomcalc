@@ -21,7 +21,6 @@ export function createTraits(skills) {
 function createTraitComponent(trait) {
   const component = document.createElement('div');
   component.classList.add('trait');
-  component.classList.add(trait.type === TRAIT_TYPES.PRIMARY ? 'trait-primary' : 'trait-secondary');
 
   if (!trait.active) {
     component.classList.add('trait-inactive');

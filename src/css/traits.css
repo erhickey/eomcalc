@@ -28,30 +28,16 @@
   opacity: 0.5;
 }
 
-.trait-primary > img {
+.trait > img {
   width: 26px;
   height: 26px;
   margin: 4px 4px 0 4px;
 }
 
-.trait-secondary > img {
-  width: 22px;
-  height: 22px;
-  margin: 5px 5px 0 6px;
-}
-
 @media (pointer: fine) {
-  .trait-primary > img:hover {
-    background: rgba(180, 180, 180, 0.7);
-    box-shadow: 0 0 5px #fff;
+  .trait > img:hover {
+    background: rgba(170, 170, 170, 0.8);
+    box-shadow: 0 0 5px #ddd;
     border-radius: 100%;
-    opacity: 0.8;
-  }
-
-  .trait-secondary > img:hover {
-    background: rgba(180, 180, 180, 0.7);
-    box-shadow: 0 0 12px #fff;
-    border-radius: 50%;
-    opacity: 0.6;
   }
 }

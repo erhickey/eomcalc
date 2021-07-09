@@ -38,16 +38,10 @@
   width: 100%;
 }
 
-.skill-list-skill-primary-trait {
+.skill-list-skill-footer > img {
   margin: 3px 2px;
-  height: 19px;
-  width: 19px;
-}
-
-.skill-list-skill-secondary-trait {
-  margin: 4px 3px;
-  height: 17px;
-  width: 17px;
+  height: 20px;
+  width: 20px;
 }
 
 .chosen-skill-list-skill:after {

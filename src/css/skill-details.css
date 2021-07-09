@@ -55,17 +55,10 @@
   margin-top: 5px;
 }
 
-.skill-details-primary-trait {
-  height: 19px;
-  width: 19px;
+.skill-details-traits > img {
+  height: 25px;
+  width: 25px;
   margin-right: 7px;
-}
-
-.skill-details-secondary-trait {
-  height: 17px;
-  width: 17px;
-  opacity: 0.7;
-  margin-top: 1px;
 }
 
 .skill-details-misc {

@@ -33,15 +33,9 @@ function createSkillListComponent(skill, chosenSkills) {
 
   const footer = document.createElement('div');
   footer.classList.add('skill-list-skill-footer');
+  footer.appendChild(createImageNode(TRAIT_IMAGES_DIR, TRAIT_MAP[skill.primaryTrait].name));
+  footer.appendChild(createImageNode(TRAIT_IMAGES_DIR, TRAIT_MAP[skill.secondaryTrait].name));
 
-  const primaryTrait = createImageNode(TRAIT_IMAGES_DIR, TRAIT_MAP[skill.primaryTrait].name);
-  primaryTrait.classList.add('skill-list-skill-primary-trait');
-
-  const secondaryTrait = createImageNode(TRAIT_IMAGES_DIR, TRAIT_MAP[skill.secondaryTrait].name);
-  secondaryTrait.classList.add('skill-list-skill-secondary-trait');
-
-  footer.appendChild(primaryTrait);
-  footer.appendChild(secondaryTrait);
   component.appendChild(createSkillInfoComponent(skill, 'skill-list-info'));
   component.appendChild(skillImage);
   component.appendChild(footer);

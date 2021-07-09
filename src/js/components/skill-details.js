@@ -115,15 +115,7 @@ function createHeaderComponent(skill) {
 function createTraitsComponent(skill) {
   const component = document.createElement('div');
   component.classList.add('skill-details-traits');
-
-  const primaryTrait = createImageNode(TRAIT_IMAGES_DIR, TRAIT_MAP[skill.primaryTrait].name);
-  primaryTrait.classList.add('skill-details-primary-trait');
-
-  const secondaryTrait = createImageNode(TRAIT_IMAGES_DIR, TRAIT_MAP[skill.secondaryTrait].name);
-  secondaryTrait.classList.add('skill-details-secondary-trait');
-
-  component.appendChild(primaryTrait);
-  component.appendChild(secondaryTrait);
-
+  component.appendChild(createImageNode(TRAIT_IMAGES_DIR, TRAIT_MAP[skill.primaryTrait].name));
+  component.appendChild(createImageNode(TRAIT_IMAGES_DIR, TRAIT_MAP[skill.secondaryTrait].name));
   return component;
 }
