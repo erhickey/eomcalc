@@ -1,7 +1,3 @@
-/**
- * general helper functions for the app
- */
-
 import {MAX_ACTIVES, MAX_PASSIVES, MAX_SKILLS} from '../constants/app.js';
 import {SKILL_TYPES} from '../constants/data.js';
 

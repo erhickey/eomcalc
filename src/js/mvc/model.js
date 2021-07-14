@@ -4,7 +4,7 @@
 
 import {MAX_SKILL_LEVEL, MIN_SKILL_LEVEL, NO_CHANGE, SKILL_ADDED, SKILL_REMOVED} from '../constants/app.js';
 import {SKILLS} from '../constants/data.js';
-import {validBuild} from '../helpers/app.js';
+import {validBuild} from '../helpers/build-validator.js';
 
 // user's current build
 let chosenSkills = [];
@@ -18,6 +18,9 @@ let skillLevel = MIN_SKILL_LEVEL;
 // trait that trait detail component may be displaying
 let currentTrait = null;
 
+// filters that are currently active
+let currentFilters = [];
+
 /*
  * called once when application starts
  *
@@ -26,6 +29,10 @@ let currentTrait = null;
 export function initializeState(build = []) {
   chosenSkills = build;
   return [SKILLS, chosenSkills];
+}
+
+export function getChosenSkills() {
+  return chosenSkills;
 }
 
 /*
@@ -120,4 +127,26 @@ export function updateTraitDetail(trait) {
 
   currentTrait = trait;
   return true;
+}
+
+/*
+ * if the filter is already active, remove it, otherwise add it to the list of active filters
+ *
+ * returns the resulting list of active filters
+ */
+export function addOrRemoveFilter(filter) {
+  if (currentFilters.some(cf => cf.key === filter.key && cf.value === filter.value)) {
+    currentFilters = currentFilters.filter(cf => !(cf.key === filter.key && cf.value === filter.value));
+  } else {
+    currentFilters.push(filter);
+  }
+
+  return currentFilters;
+}
+
+/*
+ * clear currentFilters
+ */
+export function clearFilters() {
+  currentFilters = [];
 }

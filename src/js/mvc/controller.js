@@ -5,7 +5,10 @@
  */
 
 import {
+  addOrRemoveFilter,
   addOrRemoveSkill,
+  clearFilters,
+  getChosenSkills,
   getCurrentSkillDetail,
   getSkillLevel,
   initializeState,
@@ -15,6 +18,7 @@ import {
 } from './model.js';
 import {
   buildChanged,
+  filterChanged,
   hideSkillDetailComponent,
   hideTraitDetailComponent,
   initialRender,
@@ -25,6 +29,8 @@ import {
 } from './view.js';
 import {NO_CHANGE, SKILL_REMOVED} from '../constants/app.js';
 import {ESCAPE_KEY} from '../constants/constants.js';
+import {SKILLS} from '../constants/data.js';
+import {applyFilters} from '../helpers/filter.js';
 
 /*
  * called once when the app starts
@@ -107,4 +113,20 @@ export function onTraitClick(anchorElement, trait) {
  */
 export function hideTraitDetail() {
   hideTraitDetailComponent();
+}
+
+/*
+ * called when a filter is clicked
+ */
+export function filterClicked(filter) {
+  const filters = addOrRemoveFilter(filter);
+  filterChanged(applyFilters(filters, SKILLS), filters, getChosenSkills());
+}
+
+/*
+ * called when user clicks clear filters button
+ */
+export function clearFiltersClicked() {
+  clearFilters();
+  filterChanged(SKILLS, [], getChosenSkills());
 }

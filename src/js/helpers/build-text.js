@@ -2,7 +2,7 @@
  * helper functions for creating/parsing build URL and discord strings
  */
 
-import {validBuild} from './app.js';
+import {validBuild} from './build-validator.js';
 import {SKILLS} from '../constants/data.js';
 
 /*

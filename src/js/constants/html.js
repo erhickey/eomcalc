@@ -3,6 +3,9 @@
  */
 
 export const SKILL_AND_FILTER_CONTAINER_ID = 'skill-and-filter-container';
+
+export const FILTERS_ID = 'filters';
+
 export const SKILL_LIST_ID = 'skill-list';
 export const SKILL_ID_PREFIX = 'skill-';
 export const SKILL_LIST_SKILL_PREFIX = 'skill-list-';

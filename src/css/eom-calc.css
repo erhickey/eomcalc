@@ -1,4 +1,5 @@
 @import './components/build-text.css';
+@import './components/filter.css';
 @import './components/skill-card.css';
 @import './components/skill-detail.css';
 @import './components/trait-detail.css';

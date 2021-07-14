@@ -1,0 +1,76 @@
+.filters-top {
+  padding: 5px;
+  max-width: 90%;
+  margin: 0 auto;
+  border-bottom: 1px solid grey;
+}
+
+.trait-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: start;
+  padding: 5px;
+}
+
+.type-filters {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  max-width: 90%;
+  margin: 0 auto;
+  border-top: 1px solid grey;
+}
+
+.clear-filter-button {
+  text-align: center;
+  cursor: default;
+  user-select: none;
+  color: #aaa;
+  font-weight: bold;
+}
+
+@media (pointer: fine) {
+  .clear-filter-button:hover {
+    color: #ddd;
+  }
+}
+
+.trait-filter {
+  margin: 0 2px;
+}
+
+.trait-filter > img {
+  width: 30px;
+  height: 30px;
+  opacity: 0.5;
+}
+
+@media (pointer: fine) {
+  .trait-filter:hover > img {
+    background: rgba(170, 170, 170, 0.8);
+    box-shadow: 0 0 5px #ddd;
+    border-radius: 100%;
+  }
+}
+
+.trait-filter.active-filter > img {
+  opacity: 1;
+}
+
+.type-filter {
+  color: #888;
+  margin: 0 10px;
+  cursor: default;
+  user-select: none;
+}
+
+@media (pointer: fine) {
+  .type-filter:hover {
+    color: #aaa;
+  }
+}
+
+.type-filter.active-filter {
+  color: #eee;
+}

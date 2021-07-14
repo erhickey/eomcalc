@@ -3,6 +3,7 @@
  */
 
 import {createBuildTexts} from '../components/build-text.js';
+import {createFilters} from '../components/filter.js';
 import {createSkillCards} from '../components/skill-card.js';
 import {createSkillDetail} from '../components/skill-detail.js';
 import {createTraits} from '../components/trait.js';
@@ -12,6 +13,7 @@ import {
   BUILD_SKILL_PREFIX,
   BUILD_CONTAINER_ID,
   CHOSEN_SKILLS_ID,
+  FILTERS_ID,
   SKILL_AND_FILTER_CONTAINER_ID,
   SKILL_DETAIL_ID,
   SKILL_ID_PREFIX,
@@ -44,6 +46,7 @@ export function initialRender(container, skills, chosenSkills) {
 function initSkillAndFilterComponents(skills, chosenSkills) {
   const component = document.createElement('div');
   component.id = SKILL_AND_FILTER_CONTAINER_ID;
+  component.appendChild(createFiltersComponent());
   component.appendChild(createSkillList(skills, chosenSkills));
   return component;
 }
@@ -74,7 +77,7 @@ function initTraitDetailComponent() {
 }
 
 /*
- * called when the build changes, redraws the components in the build wrapper:
+ * called when the build changes, redraws the components in the build container:
  * chosen skills or information text, traits, and build texts
  *
  * also adds/removes the chosen-skill class to skill cards in the skill list that have been chosen
@@ -95,10 +98,27 @@ export function buildChanged(chosenSkills, changedSkill, isRemoved) {
   }
 }
 
+/*
+ * called when the filters change and the skill list needs to be updated
+ */
+export function filterChanged(skills, currentFilters, chosenSkills) {
+  const df = new DocumentFragment();
+  appendChildren(df, createFiltersComponent(currentFilters));
+  appendChildren(df, createSkillList(skills, chosenSkills));
+  replaceChildren(document.getElementById(SKILL_AND_FILTER_CONTAINER_ID), df);
+}
+
 function createSkillList(skills, chosenSkills) {
   const component = document.createElement('div');
   component.id = SKILL_LIST_ID;
   appendChildren(component, createSkillCards(skills.sort(compareSkills), SKILL_LIST_SKILL_PREFIX, chosenSkills));
+  return component;
+}
+
+function createFiltersComponent(currentFilters = []) {
+  const component = document.createElement('div');
+  component.id = FILTERS_ID;
+  appendChildren(component, createFilters(currentFilters));
   return component;
 }
 
