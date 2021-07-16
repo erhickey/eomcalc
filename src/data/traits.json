@@ -68,7 +68,7 @@
       "name": "Mage",
       "id": 6,
       "type": 1,
-      "desc": "Boost magic damage of next skill within 5s after casting any active skill",
+      "desc": "Boost magic damage of next skill within 10s after casting any active skill",
       "breakpoints": [ 2, 4, 6 ],
       "effect": "{}% AP Boost",
       "stats": [

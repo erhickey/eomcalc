@@ -613,7 +613,7 @@
     {
       "skillName": "Lucky Dice",
       "skillId": 62,
-      "skillType": 1,
+      "skillType": 2,
       "rarity": 4,
       "primaryTrait": 2,
       "secondaryTrait": 20,
