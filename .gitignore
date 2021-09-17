@@ -1,4 +1,9 @@
+# packages
 node_modules
+
+# build files
 dist-newstyle
 dist
+
+# editor files
 *.swp

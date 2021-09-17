@@ -13,9 +13,5 @@ Also present in this project is Haskell code which parses data from multiple gam
 
 1. Locate a file named main.###.com.nabooplanet.magicrystal.obb on the device you have Echoes of Magic installed on. On my device it is located at /Internal shared storage/Android/obb/com.nabooplanet.magicrystal/
 2. This file is a zip archive, extract its contents
-3. Navigate to assets/bin/Data
-4. Find a file ending with 'return LanguageConfig' (grep '^return LanguageConfig' \*). This file will contain two groups of four lines for each skill, each set of lines starting with ["SkillName_###"]= or ["SkillTips_###"]=
-5. Once you find the file, copy it to src/data/skill-descriptions
-6. Find a file ending with 'return SkillConfig' (grep '^return SkillConfig' \*). This file will contain attributes for each skill. The attributes include an ID, which matches the numbers found in the previous file, and several other attributes such as Desc, quality, SkillType, IsActive, Buy, Sell, CD
-7. Once you find the file, copy it to src/data/skill-details
-8. Run the Haskell code to generate src/data/skills-generated.json. A cabal file is included to easily execute the code.
+3. Run generate-data.sh with the extraction location as the only argument
+4. On successful completion, json files will be generated in src/data

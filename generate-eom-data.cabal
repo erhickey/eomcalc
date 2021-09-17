@@ -1,7 +1,7 @@
 cabal-version:       2.4
-name:                Generate-EoM-Skills
+name:                Generate-EoM-Data
 version:             0.0.0.0
-description:         Generate json file containing details about Echoes of Magic skills from game files
+description:         Generate json files containing details about Echoes of Magic skills/traits from game files
 homepage:            https://github.com/erhickey/eomcalc#readme
 license:             Unlicense
 license-file:        LICENSE
@@ -32,13 +32,21 @@ common ghc-opts
                        -rtsopts
                        -with-rtsopts=-N
 
-executable generate-skills
+executable generate-data
   import:              common-options, ghc-opts
   hs-source-dirs:      src/hs
-  main-is:             generate-skills.hs
+  main-is:             Main.hs
   build-depends:       aeson,
                        attoparsec,
                        bytestring,
                        containers,
                        text
+  other-modules:       EomJson.EomJson
+                       EomJson.Assembler.Skills
+                       EomJson.Assembler.Traits
+                       EomJson.Json.Skill
+                       EomJson.Json.Trait
+                       EomJson.Parse.SkillDetails
+                       EomJson.Parse.SkillsAndTraits
+                       EomJson.Util.Util
   ghc-options:         -O2
