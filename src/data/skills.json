@@ -1,0 +1,1884 @@
+{
+    "skills": [
+        {
+            "skillId": 20291,
+            "cooldowns": [
+                10,
+                10,
+                10,
+                10
+            ],
+            "descriptions": [
+                "Causes a lightning explosion to <b>5</b> enemy nearby every <b>1s</b>, dealing <color=#34d1fe><b>15%</b> MAG DMG</color> and <color=#e465ff>increasing damage received by the target by <b>5%</b></color>, lasting <b>5s</b>.",
+                "Causes a lightning explosion to <b>5</b> enemy nearby every <b>1s</b>, dealing <color=#34d1fe><b>22%</b> MAG DMG</color> and <color=#e465ff>increasing damage received by the target by <b>10%</b></color>, lasting <b>5s</b>.",
+                "Causes a lightning explosion to <b>5</b> enemy nearby every <b>1s</b>, dealing <color=#34d1fe><b>37%</b> MAG DMG</color> and <color=#e465ff>increasing damage received by the target by <b>15%</b></color>, lasting <b>5s</b>.",
+                "Causes a lightning explosion to <b>5</b> enemy nearby every <b>1s</b>, dealing <color=#34d1fe><b>60%</b> MAG DMG</color> and <color=#e465ff>increasing damage received by the target by <b>20%</b></color>, lasting <b>5s</b>."
+            ],
+            "rarity": 4,
+            "secondaryTrait": 104,
+            "isActive": false,
+            "skillName": "Arc Lightning",
+            "primaryTrait": 6
+        },
+        {
+            "skillId": 10091,
+            "cooldowns": [
+                8,
+                8,
+                9,
+                10
+            ],
+            "descriptions": [
+                "Fire 1 arcane energy ball at a target enemy, dealing <color=#34d1fe><b>70%</b> MAG DMG</color> to all enemies near the target.",
+                "Fire 1 arcane energy ball at a target enemy, dealing <color=#34d1fe><b>95%</b> MAG DMG</color> to all enemies near the target.",
+                "Fire 2 arcane energy balls at a target enemy, each blast dealing <color=#34d1fe><b>95%</b> MAG DMG</color> to all enemies near the target.",
+                "Fire 3 arcane energy balls at a target enemy, each blast dealing <color=#34d1fe><b>110%</b> MAG DMG</color> to all enemies near the target."
+            ],
+            "rarity": 2,
+            "secondaryTrait": 103,
+            "isActive": true,
+            "skillName": "Arcane Strike",
+            "primaryTrait": 8
+        },
+        {
+            "skillId": 10411,
+            "cooldowns": [
+                35,
+                35,
+                35,
+                35
+            ],
+            "descriptions": [
+                "Rapidly unleash 1 arrow shots from Arcane power source in a single direction, move freely and MOVSPD+40% while firing, each arrow deals <color=#34d1fe>MAG DMG that equals to <b>7%</b></color> of sum of your <color=#ff8400>ATK</color> and <color=#34d1fe>AP</color>.",
+                "Rapidly unleash 1 arrow shots from Arcane power source in a single direction, move freely and MOVSPD+40% while firing, each arrow deals <color=#34d1fe>MAG DMG that equals to <b>12%</b></color> of sum of your <color=#ff8400>ATK</color> and <color=#34d1fe>AP</color>.",
+                "Rapidly unleash 1 arrow shots from Arcane power source in a single direction, move freely and MOVSPD+40% while firing, each arrow deals <color=#34d1fe>MAG DMG that equals to <b>19%</b></color> of sum of your <color=#ff8400>ATK</color> and <color=#34d1fe>AP</color>. Open extra 3 power sources, dealing <color=#34d1fe>MAG DMG equals to <b>5%</b> of your ATK + AP</color>.",
+                "Rapidly unleash 1 arrow shots from Arcane power source in a single direction, move freely and MOVSPD+40% while firing, each arrow deals <color=#34d1fe>MAG DMG that equals to <b>30%</b></color> of sum of your <color=#ff8400>ATK</color> and <color=#34d1fe>AP</color>. Open extra 3 power sources, dealing <color=#34d1fe>MAG DMG equals to <b>5%</b> of your ATK + AP</color>."
+            ],
+            "rarity": 4,
+            "secondaryTrait": 103,
+            "isActive": true,
+            "skillName": "Arcane Volley",
+            "primaryTrait": 4
+        },
+        {
+            "skillId": 10661,
+            "cooldowns": [
+                35,
+                35,
+                35,
+                35
+            ],
+            "descriptions": [
+                "Wildly unleash a torrent of light arrows for 2.5s, being invincible in the duration, but decreasing MOV SPD by 20%. Shoot all enemies 25 times within 5m, dealing <color=#ff8400>PHY DMG that equals to <b>10%</b></color> of sum of your <color=#ff8400>ATK</color> and <color=#34d1fe>AP</color> each shot. ",
+                "Wildly unleash a torrent of light arrows for 3s, being invincible in the duration, but decreasing MOV SPD by 20%. Shoot all enemies 30 times within 5m, dealing <color=#ff8400>PHY DMG that equals to <b>13%</b></color> of sum of your <color=#ff8400>ATK</color> and <color=#34d1fe>AP</color> each shot. ",
+                "Wildly unleash a torrent of light arrows for 3.5s, being invincible in the duration, but decreasing MOV SPD by 20%. Shoot all enemies 35 times within 5m, dealing <color=#ff8400>PHY DMG that equals to <b>15%</b></color> of sum of your <color=#ff8400>ATK</color> and <color=#34d1fe>AP</color> each shot. Left a clone of Arrow Dance that can not move, dealing<color=#ff8400> PHY DMG that equals to <b>7%</b></color> of sum of your <color=#ff8400>ATK</color> and <color=#34d1fe>AP</color> each shot",
+                "Wildly unleash a torrent of light arrows for 4s, being invincible in the duration, but decreasing MOV SPD by 20%. Shoot all enemies 40 times within 5m, dealing <color=#ff8400>PHY DMG that equals to <b>21%</b></color> of sum of your <color=#ff8400>ATK</color> and <color=#34d1fe>AP</color> each shot. Left a clone of Arrow Dance that can not move, dealing<color=#ff8400> PHY DMG that equals to <b>10%</b></color> of sum of your <color=#ff8400>ATK</color> and <color=#34d1fe>AP</color> each shot"
+            ],
+            "rarity": 4,
+            "secondaryTrait": 114,
+            "isActive": true,
+            "skillName": "Arrow Dance",
+            "primaryTrait": 4
+        },
+        {
+            "skillId": 10251,
+            "cooldowns": [
+                9,
+                9,
+                9,
+                9
+            ],
+            "descriptions": [
+                "Charge to an enemy, dealing <color=#ff8400><b>36%</b> PHY DMG</color>, and gain <color=#e465ff><b>200%</b>ATK SPD for the next <b>3</b> Basic Attacks</color> with extra <color=#ff8400><b>8%</b> PHY DMG</color> .",
+                "Charge to an enemy, dealing <color=#ff8400><b>50%</b> PHY DMG</color>, and gain <color=#e465ff><b>200%</b>ATK SPD for the next <b>4</b> Basic Attacks</color> with extra <color=#ff8400><b>10%</b> PHY DMG</color>.",
+                "Charge to an enemy, dealing <color=#ff8400><b>85%</b> PHY DMG</color>, and gain <color=#e465ff><b>200%</b>ATK SPD for the next <b>5</b> Basic Attacks</color> with extra <color=#ff8400><b>15%</b> PHY DMG</color>.",
+                "Charge to an enemy, dealing <color=#ff8400><b>160%</b> PHY DMG</color>, and gain <color=#e465ff><b>200%</b>ATK SPD for the next <b>6</b> Basic Attacks</color> with extra <color=#ff8400><b>20%</b> PHY DMG</color>."
+            ],
+            "rarity": 2,
+            "secondaryTrait": 111,
+            "isActive": true,
+            "skillName": "Assault Charge",
+            "primaryTrait": 1
+        },
+        {
+            "skillId": 10341,
+            "cooldowns": [
+                20,
+                20,
+                20,
+                20
+            ],
+            "descriptions": [
+                "Summon a vortex that sucks in nearby enemy units, dealing up to <color=#34d1fe><b>196%</b> MAG DMG</color>. Enemies affected by Black Hole <color=#a57963>have their MOV SPD slowed by <b>50%</b></color>.",
+                "Summon a vortex that sucks in nearby enemy units, dealing up to <color=#34d1fe><b>280%</b> MAG DMG</color>. Enemies affected by Black Hole <color=#a57963>have their MOV SPD slowed by <b>50%</b></color>.",
+                "Summon a vortex that sucks in nearby enemy units, dealing up to <color=#34d1fe><b>420%</b> MAG DMG</color>. Enemies affected by Black Hole <color=#a57963>have their MOV SPD slowed by <b>50%</b></color>.<color=#e465ff>Create a satellite blackhole that orbit you.</color>",
+                "Summon a vortex that sucks in nearby enemy units, dealing up to <color=#34d1fe><b>714%</b> MAG DMG</color>. Enemies affected by Black Hole <color=#a57963>have their MOV SPD slowed by <b>50%</b></color>.<color=#e465ff>Create a satellite blackhole that orbit you.</color>"
+            ],
+            "rarity": 4,
+            "secondaryTrait": 105,
+            "isActive": true,
+            "skillName": "Black Hole",
+            "primaryTrait": 5
+        },
+        {
+            "skillId": 10141,
+            "cooldowns": [
+                15,
+                15,
+                15,
+                15
+            ],
+            "descriptions": [
+                "Rapidly summon a blizzard <b>6</b> times in the target area, each blast dealing <color=#34d1fe><b>18%</b> MAG DMG</color> to enemies.",
+                "Rapidly summon a blizzard <b>6</b> times in the target area, each blast dealing <color=#34d1fe><b>28%</b> MAG DMG</color> to enemies.",
+                "Rapidly summon a blizzard <b>6</b> times in the target area, each blast dealing <color=#34d1fe><b>46%</b> MAG DMG</color> to enemies.",
+                "Rapidly summon a blizzard <b>6</b> times in the target area, each blast dealing <color=#34d1fe><b>75%</b> MAG DMG</color> to enemies."
+            ],
+            "rarity": 3,
+            "secondaryTrait": 102,
+            "isActive": true,
+            "skillName": "Blizzard",
+            "primaryTrait": 6
+        },
+        {
+            "skillId": 10741,
+            "cooldowns": [
+                15,
+                15,
+                15,
+                15
+            ],
+            "descriptions": [
+                "Call a bomb to fall from the sky to the target location, knocking up enemies for 0.5s when it lands. Dealing <color=#ff8400><b>80%</b> PHY DMG</color> and slowing enemies by 50% for 1.5s. The bomb explodes for a short delay, dealing <color=#ff8400><b>40%</b> PHY DMG</color>",
+                "Call a bomb to fall from the sky to the target location, knocking up enemies for 0.5s when it lands. Dealing <color=#ff8400><b>120%</b> PHY DMG</color> and slowing enemies by 50% for 1.5s. The bomb explodes for a short delay, dealing <color=#ff8400><b>60%</b> PHY DMG</color>",
+                "Call a bomb to fall from the sky to the target location, knocking up enemies for 0.5s when it lands. Dealing <color=#ff8400><b>200%</b> PHY DMG</color> and slowing enemies by 50% for 1.5s. The bomb explodes for a short delay, dealing <color=#ff8400><b>100%</b> PHY DMG</color>",
+                "Call a bomb to fall from the sky to the target location, knocking up enemies for 0.5s when it lands. Dealing <color=#ff8400><b>320%</b> PHY DMG</color> and slowing enemies by 50% for 1.5s. The bomb explodes for a short delay, dealing <color=#ff8400><b>160%</b> PHY DMG</color>"
+            ],
+            "rarity": 3,
+            "secondaryTrait": 116,
+            "isActive": true,
+            "skillName": "Bomb Assault",
+            "primaryTrait": 2
+        },
+        {
+            "skillId": 10471,
+            "cooldowns": [
+                15,
+                15,
+                15,
+                15
+            ],
+            "descriptions": [
+                "Send out <b>3</b> magic Blades that deal <color=#ff8400><b>8%</b> PHY DMG every 0.5 second</color>, then they return back to you after a few moments. The returning Blades deal a bonus <color=#ff8400><b>40%</b> PHY DMG</color> to units hit.",
+                "Send out <b>3</b> magic Blades that deal <color=#ff8400><b>10%</b> PHY DMG every 0.5 second</color>, then they return back to you after a few moments. The returning Blades deal a bonus <color=#ff8400><b>60%</b> PHY DMG</color> to units hit.",
+                "Send out <b>4</b> magic Blades that deal <color=#ff8400><b>12%</b> PHY DMG every 0.5 second</color>, then they return back to you after a few moments. The returning Blades deal a bonus <color=#ff8400><b>75%</b> PHY DMG</color> to units hit. Send out <b>4</b> same magic Blades behind you.",
+                "Send out <b>5</b> magic Blades that deal <color=#ff8400><b>15%</b> PHY DMG every 0.5 second</color>, then they return back to you after a few moments. The returning Blades deal a bonus <color=#ff8400><b>95%</b> PHY DMG</color> to units hit. Send out <b>4</b> same magic Blades behind you."
+            ],
+            "rarity": 3,
+            "secondaryTrait": 105,
+            "isActive": true,
+            "skillName": "Boomerang Blade",
+            "primaryTrait": 2
+        },
+        {
+            "skillId": 10481,
+            "cooldowns": [
+                16,
+                16,
+                16,
+                16
+            ],
+            "descriptions": [
+                "Throw a shield that returns toward the starting direction after reaching its manximum range, dealing <color=#ff8400><b>13%</b> PHY DMG</color> to enemies it hits. If you <b>catch the returning shield</b>, it will grant you <color=#00ffde>a shield equal to <b>11%</b> of your ATK + AP</color> and its <b>cooldown is reduced by 50%</b>.",
+                "Throw a shield that returns toward the starting direction after reaching its manximum range, dealing <color=#ff8400><b>20%</b> PHY DMG</color> to enemies it hits. If you <b>catch the returning shield</b>, it will grant you <color=#00ffde>a shield equal to <b>16%</b> of your ATK + AP</color> and its <b>cooldown is reduced by 50%</b>.",
+                "Throw a shield that returns toward the starting direction after reaching its manximum range, dealing <color=#ff8400><b>31%</b> PHY DMG</color> to enemies it hits. If you <b>catch the returning shield</b>, it will grant you <color=#00ffde>a shield equal to <b>25%</b> of your ATK + AP</color> and its <b>cooldown is reduced by 50%</b>.",
+                "Throw a shield that returns toward the starting direction after reaching its manximum range, dealing <color=#ff8400><b>47%</b> PHY DMG</color> to enemies it hits. If you <b>catch the returning shield</b>, it will grant you <color=#00ffde>a shield equal to <b>38%</b> of your ATK + AP</color> and its <b>cooldown is reduced by 50%</b>."
+            ],
+            "rarity": 1,
+            "secondaryTrait": 107,
+            "isActive": true,
+            "skillName": "Boomerang Shield",
+            "primaryTrait": 3
+        },
+        {
+            "skillId": 20061,
+            "cooldowns": [
+                90,
+                90,
+                90,
+                90
+            ],
+            "descriptions": [
+                "When <b>killed</b>, <color=#ff543f>prevents your death</color> and immediately recover <color=#36ec3e><b>16%</b> of your Max HP</color>. <b>90s CD</b>.",
+                "When <b>killed</b>, <color=#ff543f>prevents your death</color> and immediately recovers <color=#36ec3e><b>23%</b> of your Max HP</color>. <b>90s CD</b>.",
+                "When <b>killed</b>, <color=#ff543f>prevents your death</color> and immediately recovers <color=#36ec3e><b>36%</b> of your Max HP</color>. <b>90s CD</b>.",
+                "When <b>killed</b>, <color=#ff543f>prevents your death</color> and immediately recovers <color=#36ec3e><b>54%</b> of your Max HP</color>. <b>90s CD</b>."
+            ],
+            "rarity": 5,
+            "secondaryTrait": 111,
+            "isActive": false,
+            "skillName": "Borrowed Time",
+            "primaryTrait": 3
+        },
+        {
+            "skillId": 10021,
+            "cooldowns": [
+                40,
+                35,
+                30,
+                25
+            ],
+            "descriptions": [
+                "Morph into a Chaos Warrior and deal <color=#ff8400><b>32%</b> continual PHY DMG</color> per seceond to all nearby enemies. Also boosts <color=#e465ff>ATK SPD <b>10%</b></color>,<color=#ff8400>ATK <b>25%</b></color>, and <color=#e465ff>MOV SPD <b>20%</b></color> for <b>8</b>s.",
+                "Morph into a Chaos Warrior and deal <color=#ff8400><b>48%</b> continual PHY DMG</color> per seceond to all nearby enemies. Also boosts <color=#e465ff>ATK SPD <b>15%</b></color>,<color=#ff8400>ATK <b>30%</b></color>, and <color=#e465ff>MOV SPD <b>30%</b></color> for <b>8</b>s.",
+                "Morph into a Chaos Warrior and deal <color=#ff8400><b>64%</b> continual PHY DMG</color> per seceond to all nearby enemies. Also boosts <color=#e465ff>ATK SPD <b>20%</b></color>,<color=#ff8400>ATK <b>45%</b></color>, and <color=#e465ff>MOV SPD <b>50%</b></color> for <b>8</b>s.",
+                "Morph into a Chaos Warrior and deal <color=#ff8400><b>80%</b> continual PHY DMG</color> per seceond to all nearby enemies. Also boosts <color=#e465ff>ATK SPD <b>30%</b></color>,<color=#ff8400>ATK <b>80%</b></color>, and <color=#e465ff>MOV SPD <b>80%</b></color> for <b>8</b>s."
+            ],
+            "rarity": 5,
+            "secondaryTrait": 113,
+            "isActive": true,
+            "skillName": "Chaos",
+            "primaryTrait": 1
+        },
+        {
+            "skillId": 10011,
+            "cooldowns": [
+                3,
+                3,
+                3,
+                3
+            ],
+            "descriptions": [
+                "Swipe at those around you with great force, dealing <b>1 time</b> of <color=#ff8400><b>25%</b> PHY DMG</color>.",
+                "Swipe at those around you with great force, dealing <b>2 times</b> of <color=#ff8400><b>16%</b> PHY DMG</color>.",
+                "Swipe at those around you with great force, dealing <b>4 times</b> of <color=#ff8400><b>16%</b> PHY DMG</color>.",
+                "Swipe at those around you with great force, dealing <b>4 times</b> of <color=#ff8400><b>23%</b> PHY DMG</color>."
+            ],
+            "rarity": 1,
+            "secondaryTrait": 112,
+            "isActive": true,
+            "skillName": "Cleave",
+            "primaryTrait": 1
+        },
+        {
+            "skillId": 20171,
+            "cooldowns": [
+                0.5,
+                0.5,
+                0.5,
+                0.5
+            ],
+            "descriptions": [
+                "Each continuous Basic Attack boosts <color=#e465ff>ATK SPD <b>5%</b></color>, up to <b>6</b> stacks, but <color=#ff543f>it will drop to zero</color> if you go <b>3</b>s without making a basic attack.",
+                "Each continuous Basic Attack boosts <color=#e465ff>ATK SPD <b>6%</b></color>, up to <b>8</b> stacks, but <color=#ff543f>it will drop to zero</color> if you go <b>3</b>s without making a basic attack.",
+                "Each continuous Basic Attack boosts <color=#e465ff>ATK SPD <b>8%</b></color>, up to <b>10</b> stacks, but <color=#ff543f>it will drop to zero</color> if you go <b>3</b>s without making a basic attack.",
+                "Each continuous Basic Attack boosts <color=#e465ff>ATK SPD <b>10%</b></color>, up to <b>12</b> stacks, but <color=#ff543f>it will drop to zero</color> if you go <b>3</b>s without making a basic attack."
+            ],
+            "rarity": 3,
+            "secondaryTrait": 113,
+            "isActive": false,
+            "skillName": "Combat Focus",
+            "primaryTrait": 1
+        },
+        {
+            "skillId": 10621,
+            "cooldowns": [
+                30,
+                30,
+                30,
+                30
+            ],
+            "descriptions": [
+                "For the next <b>30</b>s, boost <color=#e465ff>DMG by <b>20%</b></color> , but all Active skill CD lengthen by 10% during the effect.",
+                "For the next <b>30</b>s, boost <color=#e465ff>DMG by <b>30%</b></color> , but all Active skill CD lengthen by 10% during the effect.",
+                "For the next <b>30</b>s, boost <color=#e465ff>DMG by <b>40%</b></color> , but all Active skill CD lengthen by 10% during the effect.",
+                "For the next <b>30</b>s, boost <color=#e465ff>DMG by <b>50%</b></color> , but all Active skill CD lengthen by 10% during the effect."
+            ],
+            "rarity": 3,
+            "secondaryTrait": 114,
+            "isActive": true,
+            "skillName": "Concentration",
+            "primaryTrait": 1
+        },
+        {
+            "skillId": 20161,
+            "cooldowns": [
+                8,
+                8,
+                8,
+                8
+            ],
+            "descriptions": [
+                "When <b>attacked</b>, there's a <b>20% chance</b> of performing a helix counter, dealing <color=#ff8400><b>95%</b> PHY DMG</color> to all enemies within a 3 meter radius. <b>8s CD</b>.",
+                "When <b>attacked</b>, there's a <b>40% chance</b> of performing a helix counter, dealing <color=#ff8400><b>140%</b> PHY DMG</color> to all enemies within a 3 meter radius. <b>8s CD</b>.",
+                "When <b>attacked</b>, there's a <b>70% chance</b> of performing a helix counter, dealing <color=#ff8400><b>220%</b> PHY DMG</color> to all enemies within a 3 meter radius. <b>8s CD</b>.",
+                "When <b>attacked</b>, there's a <b>100% chance</b> of performing a helix counter, dealing <color=#ff8400><b>320%</b> PHY DMG</color> to all enemies within a 3 meter radius. <b>8s CD</b>."
+            ],
+            "rarity": 2,
+            "secondaryTrait": 113,
+            "isActive": false,
+            "skillName": "Counter Helix",
+            "primaryTrait": 3
+        },
+        {
+            "skillId": 20181,
+            "cooldowns": [
+                0.5,
+                0.5,
+                0.5,
+                0.5
+            ],
+            "descriptions": [
+                "Basic Attacks have a <b>20% chance</b> of making a shockwave, dealing bonus <color=#ff8400><b>70%</b> PHY DMG</color> to enemies nearby the target.",
+                "Basic Attacks have a <b>25% chance</b> of making a shockwave, dealing bonus <color=#ff8400><b>80%</b> PHY DMG</color> to enemies nearby the target.",
+                "Basic Attacks have a <b>30% chance</b> of making a shockwave, dealing bonus <color=#ff8400><b>100%</b> PHY DMG</color> to enemies nearby the target.",
+                "Basic Attacks have a <b>35% chance</b> of making a shockwave, dealing bonus <color=#ff8400><b>120%</b> PHY DMG</color> to enemies nearby the target."
+            ],
+            "rarity": 4,
+            "secondaryTrait": 108,
+            "isActive": false,
+            "skillName": "Crush",
+            "primaryTrait": 1
+        },
+        {
+            "skillId": 10391,
+            "cooldowns": [
+                3,
+                3,
+                3,
+                3
+            ],
+            "descriptions": [
+                "Fire <b>1</b> arrow of ice crystal in a straight line. If the arrow collides with an enemy, it explodes and slows all surrounding enemy units, dealing <color=#34d1fe>MAG DMG equals to <b>13%</b></color> of sum of your <color=#ff8400>ATK</color> and <color=#34d1fe>AP</color>.",
+                "Fire <b>1</b> arrow of ice crystal in a straight line. If the arrow collides with an enemy, it explodes and slows all surrounding enemy units, dealing <color=#34d1fe>MAG DMG equals to <b>15%</b></color> of sum of your <color=#ff8400>ATK</color> and <color=#34d1fe>AP</color>.",
+                "Fire <b>2</b> arrow of ice crystal in a straight line. If the arrow collides with an enemy, it explodes and slows all surrounding enemy units, dealing <color=#34d1fe>MAG DMG equals to <b>15%</b></color> of sum of your <color=#ff8400>ATK</color> and <color=#34d1fe>AP</color>.",
+                "Fire <b>2</b> arrow of ice crystal in a straight line. If the arrow collides with an enemy, it explodes and slows all surrounding enemy units, dealing <color=#34d1fe>MAG DMG equals to <b>23%</b></color> of sum of your <color=#ff8400>ATK</color> and <color=#34d1fe>AP</color>."
+            ],
+            "rarity": 1,
+            "secondaryTrait": 102,
+            "isActive": true,
+            "skillName": "Crystal Arrow",
+            "primaryTrait": 4
+        },
+        {
+            "skillId": 10611,
+            "cooldowns": [
+                15,
+                15,
+                15,
+                15
+            ],
+            "descriptions": [
+                "Open 1 rift to the darkness dealing an initial burst of <color=#34d1fe><b>75%</b> MAG DMG</color> and <color=#34d1fe>roots the target</color> for 1s, then explodes for a second burst of <color=#34d1fe><b>100%</b> MAG DMG</color> after a delay.",
+                "Open 1 rift to the darkness dealing an initial burst of <color=#34d1fe><b>110%</b> MAG DMG</color> and <color=#34d1fe>roots the target</color> for 1.5s, then explodes for a second burst of <color=#34d1fe><b>150%</b> MAG DMG</color> after a delay.",
+                "Open 3 rifts to the darkness dealing an initial burst of <color=#34d1fe><b>190%</b> MAG DMG</color> and <color=#34d1fe>roots the target</color> for 2s, then explodes for a second burst of <color=#34d1fe><b>250%</b> MAG DMG</color> after a delay.",
+                "Open 3 rifts to the darkness dealing an initial burst of <color=#34d1fe><b>300%</b> MAG DMG</color> and <color=#34d1fe>roots the target</color> for 2.5s, then explodes for a second burst of <color=#34d1fe><b>400%</b> MAG DMG</color> after a delay."
+            ],
+            "rarity": 4,
+            "secondaryTrait": 105,
+            "isActive": true,
+            "skillName": "Dark Rift",
+            "primaryTrait": 6
+        },
+        {
+            "skillId": 10441,
+            "cooldowns": [
+                30,
+                30,
+                30,
+                30
+            ],
+            "descriptions": [
+                "Call upon the God of Dawn, fire a huge shockwave that boosts <color=#e465ff>allies for <b>20%</b> Dodge rate</color> (The highest dodge rate attainable is only up to <color=#e465ff><b>90%</b></color>), while throwing enemies caught in the wave back by dealing <color=#34d1fe>MAG DMG that equals to <b>110%</b></color> of sum of your <color=#ff8400>ATK</color> and <color=#34d1fe>AP</color>.",
+                "Call upon the God of Dawn, fire a huge shockwave that boosts <color=#e465ff>allies for <b>20%</b> Dodge rate</color> (The highest dodge rate attainable is only up to <color=#e465ff><b>90%</b></color>), while throwing enemies caught in the wave back by dealing <color=#34d1fe>MAG DMG that equals to <b>200%</b></color> of sum of your <color=#ff8400>ATK</color> and <color=#34d1fe>AP</color>.",
+                "Call upon the God of Dawn, fire a huge shockwave that boosts <color=#e465ff>allies for <b>20%</b> Dodge rate</color> (The highest dodge rate attainable is only up to <color=#e465ff><b>90%</b></color>), while throwing enemies caught in the wave back by dealing <color=#34d1fe>MAG DMG that equals to <b>370%</b></color> of sum of your <color=#ff8400>ATK</color> and <color=#34d1fe>AP</color>. <color=#e465ff>Shockwave knocks back enemies by 5m</color>.",
+                "Call upon the God of Dawn, fire a huge shockwave that boosts <color=#e465ff>allies for <b>20%</b> Dodge rate</color> (The highest dodge rate attainable is only up to <color=#e465ff><b>90%</b></color>), while throwing enemies caught in the wave back by dealing <color=#34d1fe>MAG DMG that equals to <b>650%</b></color> of sum of your <color=#ff8400>ATK</color> and <color=#34d1fe>AP</color>. <color=#e465ff>Shockwave knocks back enemies by 5m</color>."
+            ],
+            "rarity": 5,
+            "secondaryTrait": 110,
+            "isActive": true,
+            "skillName": "Dawn Shockwave",
+            "primaryTrait": 4
+        },
+        {
+            "skillId": 20241,
+            "cooldowns": [
+                0.5,
+                0.5,
+                0.5,
+                0.5
+            ],
+            "descriptions": [
+                "Each <b>enemy death</b> increases <color=#34d1fe><b>AP by 1.5%</b></color>, up to <b>10</b> stacks. After <b>10s</b> without an enemy death, all stacks are <color=#ff543f>removed</color>.",
+                "Each <b>enemy death</b> increases <color=#34d1fe><b>AP by 2.2%</b></color>, up to <b>10</b> stacks. After <b>15s</b> without an enemy death, all stacks are <color=#ff543f>removed</color>.",
+                "Each <b>enemy death</b> increases <color=#34d1fe><b>AP by 3.7%</b></color>, up to <b>10</b> stacks. After <b>20s</b> without an enemy death, all stacks are <color=#ff543f>removed</color>.",
+                "Each <b>enemy death</b> increases <color=#34d1fe><b>AP by 6%</b></color>, up to <b>10</b> stacks. After <b>30s</b> without an enemy death, all stacks are <color=#ff543f>removed</color>."
+            ],
+            "rarity": 3,
+            "secondaryTrait": 105,
+            "isActive": false,
+            "skillName": "Dead Domination",
+            "primaryTrait": 6
+        },
+        {
+            "skillId": 20201,
+            "cooldowns": [
+                0.5,
+                0.5,
+                0.5,
+                0.5
+            ],
+            "descriptions": [
+                "When an <b>enemy is killed</b>, there's a <b>50% chance</b> of summoning an Ancient Skeleton Guard that fights enemies for <b>5s</b> ,inheriting <color=#36ec3e><b>25%</b> HP</color>, <color=#ff8400><b>15%</b> ATK</color> and <color=#34d1fe><b>15%</b> AP</color> from your character. ",
+                "When an <b>enemy is killed</b>, there's a <b>50% chance</b> of summoning an Ancient Skeleton Guard that fights enemies for <b>6s</b> ,inheriting <color=#36ec3e><b>30%</b> HP</color>, <color=#ff8400><b>20%</b> ATK</color> and <color=#34d1fe><b>20%</b> AP</color> from your character. ",
+                "When an <b>enemy is killed</b>, there's a <b>50% chance</b> of summoning an Ancient Skeleton Guard that fights enemies for <b>7s</b> ,inheriting <color=#36ec3e><b>35%</b> HP</color>, <color=#ff8400><b>30%</b> ATK</color> and <color=#34d1fe><b>30%</b> AP</color> from your character. <color=#e465ff>Ancient Skeleton Guard learned to spell Shadow Strike</color>. ",
+                "When an <b>enemy is killed</b>, there's a <b>50% chance</b> of summoning an Ancient Skeleton Guard that fights enemies for <b>8s</b> ,inheriting <color=#36ec3e><b>40%</b> HP</color>, <color=#ff8400><b>45%</b> ATK</color> and <color=#34d1fe><b>45%</b> AP</color> from your character. <color=#e465ff>Ancient Skeleton Guard learned to spell Shadow Strike</color>. "
+            ],
+            "rarity": 2,
+            "secondaryTrait": 108,
+            "isActive": false,
+            "skillName": "Dead Reborn",
+            "primaryTrait": 5
+        },
+        {
+            "skillId": 10211,
+            "cooldowns": [
+                10,
+                10,
+                10,
+                10
+            ],
+            "descriptions": [
+                "Strike a mighty blow at melee range, dealing <color=#ff543f><b>6%</b> of your Current Health damage to yourself</color> and <b>4 times</b> of <color=#ff8400><b>36%</b> PHY DMG</color> to all enemies in  a small area around you.",
+                "Strike a mighty blow at melee range, dealing <color=#ff543f><b>9%</b> of your Current Health damage to yourself</color> and <b>5 times</b> of <color=#ff8400><b>43%</b> PHY DMG</color> to all enemies in  a small area around you.",
+                "Strike a mighty blow at melee range, dealing <color=#ff543f><b>13%</b> of your Current Health damage to yourself</color> and <b>8 times</b> of <color=#ff8400><b>45%</b> PHY DMG</color> to all enemies in  a small area around you.",
+                "Strike a mighty blow at melee range, dealing <color=#ff543f><b>22%</b> of your Current Health damage to yourself</color> and <b>8 times</b> of <color=#ff8400><b>72%</b> PHY DMG</color> to all enemies in  a small area around you."
+            ],
+            "rarity": 2,
+            "secondaryTrait": 105,
+            "isActive": true,
+            "skillName": "Double Edge",
+            "primaryTrait": 3
+        },
+        {
+            "skillId": 10561,
+            "cooldowns": [
+                15,
+                15,
+                15,
+                15
+            ],
+            "descriptions": [
+                "Summon an Earth Elemental that <b>taunts enemies</b> and fights using its fists, inheriting <color=#36ec3e><b>40%</b> HP</color>, <color=#ff8400><b>30%</b> ATK</color> and <color=#34d1fe><b>30%</b> AP</color> from your character, lasting <b>20s</b>.",
+                "Summon an Earth Elemental that <b>taunts enemies</b> and fights using its fists, inheriting <color=#36ec3e><b>50%</b> HP</color>, <color=#ff8400><b>42%</b> ATK</color> and <color=#34d1fe><b>42%</b> AP</color> from your character, lasting <b>20s</b>.",
+                "Summon an Earth Elemental that <b>taunts enemies</b> and fights using its fists, inheriting <color=#36ec3e><b>60%</b> HP</color>, <color=#ff8400><b>65%</b> ATK</color> and <color=#34d1fe><b>65%</b> AP</color> from your character, lasting <b>20s</b>.",
+                "Summon an Earth Elemental that <b>taunts enemies</b> and fights using its fists, inheriting <color=#36ec3e><b>70%</b> HP</color>, <color=#ff8400><b>95%</b> ATK</color> and <color=#34d1fe><b>95%</b> AP</color> from your character, lasting <b>20s</b>."
+            ],
+            "rarity": 3,
+            "secondaryTrait": 108,
+            "isActive": true,
+            "skillName": "Earth Elemental",
+            "primaryTrait": 5
+        },
+        {
+            "skillId": 10581,
+            "cooldowns": [
+                15,
+                15,
+                15,
+                15
+            ],
+            "descriptions": [
+                "Create several Earth Protrusions that slows passing enemies. Dealing <color=#34d1fe><b>20%</b> MAG DMG</color> when casted, then dealing <color=#34d1fe><b>15%</b> MAG DMG per second for 5s</color>, up to a total of <color=#34d1fe><b>75%</b> MAG DMG</color>, before exploding for a burst of <color=#34d1fe><b>40%</b> MAG DMG</color>.",
+                "Create several Earth Protrusions that slows passing enemies. Dealing <color=#34d1fe><b>30%</b> MAG DMG</color> when casted, then dealing <color=#34d1fe><b>22%</b> MAG DMG per second for 5s</color>, up to a total of <color=#34d1fe><b>110%</b> MAG DMG</color>, before exploding for a burst of <color=#34d1fe><b>60%</b> MAG DMG</color>.",
+                "Create several Earth Protrusions that slows passing enemies. Dealing <color=#34d1fe><b>50%</b> MAG DMG</color> when casted, then dealing <color=#34d1fe><b>35%</b> MAG DMG per second for 5s</color>, up to a total of <color=#34d1fe><b>175%</b> MAG DMG</color>, before exploding for a burst of <color=#34d1fe><b>60%</b> MAG DMG</color>.",
+                "Create several Earth Protrusions that slows passing enemies. Dealing <color=#34d1fe><b>80%</b> MAG DMG</color> when casted, then dealing <color=#34d1fe><b>58%</b> MAG DMG per second for 5s</color>, up to a total of <color=#34d1fe><b>290%</b> MAG DMG</color>, before exploding for a burst of <color=#34d1fe><b>90%</b> MAG DMG</color>."
+            ],
+            "rarity": 3,
+            "secondaryTrait": 108,
+            "isActive": true,
+            "skillName": "Earth Knoll",
+            "primaryTrait": 7
+        },
+        {
+            "skillId": 20231,
+            "cooldowns": [
+                0.5,
+                0.5,
+                0.5,
+                0.5
+            ],
+            "descriptions": [
+                "When <b>any Active Skill is used</b>, there's a <b>20% chance</b> of triggering 4 earthquakes, each blast dealing <color=#34d1fe><b>40%</b> MAG DMG</color> and a <color=#a57963><b>90%</b> slow for <b>0.5</b>s</color>",
+                "When <b>any Active Skill is used</b>, there's a <b>20% chance</b> of triggering 4 earthquakes, each blast dealing <color=#34d1fe><b>60%</b> MAG DMG</color> and a <color=#a57963><b>90%</b> slow for <b>0.5</b>s</color>",
+                "When <b>any Active Skill is used</b>, there's a <b>20% chance</b> of triggering 5 earthquakes, each blast dealing <color=#34d1fe><b>80%</b> MAG DMG</color> and a <color=#a57963><b>90%</b> slow for <b>0.5</b>s</color>",
+                "When <b>any Active Skill is used</b>, there's a <b>20% chance</b> of triggering 7 earthquakes, each blast dealing <color=#34d1fe><b>90%</b> MAG DMG</color> and a <color=#a57963><b>90%</b> slow for <b>0.5</b>s</color>"
+            ],
+            "rarity": 4,
+            "secondaryTrait": 108,
+            "isActive": false,
+            "skillName": "Earthquake",
+            "primaryTrait": 7
+        },
+        {
+            "skillId": 20131,
+            "cooldowns": [
+                1,
+                1,
+                1,
+                1
+            ],
+            "descriptions": [
+                "Increases Damage Reduction as HP decreases:\\nWhen <b>HP is < 80%</b>, gain <color=#e465ff><b>8%</b> Damage Reduction</color>\\nWhen <b>HP is < 50%</b>, gain <color=#e465ff><b>20%</b> Damage Reduction</color>\\nWhen <b>HP is < 20%</b>, gain <color=#e465ff><b>43%</b> Damage Reduction</color>.",
+                "Increases Damage Reduction as HP decreases:\\nWhen <b>HP is < 80%</b>, gain <color=#e465ff><b>11%</b> Damage Reduction</color>\\nWhen <b>HP is < 50%</b>, gain <color=#e465ff><b>27%</b> Damage Reduction</color>\\nWhen <b>HP is < 20%</b>, gain <color=#e465ff><b>53%</b> Damage Reduction</color>.",
+                "Increases Damage Reduction as HP decreases:\\nWhen <b>HP is < 80%</b>, gain <color=#e465ff><b>17%</b> Damage Reduction</color>\\nWhen <b>HP is < 50%</b>, gain <color=#e465ff><b>38%</b> Damage Reduction</color>\\nWhen <b>HP is < 20%</b>, gain <color=#e465ff><b>65%</b> Damage Reduction</color>.",
+                "Increases Damage Reduction as HP decreases:\\nWhen <b>HP is < 80%</b>, gain <color=#e465ff><b>25%</b> Damage Reduction</color>\\nWhen <b>HP is < 50%</b>, gain <color=#e465ff><b>50%</b> Damage Reduction</color>\\nWhen <b>HP is < 20%</b>, gain <color=#e465ff><b>75%</b> Damage Reduction</color>."
+            ],
+            "rarity": 3,
+            "secondaryTrait": 112,
+            "isActive": false,
+            "skillName": "Endure",
+            "primaryTrait": 3
+        },
+        {
+            "skillId": 20211,
+            "cooldowns": [
+                0.5,
+                0.5,
+                0.5,
+                0.5
+            ],
+            "descriptions": [
+                "When <b>any Active Skill is used</b>, there's a <b>50% chance</b> to summon an Ancient Skeleton Mage who fights enemies with ranged magic bolts for <b>5</b>s, inheriting <color=#36ec3e><b>20%</b> HP</color>, <color=#ff8400><b>25%</b> ATK</color> and <color=#34d1fe><b>25%</b> AP</color> from your character. ",
+                "When <b>any Active Skill is used</b>, there's a <b>50% chance</b> to summon an Ancient Skeleton Mage who fights enemies with ranged magic bolts for <b>6</b>s, inheriting <color=#36ec3e><b>25%</b> HP</color>, <color=#ff8400><b>35%</b> ATK</color> and <color=#34d1fe><b>35%</b> AP</color> from your character. ",
+                "When <b>any Active Skill is used</b>, there's a <b>50% chance</b> to summon an Ancient Skeleton Mage who fights enemies with ranged magic bolts for <b>7</b>s, inheriting <color=#36ec3e><b>30%</b> HP</color>, <color=#ff8400><b>50%</b> ATK</color> and <color=#34d1fe><b>50%</b> AP</color> from your character. ",
+                "When <b>any Active Skill is used</b>, there's a <b>50% chance</b> to summon an Ancient Skeleton Mage who fights enemies with ranged magic bolts for <b>8</b>s, inheriting <color=#36ec3e><b>35%</b> HP</color>, <color=#ff8400><b>75%</b> ATK</color> and <color=#34d1fe><b>75%</b> AP</color> from your character. "
+            ],
+            "rarity": 4,
+            "secondaryTrait": 103,
+            "isActive": false,
+            "skillName": "Energy Concentration",
+            "primaryTrait": 5
+        },
+        {
+            "skillId": 10451,
+            "cooldowns": [
+                12,
+                12,
+                12,
+                12
+            ],
+            "descriptions": [
+                "Dash in a direction, leaving behind <b>1</b> clone that will attack enemies for <b>3</b>s.Clone receives <b>900%</b> more damage from enemies and explodes <color=#34d1fe>MAG DMG that equals to <b>15%</b></color> of sum of your <color=#ff8400>ATK</color> and <color=#34d1fe>AP</color> when <b>being dead</b>.",
+                "Dash in a direction, leaving behind <b>2</b> clone that will attack enemies for <b>3</b>s.Clone receives <b>750%</b> more damage from enemies and explodes explodes <color=#34d1fe>MAG DMG that equals to <b>15%</b></color> of sum of your <color=#ff8400>ATK</color> and <color=#34d1fe>AP</color> when <b>being dead</b>.",
+                "Dash in a direction, leaving behind <b>3</b> clone that will attack enemies for <b>3</b>s.Clone receives <b>500%</b> more damage from enemies and explodes explodes <color=#34d1fe>MAG DMG that equals to <b>15%</b></color> of sum of your <color=#ff8400>ATK</color> and <color=#34d1fe>AP</color> when <b>being dead</b>.",
+                "Dash in a direction, leaving behind <b>4</b> clone that will attack enemies for <b>3</b>s.Clone receives <b>200%</b> more damage from enemies and explodes explodes <color=#34d1fe>MAG DMG that equals to <b>15%</b></color> of sum of your <color=#ff8400>ATK</color> and <color=#34d1fe>AP</color> when <b>being dead</b>."
+            ],
+            "rarity": 2,
+            "secondaryTrait": 108,
+            "isActive": true,
+            "skillName": "Escape Plan",
+            "primaryTrait": 4
+        },
+        {
+            "skillId": 10431,
+            "cooldowns": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "descriptions": [
+                "Place a fruit trap that blooms when walked over, dealing <color=#34d1fe>MAG DMG that equals to <b>38%</b></color> of sum of your <color=#ff8400>ATK</color> and <color=#34d1fe>AP</color> with an explosion.",
+                "Place a fruit trap that blooms when walked over, dealing <color=#34d1fe>MAG DMG that equals to <b>56%</b></color> of sum of your <color=#ff8400>ATK</color> and <color=#34d1fe>AP</color> with an explosion.",
+                "Place a fruit trap that blooms when walked over, dealing <color=#34d1fe>MAG DMG that equals to <b>95%</b></color> of sum of your <color=#ff8400>ATK</color> and <color=#34d1fe>AP</color> with an explosion. Create 8 mini fruits after explosion, each dealing <color=#34d1fe>MAG DMG equals to <b>10%</b> of your ATK + AP</color>.",
+                "Place a fruit trap that blooms when walked over, dealing <color=#34d1fe>MAG DMG that equals to <b>150%</b></color> of sum of your <color=#ff8400>ATK</color> and <color=#34d1fe>AP</color> with an explosion. Create 8 mini fruits after explosion, each dealing <color=#34d1fe>MAG DMG equals to <b>10%</b> of your ATK + AP</color>."
+            ],
+            "rarity": 3,
+            "secondaryTrait": 109,
+            "isActive": true,
+            "skillName": "Explosion Fruit",
+            "primaryTrait": 4
+        },
+        {
+            "skillId": 10541,
+            "cooldowns": [
+                20,
+                20,
+                20,
+                20
+            ],
+            "descriptions": [
+                "Summon a Faerie Dragon which <color=#36ec3e><b>heals allies</b></color> attacking using ranged magic bolts,inheriting <color=#36ec3e><b>15%</b> HP</color>, <color=#ff8400><b>10%</b> ATK</color> and <color=#34d1fe><b>10%</b> AP</color> from your character, lasting <b>20s</b>.\\nWhen <b>Faerie Dragon dies</b>, it leaves a magic <color=#36ec3e>healing orb that restores HP</color> that equals to <color=#36ec3e><b>4% max HP</b></color> of the character who touches it.",
+                "Summon a Faerie Dragon which <color=#36ec3e><b>heals allies</b></color> attacking using ranged magic bolts,inheriting <color=#36ec3e><b>20%</b> HP</color>, <color=#ff8400><b>15%</b> ATK</color> and <color=#34d1fe><b>15%</b> AP</color> from your character, lasting <b>20s</b>.\\nWhen <b>Faerie Dragon dies</b>, it leaves a magic <color=#36ec3e>healing orb that restores HP</color> that equals to <color=#36ec3e><b>5.6% max HP</b></color> of the character who touches it.",
+                "Summon a Faerie Dragon which <color=#36ec3e><b>heals allies</b></color> attacking using ranged magic bolts,inheriting <color=#36ec3e><b>25%</b> HP</color>, <color=#ff8400><b>25%</b> ATK</color> and <color=#34d1fe><b>25%</b> AP</color> from your character, lasting <b>20s</b>.\\nWhen <b>Faerie Dragon dies</b>, it leaves a magic <color=#36ec3e>healing orb that restores HP</color> that equals to <color=#36ec3e><b>8.8% max HP</b></color> of the character who touches it.",
+                "Summon a Faerie Dragon which <color=#36ec3e><b>heals allies</b></color> attacking using ranged magic bolts,inheriting <color=#36ec3e><b>30%</b> HP</color>, <color=#ff8400><b>35%</b> ATK</color> and <color=#34d1fe><b>35%</b> AP</color> from your character, lasting <b>20s</b>.\\nWhen <b>Faerie Dragon dies</b>, it leaves a magic <color=#36ec3e>healing orb that restores HP</color> that equals to <color=#36ec3e><b>12.8% max HP</b></color> of the character who touches it."
+            ],
+            "rarity": 2,
+            "secondaryTrait": 109,
+            "isActive": true,
+            "skillName": "Faerie Dragon",
+            "primaryTrait": 5
+        },
+        {
+            "skillId": 20101,
+            "cooldowns": [
+                0.5,
+                0.5,
+                0.5,
+                0.5
+            ],
+            "descriptions": [
+                "Being a slaughtering fanatic, your <color=#e465ff>ATK SPD is increased by <b>45%</b></color>, but <color=#ff543f>damage of Basic ATK decrease by <b>15%</b></color>.",
+                "Being a slaughtering fanatic, your <color=#e465ff>ATK SPD is increased by <b>53%</b></color>, but <color=#ff543f>damage of Basic ATK decrease by <b>10%</b></color>.",
+                "Being a slaughtering fanatic, your <color=#e465ff>ATK SPD is increased by <b>70%</b></color>, but <color=#ff543f>damage of Basic ATK decrease by <b>5%</b></color>.",
+                "Being a slaughtering fanatic, your <color=#e465ff>ATK SPD is increased by <b>100%</b></color>."
+            ],
+            "rarity": 4,
+            "secondaryTrait": 112,
+            "isActive": false,
+            "skillName": "Fanatic",
+            "primaryTrait": 4
+        },
+        {
+            "skillId": 20021,
+            "cooldowns": [
+                0.5,
+                0.5,
+                0.5,
+                0.5
+            ],
+            "descriptions": [
+                "By using Evil power, there's a <b>20%</b> chance to enable <color=#36ec3e><b>30%</b> Lifesteal for <b>Basic Attacks</b></color>.",
+                "By using Evil power, there's a <b>20%</b> chance to enable <color=#36ec3e><b>35%</b> Lifesteal for <b>Basic Attacks</b></color>.",
+                "By using Evil power, there's a <b>20%</b> chance to enable <color=#36ec3e><b>45%</b> Lifesteal for <b>Basic Attacks</b></color>.",
+                "By using Evil power, there's a <b>20%</b> chance to enable <color=#36ec3e><b>60%</b> Lifesteal for <b>Basic Attacks</b></color>."
+            ],
+            "rarity": 3,
+            "secondaryTrait": 112,
+            "isActive": false,
+            "skillName": "Feast",
+            "primaryTrait": 1
+        },
+        {
+            "skillId": 10111,
+            "cooldowns": [
+                3,
+                3,
+                3,
+                3
+            ],
+            "descriptions": [
+                "Channel the breath of a Phoenix, sending out <b>1</b> wave of fire scorching every enemy in its path, dealing <color=#34d1fe><b>25%</b> MAG DMG</color>",
+                "Channel the breath of a Phoenix, sending out <b>1</b> wave of fire scorching every enemy in its path, dealing <color=#34d1fe><b>32%</b> MAG DMG</color>",
+                "Channel the breath of a Phoenix, sending out <b>2</b> wave of fire scorching every enemy in its path, dealing <color=#34d1fe><b>32%</b> MAG DMG</color>",
+                "Channel the breath of a Phoenix, sending out <b>2</b> wave of fire scorching every enemy in its path, dealing <color=#34d1fe><b>46%</b> MAG DMG</color>"
+            ],
+            "rarity": 1,
+            "secondaryTrait": 101,
+            "isActive": true,
+            "skillName": "Flame Phoenix",
+            "primaryTrait": 6
+        },
+        {
+            "skillId": 10641,
+            "cooldowns": [
+                20,
+                20,
+                20,
+                20
+            ],
+            "descriptions": [
+                "Fire a tracking flash bomb at a target enemy, dealing <color=#ff8400><b>108%</b> PHY DMG</color> to all enemies near the target and <color=#e465ff>blinding them for <b>1s</b></color>.",
+                "Fire a tracking flash bomb at a target enemy, dealing <color=#ff8400><b>160%</b> PHY DMG</color> to all enemies near the target and <color=#e465ff>blinding them for <b>1.5s</b></color>.",
+                "Fire a tracking flash bomb at a target enemy, dealing <color=#ff8400><b>270%</b> PHY DMG</color> to all enemies near the target and <color=#e465ff>blinding them for <b>2s</b></color>.",
+                "Fire a tracking flash bomb at a target enemy, dealing <color=#ff8400><b>430%</b> PHY DMG</color> to all enemies near the target and <color=#e465ff>blinding them for <b>2.5s</b></color>."
+            ],
+            "rarity": 2,
+            "secondaryTrait": 114,
+            "isActive": true,
+            "skillName": "Flash Bomb",
+            "primaryTrait": 2
+        },
+        {
+            "skillId": 10231,
+            "cooldowns": [
+                8,
+                8,
+                8,
+                8
+            ],
+            "descriptions": [
+                "Cast several bolts of eldritch lightning power that pierce through enemies, dealing <b>3 times</b> of <color=#34d1fe><b>26%</b> MAG DMG</color> to targets in the area.",
+                "Cast several bolts of eldritch lightning power that pierce through enemies, dealing <b>4 times</b> of <color=#34d1fe><b>30%</b> MAG DMG</color> to targets in the area.",
+                "Cast several bolts of eldritch lightning power that pierce through enemies, dealing <b>6 times</b> of <color=#34d1fe><b>32%</b> MAG DMG</color> to targets in the area.",
+                "Cast several bolts of eldritch lightning power that pierce through enemies, dealing <b>8 times</b> of <color=#34d1fe><b>37%</b> MAG DMG</color> to targets in the area."
+            ],
+            "rarity": 3,
+            "secondaryTrait": 104,
+            "isActive": true,
+            "skillName": "Forked Lightning",
+            "primaryTrait": 7
+        },
+        {
+            "skillId": 20051,
+            "cooldowns": [
+                8,
+                8,
+                8,
+                8
+            ],
+            "descriptions": [
+                "When <b>attacked</b>, cause a Frost Nova, dealing <color=#34d1fe><b>50%</b> MAG DMG</color> to all enemies within a 3 meter radius, and <color=#a57963>slowing enemies MOV SPD by <b>20%</b> for <b>1</b>s</color>. <b>8s CD</b>.",
+                "When <b>attacked</b>, cause a Frost Nova, dealing <color=#34d1fe><b>70%</b> MAG DMG</color> to all enemies within a 3 meter radius, and <color=#a57963>slowing enemies MOV SPD by <b>20%</b> for <b>1.5</b>s</color>. <b>8s CD</b>.",
+                "When <b>attacked</b>, cause a Frost Nova, dealing <color=#34d1fe><b>120%</b> MAG DMG</color> to all enemies within a 3 meter radius, and <color=#a57963>slowing enemies MOV SPD by <b>20%</b> for <b>2</b>s</color>. <b>8s CD</b>.",
+                "When <b>attacked</b>, cause a Frost Nova, dealing <color=#34d1fe><b>190%</b> MAG DMG</color> to all enemies within a 3 meter radius, and <color=#a57963>slowing enemies MOV SPD by <b>20%</b> for <b>3</b>s</color>. <b>8s CD</b>."
+            ],
+            "rarity": 2,
+            "secondaryTrait": 102,
+            "isActive": false,
+            "skillName": "Frost Nova",
+            "primaryTrait": 6
+        },
+        {
+            "skillId": 20081,
+            "cooldowns": [
+                0.5,
+                0.5,
+                0.5,
+                0.5
+            ],
+            "descriptions": [
+                "A ruthless assassin shows no mercy. Permanently boosts <color=#e465ff>crit damage <b>60%</b></color>.",
+                "A ruthless assassin shows no mercy. Permanently boosts <color=#e465ff>crit damage <b>85%</b></color>.",
+                "A ruthless assassin shows no mercy. Permanently boosts <color=#e465ff>crit damage <b>125%</b></color>.",
+                "A ruthless assassin shows no mercy. Permanently boosts <color=#e465ff>crit damage <b>185%</b></color>."
+            ],
+            "rarity": 4,
+            "secondaryTrait": 108,
+            "isActive": false,
+            "skillName": "Grim",
+            "primaryTrait": 2
+        },
+        {
+            "skillId": 20011,
+            "cooldowns": [
+                0.5,
+                0.5,
+                0.5,
+                0.5
+            ],
+            "descriptions": [
+                "When <b>any Active Skill is used</b>, there's a <b>30%</b> chance of creating a pillar of flame, dealing <color=#34d1fe><b>85%</b> MAG DMG</color> to surrounding enemies.",
+                "When <b>any Active Skill is used</b>, there's a <b>35%</b> chance of creating a pillar of flame, dealing <color=#34d1fe><b>105%</b> MAG DMG</color> to surrounding enemies.",
+                "When <b>any Active Skill is used</b>, there's a <b>40%</b> chance of creating a pillar of flame, dealing <color=#34d1fe><b>155%</b> MAG DMG</color> to surrounding enemies.",
+                "When <b>any Active Skill is used</b>, there's a <b>50%</b> chance of creating a pillar of flame, dealing <color=#34d1fe><b>200%</b> MAG DMG</color> to surrounding enemies."
+            ],
+            "rarity": 3,
+            "secondaryTrait": 101,
+            "isActive": false,
+            "skillName": "Hell Flame",
+            "primaryTrait": 5
+        },
+        {
+            "skillId": 10181,
+            "cooldowns": [
+                20,
+                20,
+                20,
+                20
+            ],
+            "descriptions": [
+                "Pull a blazing meteor from the sky towards a target area to summon a Hellfire Demon, dealing <color=#34d1fe><b>140%</b> MAG DMG</color> and <color=#00ffde>stuns enemies within the impact zone for <b>2</b>s</color>, inheriting <color=#ff8400><b>40%</b> ATK</color>, <color=#34d1fe><b>40%</b> AP</color> and <color=#36ec3e><b>50%</b> HP</color> from your character, lasting <b>20</b>s. Hellfire leave a fireland when died.",
+                "Pull a blazing meteor from the sky towards a target area to summon a Hellfire Demon, dealing <color=#34d1fe><b>200%</b> MAG DMG</color> and <color=#00ffde>stuns enemies within the impact zone for <b>2.5</b>s</color>, inheriting <color=#ff8400><b>60%</b> ATK</color>, <color=#34d1fe><b>60%</b> AP</color> and <color=#36ec3e><b>60%</b> HP</color> from your character, lasting <b>20</b>s. Hellfire leave a fireland when died.",
+                "Pull a blazing meteor from the sky towards a target area to summon a Hellfire Demon, dealing <color=#34d1fe><b>340%</b> MAG DMG</color> and <color=#00ffde>stuns enemies within the impact zone for <b>3</b>s</color>, inheriting <color=#ff8400><b>80%</b> ATK</color>, <color=#34d1fe><b>80%</b> AP</color> and <color=#36ec3e><b>70%</b> HP</color> from your character, lasting <b>20</b>s. Hellfire leave a fireland when died. <color=#e465ff>Hellfire learned to spell Charging</color>.",
+                "Pull a blazing meteor from the sky towards a target area to summon a Hellfire Demon, dealing <color=#34d1fe><b>540%</b> MAG DMG</color> and <color=#00ffde>stuns enemies within the impact zone for <b>4</b>s</color>, inheriting <color=#ff8400><b>100%</b> ATK</color>, <color=#34d1fe><b>100%</b> AP</color> and <color=#36ec3e><b>80%</b> HP</color> from your character, lasting <b>20</b>s. Hellfire leave a fireland when died. <color=#e465ff>Hellfire learned to spell Charging</color>."
+            ],
+            "rarity": 5,
+            "secondaryTrait": 101,
+            "isActive": true,
+            "skillName": "Hellfire",
+            "primaryTrait": 5
+        },
+        {
+            "skillId": 20111,
+            "cooldowns": [
+                8,
+                8,
+                8,
+                8
+            ],
+            "descriptions": [
+                "Periodically marks enemies nearby for <b>4</b>s.Marked targets will <color=#e465ff>receive <b>25%</b> extra damage</color>.",
+                "Periodically marks enemies nearby for <b>4</b>s.Marked targets will <color=#e465ff>receive <b>35%</b> extra damage</color>.",
+                "Periodically marks enemies nearby for <b>4</b>s.Marked targets will <color=#e465ff>receive <b>60%</b> extra damage</color>.",
+                "Periodically marks enemies nearby for <b>4</b>s.Marked targets will <color=#e465ff>receive <b>95%</b> extra damage</color>."
+            ],
+            "rarity": 3,
+            "secondaryTrait": 113,
+            "isActive": false,
+            "skillName": "Hunt",
+            "primaryTrait": 4
+        },
+        {
+            "skillId": 10571,
+            "cooldowns": [
+                25,
+                25,
+                25,
+                25
+            ],
+            "descriptions": [
+                "Plant a Ice Lotus which <b>flourish over 5 seconds</b>, breeze that surround the florescent Lotus, slows and deals <color=#34d1fe><b>7%</b> MAG DMG per 0.5 second</color> to nearby enemy. The florescent Lotus lasts <b>15s</b>, then it bursts and <b>freezes enemy</b> 5s by dealing <color=#34d1fe><b>30%</b> MAG DMG</color>. If an enemy touches the Lotus before its florescence, the Lotus prematurely bursts and freezes enemy 2s.",
+                "Plant a Ice Lotus which <b>flourish over 5 seconds</b>, breeze that surround the florescent Lotus, slows and deals <color=#34d1fe><b>10%</b> MAG DMG per 0.5 second</color> to nearby enemy. The florescent Lotus lasts <b>15s</b>, then it bursts and <b>freezes enemy</b> 5s by dealing <color=#34d1fe><b>40%</b> MAG DMG</color>. If an enemy touches the Lotus before its florescence, the Lotus prematurely bursts and freezes enemy 3s.",
+                "Plant a Ice Lotus which <b>flourish over 5 seconds</b>, breeze that surround the florescent Lotus, slows and deals <color=#34d1fe><b>17%</b> MAG DMG per 0.5 second</color> to nearby enemy. The florescent Lotus lasts <b>15s</b>, then it bursts and <b>freezes enemy</b> 5s by dealing <color=#34d1fe><b>65%</b> MAG DMG</color>. If an enemy touches the Lotus before its florescence, the Lotus prematurely bursts and freezes enemy 4s.",
+                "Plant a Ice Lotus which <b>flourish over 5 seconds</b>, breeze that surround the florescent Lotus, slows and deals <color=#34d1fe><b>27%</b> MAG DMG per 0.5 second</color> to nearby enemy. The florescent Lotus lasts <b>15s</b>, then it bursts and <b>freezes enemy</b> 5s by dealing <color=#34d1fe><b>100%</b> MAG DMG</color>. If an enemy touches the Lotus before its florescence, the Lotus prematurely bursts and freezes enemy 5s."
+            ],
+            "rarity": 3,
+            "secondaryTrait": 102,
+            "isActive": true,
+            "skillName": "Ice Lotus",
+            "primaryTrait": 7
+        },
+        {
+            "skillId": 10311,
+            "cooldowns": [
+                25,
+                25,
+                25,
+                25
+            ],
+            "descriptions": [
+                "Shield yourself and all friendly units in a large area around you for <color=#00ffde><b>40%</b> of AP</color>. When an individual shield breaks, it deals <color=#34d1fe><b>20%</b> MAG DMG</color> to nearby enemies.",
+                "Shield yourself and all friendly units in a large area around you for <color=#00ffde><b>60%</b> of AP</color>. When an individual shield breaks, it deals <color=#34d1fe><b>30%</b> MAG DMG</color> to nearby enemies.",
+                "Shield yourself and all friendly units in a large area around you for <color=#00ffde><b>100%</b> of AP</color>. When an individual shield breaks, it deals <color=#34d1fe><b>50%</b> MAG DMG</color> to nearby enemies.",
+                "Shield yourself and all friendly units in a large area around you for <color=#00ffde><b>160%</b> of AP</color>. When an individual shield breaks, it deals <color=#34d1fe><b>85%</b> MAG DMG</color> to nearby enemies."
+            ],
+            "rarity": 3,
+            "secondaryTrait": 102,
+            "isActive": true,
+            "skillName": "Ice Thorn Shield",
+            "primaryTrait": 5
+        },
+        {
+            "skillId": 10191,
+            "cooldowns": [
+                4,
+                4,
+                4,
+                4
+            ],
+            "descriptions": [
+                "Summon a sphere of ice to a target area that explodes, dealing <color=#34d1fe><b>30%</b> MAG DMG</color> to all enemies in the area, plus a <color=#a57963><b>50%</b> slowdown for <b>0.5</b>s</color>.",
+                "Summon a sphere of ice to a target area that explodes, dealing <color=#34d1fe><b>45%</b> MAG DMG</color> to all enemies in the area, plus a <color=#a57963><b>50%</b> slowdown for <b>0.5</b>s</color>.",
+                "Summon a sphere of ice to a target area that explodes, dealing <color=#34d1fe><b>70%</b> MAG DMG</color> to all enemies in the area, plus a <color=#a57963><b>50%</b> slowdown for <b>0.5</b>s</color>.Create a icey pillar after explosion, dealing <b>2 times</b> of <color=#34d1fe><b>5%</b> MAG DMG</color>.",
+                "Summon a sphere of ice to a target area that explodes, dealing <color=#34d1fe><b>100%</b> MAG DMG</color> to all enemies in the area, plus a <color=#a57963><b>50%</b> slowdown for <b>0.5</b>s</color>.Create a icey pillar after explosion, dealing <b>2 times</b> of <color=#34d1fe><b>10%</b> MAG DMG</color>."
+            ],
+            "rarity": 1,
+            "secondaryTrait": 102,
+            "isActive": true,
+            "skillName": "Icy Burst",
+            "primaryTrait": 7
+        },
+        {
+            "skillId": 20191,
+            "cooldowns": [
+                0.5,
+                0.5,
+                0.5,
+                0.5
+            ],
+            "descriptions": [
+                "Basic Attacks have a <b>25% chance</b> of impaling the enemy, dealing <color=#ff8400><b>45%</b> bonus PHY DMG</color> to target and <color=#ff8400><b>15%</b> PHY DMG</color> to enemies nearby the target.",
+                "Basic Attacks have a <b>25% chance</b> of impaling the enemy, dealing <color=#ff8400><b>60%</b> bonus PHY DMG</color> to target and <color=#ff8400><b>20%</b> PHY DMG</color> to enemies nearby the target.",
+                "Basic Attacks have a <b>25% chance</b> of impaling the enemy, dealing <color=#ff8400><b>90%</b> bonus PHY DMG</color> to target and <color=#ff8400><b>30%</b> PHY DMG</color> to enemies nearby the target.",
+                "Basic Attacks have a <b>25% chance</b> of impaling the enemy, dealing <color=#ff8400><b>120%</b> bonus PHY DMG</color> to target and <color=#ff8400><b>40%</b> PHY DMG</color> to enemies nearby the target."
+            ],
+            "rarity": 4,
+            "secondaryTrait": 112,
+            "isActive": false,
+            "skillName": "Impale",
+            "primaryTrait": 2
+        },
+        {
+            "skillId": 20251,
+            "cooldowns": [
+                8,
+                8,
+                8,
+                8
+            ],
+            "descriptions": [
+                "When <b>attacked</b>, there's a <b>20%</b> chance of dealing <color=#ff8400><b>72%</b> PHY DMG</color> to all enemies within a 3 meter radius, <color=#00ffde>stunning up to <b>5</b> surrounding enemies for <b>2s</b></color>. <b>8s</b> CD.",
+                "When <b>attacked</b>, there's a <b>40%</b> chance of dealing <color=#ff8400><b>105%</b> PHY DMG</color> to all enemies within a 3 meter radius, <color=#00ffde>stunning up to <b>7</b> surrounding enemies for <b>2.5s</b></color>. <b>8s</b> CD.",
+                "When <b>attacked</b>, there's a <b>70%</b> chance of dealing <color=#ff8400><b>165%</b> PHY DMG</color> to all enemies within a 3 meter radius, <color=#00ffde>stunning up to <b>9</b> surrounding enemies for <b>3s</b></color>. <b>8s</b> CD.",
+                "When <b>attacked</b>, there's a <b>100%</b> chance of dealing <color=#ff8400><b>240%</b> PHY DMG</color> to all enemies within a 3 meter radius, <color=#00ffde>stunning up to <b>12</b> surrounding enemies for <b>4s</b></color>. <b>8s</b> CD."
+            ],
+            "rarity": 3,
+            "secondaryTrait": 107,
+            "isActive": false,
+            "skillName": "Kraken Shell",
+            "primaryTrait": 3
+        },
+        {
+            "skillId": 10131,
+            "cooldowns": [
+                12,
+                12,
+                12,
+                12
+            ],
+            "descriptions": [
+                "Unleashe 1 ray of energy which you can direct with the virtual joystick for <b>2</b> seconds, knocking enemy back for up to <b>8.5m</b>, and dealing up to total <color=#34d1fe><b>80%</b> continuous MAG DMG</color>.",
+                "Unleashe 1 ray of energy which you can direct with the virtual joystick for <b>2</b> seconds, knocking enemy back for up to <b>10.5m</b>, and dealing up to total <color=#34d1fe><b>140%</b> continuous MAG DMG</color>.",
+                "Unleashe 1 ray of energy which you can direct with the virtual joystick for <b>2</b> seconds, knocking enemy back for up to <b>12.5m</b>, and dealing up to total <color=#34d1fe><b>260%</b> continuous MAG DMG</color>.",
+                "Unleashe 1 ray of energy which you can direct with the virtual joystick for <b>2</b> seconds, knocking enemy back for up to <b>16.5m</b>, and dealing up to total <color=#34d1fe><b>440%</b> continuous MAG DMG</color>."
+            ],
+            "rarity": 2,
+            "secondaryTrait": 103,
+            "isActive": true,
+            "skillName": "Laser",
+            "primaryTrait": 6
+        },
+        {
+            "skillId": 10711,
+            "cooldowns": [
+                10,
+                10,
+                10,
+                10
+            ],
+            "descriptions": [
+                "Leap to a target location and slam your weapon down, knock up enemies for 1s, dealing <color=#ff8400><b>80%</b> PHY DMG</color>.",
+                "Leap to a target location and slam your weapon down, knock up enemies for 1s, dealing <color=#ff8400><b>120%</b> PHY DMG</color>.",
+                "Leap to a target location and slam your weapon down, knock up enemies for 1s, dealing <color=#ff8400><b>200%</b> PHY DMG</color>.",
+                "Leap to a target location and slam your weapon down, knock up enemies for 1s, dealing <color=#ff8400><b>320%</b> PHY DMG</color>."
+            ],
+            "rarity": 2,
+            "secondaryTrait": 116,
+            "isActive": true,
+            "skillName": "Leap Blade",
+            "primaryTrait": 1
+        },
+        {
+            "skillId": 10321,
+            "cooldowns": [
+                15,
+                15,
+                15,
+                15
+            ],
+            "descriptions": [
+                "Sacrifice <color=#ff543f><b>20%</b> of your current health</color> to break an enemy's life, charging to a target, dealing <color=#ff8400><b>250%</b> PHY DMG</color> <color=#e465ff>Silence target <b>1</b>s</color> and <color=#e465ff>Disarm target <b>3</b>s</color>.",
+                "Sacrifice <color=#ff543f><b>20%</b> of your current health</color> to break an enemy's life, charging to a target, dealing <color=#ff8400><b>380%</b> PHY DMG</color> <color=#e465ff>Silence target <b>1.5</b>s</color> and <color=#e465ff>Disarm target <b>3.5</b>s</color>.",
+                "Sacrifice <color=#ff543f><b>20%</b> of your current health</color> to break an enemy's life, charging to a target, dealing <color=#ff8400><b>640%</b> PHY DMG</color> <color=#e465ff>Silence target <b>2</b>s</color> and <color=#e465ff>Disarm target <b>4</b>s</color>.",
+                "Sacrifice <color=#ff543f><b>20%</b> of your current health</color> to break an enemy's life, charging to a target, dealing <color=#ff8400><b>1000%</b> PHY DMG</color> <color=#e465ff>Silence target <b>2.5</b>s</color> and <color=#e465ff>Disarm target <b>5</b>s</color>."
+            ],
+            "rarity": 4,
+            "secondaryTrait": 105,
+            "isActive": true,
+            "skillName": "Life Break",
+            "primaryTrait": 1
+        },
+        {
+            "skillId": 20071,
+            "cooldowns": [
+                90,
+                90,
+                90,
+                90
+            ],
+            "descriptions": [
+                "Basic Attacks have a <b>10% chance</b> to fire a light energy ball to the target that was hit by Basic Attack within 5m. The light energy ball will bounce 8 times to nearby enemies, dealing <color=#ff8400><b>25%</b> PHY DMG</color> each time. When there are not any target to bounce, the light energy ball will release all remaining bounce count on the last target it hits, dealing <color=#ff8400><b>18%</b> PHY DMG</color> each time",
+                "Basic Attacks have a <b>10% chance</b> to fire a light energy ball to the target that was hit by Basic Attack within 5m. The light energy ball will bounce 8 times to nearby enemies, dealing <color=#ff8400><b>38%</b> PHY DMG</color> each time. When there are not any target to bounce, the light energy ball will release all remaining bounce count on the last target it hits, dealing <color=#ff8400><b>28%</b> PHY DMG</color> each time",
+                "Basic Attacks have a <b>10% chance</b> to fire a light energy ball to the target that was hit by Basic Attack within 5m. The light energy ball will bounce 8 times to nearby enemies, dealing <color=#ff8400><b>63%</b> PHY DMG</color> each time. When there are not any target to bounce, the light energy ball will release all remaining bounce count on the last target it hits, dealing <color=#ff8400><b>48%</b> PHY DMG</color> each time",
+                "Basic Attacks have a <b>10% chance</b> to fire a light energy ball to the target that was hit by Basic Attack within 5m. The light energy ball will bounce 8 times to nearby enemies, dealing <color=#ff8400><b>100%</b> PHY DMG</color> each time. When there are not any target to bounce, the light energy ball will release all remaining bounce count on the last target it hits, dealing <color=#ff8400><b>75%</b> PHY DMG</color> each time"
+            ],
+            "rarity": 5,
+            "secondaryTrait": 114,
+            "isActive": false,
+            "skillName": "Light Energy Bounce",
+            "primaryTrait": 1
+        },
+        {
+            "skillId": 10631,
+            "cooldowns": [
+                30,
+                30,
+                30,
+                30
+            ],
+            "descriptions": [
+                "Teleport to the target location and slash 4 time, dealing <color=#ff8400><b>60%</b> PHY DMG</color> each time, and draw a Light Hexagram circle. After the circle spelling is done, blast the ground to detonate the Circle, dealing <color=#ff8400><b>240%</b> PHY DMG</color>. The character is invulnerable during the casting.",
+                "Teleport to the target location and slash 4 time, dealing <color=#ff8400><b>90%</b> PHY DMG</color> each time, and draw a Light Hexagram circle. After the circle spelling is done, blast the ground to detonate the Circle, dealing <color=#ff8400><b>360%</b> PHY DMG</color>. The character is invulnerable during the casting.",
+                "Teleport to the target location and slash 4 time, dealing <color=#ff8400><b>150%</b> PHY DMG</color> each time, and draw a Light Hexagram circle. After the circle spelling is done, blast the ground to detonate the Circle, dealing <color=#ff8400><b>600%</b> PHY DMG</color>. The character is invulnerable during the casting.",
+                "Teleport to the target location and slash 4 time, dealing <color=#ff8400><b>200%</b> PHY DMG</color> each time, and draw a Light Hexagram circle. After the circle spelling is done, blast the ground to detonate the Circle, dealing <color=#ff8400><b>800%</b> PHY DMG</color>. The character is invulnerable during the casting."
+            ],
+            "rarity": 4,
+            "secondaryTrait": 114,
+            "isActive": true,
+            "skillName": "Light Hexagram",
+            "primaryTrait": 2
+        },
+        {
+            "skillId": 10651,
+            "cooldowns": [
+                30,
+                30,
+                30,
+                30
+            ],
+            "descriptions": [
+                "Draw in all nearby enemies in the target area and <color=#a57963>slow them by <b>90%</b> for 1s</color>, then call down a beam of light energy, dealing <color=#ff8400><b>315%</b> PHY DMG</color> to enemies in the area.",
+                "Draw in all nearby enemies in the target area and <color=#a57963>slow them by <b>90%</b> for 1s</color>, then call down a beam of light energy, dealing <color=#ff8400><b>480%</b> PHY DMG</color> to enemies in the area.",
+                "Draw in all nearby enemies in the target area and <color=#a57963>slow them by <b>90%</b> for 1s</color>, then call down a beam of light energy, dealing <color=#ff8400><b>800%</b> PHY DMG</color> to enemies in the area.",
+                "Draw in all nearby enemies in the target area and <color=#a57963>slow them by <b>90%</b> for 1s</color>, then call down a beam of light energy, dealing <color=#ff8400><b>1260%</b> PHY DMG</color> to enemies in the area."
+            ],
+            "rarity": 3,
+            "secondaryTrait": 114,
+            "isActive": true,
+            "skillName": "Light Punishment",
+            "primaryTrait": 3
+        },
+        {
+            "skillId": 10401,
+            "cooldowns": [
+                15,
+                15,
+                15,
+                15
+            ],
+            "descriptions": [
+                "Summon a arrow of lightning from the sky dealing <color=#34d1fe>MAG DMG that equals to <b>25%</b></color> of sum of your <color=#ff8400>ATK</color> and <color=#34d1fe>AP</color> to the target area, and continuous discharge to enemies with the damage that equals to <color=#34d1fe><b>7%</b></color> of sum of your <color=#ff8400>ATK</color> and <color=#34d1fe>AP</color>, once per 0.5s for <b>2.5</b>s.",
+                "Summon a arrow of lightning from the sky dealing <color=#34d1fe>MAG DMG that equals to <b>35%</b></color> of sum of your <color=#ff8400>ATK</color> and <color=#34d1fe>AP</color> to the target area,and continuous discharge to enemies with the damage that equals to <color=#34d1fe><b>10%</b></color> of sum of your <color=#ff8400>ATK</color> and <color=#34d1fe>AP</color>, once per 0.5s for <b>2.5</b>s.",
+                "Summon a arrow of lightning from the sky dealing <color=#34d1fe>MAG DMG that equals to <b>65%</b></color> of sum of your <color=#ff8400>ATK</color> and <color=#34d1fe>AP</color> to the target area, and continuous discharge to enemies with the damage that equals to <color=#34d1fe><b>10%</b></color> of sum of your <color=#ff8400>ATK</color> and <color=#34d1fe>AP</color>, once per 0.25s for <b>2.25</b>s.",
+                "Summon a arrow of lightning from the sky dealing <color=#34d1fe>MAG DMG that equals to <b>85%</b></color> of sum of your <color=#ff8400>ATK</color> and <color=#34d1fe>AP</color> to the target area, and continuous discharge to enemies with the damage that equals to <color=#34d1fe><b>17%</b></color> of sum of your <color=#ff8400>ATK</color> and <color=#34d1fe>AP</color>, once per 0.25s for <b>2.25</b>s."
+            ],
+            "rarity": 3,
+            "secondaryTrait": 104,
+            "isActive": true,
+            "skillName": "Lightning Field",
+            "primaryTrait": 4
+        },
+        {
+            "skillId": 20091,
+            "cooldowns": [
+                90,
+                90,
+                90,
+                90
+            ],
+            "descriptions": [
+                "Summon <b>2</b> lightning balls that orbit you, dealing <color=#34d1fe><b>6%</b> MAG DMG</color> per <b>0.3s</b> when they hit an enemy.",
+                "Summon <b>3</b> lightning balls that orbit you, dealing <color=#34d1fe><b>10%</b> MAG DMG</color> per <b>0.3s</b> when they hit an enemy.",
+                "Summon <b>4</b> lightning balls that orbit you, dealing <color=#34d1fe><b>12%</b> MAG DMG</color> per <b>0.3s</b> when they hit an enemy.",
+                "Summon <b>5</b> lightning balls that orbit you, dealing <color=#34d1fe><b>16%</b> MAG DMG</color> per <b>0.3s</b> when they hit an enemy."
+            ],
+            "rarity": 2,
+            "secondaryTrait": 104,
+            "isActive": false,
+            "skillName": "Lightning Orbs",
+            "primaryTrait": 7
+        },
+        {
+            "skillId": 20041,
+            "cooldowns": [
+                0.5,
+                0.5,
+                0.5,
+                0.5
+            ],
+            "descriptions": [
+                "When any <b>Active skill casts</b>, your <b>next basic attacks</b> will summon a lightning, dealing <color=#34d1fe><b>35%</b> MAG DMG</color> to all the enemy units arround the target.",
+                "When any <b>Active skill casts</b>, your <b>next basic attacks</b> will summon a lightning, dealing <color=#34d1fe><b>50%</b> MAG DMG</color> to all the enemy units arround the target.",
+                "When any <b>Active skill casts</b>, your <b>next basic attacks</b> will summon a lightning, dealing <color=#34d1fe><b>85%</b> MAG DMG</color> to all the enemy units arround the target.",
+                "When any <b>Active skill casts</b>, your <b>next basic attacks</b> will summon a lightning, dealing <color=#34d1fe><b>135%</b> MAG DMG</color> to all the enemy units arround the target."
+            ],
+            "rarity": 2,
+            "secondaryTrait": 104,
+            "isActive": false,
+            "skillName": "Lightning Rod",
+            "primaryTrait": 4
+        },
+        {
+            "skillId": 10511,
+            "cooldowns": [
+                30,
+                30,
+                30,
+                30
+            ],
+            "descriptions": [
+                "Automatically Roll the Lucky Dice to acitvate an boosting ability according to the result for <b>30s</b>:\\n1-<b>Nothing happens</b>\\n2-Boosts <color=#ff8400>DEF</color> by <b>5%</b>\\n3-Boosts <color=#e465ff>ATK SPD</color> by <b>20%</b>\\n4-Boosts <color=#ff8400>ATK</color> and <color=#34d1fe>AP</color> by <b>7%</b>\\n5-Boosts <color=#e465ff>Crit Rate</color> by <b>8%</b>\\n6-Boosts <color=#e465ff>CD Reduction</color> by <b>16%</b>.",
+                "Automatically Roll the Lucky Dice to acitvate an boosting ability according to the result for <b>30s</b>:\\n1-<b>Nothing happens</b>\\n2-Boosts <color=#ff8400>DEF</color> by <b>7%</b>\\n3-Boosts <color=#e465ff>ATK SPD</color> by <b>30%</b>\\n4-Boosts <color=#ff8400>ATK</color> and <color=#34d1fe>AP</color> by <b>10%</b>\\n5-Boosts <color=#e465ff>Crit Rate</color> by <b>12%</b>\\n6-Boosts <color=#e465ff>CD Reduction</color> by <b>23%</b>.",
+                "Automatically Roll the Lucky Dice to acitvate an boosting ability according to the result for <b>30s</b>:\\n1-<b>Nothing happens</b>\\n2-Boosts <color=#ff8400>DEF</color> by <b>12%</b>\\n3-Boosts <color=#e465ff>ATK SPD</color> by <b>50%</b>\\n4-Boosts <color=#ff8400>ATK</color> and <color=#34d1fe>AP</color> by <b>17%</b>\\n5-Boosts <color=#e465ff>Crit Rate</color> by <b>20%</b>\\n6-Boosts <color=#e465ff>CD Reduction</color> by <b>33%</b>.",
+                "Automatically Roll the Lucky Dice to acitvate an boosting ability according to the result for <b>30s</b>:\\n1-<b>Nothing happens</b>\\n2-Boosts <color=#ff8400>DEF</color> by <b>19%</b>\\n3-Boosts <color=#e465ff>ATK SPD</color> by <b>80%</b>\\n4-Boosts <color=#ff8400>ATK</color> and <color=#34d1fe>AP</color> by <b>27%</b>\\n5-Boosts <color=#e465ff>Crit Rate</color> by <b>30%</b>\\n6-Boosts <color=#e465ff>CD Reduction</color> by <b>44%</b>."
+            ],
+            "rarity": 4,
+            "secondaryTrait": 113,
+            "isActive": false,
+            "skillName": "Lucky Dice",
+            "primaryTrait": 2
+        },
+        {
+            "skillId": 10121,
+            "cooldowns": [
+                20,
+                20,
+                20,
+                20
+            ],
+            "descriptions": [
+                "Summon <b>1</b> flaming meteor from the sky onto the target location, <color=#34d1fe><b>dealing 80%</b> MAG DMG</color>. Upon landing, the meteor rolls forward, continuously dealing up to a total of <color=#34d1fe><b>50%</b> MAG DMG</color>, finally exploding after 1.5 seconds and dealing <color=#34d1fe><b>20%</b> MAG DMG</color>.",
+                "Summon <b>1</b> flaming meteor from the sky onto the target location, <color=#34d1fe><b>dealing 120%</b> MAG DMG</color>. Upon landing, the meteor rolls forward, continuously dealing up to a total of <color=#34d1fe><b>75%</b> MAG DMG</color>, finally exploding after 1.5 seconds and dealing <color=#34d1fe><b>30%</b> MAG DMG</color>.",
+                "Summon <b>2</b> flaming meteors from the sky onto the target location, <color=#34d1fe><b>dealing 120%</b> MAG DMG</color>. Upon landing, the meteor rolls forward, continuously dealing up to a total of <color=#34d1fe><b>75%</b> MAG DMG</color>, finally exploding after 1.5 seconds and dealing <color=#34d1fe><b>30%</b> MAG DMG</color>.",
+                "Summon <b>3</b> flaming meteors from the sky onto the target location, <color=#34d1fe><b>dealing 140%</b> MAG DMG</color>. Upon landing, the meteor rolls forward, continuously dealing up to a total of <color=#34d1fe><b>100%</b> MAG DMG</color>, finally exploding after 1.5 seconds and dealing <color=#34d1fe><b>40%</b> MAG DMG</color>."
+            ],
+            "rarity": 3,
+            "secondaryTrait": 101,
+            "isActive": true,
+            "skillName": "Meteor",
+            "primaryTrait": 8
+        },
+        {
+            "skillId": 10361,
+            "cooldowns": [
+                30,
+                30,
+                30,
+                30
+            ],
+            "descriptions": [
+                "Leap towards and slashes, attacking a random enemy target nearby <b>9</b> times, dealing <color=#ff8400><b>45%</b> PHY DMG</color> to all enemy units arround the target. <color=#ff543f>Invulnerable for the duration</color>.",
+                "Leap towards and slashes, attacking a random enemy target nearby <b>9</b> times, dealing <color=#ff8400><b>67%</b> PHY DMG</color> to all enemy units arround the target. <color=#ff543f>Invulnerable for the duration</color>.",
+                "Leap towards and slashes, attacking a random enemy target nearby <b>9</b> times, dealing <color=#ff8400><b>100%</b> PHY DMG</color> to all enemy units arround the target. <color=#ff543f>Invulnerable for the duration</color>. Release 3 Void blasts when hitting target, dealing <b>2 times of</b> <color=#ff8400><b>6%</b> PHY DMG</color>",
+                "Leap towards and slashes, attacking a random enemy target nearby <b>9</b> times, dealing <color=#ff8400><b>160%</b> PHY DMG</color> to all enemy units arround the target. <color=#ff543f>Invulnerable for the duration</color>. Release 3 Void blasts when hitting target, dealing <b>2 times of</b> <color=#ff8400><b>10%</b> PHY DMG</color>"
+            ],
+            "rarity": 5,
+            "secondaryTrait": 111,
+            "isActive": true,
+            "skillName": "Omnislash",
+            "primaryTrait": 2
+        },
+        {
+            "skillId": 10461,
+            "cooldowns": [
+                40,
+                40,
+                40,
+                40
+            ],
+            "descriptions": [
+                "Unlock your inner mind with an Arcane storm that distorts the space-time. While the mindstorm rages, you gain<color=#34d1fe><b>10%</b> AP</color>, and <color=#e465ff>cooldown time of all Active skills is <b>40%</b> shorter</color>, lasting 8s.",
+                "Unlock your inner mind with an Arcane storm that distorts the space-time. While the mindstorm rages, you gain<color=#34d1fe><b>15%</b> AP</color>, and <color=#e465ff>cooldown time of all Active skills is <b>45%</b> shorter</color>, lasting 8s.",
+                "Unlock your inner mind with an Arcane storm that distorts the space-time. While the mindstorm rages, you gain<color=#34d1fe><b>20%</b> AP</color>, and <color=#e465ff>cooldown time of all Active skills is <b>55%</b> shorter</color>, lasting 8s.",
+                "Unlock your inner mind with an Arcane storm that distorts the space-time. While the mindstorm rages, you gain<color=#34d1fe><b>25%</b> AP</color>, and <color=#e465ff>cooldown time of all Active skills is <b>65%</b> shorter</color>, lasting 8s."
+            ],
+            "rarity": 5,
+            "secondaryTrait": 103,
+            "isActive": true,
+            "skillName": "Overload",
+            "primaryTrait": 6
+        },
+        {
+            "skillId": 10501,
+            "cooldowns": [
+                10,
+                10,
+                10,
+                10
+            ],
+            "descriptions": [
+                "Throw a giant Phantom Sword that deals <color=#ff8400><b>10%</b> PHY DMG</color> every 0.5 second to enemy it hits, the Sword returns back to you with an accelerated speed after <b>3s</b>. The returning Sword deals <color=#ff8400><b>15% - 75%</b> PHY DMG</color> to enemy hit, <b>gaining damage over the first 2 seconds of travel time</b>.",
+                "Throw a giant Phantom Sword that deals <color=#ff8400><b>15%</b> PHY DMG</color> every 0.5 second to enemy it hits, the Sword returns back to you with an accelerated speed after <b>3s</b>. The returning Sword deals <color=#ff8400><b>22% - 110%</b> PHY DMG</color> to enemy hit, <b>gaining damage over the first 2 seconds of travel time</b>.",
+                "Throw a giant Phantom Sword that deals <color=#ff8400><b>25%</b> PHY DMG</color> every 0.5 second to enemy it hits, the Sword returns back to you with an accelerated speed after <b>3s</b>. The returning Sword deals <color=#ff8400><b>38% - 190%</b> PHY DMG</color> to enemy hit, <b>gaining damage over the first 2 seconds of travel time</b>. Create 12 mini swords surrounding Phantom Sword, each dealing <color=#ff8400><b>10%</b> PHY DMG</color>.",
+                "Throw a giant Phantom Sword that deals <color=#ff8400><b>42%</b> PHY DMG</color> every 0.5 second to enemy it hits, the Sword returns back to you with an accelerated speed after <b>3s</b>. The returning Sword deals <color=#ff8400><b>60% - 300%</b> PHY DMG</color> to enemy hit, <b>gaining damage over the first 2 seconds of travel time</b>. Create 12 mini swords surrounding Phantom Sword, each dealing <color=#ff8400><b>10%</b> PHY DMG</color>."
+            ],
+            "rarity": 3,
+            "secondaryTrait": 105,
+            "isActive": true,
+            "skillName": "Phantom Sword",
+            "primaryTrait": 1
+        },
+        {
+            "skillId": 10201,
+            "cooldowns": [
+                25,
+                25,
+                25,
+                25
+            ],
+            "descriptions": [
+                "Instantly heals the character for <color=#36ec3e><b>7.2%</b> of max HP</color>, also deals <b>1 time</b> of <color=#34d1fe><b>45%</b> MAG DMG</color> and <color=#ff8400><b>45%</b> PHY DMG</color> to any surrounding enemies.",
+                "Instantly heals the character for <color=#36ec3e><b>11.5%</b> of max HP</color>, also deals <b>1 time</b> of <color=#34d1fe><b>68%</b> MAG DMG</color> and <color=#ff8400><b>68%</b> PHY DMG</color> to any surrounding enemies.",
+                "Instantly heals the character for <color=#36ec3e><b>18%</b> of max HP</color>, also deals <b>3 times</b> of <color=#34d1fe><b>37%</b> MAG DMG</color> and <color=#ff8400><b>37%</b> PHY DMG</color> to any surrounding enemies.",
+                "Instantly heals the character for <color=#36ec3e><b>30%</b> of max HP</color>, also deals <b>4 times</b> of <color=#34d1fe><b>45%</b> MAG DMG</color> and <color=#ff8400><b>45%</b> PHY DMG</color> to any surrounding enemies."
+            ],
+            "rarity": 3,
+            "secondaryTrait": 107,
+            "isActive": true,
+            "skillName": "Purify",
+            "primaryTrait": 8
+        },
+        {
+            "skillId": 10331,
+            "cooldowns": [
+                20,
+                20,
+                20,
+                20
+            ],
+            "descriptions": [
+                "Summon a crater of lava in a target area, dealing <color=#34d1fe><b>22%</b> MAG DMG </color> per second for 3s, the crater than erupts, dealing <color=#34d1fe><b>110%</b> MAG DMG</color> and <color=#a57963>slowing all enemies in the area by <b>20%</b> for <b>0.5</b>s</color>.",
+                "Summon a crater of lava in a target area, dealing <color=#34d1fe><b>34%</b> MAG DMG </color> per second for 3s, the crater than erupts, dealing <color=#34d1fe><b>170%</b> MAG DMG</color> and <color=#a57963>slowing all enemies in the area by <b>20%</b> for <b>1</b>s</color>.",
+                "Summon a crater of lava in a target area, dealing <color=#34d1fe><b>56%</b> MAG DMG </color> per second for 3s, the crater than erupts, dealing <color=#34d1fe><b>280%</b> MAG DMG</color> and <color=#a57963>slowing all enemies in the area by <b>20%</b> for <b>1.5</b>s</color>. Leaves 5 mini craters, dealing <color=#34d1fe><b>20%</b> MAG DMG</color>.",
+                "Summon a crater of lava in a target area, dealing <color=#34d1fe><b>90%</b> MAG DMG </color> per second for 3s, the crater than erupts, dealing <color=#34d1fe><b>450%</b> MAG DMG</color> and <color=#a57963>slowing all enemies in the area by <b>20%</b> for <b>2</b>s</color>. Leaves 5 mini craters, dealing <color=#34d1fe><b>20%</b> MAG DMG</color>."
+            ],
+            "rarity": 4,
+            "secondaryTrait": 101,
+            "isActive": true,
+            "skillName": "Pyroblast",
+            "primaryTrait": 6
+        },
+        {
+            "skillId": 20271,
+            "cooldowns": [
+                10,
+                10,
+                10,
+                10
+            ],
+            "descriptions": [
+                "When <b>attacked</b>, there's a <b>20%</b> chance of <color=#36ec3e>restoring HP</color> equal to <color=#36ec3e><b>2.2%</b> of your max HP once per second for 3s</color>, up to a total of <color=#36ec3e><b>6.6%</b> of your max HP</color>. <b>10s CD</b>.",
+                "When <b>attacked</b>, there's a <b>40%</b> chance of <color=#36ec3e>restoring HP</color> equal to <color=#36ec3e><b>3.4%</b> of your max HP once per second for 3s</color>, up to a total of <color=#36ec3e><b>10.2%</b> of your max HP</color>. <b>10s CD</b>.",
+                "When <b>attacked</b>, there's a <b>70%</b> chance of <color=#36ec3e>restoring HP</color> equal to <color=#36ec3e><b>5.8%</b> of your max HP once per second for 3s</color>, up to a total of <color=#36ec3e><b>17.4%</b> of your max HP</color>. <b>10s CD</b>.",
+                "When <b>attacked</b>, there's a <b>100%</b> chance of <color=#36ec3e>restoring HP</color> equal to <color=#36ec3e><b>9.2%</b> of your max HP once per second for 3s</color>, up to a total of <color=#36ec3e><b>27.6%</b> of your max HP</color>. <b>10s CD</b>."
+            ],
+            "rarity": 4,
+            "secondaryTrait": 109,
+            "isActive": false,
+            "skillName": "Regeneration",
+            "primaryTrait": 3
+        },
+        {
+            "skillId": 10101,
+            "cooldowns": [
+                30,
+                30,
+                30,
+                30
+            ],
+            "descriptions": [
+                "Conjures a healing magical wind around you, <color=#36ec3e>restoring HP</color> equals to <color=#36ec3e><b>2.4%</b> of your max HP</color> once per second for <b>5</b>s, up to a total of <color=#36ec3e><b>12%</b> of your max HP</color>.",
+                "Conjures a healing magical wind around you, <color=#36ec3e>restoring HP</color> equals to <color=#36ec3e><b>3.6%</b> of your max HP</color> once per second for <b>5</b>s, up to a total of <color=#36ec3e><b>18%</b> of your max HP</color>.",
+                "Conjures a healing magical wind around you, <color=#36ec3e>restoring HP</color> equals to <color=#36ec3e><b>3.6%</b> of your max HP</color> once per 0.5 second for <b>5</b>s, up to a total of <color=#36ec3e><b>36%</b> of your max HP</color>.",
+                "Conjures a healing magical wind around you, <color=#36ec3e>restoring HP</color> equals to <color=#36ec3e><b>4.8%</b> of your max HP</color> once per 0.5 second for <b>5</b>s, up to a total of <color=#36ec3e><b>48%</b> of your max HP</color>."
+            ],
+            "rarity": 2,
+            "secondaryTrait": 109,
+            "isActive": true,
+            "skillName": "Rejuvenate",
+            "primaryTrait": 8
+        },
+        {
+            "skillId": 10591,
+            "cooldowns": [
+                10,
+                10,
+                10,
+                10
+            ],
+            "descriptions": [
+                "Create <b>2</b> exploding Riptide waves around yourself. 2 explosions respectively deal <color=#34d1fe><b>75% and 125%</b> MAG DMG</color> and slows enemies.The second explosion will <color=#e465ff>throw enemy back for 3m</color>.",
+                "Create <b>2</b> exploding Riptide waves around yourself. 2 explosions respectively deal <color=#34d1fe><b>110% and 180%</b> MAG DMG</color> and slows enemies.The second explosion will <color=#e465ff>throw enemy back for 3m</color>.",
+                "Create <b>3</b> exploding Riptide waves around yourself. 3 explosions respectively deal <color=#34d1fe><b>175%,265% and 350%</b> MAG DMG</color> and slows enemies.The second explosion will <color=#e465ff>throw enemy back for 3m</color>.",
+                "Create <b>3</b> exploding Riptide waves around yourself. 3 explosions respectively deal <color=#34d1fe><b>285%,385% and 570%</b> MAG DMG</color> and slows enemies.The second explosion will <color=#e465ff>throw enemy back for 3m</color>."
+            ],
+            "rarity": 3,
+            "secondaryTrait": 107,
+            "isActive": true,
+            "skillName": "Riptide Strike",
+            "primaryTrait": 6
+        },
+        {
+            "skillId": 10531,
+            "cooldowns": [
+                15,
+                15,
+                15,
+                15
+            ],
+            "descriptions": [
+                "With the power of wind charge forward dealing <color=#ff8400><b>52%</b> PHY DMG</color> and <b>knocking back</b> enemies in your path, before releasing 1 blast that deals in a total of <color=#ff8400><b>130%</b> PHY DMG</color> to nearby enemies.",
+                "With the power of wind charge forward dealing <color=#ff8400><b>78%</b> PHY DMG</color> and <b>knocking back</b> enemies in your path, before releasing 1 blast that deals in a total of <color=#ff8400><b>195%</b> PHY DMG</color> to nearby enemies.",
+                "With the power of wind charge forward dealing <color=#ff8400><b>130%</b> PHY DMG</color> and <b>knocking back</b> enemies in your path, before releasing 3 blast that deals in a total of <color=#ff8400><b>325%</b> PHY DMG</color> to nearby enemies.",
+                "With the power of wind charge forward dealing <color=#ff8400><b>210%</b> PHY DMG</color> and <b>knocking back</b> enemies in your path, before releasing 3 blast that deals in a total of <color=#ff8400><b>525%</b> PHY DMG</color> to nearby enemies."
+            ],
+            "rarity": 4,
+            "secondaryTrait": 110,
+            "isActive": true,
+            "skillName": "Rude Counter",
+            "primaryTrait": 3
+        },
+        {
+            "skillId": 10371,
+            "cooldowns": [
+                10,
+                10,
+                10,
+                10
+            ],
+            "descriptions": [
+                "Toggle Sacrifice to drain <color=#ff543f><b>0.9%</b> of your Current Health per seceond</color>, dealing <color=#ff8400><b>30%</b> PHY DMG per seceond</color> to all nearby enemies.",
+                "Toggle Sacrifice to drain <color=#ff543f><b>1.35%</b> of your Current Health per seceond</color>, dealing <color=#ff8400><b>42%</b> PHY DMG per seceond</color> to all nearby enemies.",
+                "Toggle Sacrifice to drain <color=#ff543f><b>2.25%</b> of your Current Health per seceond</color>, dealing <color=#ff8400><b>72%</b> PHY DMG per seceond</color> to all nearby enemies.  Release a evil spirit every 5 s in a random direction.",
+                "Toggle Sacrifice to drain <color=#ff543f><b>3.6%</b> of your Current Health per seceond</color>, dealing <color=#ff8400><b>114%</b> PHY DMG per seceond</color> to all nearby enemies.  Release a evil spirit every 5 s in a random direction."
+            ],
+            "rarity": 3,
+            "secondaryTrait": 112,
+            "isActive": true,
+            "skillName": "Sacrifice",
+            "primaryTrait": 3
+        },
+        {
+            "skillId": 20261,
+            "cooldowns": [
+                0.5,
+                0.5,
+                0.5,
+                0.5
+            ],
+            "descriptions": [
+                "Get a permanent  <color=#e465ff><b>4%</b> chance of dodging</color> of enemy basic attacks (The highest dodge rate attainable is only up to <color=#e465ff><b>90%</b></color>),When Dodged, Get a boost of <color=#e465ff><b>4%</b> Crit chance</color> of <b>5</b>s, you can accunmulate up to 3 stacks, and it will <color=#ff543f>drop to zero</color> with a Critical Strike.",
+                "Get a permanent  <color=#e465ff><b>6%</b> chance of dodging</color> of enemy basic attacks (The highest dodge rate attainable is only up to <color=#e465ff><b>90%</b></color>),When Dodged, Get a boost of <color=#e465ff><b>6%</b> Crit chance</color> of <b>5</b>s, you can accunmulate up to 3 stacks, and it will <color=#ff543f>drop to zero</color> with a Critical Strike.",
+                "Get a permanent  <color=#e465ff><b>10%</b> chance of dodging</color> of enemy basic attacks (The highest dodge rate attainable is only up to <color=#e465ff><b>90%</b></color>),When Dodged, Get a boost of <color=#e465ff><b>10%</b> Crit chance</color> of <b>5</b>s, you can accunmulate up to 3 stacks, and it will <color=#ff543f>drop to zero</color> with a Critical Strike.",
+                "Get a permanent  <color=#e465ff><b>16%</b> chance of dodging</color> of enemy basic attacks (The highest dodge rate attainable is only up to <color=#e465ff><b>90%</b></color>),When Dodged, Get a boost of <color=#e465ff><b>16%</b> Crit chance</color> of <b>5</b>s, you can accunmulate up to 3 stacks, and it will <color=#ff543f>drop to zero</color> with a Critical Strike."
+            ],
+            "rarity": 3,
+            "secondaryTrait": 110,
+            "isActive": false,
+            "skillName": "Shadow Chaser",
+            "primaryTrait": 2
+        },
+        {
+            "skillId": 10261,
+            "cooldowns": [
+                3,
+                3,
+                3,
+                3
+            ],
+            "descriptions": [
+                "Throw <b>3</b> long-range Kunai that converge on target position, each Kunai deals <color=#ff8400><b>6%</b> PHY DMG</color> to all enemies it passes through, and <color=#e465ff>boosting your Critical Strike Damage within the next <b>2</b>s by <b>10%</b></color>.",
+                "Throw <b>5</b> long-range Kunai that converge on target position, each Kunai deals <color=#ff8400><b>6%</b> PHY DMG</color> to all enemies it passes through, and <color=#e465ff>boosting your Critical Strike Damage within the next <b>2</b>s by <b>10%</b></color>.",
+                "Throw <b>7</b> long-range Kunai that converge on target position, each Kunai deals <color=#ff8400><b>7%</b> PHY DMG</color> to all enemies it passes through, and <color=#e465ff>boosting your Critical Strike Damage within the next <b>2</b>s by <b>10%</b></color>.",
+                "Throw <b>9</b> long-range Kunai that converge on target position, each Kunai deals <color=#ff8400><b>9%</b> PHY DMG</color> to all enemies it passes through, and <color=#e465ff>boosting your Critical Strike Damage within the next <b>2</b>s by <b>10%</b></color>."
+            ],
+            "rarity": 1,
+            "secondaryTrait": 105,
+            "isActive": true,
+            "skillName": "Shadow Kunai",
+            "primaryTrait": 2
+        },
+        {
+            "skillId": 10281,
+            "cooldowns": [
+                15,
+                15,
+                15,
+                15
+            ],
+            "descriptions": [
+                "Open a rift to the darkness with magic force, dealing <color=#34d1fe><b>116%</b> MAG DMG</color> to all enemy units nearby.",
+                "Open a rift to the darkness with magic force, dealing <color=#34d1fe><b>174%</b> MAG DMG</color> to all enemy units nearby.",
+                "Open a rift to the darkness with magic force, dealing <color=#34d1fe><b>288%</b> MAG DMG</color> to all enemy units nearby.",
+                "Open a rift to the darkness with magic force, dealing <color=#34d1fe><b>460%</b> MAG DMG</color> to all enemy units nearby."
+            ],
+            "rarity": 2,
+            "secondaryTrait": 105,
+            "isActive": true,
+            "skillName": "Shadow Strike",
+            "primaryTrait": 7
+        },
+        {
+            "skillId": 10521,
+            "cooldowns": [
+                20,
+                20,
+                20,
+                20
+            ],
+            "descriptions": [
+                "Summon 1 ring of shields around you for 5s, gaining <b>50% DMG Reduction</b> and <color=#e465ff>reflecting <b>100%</b> of the DMG of all enemy attacks</color>.\\nWith a stone spear, rapidly strike <color=#ff8400><b>25</b> times for <b>8%</b> PHY DMG each</color>. After the duration expires, the shield explodes which deals <color=#ff8400><b>80%</b> PHY DMG</color>.",
+                "Summon 1 ring of shields around you for 5s, gaining <b>50% DMG Reduction</b> and <color=#e465ff>reflecting <b>150%</b> of the DMG of all enemy attacks</color>.\\nWith a stone spear, rapidly strike <color=#ff8400><b>25</b> times for <b>12%</b> PHY DMG each</color>. After the duration expires, the shield explodes which deals <color=#ff8400><b>120%</b> PHY DMG</color>.",
+                "Summon 3 ring of shields around you for 5s, gaining <b>50% DMG Reduction</b> and <color=#e465ff>reflecting <b>200%</b> of the DMG of all enemy attacks</color>.\\nWith a stone spear, rapidly strike <color=#ff8400><b>25</b> times for <b>20%</b> PHY DMG each</color>. After the duration expires, the shield explodes which deals <color=#ff8400><b>200%</b> PHY DMG</color>.",
+                "Summon 3 ring of shields around you for 5s, gaining <b>50% DMG Reduction</b> and <color=#e465ff>reflecting <b>300%</b> of the DMG of all enemy attacks</color>.\\nWith a stone spear, rapidly strike <color=#ff8400><b>25</b> times for <b>32%</b> PHY DMG each</color>. After the duration expires, the shield explodes which deals <color=#ff8400><b>320%</b> PHY DMG</color>."
+            ],
+            "rarity": 3,
+            "secondaryTrait": 108,
+            "isActive": true,
+            "skillName": "Shelter",
+            "primaryTrait": 3
+        },
+        {
+            "skillId": 10071,
+            "cooldowns": [
+                30,
+                30,
+                30,
+                30
+            ],
+            "descriptions": [
+                "For <b>5</b>s, gain <color=#e465ff><b>50%</b> Damage Reduction</color> and <color=#e465ff>immunity to all CC</color>.",
+                "For <b>6</b>s, gain <color=#e465ff><b>60%</b> Damage Reduction</color> and <color=#e465ff>immunity to all CC</color>.",
+                "For <b>7</b>s, gain <color=#e465ff><b>80%</b> Damage Reduction</color> and <color=#e465ff>immunity to all CC</color>.",
+                "For <b>9</b>s, gain <color=#e465ff><b>99%</b> Damage Reduction</color> and <color=#e465ff>immunity to all CC</color>."
+            ],
+            "rarity": 5,
+            "secondaryTrait": 108,
+            "isActive": true,
+            "skillName": "Shield Wall",
+            "primaryTrait": 3
+        },
+        {
+            "skillId": 10161,
+            "cooldowns": [
+                10,
+                10,
+                10,
+                10
+            ],
+            "descriptions": [
+                "Summon an Ancient Skeleton Guard that fights in melee range, inheriting <color=#36ec3e><b>25%</b> HP</color>, <color=#ff8400><b>15%</b> ATK</color> and <color=#34d1fe><b>15%</b> AP</color> from your character, lasting <b>20</b>s.",
+                "Summon an Ancient Skeleton Guard that fights in melee range, inheriting <color=#36ec3e><b>30%</b> HP</color>, <color=#ff8400><b>20%</b> ATK</color> and <color=#34d1fe><b>20%</b> AP</color> from your character, lasting <b>20</b>s.",
+                "Summon an Ancient Skeleton Guard that fights in melee range, inheriting <color=#36ec3e><b>35%</b> HP</color>, <color=#ff8400><b>30%</b> ATK</color> and <color=#34d1fe><b>30%</b> AP</color> from your character, lasting <b>20</b>s. <color=#e465ff>Ancient Skeleton Guard learned to spell Shadow Strike</color>.",
+                "Summon an Ancient Skeleton Guard that fights in melee range, inheriting <color=#36ec3e><b>40%</b> HP</color>, <color=#ff8400><b>45%</b> ATK</color> and <color=#34d1fe><b>45%</b> AP</color> from your character, lasting <b>20</b>s. <color=#e465ff>Ancient Skeleton Guard learned to spell Shadow Strike</color>."
+            ],
+            "rarity": 1,
+            "secondaryTrait": 108,
+            "isActive": true,
+            "skillName": "Skeleton Guard",
+            "primaryTrait": 5
+        },
+        {
+            "skillId": 10351,
+            "cooldowns": [
+                10,
+                10,
+                10,
+                10
+            ],
+            "descriptions": [
+                "Fold time and space to instantly teleport to a target location dealing <color=#34d1fe><b>110%</b> MAG DMG</color> to all nearby units after shifting.",
+                "Fold time and space to instantly teleport to a target location dealing <color=#34d1fe><b>165%</b> MAG DMG</color> to all nearby units after shifting.",
+                "Fold time and space to instantly teleport to a target location dealing <color=#34d1fe><b>280%</b> MAG DMG</color> to all nearby units after shifting.",
+                "Fold time and space to instantly teleport to a target location dealing <color=#34d1fe><b>445%</b> MAG DMG</color> to all nearby units after shifting."
+            ],
+            "rarity": 3,
+            "secondaryTrait": 104,
+            "isActive": true,
+            "skillName": "SpaceTime Shift",
+            "primaryTrait": 6
+        },
+        {
+            "skillId": 10271,
+            "cooldowns": [
+                4,
+                4,
+                4,
+                4
+            ],
+            "descriptions": [
+                "Call down a wave of shooting stars to damage up to 8 enemy units, dealing <color=#34d1fe><b>30%</b> MAG DMG</color>.",
+                "Call down a wave of shooting stars to damage up to 8 enemy units, dealing <color=#34d1fe><b>45%</b> MAG DMG</color>.",
+                "Call down a wave of shooting stars to damage up to 8 enemy units, dealing <color=#34d1fe><b>80%</b> MAG DMG</color>.",
+                "Call down a wave of shooting stars to damage up to 8 enemy units, dealing <color=#34d1fe><b>120%</b> MAG DMG</color>."
+            ],
+            "rarity": 1,
+            "secondaryTrait": 103,
+            "isActive": true,
+            "skillName": "Starfall",
+            "primaryTrait": 8
+        },
+        {
+            "skillId": 10761,
+            "cooldowns": [
+                6,
+                6,
+                6,
+                6
+            ],
+            "descriptions": [
+                "",
+                "",
+                "",
+                ""
+            ],
+            "rarity": 2,
+            "secondaryTrait": 116,
+            "isActive": true,
+            "skillName": "Steel Hammer",
+            "primaryTrait": 6
+        },
+        {
+            "skillId": 20121,
+            "cooldowns": [
+                0.5,
+                0.5,
+                0.5,
+                0.5
+            ],
+            "descriptions": [
+                "With the help of God of Strom, basic Attacks have a <b>25% chance</b> to add bonus <color=#ff8400><b>100%</b> PHY DMG</color> plus a chance of <color=#e465ff>throwing enemy back</color>.",
+                "With the help of God of Strom, basic Attacks have a <b>30% chance</b> to add bonus <color=#ff8400><b>100%</b> PHY DMG</color> plus a chance of <color=#e465ff>throwing enemy back</color>.",
+                "With the help of God of Strom, basic Attacks have a <b>50% chance</b> to add bonus <color=#ff8400><b>100%</b> PHY DMG</color> plus a chance of <color=#e465ff>throwing enemy back</color>.",
+                "With the help of God of Strom, basic Attacks have a <b>70% chance</b> to add bonus <color=#ff8400><b>100%</b> PHY DMG</color> plus a chance of <color=#e465ff>throwing enemy back</color>."
+            ],
+            "rarity": 4,
+            "secondaryTrait": 110,
+            "isActive": false,
+            "skillName": "Storm Roar",
+            "primaryTrait": 4
+        },
+        {
+            "skillId": 10151,
+            "cooldowns": [
+                15,
+                15,
+                15,
+                15
+            ],
+            "descriptions": [
+                "Throw 1 tracking lightning hammer at a target, dealing <color=#34d1fe><b>145%</b> MAG DMG</color> plus a <color=#00ffde><b>2</b>s stun</color> to all enemies nearby the target",
+                "Throw 1 tracking lightning hammer at a target, dealing <color=#34d1fe><b>220%</b> MAG DMG</color> plus a <color=#00ffde><b>2.5</b>s stun</color> to all enemies nearby the target",
+                "Throw 2 tracking lightning hammers at a target, dealing <color=#34d1fe><b>220%</b> MAG DMG</color> plus a <color=#00ffde><b>3</b>s stun</color> to all enemies nearby the target",
+                "Throw 3 tracking lightning hammers at a target, dealing <color=#34d1fe><b>260%</b> MAG DMG</color> plus a <color=#00ffde><b>4</b>s stun</color> to all enemies nearby the target"
+            ],
+            "rarity": 4,
+            "secondaryTrait": 104,
+            "isActive": true,
+            "skillName": "Stormhammer",
+            "primaryTrait": 8
+        },
+        {
+            "skillId": 10301,
+            "cooldowns": [
+                10,
+                10,
+                10,
+                10
+            ],
+            "descriptions": [
+                "Gives your next Basic Attack strike a fan-shaped splash dmg effect, dealing <color=#ff8400><b>100%</b> PHY DMG</color>.",
+                "Gives your next Basic Attack strike a fan-shaped splash dmg effect, dealing <color=#ff8400><b>150%</b> PHY DMG</color>.",
+                "Gives your next Basic Attack strike a fan-shaped splash dmg effect, dealing <color=#ff8400><b>250%</b> PHY DMG</color>.",
+                "Gives your next Basic Attack strike a fan-shaped splash dmg effect, dealing <color=#ff8400><b>400%</b> PHY DMG</color>."
+            ],
+            "rarity": 3,
+            "secondaryTrait": 113,
+            "isActive": true,
+            "skillName": "Super Strike",
+            "primaryTrait": 2
+        },
+        {
+            "skillId": 20221,
+            "cooldowns": [
+                0.5,
+                0.5,
+                0.5,
+                0.5
+            ],
+            "descriptions": [
+                "When <b>any Active Skill is used</b>, there's a <b>25% chance</b> of <color=#36ec3e>healing for <b>3.2%</b> of your max HP</color>",
+                "When <b>any Active Skill is used</b>, there's a <b>25% chance</b> of <color=#36ec3e>healing for <b>4.8%</b> of your max HP</color>",
+                "When <b>any Active Skill is used</b>, there's a <b>25% chance</b> of <color=#36ec3e>healing for <b>8%</b> of your max HP</color>",
+                "When <b>any Active Skill is used</b>, there's a <b>25% chance</b> of <color=#36ec3e>healing for <b>12.6%</b> of your max HP</color>"
+            ],
+            "rarity": 3,
+            "secondaryTrait": 107,
+            "isActive": false,
+            "skillName": "Surge",
+            "primaryTrait": 7
+        },
+        {
+            "skillId": 10241,
+            "cooldowns": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "descriptions": [
+                "Dash forward to strike, dealing <color=#ff8400><b>40%</b> PHY DMG</color> to all targets you pass through. <color=#ff543f>If any target dies to Sweeping Blade, its cooldown refreshes</color>.",
+                "Dash forward to strike, dealing <color=#ff8400><b>60%</b> PHY DMG</color> to all targets you pass through. <color=#ff543f>If any target dies to Sweeping Blade, its cooldown refreshes</color>.",
+                "Dash forward to strike, dealing <color=#ff8400><b>60%</b> PHY DMG</color> to all targets you pass through. <color=#ff543f>If any target dies to Sweeping Blade, its cooldown refreshes</color>. <color=#e465ff>You can activate twice before cooldown</color>.",
+                "Dash forward to strike, dealing <color=#ff8400><b>95%</b> PHY DMG</color> to all targets you pass through. <color=#ff543f>If any target dies to Sweeping Blade, its cooldown refreshes</color>. <color=#e465ff>You can activate twice before cooldown</color>."
+            ],
+            "rarity": 2,
+            "secondaryTrait": 110,
+            "isActive": true,
+            "skillName": "Sweeping Blade",
+            "primaryTrait": 2
+        },
+        {
+            "skillId": 10031,
+            "cooldowns": [
+                8,
+                8,
+                8,
+                8
+            ],
+            "descriptions": [
+                "<b>2</b> Swords raze the ground directly in front of you, each sword deals <color=#ff8400><b>30%</b> PHY DMG</color> and <color=#ff8400><b>30%</b> blast damage</color>.",
+                "<b>3</b> Swords raze the ground directly in front of you, each sword deals <color=#ff8400><b>30%</b> PHY DMG</color> and <color=#ff8400><b>30%</b> blast damage</color>.",
+                "<b>4</b> Swords raze the ground directly in front of you, each sword deals <color=#ff8400><b>38%</b> PHY DMG</color> and <color=#ff8400><b>38%</b> blast damage</color>.",
+                "<b>5</b> Swords raze the ground directly in front of you, each sword deals <color=#ff8400><b>48%</b> PHY DMG</color> and <color=#ff8400><b>48%</b> blast damage</color>."
+            ],
+            "rarity": 2,
+            "secondaryTrait": 109,
+            "isActive": true,
+            "skillName": "Swordfall",
+            "primaryTrait": 2
+        },
+        {
+            "skillId": 10551,
+            "cooldowns": [
+                20,
+                20,
+                20,
+                20
+            ],
+            "descriptions": [
+                "Summon <b>2</b> Thunder Elementals which inherits <color=#36ec3e><b>20%</b> HP</color>, <color=#ff8400><b>5%</b> ATK</color>and <color=#34d1fe><b>5%</b> AP</color> from your character, lasting <b>15s</b>. \\nThunder Elementals generate a lightning chain between itself and your character, <color=#e465ff>boosting character's damage dealt by <b>8%</b></color> and <color=#34d1fe>dealing <b>5% MAG DMG every 0.4 second</b></color> to enemy touching the chain.",
+                "Summon <b>2</b> Thunder Elementals which inherits <color=#36ec3e><b>25%</b> HP</color>, <color=#ff8400><b>10%</b> ATK</color>and <color=#34d1fe><b>10%</b> AP</color> from your character, lasting <b>15s</b>. \\nThunder Elementals generate a lightning chain between itself and your character, <color=#e465ff>boosting character's damage dealt by <b>10%</b></color> and <color=#34d1fe>dealing <b>6% MAG DMG every 0.4 second</b></color> to enemy touching the chain.",
+                "Summon <b>3</b> Thunder Elementals which inherits <color=#36ec3e><b>30%</b> HP</color>, <color=#ff8400><b>15%</b> ATK</color>and <color=#34d1fe><b>15%</b> AP</color> from your character, lasting <b>15s</b>. \\nThunder Elementals generate a lightning chain between itself and your character, <color=#e465ff>boosting character's damage dealt by <b>10%</b></color> and <color=#34d1fe>dealing <b>7% MAG DMG every 0.4 second</b></color> to enemy touching the chain.",
+                "Summon <b>3</b> Thunder Elementals which inherits <color=#36ec3e><b>35%</b> HP</color>, <color=#ff8400><b>20%</b> ATK</color>and <color=#34d1fe><b>20%</b> AP</color> from your character, lasting <b>15s</b>. \\nThunder Elementals generate a lightning chain between itself and your character, <color=#e465ff>boosting character's damage dealt by <b>12%</b></color> and <color=#34d1fe>dealing <b>11% MAG DMG every 0.4 second</b></color> to enemy touching the chain."
+            ],
+            "rarity": 4,
+            "secondaryTrait": 104,
+            "isActive": true,
+            "skillName": "Thunder Elemental",
+            "primaryTrait": 5
+        },
+        {
+            "skillId": 10421,
+            "cooldowns": [
+                8,
+                8,
+                8,
+                8
+            ],
+            "descriptions": [
+                "Wind up before firing a powerful barrage of tide that deals damage to each enemy unit it passes through, dealing <color=#34d1fe>MAG DMG that equals to <b>30%</b></color> of sum of your <color=#ff8400>ATK</color> and <color=#34d1fe>AP</color> and <color=#e465ff>throwing them back for 3m</color>.",
+                "Wind up before firing a powerful barrage of tide that deals damage to each enemy unit it passes through, dealing <color=#34d1fe>MAG DMG that equals to <b>50%</b></color> of sum of your <color=#ff8400>ATK</color> and <color=#34d1fe>AP</color> and <color=#e465ff>throwing them back for 3m</color>.",
+                "Wind up before firing a powerful barrage of tide that deals damage to each enemy unit it passes through, dealing <color=#34d1fe>MAG DMG that equals to <b>90%</b></color> of sum of your <color=#ff8400>ATK</color> and <color=#34d1fe>AP</color> and <color=#e465ff>throwing them back for 3m</color>.",
+                "Wind up before firing a powerful barrage of tide that deals damage to each enemy unit it passes through, dealing <color=#34d1fe>MAG DMG that equals to <b>150%</b></color> of sum of your <color=#ff8400>ATK</color> and <color=#34d1fe>AP</color> and <color=#e465ff>throwing them back for 3m</color>."
+            ],
+            "rarity": 2,
+            "secondaryTrait": 107,
+            "isActive": true,
+            "skillName": "Tide Arrow",
+            "primaryTrait": 4
+        },
+        {
+            "skillId": 10291,
+            "cooldowns": [
+                30,
+                30,
+                30,
+                30
+            ],
+            "descriptions": [
+                "Summon 1 torrent swell that, after a short delay, deals <color=#34d1fe><b>285%</b> MAG DMG</color> to all enemy units in a target area.",
+                "Summon 1 torrent swell that, after a short delay, deals <color=#34d1fe><b>420%</b> MAG DMG</color> to all enemy units in a target area.",
+                "Summon 5 torrent swells that, after a short delay, deals <color=#34d1fe><b>700%</b> MAG DMG</color> to all enemy units in a target area.",
+                "Summon 5 torrent swells that, after a short delay, deals <color=#34d1fe><b>1140%</b> MAG DMG</color> to all enemy units in a target area."
+            ],
+            "rarity": 5,
+            "secondaryTrait": 107,
+            "isActive": true,
+            "skillName": "Torrent Wave",
+            "primaryTrait": 7
+        },
+        {
+            "skillId": 10601,
+            "cooldowns": [
+                40,
+                40,
+                40,
+                40
+            ],
+            "descriptions": [
+                "Summon a massive Tsunami Wave that slows, and <color=#34d1fe>deals <b>350%</b> MAG DMG</color> to enemies.",
+                "Summon a massive Tsunami Wave that slows, and <color=#34d1fe>deals <b>525%</b> MAG DMG</color> to enemies.",
+                "Summon a massive Tsunami Wave that slows, and <color=#34d1fe>deals <b>875%</b> MAG DMG</color> to enemies.",
+                "Summon a massive Tsunami Wave that slows, and <color=#34d1fe>deals <b>1400%</b> MAG DMG</color> to enemies."
+            ],
+            "rarity": 5,
+            "secondaryTrait": 107,
+            "isActive": true,
+            "skillName": "Tsunami",
+            "primaryTrait": 8
+        },
+        {
+            "skillId": 10491,
+            "cooldowns": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "descriptions": [
+                "Thrust by using void power to <b>7 enemy units</b> in a line, dealing <b>3 times</b> of <color=#ff8400><b>25%</b> PHY DMG</color> the first of that counts as<b> Basic Attack dmg</b> and <b>applies all your On-Hit effects</b>.",
+                "Thrust by using void power to <b>7 enemy units</b> in a line, dealing <b>3 times</b> of <color=#ff8400><b>38%</b> PHY DMG</color> the first of that counts as<b> Basic Attack dmg</b> and <b>applies all your On-Hit effects</b>.",
+                "Thrust by using void power to <b>7 enemy units</b> in a <color=#e465ff>fan-shape area</color>, dealing <b>3 times</b> of <color=#ff8400><b>65%</b> PHY DMG</color> the first of that counts as<b> Basic Attack dmg</b> and <b>applies all your On-Hit effects</b>.",
+                "Thrust by using void power to <b>7 enemy units</b> in a <color=#e465ff>fan-shape area</color>, dealing <b>3 times</b> of <color=#ff8400><b>105%</b> PHY DMG</color> the first of that counts as<b> Basic Attack dmg</b> and <b>applies all your On-Hit effects</b>."
+            ],
+            "rarity": 4,
+            "secondaryTrait": 111,
+            "isActive": true,
+            "skillName": "Void Thrust",
+            "primaryTrait": 1
+        },
+        {
+            "skillId": 20031,
+            "cooldowns": [
+                0.5,
+                0.5,
+                0.5,
+                0.5
+            ],
+            "descriptions": [
+                "Each <b>enemy death</b> boosts <color=#ff8400>Attack by <b>1.8%</b></color>, up to <b>10</b> stacks, but it will <color=#ff543f>drop to zero</color> if you go <b>10s</b> with <b>no enemy deaths</b>.",
+                "Each <b>enemy death</b> boosts <color=#ff8400>Attack by <b>2.7%</b></color>, up to <b>10</b> stacks, but it will <color=#ff543f>drop to zero</color> if you go <b>15s</b> with <b>no enemy deaths</b>.",
+                "Each <b>enemy death</b> boosts <color=#ff8400>Attack by <b>4.5%</b></color>, up to <b>10</b> stacks, but it will <color=#ff543f>drop to zero</color> if you go <b>20s</b> with <b>no enemy deaths</b>.",
+                "Each <b>enemy death</b> boosts <color=#ff8400>Attack by <b>7.3%</b></color>, up to <b>10</b> stacks, but it will <color=#ff543f>drop to zero</color> if you go <b>30s</b> with <b>no enemy deaths</b>."
+            ],
+            "rarity": 3,
+            "secondaryTrait": 111,
+            "isActive": false,
+            "skillName": "Vortex",
+            "primaryTrait": 2
+        },
+        {
+            "skillId": 10061,
+            "cooldowns": [
+                8,
+                8,
+                8,
+                8
+            ],
+            "descriptions": [
+                "Slams the ground, dealing <color=#ff8400><b>60%</b> PHY DMG</color> to nearby enemies all around the caster, plus <color=#00ffde><b>2s</b> of stun</color> to up to <b>5</b> enemies.",
+                "Slams the ground, dealing <color=#ff8400><b>90%</b> PHY DMG</color> to nearby enemies all around the caster, plus <color=#00ffde><b>2.5s</b> of stun</color> to up to <b>7</b> enemies.",
+                "Slams the ground, dealing <color=#ff8400><b>150%</b> PHY DMG</color> to nearby enemies all around the caster, plus <color=#00ffde><b>3s</b> of stun</color> to up to <b>9</b> enemies.",
+                "Slams the ground, dealing <color=#ff8400><b>245%</b> PHY DMG</color> to nearby enemies all around the caster, plus <color=#00ffde><b>4s</b> of stun</color> to up to <b>12</b> enemies."
+            ],
+            "rarity": 2,
+            "secondaryTrait": 109,
+            "isActive": true,
+            "skillName": "War Stomp",
+            "primaryTrait": 1
+        },
+        {
+            "skillId": 10171,
+            "cooldowns": [
+                10,
+                10,
+                10,
+                10
+            ],
+            "descriptions": [
+                "Summon one Water Elemental which fights using ranged magic bolts, inheriting <color=#36ec3e><b>20%</b> HP</color>, <color=#ff8400><b>25%</b> ATK</color> and <color=#34d1fe><b>25%</b> AP</color> from your character, lasting <b>20</b>s.",
+                "Summon one Water Elemental which fights using ranged magic bolts, inheriting <color=#36ec3e><b>25%</b> HP</color>, <color=#ff8400><b>35%</b> ATK</color> and <color=#34d1fe><b>35%</b> AP</color> from your character, lasting <b>20</b>s.",
+                "Summon one Water Elemental which fights using ranged magic bolts, inheriting <color=#36ec3e><b>30%</b> HP</color>, <color=#ff8400><b>50%</b> ATK</color> and <color=#34d1fe><b>50%</b> AP</color> from your character, lasting <b>20</b>s. <color=#e465ff>Water Elemental learned to spell Tide Arrow</color>.",
+                "Summon one Water Elemental which fights using ranged magic bolts, inheriting <color=#36ec3e><b>35%</b> HP</color>, <color=#ff8400><b>75%</b> ATK</color> and <color=#34d1fe><b>75%</b> AP</color> from your character, lasting <b>20</b>s. <color=#e465ff>Water Elemental learned to spell Tide Arrow</color>."
+            ],
+            "rarity": 3,
+            "secondaryTrait": 107,
+            "isActive": true,
+            "skillName": "Water Elemental",
+            "primaryTrait": 5
+        },
+        {
+            "skillId": 10041,
+            "cooldowns": [
+                12,
+                12,
+                12,
+                12
+            ],
+            "descriptions": [
+                "Cause a bladestorm of destructive force around you,dealing up to total <color=#ff8400><b>120%</b> PHY DMG</color> to nearby enemy units with <color=#e465ff><b>50%</b> chance of dodging</color> enemy Basic Attacks. (The highest dodge rate attainable is only up to <color=#e465ff><b>90%</b></color>)",
+                "Cause a bladestorm of destructive force around you,dealing up to total <color=#ff8400><b>180%</b> PHY DMG</color> to nearby enemy units with <color=#e465ff><b>60%</b> chance of dodging</color> enemy Basic Attacks. (The highest dodge rate attainable is only up to <color=#e465ff><b>90%</b></color>)",
+                "Cause a bladestorm of destructive force around you,dealing up to total <color=#ff8400><b>300%</b> PHY DMG</color> to nearby enemy units with <color=#e465ff><b>70%</b> chance of dodging</color> enemy Basic Attacks (The highest dodge rate attainable is only up to <color=#e465ff><b>90%</b></color>). Leave a cyclone behind every 1s, dealing <color=#ff8400><b>5%</b> PHY DMG</color> per second for 3s.",
+                "Cause a bladestorm of destructive force around you,dealing up to total <color=#ff8400><b>480%</b> PHY DMG</color> to nearby enemy units with <color=#e465ff><b>80%</b> chance of dodging</color> enemy Basic Attacks (The highest dodge rate attainable is only up to <color=#e465ff><b>90%</b></color>). Leave a cyclone behind every 0.6s, dealing <color=#ff8400><b>5%</b> PHY DMG</color> per second for 3s."
+            ],
+            "rarity": 2,
+            "secondaryTrait": 110,
+            "isActive": true,
+            "skillName": "Whirlwind",
+            "primaryTrait": 1
+        },
+        {
+            "skillId": 10081,
+            "cooldowns": [
+                25,
+                25,
+                25,
+                25
+            ],
+            "descriptions": [
+                "For the next <b>7</b>s, boost <color=#e465ff>MOV SPD <b>40%</b></color> and have a <color=#e465ff><b>50%</b> chance of dodging</color> enemy Basic Attacks. (The highest dodge rate attainable is only up to <color=#e465ff><b>90%</b></color>)",
+                "For the next <b>8</b>s, boost <color=#e465ff>MOV SPD <b>50%</b></color> and have a <color=#e465ff><b>60%</b> chance of dodging</color> enemy Basic Attacks. (The highest dodge rate attainable is only up to <color=#e465ff><b>90%</b></color>)",
+                "For the next <b>10</b>s, boost <color=#e465ff>MOV SPD <b>60%</b></color> and have a <color=#e465ff><b>70%</b> chance of dodging</color> enemy Basic Attacks. (The highest dodge rate attainable is only up to <color=#e465ff><b>90%</b></color>)",
+                "For the next <b>12</b>s, boost <color=#e465ff>MOV SPD <b>70%</b></color> and have a <color=#e465ff><b>90%</b> chance of dodging</color> enemy Basic Attacks. (The highest dodge rate attainable is only up to <color=#e465ff><b>90%</b></color>)"
+            ],
+            "rarity": 4,
+            "secondaryTrait": 110,
+            "isActive": true,
+            "skillName": "Windrun",
+            "primaryTrait": 8
+        },
+        {
+            "skillId": 20301,
+            "cooldowns": [
+                0.5,
+                0.5,
+                0.5,
+                0.5
+            ],
+            "descriptions": [
+                "When <b>any Active Skill used</b>, there's a <b>25% chance</b> of firing <b>5</b> tracking energy balls of condensed wrath, each blast dealing <color=#34d1fe><b>30% MAG DMG</b></color> to target and <color=#34d1fe><b>10%</b> MAG DMG</color> to enemies nearby the target.",
+                "When <b>any Active Skill used</b>, there's a <b>25% chance</b> of firing <b>5</b> tracking energy balls of condensed wrath, each blast dealing <color=#34d1fe><b>42% MAG DMG</b></color> to target and <color=#34d1fe><b>14%</b> MAG DMG</color> to enemies nearby the target.",
+                "When <b>any Active Skill used</b>, there's a <b>25% chance</b> of firing <b>5</b> tracking energy balls of condensed wrath, each blast dealing <color=#34d1fe><b>46% MAG DMG</b></color> to target and <color=#34d1fe><b>20%</b> MAG DMG</color> to enemies nearby the target.",
+                "When <b>any Active Skill used</b>, there's a <b>25% chance</b> of firing <b>5</b> tracking energy balls of condensed wrath, each blast dealing <color=#34d1fe><b>80% MAG DMG</b></color> to target and <color=#34d1fe><b>27%</b> MAG DMG</color> to enemies nearby the target."
+            ],
+            "rarity": 4,
+            "secondaryTrait": 109,
+            "isActive": false,
+            "skillName": "Wrath",
+            "primaryTrait": 7
+        },
+        {
+            "skillId": 10381,
+            "cooldowns": [
+                20,
+                20,
+                20,
+                20
+            ],
+            "descriptions": [
+                "Surround yourself in a magical storm of Nature, throwing enemies back and <color=#a57963>slowing their MOV SPD by <b>50%</b> for <b>5</b>s</color>, deal <color=#34d1fe><b>150%</b> MAG DMG</color> that depends on the distance of enemy knockback.",
+                "Surround yourself in a magical storm of Nature, throwing enemies back and <color=#a57963>slowing their MOV SPD by <b>50%</b> for <b>5</b>s</color>, deal <color=#34d1fe><b>225%</b> MAG DMG</color> that depends on the distance of enemy knockback.",
+                "Surround yourself in a magical storm of Nature, throwing enemies back and <color=#a57963>slowing their MOV SPD by <b>50%</b> for <b>5</b>s</color>, deal <color=#34d1fe><b>375%</b> MAG DMG</color> that depends on the distance of enemy knockback.",
+                "Surround yourself in a magical storm of Nature, throwing enemies back and <color=#a57963>slowing their MOV SPD by <b>50%</b> for <b>5</b>s</color>, deal <color=#34d1fe><b>600%</b> MAG DMG</color> that depends on the distance of enemy knockback."
+            ],
+            "rarity": 3,
+            "secondaryTrait": 109,
+            "isActive": true,
+            "skillName": "Wrath of Nature",
+            "primaryTrait": 7
+        }
+    ]
+}
