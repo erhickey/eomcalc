@@ -4,11 +4,9 @@ module EomJson.Parse.SkillsAndTraits (FieldType(..), ParsedField, skillAndTraitD
 
 import Control.Applicative ((<|>))
 import Data.Text (Text)
-import Data.Text as T (concat, lines, pack, replace)
+import qualified Data.Text as T (concat, lines, pack)
 
 import Data.Attoparsec.Text (anyChar, decimal, manyTill, parseOnly, Parser, string)
-
-import EomJson.Util.Util (compose, replaceSmartQuotes)
 
 data FieldType = SkillName | SkillDescription | TraitName | TraitDescription | TraitMods deriving (Eq)
 type ParsedField = (Int, Text, FieldType)
@@ -29,7 +27,7 @@ descriptionLineParser s f = do
   sId <- decimal
   _ <- string "\"] = \""
   field <- manyTill anyChar (string "\",")
-  pure (sId, fixParsedText $ T.pack field, f)
+  pure (sId, T.pack field, f)
 
 skillNameParser :: Parser ParsedField
 skillNameParser = descriptionLineParser "SkillName" SkillName
@@ -45,14 +43,6 @@ traitDescriptionParser = descriptionLineParser "TraitTip" TraitDescription
 
 traitModsParser :: Parser ParsedField
 traitModsParser = descriptionLineParser "TraitTips" TraitMods
-
--- composition of all parsed text fixes
-fixParsedText :: (Text -> Text)
-fixParsedText = compose [ fixLuckyDice, replaceSmartQuotes ]
-
--- remove erroneous < from Lucky Dice description
-fixLuckyDice :: Text -> Text
-fixLuckyDice = T.replace "<DEF" "DEF"
 
 -- skill and trait descriptions parsed from input
 skillAndTraitDescriptions :: Text -> [Either String ParsedField]

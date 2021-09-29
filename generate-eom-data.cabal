@@ -37,6 +37,7 @@ executable generate-data
   hs-source-dirs:      src/hs
   main-is:             Main.hs
   build-depends:       aeson,
+                       aeson-pretty,
                        attoparsec,
                        bytestring,
                        containers,

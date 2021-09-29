@@ -4,7 +4,7 @@ module EomJson.Assembler.Skills (assembleSkills) where
 
 import Data.Function (on)
 import Data.IntMap ((!), IntMap)
-import Data.IntMap as IM (alter, empty, member)
+import qualified Data.IntMap as IM (alter, empty, member)
 import Data.List (groupBy, sortOn)
 import Data.Maybe (mapMaybe)
 import Data.Text (Text)

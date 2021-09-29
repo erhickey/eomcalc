@@ -4,7 +4,7 @@ module EomJson.Assembler.Traits (assembleTraits) where
 
 import Data.Function (on)
 import Data.List (groupBy, sortOn)
-import Data.Text as T (splitOn)
+import qualified Data.Text as T (splitOn)
 
 import EomJson.Json.Trait (Trait(..))
 import EomJson.Parse.SkillsAndTraits (FieldType(..), ParsedField)

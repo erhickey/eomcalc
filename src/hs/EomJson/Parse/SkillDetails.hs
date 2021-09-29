@@ -5,7 +5,6 @@ module EomJson.Parse.SkillDetails (SkillDetail(..), skillDetails) where
 import Control.Applicative ((<|>))
 import Data.Maybe (catMaybes)
 import Data.Text (Text)
-import Data.Text as T (lines, unlines)
 
 import Data.Attoparsec.Text (char, decimal, double, many', manyTill, parseOnly, Parser, string, takeTill)
 
@@ -58,4 +57,4 @@ discardLine = takeTill ('\n' ==) <* char '\n'
 -- skill details parsed from input
 skillDetails :: Text -> Either String [SkillDetail]
 -- discard garbage lines before trying to parse
-skillDetails = parseOnly skillDetailsParser . T.unlines . drop 4 . init . T.lines
+skillDetails = parseOnly skillDetailsParser
