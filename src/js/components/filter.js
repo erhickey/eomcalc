@@ -1,4 +1,3 @@
-import {SKILL_TYPES} from '../constants/data.js';
 import {ACTIVE_FILTER, PASSIVE_FILTER, TRAIT_FILTERS} from '../constants/filters.js';
 import {TRAIT_IMAGES_DIR} from '../constants/resources.js';
 import {createImageNode} from '../helpers/images.js';
@@ -34,7 +33,7 @@ function createTraitFilter(traitFilter, currentFilters) {
     component.classList.add('active-filter');
   }
 
-  component.appendChild(createImageNode(TRAIT_IMAGES_DIR, traitFilter.trait.name));
+  component.appendChild(createImageNode(TRAIT_IMAGES_DIR, traitFilter.trait.traitName));
   component.onclick = () => filterClicked(traitFilter);
   return component;
 }
@@ -44,7 +43,7 @@ function createActiveFilter(currentFilters) {
   component.classList.add('type-filter');
   component.innerHTML = '[Active Skills]';
 
-  if (currentFilters.some(cf => 'skillType' === cf.key && SKILL_TYPES.ACTIVE === cf.value)) {
+  if (currentFilters.some(cf => 'isActive' === cf.key && true === cf.value)) {
     component.classList.add('active-filter');
   }
 
@@ -57,7 +56,7 @@ function createPassiveFilter(currentFilters) {
   component.classList.add('type-filter');
   component.innerHTML = '[Passive Skills]';
 
-  if (currentFilters.some(cf => 'skillType' === cf.key && SKILL_TYPES.PASSIVE === cf.value)) {
+  if (currentFilters.some(cf => 'isActive' === cf.key && false === cf.value)) {
     component.classList.add('active-filter');
   }
 

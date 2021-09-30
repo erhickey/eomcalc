@@ -3,18 +3,6 @@
  */
 
 /*
- * replaces each {} in a string with the argument having
- * the same index in the array supplied
- */
-export function format(str, args) {
-  let i = 0;
-
-  return str.replace(/{}/g, () => {
-    return 'undefined' == typeof args[i] ? '' : args[i++];
-  });
-}
-
-/*
  * true if the object supplied is iterable, false otherwise
  */
 export function isIterable(obj) {
@@ -70,18 +58,6 @@ export function addPathSeparator(dir) {
 export function arrayToMap(arr, key) {
   return arr.reduce((map, obj) => {
     map[obj[key]] = obj;
-    return map;
-  }, {});
-}
-
-/*
- * create a map from an object where each attribute of the object
- * makes up an entry where the value of the attribute is the key,
- * and the key of the attribute is the value
- */
-export function objectToMapByValues(obj) {
-  return Object.keys(obj).reduce((map, key) => {
-    map[obj[key]] = key;
     return map;
   }, {});
 }

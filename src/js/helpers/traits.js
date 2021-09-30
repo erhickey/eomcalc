@@ -1,5 +1,4 @@
 import {ORDER_AFTER, ORDER_BEFORE, ORDER_EQUAL} from '../constants/constants.js';
-import {TRAIT_TYPES} from '../constants/data.js';
 import {compareStringsCaseInsensitive, isEmpty, last} from '../util/util.js';
 
 /*
@@ -7,19 +6,17 @@ import {compareStringsCaseInsensitive, isEmpty, last} from '../util/util.js';
  */
 export class Trait {
   constructor(trait, skills) {
-    this.name = trait.name;
-    this.id = trait.id;
-    this.type = trait.type;
-    this.description = trait.desc;
-    this.breakpoints = trait.breakpoints;
-    this.effect = trait.effect;
-    this.stats = trait.stats;
+    this.name = trait.traitName;
+    this.id = trait.traitId;
+    this.type = 100 > trait.traitId ? 'primaryTrait' : 'secondaryTrait';
+    this.description = trait.traitDescription;
+    this.breakpoints = trait.traitBreakpoints;
+    this.modifiers = trait.traitMods;
 
-    const type = trait.type === TRAIT_TYPES.PRIMARY ? 'primaryTrait' : 'secondaryTrait';
     // eslint-disable-next-line no-magic-numbers
-    this.count = isEmpty(skills) ? 0 : skills.filter(s => s[type] === trait.id).length;
+    this.count = isEmpty(skills) ? 0 : skills.filter(s => s[this.type] === this.id).length;
 
-    this.active = this.count >= trait.breakpoints[0];
+    this.active = this.count >= this.breakpoints[0];
     this.nextBreakpoint = getNextBreakpoint(trait, this.count);
     this.currentBreakpointIndex = getCurrentBreakpointIndex(trait, this.count);
   }
@@ -30,13 +27,13 @@ export class Trait {
  * or the highest breakpoint if the number of skills is greater than that
  */
 function getNextBreakpoint(trait, numSkillsWithTrait) {
-  for (const breakpoint of trait.breakpoints) {
+  for (const breakpoint of trait.traitBreakpoints) {
     if (breakpoint > numSkillsWithTrait) {
       return breakpoint;
     }
   }
 
-  return last(trait.breakpoints);
+  return last(trait.traitBreakpoints);
 }
 
 /*
@@ -45,8 +42,8 @@ function getNextBreakpoint(trait, numSkillsWithTrait) {
 function getCurrentBreakpointIndex(trait, numSkillsWithTrait) {
   let toReturn = -1;
 
-  for (let i = 0; i < trait.breakpoints.length; i++) {
-    if (trait.breakpoints[i] <= numSkillsWithTrait) {
+  for (let i = 0; i < trait.traitBreakpoints.length; i++) {
+    if (trait.traitBreakpoints[i] <= numSkillsWithTrait) {
       toReturn = i;
     }
   }
@@ -118,7 +115,7 @@ function compareTraitsByType(trait1, trait2) {
     return ORDER_EQUAL;
   }
 
-  if (trait1.type === TRAIT_TYPES.PRIMARY) {
+  if ('primaryTrait' === trait1.type) {
     return ORDER_BEFORE;
   }
 

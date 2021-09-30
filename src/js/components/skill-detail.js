@@ -1,4 +1,4 @@
-import {LEVELS, SKILL_TYPES, TRAIT_MAP} from '../constants/data.js';
+import {LEVELS, TRAIT_MAP} from '../constants/data.js';
 import {SKILL_IMAGES_DIR, TRAIT_IMAGES_DIR} from '../constants/resources.js';
 import {createImageNode} from '../helpers/images.js';
 import {hideSkillDetail, onSkillLevelClick} from '../mvc/controller.js';
@@ -51,8 +51,8 @@ function createSkillDetailHeader(skill) {
 function createSkillDetailTraits(skill) {
   const component = document.createElement('div');
   component.classList.add('skill-detail-traits');
-  component.appendChild(createImageNode(TRAIT_IMAGES_DIR, TRAIT_MAP[skill.primaryTrait].name));
-  component.appendChild(createImageNode(TRAIT_IMAGES_DIR, TRAIT_MAP[skill.secondaryTrait].name));
+  component.appendChild(createImageNode(TRAIT_IMAGES_DIR, TRAIT_MAP[skill.primaryTrait].traitName));
+  component.appendChild(createImageNode(TRAIT_IMAGES_DIR, TRAIT_MAP[skill.secondaryTrait].traitName));
   return component;
 }
 
@@ -65,7 +65,7 @@ function createSkillDetailMiddle(skill, level) {
   component.appendChild(createSkillDetailLevels(skill, level));
   component.appendChild(createSkillDetailType(skill));
 
-  if (SKILL_TYPES.ACTIVE === skill.skillType) {
+  if (skill.isActive) {
     component.appendChild(createSkillDetailCooldown(skill, level));
   }
 
@@ -97,7 +97,7 @@ function createSkillDetailLevels(skill, level) {
 function createSkillDetailType(skill) {
   const component = document.createElement('div');
   component.classList.add('skill-detail-type');
-  component.innerHTML = SKILL_TYPES.ACTIVE === skill.skillType ? 'Active' : 'Passive';
+  component.innerHTML = skill.isActive ? 'Active' : 'Passive';
   return component;
 }
 

@@ -1,6 +1,5 @@
 import {compareSkills} from './skills.js';
 import {ORDER_AFTER, ORDER_BEFORE} from '../constants/constants.js';
-import {SKILL_TYPES} from '../constants/data.js';
 
 /*
  * compareFunction for chosen skills
@@ -9,11 +8,11 @@ import {SKILL_TYPES} from '../constants/data.js';
  * then follow the same order as the skills in the skill list
  */
 export function compareChosenSkills(skill1, skill2) {
-  if (skill1.skillType === skill2.skillType) {
+  if (skill1.isActive === skill2.isActive) {
     return compareSkills(skill1, skill2);
   }
 
-  if (SKILL_TYPES.ACTIVE === skill1.skillType) {
+  if (skill1.isActive) {
     return ORDER_BEFORE;
   }
 

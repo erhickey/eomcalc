@@ -1,7 +1,6 @@
 import {TRAIT_IMAGES_DIR} from '../constants/resources.js';
 import {createImageNode} from '../helpers/images.js';
 import {hideTraitDetail} from '../mvc/controller.js';
-import {format} from '../util/util.js';
 
 const TRAIT_DETAIL_CLOSE_BUTTON = createTraitDetailCloseButton();
 
@@ -40,11 +39,10 @@ function createTraitDetailBody(trait) {
   component.classList.add('trait-detail-body');
   component.appendChild(bodyText);
 
-  for (let i = 0; i < trait.stats.length; i++) {
+  for (let i = 0; i < trait.modifiers.length; i++) {
     component.appendChild(createTraitDetailStatsRow(
       trait.breakpoints[i],
-      trait.effect,
-      trait.stats[i],
+      trait.modifiers[i],
       i === trait.currentBreakpointIndex
     ));
   }
@@ -55,7 +53,7 @@ function createTraitDetailBody(trait) {
 /*
  * create row detailing effects of the trait at a certain breakpoint
  */
-function createTraitDetailStatsRow(breakpoint, effect, stats, isActive) {
+function createTraitDetailStatsRow(breakpoint, effect, isActive) {
   const row = document.createElement('div');
   row.classList.add('trait-detail-breakpoint-row');
 
@@ -63,6 +61,6 @@ function createTraitDetailStatsRow(breakpoint, effect, stats, isActive) {
     row.classList.add('trait-detail-breakpoint-row-active');
   }
 
-  row.innerHTML = breakpoint + ': ' + format(effect, stats);
+  row.innerHTML = breakpoint + ': ' + effect;
   return row;
 }

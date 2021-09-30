@@ -18,12 +18,16 @@ descriptionsFile :: String
 descriptionsFile = "/lua.unity3d/Assets/AssetBundles/lua.unity3d/temp/lua/config/language/en_us.lua.bytes"
 
 -- relative path of skill details file
-detailsFile :: String
-detailsFile = "/lua.unity3d/Assets/AssetBundles/lua.unity3d/temp/lua/config/SkillConfig.lua.bytes"
+skillDetailsFile :: String
+skillDetailsFile = "/lua.unity3d/Assets/AssetBundles/lua.unity3d/temp/lua/config/SkillConfig.lua.bytes"
+
+-- relative path of trait detailsfile
+traitDetailsFile :: String
+traitDetailsFile = "/lua.unity3d/Assets/AssetBundles/lua.unity3d/temp/lua/config/SkillTraitConfig.lua.bytes"
 
 -- data to write out to rarities.json
 raritiesJson :: String
-raritiesJson = "{\"rarities\":{\"COMMON\":1,\"UNCOMMON\":2,\"RARE\":3,\"EPIC\":4,\"LEGENDARY\":5}}"
+raritiesJson = "{\"rarities\":{\"1\":\"COMMON\",\"2\":\"UNCOMMON\",\"3\":\"RARE\",\"4\":\"EPIC\",\"5\":\"LEGENDARY\"}}"
 
 -- encode/write json string in human readable format
 writeJsonFile :: ToJSON a => String -> a -> IO ()
@@ -41,9 +45,10 @@ main :: IO ()
 main = do
   [rippedData] <- getArgs
   descriptions <- readFileLatin1 $ rippedData ++ descriptionsFile
-  details <- readFileLatin1 $ rippedData ++ detailsFile
+  skillDetails <- readFileLatin1 $ rippedData ++ skillDetailsFile
+  traitDetails <- readFileLatin1 $ rippedData ++ traitDetailsFile
   putStrLn "Parsing data from game files..."
-  case generateData descriptions details of
+  case generateData descriptions skillDetails traitDetails of
     (Left xs) -> do
       putStrLn "Parsing failed, errors:"
       mapM_ putStrLn xs

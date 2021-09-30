@@ -1,5 +1,5 @@
 import {CHOSEN_SKILL_CLASS} from '../constants/css.js';
-import {RARITY_MAP, TRAIT_MAP} from '../constants/data.js';
+import {RARITIES, TRAIT_MAP} from '../constants/data.js';
 import {SKILL_ID_PREFIX} from '../constants/html.js';
 import {SKILL_IMAGES_DIR, TRAIT_IMAGES_DIR} from '../constants/resources.js';
 import {createImageNode} from '../helpers/images.js';
@@ -15,7 +15,7 @@ export function createSkillCards(skills, idPrefix, chosenSkills = []) {
 function createSkillCard(skill, idPrefix, chosenSkills) {
   const component = document.createElement('div');
   component.id = idPrefix + SKILL_ID_PREFIX + skill.skillId;
-  component.classList.add('skill-card', RARITY_MAP[skill.rarity].toLowerCase() + '-card');
+  component.classList.add('skill-card', RARITIES[skill.rarity].toLowerCase() + '-card');
 
   if (chosenSkills && chosenSkills.some(s => s.skillId === skill.skillId)) {
     component.classList.add(CHOSEN_SKILL_CLASS);
@@ -41,8 +41,8 @@ function createSkillCardTitle(skill) {
 function createSkillCardFooter(skill) {
   const component = document.createElement('div');
   component.classList.add('skill-card-footer');
-  component.appendChild(createImageNode(TRAIT_IMAGES_DIR, TRAIT_MAP[skill.primaryTrait].name));
-  component.appendChild(createImageNode(TRAIT_IMAGES_DIR, TRAIT_MAP[skill.secondaryTrait].name));
+  component.appendChild(createImageNode(TRAIT_IMAGES_DIR, TRAIT_MAP[skill.primaryTrait].traitName));
+  component.appendChild(createImageNode(TRAIT_IMAGES_DIR, TRAIT_MAP[skill.secondaryTrait].traitName));
   return component;
 }
 

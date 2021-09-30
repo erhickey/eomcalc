@@ -5,7 +5,7 @@ export function applyFilters(filters, skills) {
     return skills;
   }
 
-  const skillTypeFilters = filters.filter(f => 'skillType' === f.key);
+  const skillTypeFilters = filters.filter(f => 'isActive' === f.key);
   const traitFilters = filters.filter(f => 'primaryTrait' === f.key || 'secondaryTrait' === f.key);
 
   return applyFilterSubset(traitFilters, applyFilterSubset(skillTypeFilters, skills));
