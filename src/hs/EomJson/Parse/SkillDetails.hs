@@ -56,5 +56,4 @@ discardLine = takeTill ('\n' ==) <* char '\n'
 
 -- skill details parsed from input
 skillDetails :: Text -> Either String [SkillDetail]
--- discard garbage lines before trying to parse
 skillDetails = parseOnly skillDetailsParser

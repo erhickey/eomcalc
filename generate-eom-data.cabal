@@ -49,5 +49,6 @@ executable generate-data
                        EomJson.Json.Trait
                        EomJson.Parse.SkillDetails
                        EomJson.Parse.SkillsAndTraits
+                       EomJson.Parse.TraitDetails
                        EomJson.Util.Util
   ghc-options:         -O2

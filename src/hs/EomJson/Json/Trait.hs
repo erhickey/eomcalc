@@ -14,5 +14,6 @@ data Trait = Trait
   { traitName :: Text
   , traitId :: Int
   , traitDescription :: Text
+  , traitBreakpoints :: [Int]
   , traitMods :: [Text]
   } deriving (Generic, ToJSON)

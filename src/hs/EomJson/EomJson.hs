@@ -14,24 +14,28 @@ import EomJson.Json.Skill (Skill(..))
 import EomJson.Json.Trait (Trait(..))
 import EomJson.Parse.SkillDetails (skillDetails)
 import EomJson.Parse.SkillsAndTraits (ParsedField, skillAndTraitDescriptions)
+import EomJson.Parse.TraitDetails (traitDetails)
 import EomJson.Util.Util (compose, replaceSmartQuotes)
 
 -- list of skills and traits generated from parsed data
 -- skill and trait descriptions -> skill details -> (skills, traits)
 -- returns all parse errors if any parsing fails
-generateData :: Text -> Text -> Either [String] ([Skill], [Trait])
-generateData descIn detailsIn
-  | isLeft detailsParseResult = Left parseErrors
+generateData :: Text -> Text -> Text -> Either [String] ([Skill], [Trait])
+generateData descIn skillDetailsIn traitDetailsIn
+  | isLeft skillDetailsParseResult = Left parseErrors
+  | isLeft traitDetailsParseResult = Left parseErrors
   | null $ rights descParseResult = Left parseErrors
   | otherwise = Right (skills, traits)
   where
     descParseResult = skillAndTraitDescriptions descIn
-    detailsParseResult = skillDetails detailsIn
-    parseErrors = fromLeft "" detailsParseResult: lefts descParseResult
+    skillDetailsParseResult = skillDetails skillDetailsIn
+    traitDetailsParseResult = traitDetails traitDetailsIn
+    parseErrors = fromLeft "" traitDetailsParseResult : fromLeft "" skillDetailsParseResult : lefts descParseResult
     parsedDescriptions = filter notBlank . map fixParsedField $ rights descParseResult
-    details = fromRight [] detailsParseResult
-    skills = assembleSkills parsedDescriptions details
-    traits = usedTraits skills $ assembleTraits parsedDescriptions
+    sDetails = fromRight [] skillDetailsParseResult
+    tDetails = fromRight [] traitDetailsParseResult
+    skills = assembleSkills parsedDescriptions sDetails
+    traits = usedTraits skills $ assembleTraits parsedDescriptions tDetails
 
 -- filter out traits that are not used by any skills
 usedTraits :: [Skill] -> [Trait] -> [Trait]
