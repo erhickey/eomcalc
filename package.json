@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Echoes of Magic Skill Calculator",
   "scripts": {
-    "build": "npx eslint src/js/** && node build",
     "serve": "node build --serve",
-    "deploy": "npm run build && git push origin --delete gh-pages && git add dist -f && git commit -m 'auto deploy' && git subtree push --prefix dist origin gh-pages && git reset HEAD~"
+    "lint": "npx eslint src/js/**",
+    "build": "node build"
   },
   "repository": {
     "type": "git",
