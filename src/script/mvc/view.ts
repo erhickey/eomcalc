@@ -89,6 +89,7 @@ export function buildChanged(build: Skill[], changedSkill: Skill, isRemoved: boo
   }
 
   document.getElementById(Html.BUILD_AND_TRAITS_CONTAINER_ID)?.replaceChildren(df);
+  hideTraitDetail();
 }
 
 /*
@@ -158,8 +159,15 @@ export function hideSkillDetail(): void {
   }
 }
 
-export function toggleTraitDetail(): void {
-  document.getElementById(Html.TRAIT_DETAIL_ID)?.classList.toggle(HIDDEN_CLASS);
+export function toggleTraitDetail(anchorElement: HTMLElement, trait: TraitInfo): void {
+  const el = document.getElementById(Html.TRAIT_DETAIL_ID);
+
+  if (el?.classList.contains(HIDDEN_CLASS)) {
+    // update trait detail in case the build has changed
+    updateTraitDetail(anchorElement, trait);
+  } else {
+    el?.classList.add(HIDDEN_CLASS);
+  }
 }
 
 export function updateTraitDetail(anchorElement: HTMLElement, trait: TraitInfo): void {

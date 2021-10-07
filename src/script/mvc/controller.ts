@@ -87,7 +87,7 @@ export function onTraitClick(anchorElement: HTMLElement, trait: TraitInfo): void
   if (model.updateTraitDetail(trait)) {
     View.updateTraitDetail(anchorElement, trait);
   } else {
-    View.toggleTraitDetail();
+    View.toggleTraitDetail(anchorElement, trait);
   }
 }
 
