@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2020",
+    "lib": [
+      "ES2020",
+      "DOM"
+    ],
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowJs": false,
+    "strict": true,
+    "allowUnusedLabels": false,
+    "allowUnreachableCode": false,
+    "exactOptionalPropertyTypes": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "skipLibCheck": true,
+    "baseUrl": "src",
+    "paths": {
+      "@api/*": ["script/api/*"],
+      "@components/*": ["script/components/*"],
+      "@constants/*": ["script/constants/*"],
+      "@helpers/*": ["script/helpers/*"],
+      "@mvc/*": ["script/mvc/*"],
+      "@typez/*": ["script/types/*"],
+      "@util/*": ["script/util/*"],
+      "@data/*": ["data/*"]
+    }
+  },
+  "include": [
+    "src/script/**/*",
+    "src/data/*"
+  ]
+}

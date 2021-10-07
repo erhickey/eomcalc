@@ -1,25 +1,25 @@
 .common-card {
-  background-image: url("../../img/cards/common.webp");
+  background-image: url("/assets/img/cards/common.webp");
   background-size: contain;
 }
 
 .uncommon-card {
-  background-image: url("../../img/cards/uncommon.webp");
+  background-image: url("/assets/img/cards/uncommon.webp");
   background-size: contain;
 }
 
 .rare-card {
-  background-image: url("../../img/cards/rare.webp");
+  background-image: url("/assets/img/cards/rare.webp");
   background-size: contain;
 }
 
 .epic-card {
-  background-image: url("../../img/cards/epic.webp");
+  background-image: url("/assets/img/cards/epic.webp");
   background-size: contain;
 }
 
 .legendary-card {
-  background-image: url("../../img/cards/legendary.webp");
+  background-image: url("/assets/img/cards/legendary.webp");
   background-size: contain;
 }
 

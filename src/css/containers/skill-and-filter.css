@@ -8,7 +8,7 @@
   }
 }
 
-#skill-list {
+#skill-list-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -21,7 +21,7 @@
   overflow-y: scroll;
 }
 
-#filters {
+#filters-container {
   background: #585859;
   border-radius: 5px;
   border: 1px solid #303031;

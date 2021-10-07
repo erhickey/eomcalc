@@ -27,7 +27,7 @@ traitDetailsFile = "/lua.unity3d/Assets/AssetBundles/lua.unity3d/temp/lua/config
 
 -- data to write out to rarities.json
 raritiesJson :: String
-raritiesJson = "{\"rarities\":{\"1\":\"COMMON\",\"2\":\"UNCOMMON\",\"3\":\"RARE\",\"4\":\"EPIC\",\"5\":\"LEGENDARY\"}}"
+raritiesJson = "{\"rarities\":[{\"key\":1,\"value\":\"COMMON\"},{\"key\":2,\"value\":\"UNCOMMON\"},{\"key\":3,\"value\":\"RARE\"},{\"key\":4,\"value\":\"EPIC\"},{\"key\":5,\"value\":\"LEGENDARY\"}]}"
 
 -- encode/write json string in human readable format
 writeJsonFile :: ToJSON a => String -> a -> IO ()
