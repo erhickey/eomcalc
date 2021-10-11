@@ -3,6 +3,7 @@
  * handling all rendering responsibility here helps limit and group DOM updates
  */
 
+import { TRAITS } from '@api/eom';
 import { createBuildTexts } from '@components/build-text';
 import { createFilters } from '@components/filter';
 import { createSkillCards } from '@components/skill-card';
@@ -11,8 +12,7 @@ import { createTraits } from '@components/trait';
 import { createTraitDetail } from '@components/trait-detail';
 import { CHOSEN_SKILL_CLASS, HIDDEN_CLASS } from '@constants/css';
 import * as Html from '@constants/html';
-import { compareBuildSkills } from '@helpers/build-skills';
-import { compareSkills } from '@helpers/skills';
+import { compareBuildSkills, compareSkills, compareTraits } from '@helpers/comparators';
 import { Filter } from '@typez/filter';
 import { Skill } from '@typez/skill';
 import { TraitInfo } from '@typez/trait-info';
@@ -137,7 +137,7 @@ function createBuildSkillsContainer(build: Skill[]): HTMLDivElement {
 function createTraitsContainer(build: Skill[]): HTMLDivElement {
   const el = document.createElement('div');
   el.id = Html.TRAITS_CONTAINER_ID;
-  el.appendChild(createTraits(build));
+  el.appendChild(createTraits(TRAITS.map(t => new TraitInfo(t, build)).sort(compareTraits)));
   return el;
 }
 

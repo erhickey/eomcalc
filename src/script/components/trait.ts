@@ -1,17 +1,10 @@
-import { TRAITS } from '@api/eom';
 import { createTraitImage } from '@helpers/images';
-import { compareTraits } from '@helpers/traits';
 import { onTraitClick } from '@mvc/controller';
-import { Skill } from '@typez/skill';
 import { TraitInfo } from '@typez/trait-info';
 
-export function createTraits(build: Skill[]): DocumentFragment {
+export function createTraits(traits: TraitInfo[]): DocumentFragment {
   const df = new DocumentFragment();
-
-  TRAITS.map(t => new TraitInfo(t, build))
-    .sort(compareTraits)
-    .forEach(t => df.appendChild(createTrait(t)));
-
+  traits.forEach(t => df.appendChild(createTrait(t)));
   return df;
 }
 

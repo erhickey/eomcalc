@@ -16,7 +16,7 @@ export class TraitInfo {
 
     this._nextBreakpoint = this._active ? Math.min(..._trait.breakpoints.filter(n => n > this._count)) : minBreakpoint;
 
-    // will hit this condition when count is higher than or equal to maxBreakpoint
+    // condition is true when count is higher than or equal to maxBreakpoint
     if (this._nextBreakpoint === Infinity) {
       this._nextBreakpoint = maxBreakpoint;
     }
