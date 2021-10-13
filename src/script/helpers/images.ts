@@ -5,7 +5,7 @@
 import { SKILL_IMAGES_DIR, TRAIT_IMAGES_DIR } from '@constants/resources';
 import { Skill } from '@typez/skill';
 import { Trait } from '@typez/trait';
-import { addPathSeparator } from '@util/util';
+import { addPathSeparator } from '@util/string';
 
 export function createSkillImage(skill: Skill): HTMLImageElement {
   return createImageElement(SKILL_IMAGES_DIR, skill.name);

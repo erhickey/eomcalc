@@ -16,7 +16,7 @@ import { compareBuildSkills, compareSkills, compareTraits } from '@helpers/compa
 import { Filter } from '@typez/filter';
 import { Skill } from '@typez/skill';
 import { TraitInfo } from '@typez/trait-info';
-import { positionElementRelativeTo } from '@util/util';
+import { positionElementRelativeTo } from '@util/html';
 
 // number of pixels to offset trait detail from the trait by
 const DETAIL_HOVER_OFFSET = 15;

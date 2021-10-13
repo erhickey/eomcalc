@@ -1,6 +1,6 @@
 import { Skill } from '@typez/skill';
 import { TraitInfo } from '@typez/trait-info';
-import { buildComparator, compareBooleans, compareStringsCaseInsensitive } from '@util/util';
+import { buildComparator, compareBooleans, compareStringsCaseInsensitive } from '@util/compare';
 
 export const compareSkills = buildComparator([compareSkillsByRarity, compareSkillsByName]);
 

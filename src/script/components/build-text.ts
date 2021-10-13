@@ -6,7 +6,7 @@ import { BUILD_URL_ID, DISCORD_MSG_ID } from '@constants/html';
 import { IMAGES_DIR } from '@constants/resources';
 import { generateBuildDiscordMsg, generateBuildUrlParam } from '@helpers/build-text';
 import { Skill } from '@typez/skill';
-import { copyInputText } from '@util/util';
+import { copyInputText } from '@util/html';
 
 /*
  * creates discord message and build url components
