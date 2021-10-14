@@ -8,7 +8,7 @@ export function copyInputText(inputElement: HTMLInputElement): void {
 // represents left most and top most coordinate
 const TOP_LEFT = 0;
 
-/**
+/*
  * position element relative to another element, offset from top-left by given amount
  * attempts to keep the element in the viewport
  */

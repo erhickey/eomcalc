@@ -1,4 +1,4 @@
-/**
+/*
  * helper functions for creating/parsing build URL and discord strings
  */
 

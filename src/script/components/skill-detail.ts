@@ -1,118 +1,171 @@
+import { combineLatestWith } from 'rxjs/operators';
+
+import { Component } from '@components/component';
+import { HIDDEN_CLASS } from '@constants/css';
 import { LEVELS, LEVEL_OFFSET } from '@constants/eom';
-import { createSkillImage, createTraitImage } from '@helpers/images';
-import { hideSkillDetail, onSkillLevelClick } from '@mvc/controller';
+import { SKILL_DETAIL_ID } from '@constants/html';
+import { createImageElement, createSkillImageSrc, createTraitImageSrc } from '@helpers/images';
+import { Controller } from '@mvcs/controller';
+import { Service } from '@mvcs/service';
 import { Skill } from '@typez/skill.js';
 
-const SKILL_DETAIL_CLOSE_BUTTON = createSkillDetailCloseButton();
+export class SkillDetailComponent extends Component {
+  private skillTitle = document.createElement('div');
+  private skillImage = createImageElement();
+  private primaryTraitImage = createImageElement();
+  private secondaryTraitImage = createImageElement();
+  private levelSpans: HTMLSpanElement[];
+  private skillType = SkillDetailComponent.createSkillType();
+  private cooldownContainer: HTMLDivElement;
+  private cooldown = SkillDetailComponent.createCooldownNumberSpan();
+  private skillDescription = SkillDetailComponent.createSkillDescription();
 
-export function createSkillDetail(skill: Skill, level: number): DocumentFragment {
-  const df = new DocumentFragment();
-  df.appendChild(SKILL_DETAIL_CLOSE_BUTTON);
-  df.appendChild(createSkillDetailHeader(skill));
-  df.appendChild(createSkillDetailMiddle(skill, level));
-  df.appendChild(createSkillDetailDescription(skill, level));
-  return df;
-}
-
-function createSkillDetailCloseButton(): HTMLDivElement {
-  const el = document.createElement('div');
-  el.classList.add('skill-detail-close');
-  el.innerHTML = 'x';
-  el.onclick = () => hideSkillDetail();
-  return el;
-}
-
-function createSkillDetailDescription(skill: Skill, level: number): HTMLDivElement {
-  const el = document.createElement('div');
-  el.classList.add('skill-detail-description');
-  el.innerHTML = skill.descriptions[level - LEVEL_OFFSET]?.replace(/\\n/g, '\n') ?? '';
-  return el;
-}
-
-function createSkillDetailHeader(skill: Skill): HTMLDivElement {
-  const el = document.createElement('div');
-  el.classList.add('skill-detail-header');
-
-  const headerRight = document.createElement('div');
-
-  const title = document.createElement('div');
-  title.innerHTML = skill.name;
-
-  headerRight.appendChild(title);
-  headerRight.appendChild(createSkillDetailTraits(skill));
-
-  el.appendChild(createSkillImage(skill));
-  el.appendChild(headerRight);
-
-  return el;
-}
-
-function createSkillDetailTraits(skill: Skill): HTMLDivElement {
-  const el = document.createElement('div');
-  el.classList.add('skill-detail-traits');
-  el.appendChild(createTraitImage(skill.primaryTrait));
-  el.appendChild(createTraitImage(skill.secondaryTrait));
-  return el;
-}
-
-/*
- * create middle component with misc data: level, skill type, cooldown
- */
-function createSkillDetailMiddle(skill: Skill, level: number): HTMLDivElement {
-  const el = document.createElement('div');
-  el.classList.add('skill-detail-middle');
-  el.appendChild(createSkillDetailLevels(level));
-  el.appendChild(createSkillDetailType(skill));
-
-  if (skill.isActive) {
-    el.appendChild(createSkillDetailCooldown(skill, level));
+  constructor(private controller: Controller, service: Service) {
+    super();
+    this.levelSpans = this.createLevelSpans();
+    this.cooldownContainer = this.createCooldownContainer();
+    this.render();
+    this.initSubscriptions(service);
   }
 
-  return el;
-}
-
-function createSkillDetailLevels(skillLevel: number): HTMLDivElement {
-  const el = document.createElement('div');
-  el.classList.add('skill-detail-levels');
-
-  const levelLabel = document.createElement('span');
-  levelLabel.innerHTML = 'Level ';
-  el.appendChild(levelLabel);
-
-  for (const level of LEVELS) {
-    const levelNumber = document.createElement('span');
-    levelNumber.classList.add('level-text');
-    levelNumber.classList.add(skillLevel === level ? 'active-level-text' : 'inactive-level-text');
-    levelNumber.innerHTML = String(level);
-
-    levelNumber.onclick = () => onSkillLevelClick(level);
-
-    el.appendChild(levelNumber);
+  private render(): void {
+    this.id = SKILL_DETAIL_ID;
+    this.classList.add('skill-detail');
+    this.appendChild(this.createCloseButton());
+    this.appendChild(this.createHeader());
+    this.appendChild(this.createMiddle());
+    this.appendChild(this.skillDescription);
   }
 
-  return el;
-}
+  private initSubscriptions(service: Service): void {
+    service.skillDetailChange.pipe(combineLatestWith(service.skillLevelChange)).subscribe(([skill, level]) => {
+      this.update(skill, level);
+    });
 
-function createSkillDetailType(skill: Skill): HTMLDivElement {
-  const el = document.createElement('div');
-  el.classList.add('skill-detail-type');
-  el.innerHTML = skill.isActive ? 'Active' : 'Passive';
-  return el;
-}
+    service.skillDetailVisibilityChange.subscribe(isVisible => {
+      if (isVisible === this.classList.contains(HIDDEN_CLASS)) {
+        this.classList.toggle(HIDDEN_CLASS);
+      }
+    });
+  }
 
-function createSkillDetailCooldown(skill: Skill, level: number): HTMLDivElement {
-  const el = document.createElement('div');
-  el.classList.add('skill-detail-cooldown');
+  private update(skill: Skill, level: number): void {
+    this.skillTitle.innerHTML = skill.name;
+    this.skillImage.src = createSkillImageSrc(skill);
+    this.primaryTraitImage.src = createTraitImageSrc(skill.primaryTrait);
+    this.secondaryTraitImage.src = createTraitImageSrc(skill.secondaryTrait);
+    this.skillType.innerHTML = skill.isActive ? 'Active' : 'Passive';
+    this.cooldown.innerHTML = skill.cooldowns[level - LEVEL_OFFSET] + 's';
+    this.skillDescription.innerHTML = skill.descriptions[level - LEVEL_OFFSET]?.replace(/\\n/g, '\n') ?? '';
 
-  const cooldownLabel = document.createElement('span');
-  cooldownLabel.innerHTML = 'CD: ';
+    if (skill.isActive) {
+      this.cooldownContainer.classList.remove(HIDDEN_CLASS);
+    } else {
+      this.cooldownContainer.classList.add(HIDDEN_CLASS);
+    }
 
-  const cooldownNumber = document.createElement('span');
-  cooldownNumber.classList.add('skill-detail-cooldown-text');
-  cooldownNumber.innerHTML = skill.cooldowns[level - LEVEL_OFFSET] + 's';
+    this.levelSpans.forEach(levelSpan => {
+      if (levelSpan.innerHTML === String(level)) {
+        levelSpan.classList.add('active-level-text');
+      } else {
+        levelSpan.classList.remove('active-level-text');
+      }
+    });
+  }
 
-  el.appendChild(cooldownLabel);
-  el.appendChild(cooldownNumber);
+  private createCloseButton(): HTMLDivElement {
+    const el = document.createElement('div');
+    el.classList.add('skill-detail-close');
+    el.innerHTML = 'x';
+    el.onclick = () => this.controller.hideSkillDetail();
+    return el;
+  }
 
-  return el;
+  private createHeader(): HTMLDivElement {
+    const headerRight = document.createElement('div');
+    headerRight.appendChild(this.skillTitle);
+    headerRight.appendChild(this.createTraits());
+
+    const el = document.createElement('div');
+    el.classList.add('skill-detail-header');
+    el.appendChild(this.skillImage);
+    el.appendChild(headerRight);
+
+    return el;
+  }
+
+  private createTraits(): HTMLDivElement {
+    const el = document.createElement('div');
+    el.classList.add('skill-detail-traits');
+    el.appendChild(this.primaryTraitImage);
+    el.appendChild(this.secondaryTraitImage);
+    return el;
+  }
+
+  /*
+   * create middle element with misc data: level, skill type, cooldown
+   */
+  private createMiddle(): HTMLDivElement {
+    const el = document.createElement('div');
+    el.classList.add('skill-detail-middle');
+    el.appendChild(this.createLevels());
+    el.appendChild(this.skillType);
+    el.appendChild(this.cooldownContainer);
+    return el;
+  }
+
+  private createLevels(): HTMLDivElement {
+    const levelLabel = document.createElement('span');
+    levelLabel.innerHTML = 'Level ';
+
+    const el = document.createElement('div');
+    el.classList.add('skill-detail-levels');
+    el.appendChild(levelLabel);
+
+    for (const levelSpan of this.levelSpans) {
+      el.appendChild(levelSpan);
+    }
+
+    return el;
+  }
+
+  private createLevelSpans(): HTMLSpanElement[] {
+    return LEVELS.map(level => {
+      const el = document.createElement('span');
+      el.classList.add('level-text');
+      el.innerHTML = String(level);
+      el.onclick = () => this.controller.onSkillLevelClick(level);
+      return el;
+    });
+  }
+
+  private static createSkillType(): HTMLDivElement {
+    const el = document.createElement('div');
+    el.classList.add('skill-detail-type');
+    return el;
+  }
+
+  private createCooldownContainer(): HTMLDivElement {
+    const cooldownLabel = document.createElement('span');
+    cooldownLabel.innerHTML = 'CD: ';
+
+    const el = document.createElement('div');
+    el.classList.add('skill-detail-cooldown');
+    el.appendChild(cooldownLabel);
+    el.appendChild(this.cooldown);
+
+    return el;
+  }
+
+  private static createCooldownNumberSpan(): HTMLSpanElement {
+    const el = document.createElement('span');
+    el.classList.add('skill-detail-cooldown-text');
+    return el;
+  }
+
+  private static createSkillDescription(): HTMLDivElement {
+    const el = document.createElement('div');
+    el.classList.add('skill-detail-description');
+    return el;
+  }
 }

@@ -5,7 +5,7 @@ https://erhickey.github.io/eomcalc
 
 ## About
 
-A simple static site built with typescript/css/html. This project has no runtime dependencies, and minimal development dependencies (typescript, esbuild, eslint, @typescript-eslint, prettier).
+A simple static site built with typescript/css/html. This project has no runtime dependencies, and some development dependencies (typescript, rxjs, esbuild, eslint, @typescript-eslint, prettier).
 
 Included in this project is a Haskell program which parses data from multiple game files, aggregates the data, and writes it out as JSON for use in the calculator.
 

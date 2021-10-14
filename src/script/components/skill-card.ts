@@ -1,62 +1,80 @@
-import { CHOSEN_SKILL_CLASS } from '@constants/css';
+import { Component } from '@components/component';
+import { CHOSEN_SKILL_CLASS, HIDDEN_CLASS } from '@constants/css';
+import { BUILD_SKILL_ID_PREFIX, SKILL_LIST_SKILL_ID_PREFIX } from '@constants/html';
 import { createSkillImage, createTraitImage } from '@helpers/images';
-import { onSkillClick, onSkillDetailClick } from '@mvc/controller';
+import { Controller } from '@mvcs/controller';
+import { Service } from '@mvcs/service';
 import { Skill } from '@typez/skill';
 
-export function createSkillCards(skills: Skill[], idPrefix: string, build: Skill[] = []): DocumentFragment {
-  const buildSkillIds = build.map(bs => bs.id);
-  const df = new DocumentFragment();
-  skills.forEach(s => df.appendChild(createSkillCard(s, buildSkillIds, idPrefix)));
-  return df;
-}
-
-function createSkillCard(skill: Skill, buildIds: number[], idPrefix: string): HTMLDivElement {
-  const el = document.createElement('div');
-  el.id = idPrefix + skill.id;
-  el.classList.add('skill-card', skill.rarity + '-card');
-
-  if (buildIds.includes(skill.id)) {
-    el.classList.add(CHOSEN_SKILL_CLASS);
+export class SkillCardComponent extends Component {
+  constructor(private skill: Skill, private controller: Controller, service: Service, private isBuildSkill = false) {
+    super();
+    this.render();
+    this.initSubscriptions(service);
   }
 
-  el.appendChild(createSkillCardTitle(skill));
-  el.appendChild(createSkillDetailButton(skill));
-  el.appendChild(createSkillImage(skill));
-  el.appendChild(createSkillCardFooter(skill));
+  private render(): void {
+    this.id = (this.isBuildSkill ? BUILD_SKILL_ID_PREFIX : SKILL_LIST_SKILL_ID_PREFIX) + this.skill.id;
+    this.classList.add('skill-card', this.skill.rarity + '-card');
+    this.appendChild(this.createTitle());
+    this.appendChild(this.createDetailButton());
+    this.appendChild(createSkillImage(this.skill));
+    this.appendChild(this.createFooter());
 
-  el.onclick = () => onSkillClick(skill);
+    this.onclick = () => this.controller.onSkillClick(this.skill, this.isBuildSkill);
+  }
 
-  return el;
-}
+  private initSubscriptions(service: Service): void {
+    if (!this.isBuildSkill) {
+      service.skillChosenChange(this.skill).subscribe(b => this.updateChosen(b));
+      service.skillVisibilityChange(this.skill).subscribe(b => this.updateVisibility(b));
+    }
+  }
 
-function createSkillCardTitle(skill: Skill): HTMLDivElement {
-  const el = document.createElement('div');
-  el.classList.add('skill-card-title');
-  el.innerHTML = skill.name;
-  return el;
-}
+  private updateChosen(isChosen: boolean): void {
+    if (isChosen) {
+      this.classList.add(CHOSEN_SKILL_CLASS);
+    } else {
+      this.classList.remove(CHOSEN_SKILL_CLASS);
+    }
+  }
 
-function createSkillCardFooter(skill: Skill): HTMLDivElement {
-  const el = document.createElement('div');
-  el.classList.add('skill-card-footer');
-  el.appendChild(createTraitImage(skill.primaryTrait));
-  el.appendChild(createTraitImage(skill.secondaryTrait));
-  return el;
-}
+  private updateVisibility(isVisible: boolean): void {
+    if (isVisible) {
+      this.classList.remove(HIDDEN_CLASS);
+    } else {
+      this.classList.add(HIDDEN_CLASS);
+    }
+  }
 
-function createSkillDetailButton(skill: Skill): HTMLDivElement {
-  const el = document.createElement('div');
-  el.classList.add('skill-card-detail-button');
+  private createTitle(): HTMLDivElement {
+    const el = document.createElement('div');
+    el.classList.add('skill-card-title');
+    el.innerHTML = this.skill.name;
+    return el;
+  }
 
-  const span = document.createElement('span');
-  span.innerHTML = '?';
+  private createFooter(): HTMLDivElement {
+    const el = document.createElement('div');
+    el.classList.add('skill-card-footer');
+    el.appendChild(createTraitImage(this.skill.primaryTrait));
+    el.appendChild(createTraitImage(this.skill.secondaryTrait));
+    return el;
+  }
 
-  el.appendChild(span);
+  private createDetailButton(): HTMLDivElement {
+    const span = document.createElement('span');
+    span.innerHTML = '?';
 
-  el.onclick = e => {
-    e.stopPropagation();
-    onSkillDetailClick(skill);
-  };
+    const el = document.createElement('div');
+    el.classList.add('skill-card-detail-button');
+    el.appendChild(span);
 
-  return el;
+    el.onclick = e => {
+      e.stopPropagation();
+      this.controller.onSkillDetailClick(this.skill);
+    };
+
+    return el;
+  }
 }

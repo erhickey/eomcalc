@@ -17,7 +17,7 @@ export abstract class Filter {
 
 export class SkillTypeFilter extends Filter {
   constructor(private _isActive: boolean) {
-    super('skill-type' + _isActive, false);
+    super('skill-type-' + _isActive, false);
   }
 
   match(skill: Skill): boolean {

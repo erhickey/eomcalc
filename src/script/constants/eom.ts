@@ -1,4 +1,4 @@
-/**
+/*
  * constants related to Echoes of Magic
  */
 

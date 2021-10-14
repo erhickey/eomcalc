@@ -106,6 +106,8 @@
   padding: 0 7px;
   border-style: solid;
   border-width: 1px 1px 0 1px;
+  border-color: #707071;
+  color: #707071;
 }
 
 .active-level-text {
@@ -113,15 +115,11 @@
   border-color: #444;
   border-bottom-width: 2px;
   border-bottom-color: rgb(245, 204, 100);
-}
-
-.inactive-level-text {
-  border-color: #707071;
-  color: #707071;
+  color: black;
 }
 
 @media (pointer: fine) {
-  .inactive-level-text:hover {
+  .level-text:not(.active-level-text):hover {
     background: rgba(50, 50, 50, 0.3);
   }
 }

@@ -10,6 +10,6 @@ import { TRAIT_ID_SECONDARY_BREAKPOINT } from '@constants/eom';
 import { createSkills, Skill } from '@typez/skill';
 import { createTraits, Trait } from '@typez/trait';
 
-export const RARITIES = new Map<number, string>(rarities.map(kv => [kv.key, kv.value]));
+const RARITIES = new Map<number, string>(rarities.map(kv => [kv.key, kv.value]));
 export const TRAITS: Trait[] = createTraits(traits, TRAIT_ID_SECONDARY_BREAKPOINT);
 export const SKILLS: Skill[] = createSkills(skills, TRAITS, RARITIES);

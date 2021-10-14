@@ -22,7 +22,8 @@ const buildOptions = {
   sourcemap: false,
   minify: true,
   bundle: true,
-  plugins: [onResolvePlugin]
+  legalComments: 'none',
+  plugins: [onResolvePlugin],
 };
 
 // clean dist directory

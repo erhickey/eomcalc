@@ -29,7 +29,7 @@
       "@components/*": ["script/components/*"],
       "@constants/*": ["script/constants/*"],
       "@helpers/*": ["script/helpers/*"],
-      "@mvc/*": ["script/mvc/*"],
+      "@mvcs/*": ["script/mvcs/*"],
       "@typez/*": ["script/types/*"],
       "@util/*": ["script/util/*"],
       "@data/*": ["data/*"]

@@ -1,3 +1,4 @@
+import { TraitComponent } from '@components/trait';
 import { Skill } from '@typez/skill';
 import { TraitInfo } from '@typez/trait-info';
 import { buildComparator, compareBooleans, compareStringsCaseInsensitive } from '@util/compare';
@@ -39,4 +40,8 @@ function compareTraitsByType(trait1: TraitInfo, trait2: TraitInfo): number {
 
 function compareTraitsByName(trait1: TraitInfo, trait2: TraitInfo): number {
   return compareStringsCaseInsensitive(trait1.trait.name, trait2.trait.name);
+}
+
+export function compareTraitComponents(tc1: TraitComponent, tc2: TraitComponent): number {
+  return compareTraits(tc1.traitInfo, tc2.traitInfo);
 }
