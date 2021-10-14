@@ -143,10 +143,10 @@
         {
             "traitId": 103,
             "traitName": "Arcane",
-            "traitDescription": "Equip a certain number of Arcane skills to boost Crit Rate for next active skill within 10s after casting an active skill",
+            "traitDescription": "Equip a certain number of Arcane skills for a chance that the next active skill will be critical hit within 10s after casting any active skill",
             "traitMods": [
-                "20% Boost",
-                "35% Boost"
+                "20% Chance",
+                "45% Chance"
             ],
             "traitBreakpoints": [
                 2,
@@ -283,6 +283,19 @@
                 2,
                 4,
                 6
+            ]
+        },
+        {
+            "traitId": 115,
+            "traitName": "Poison",
+            "traitDescription": "Equip a certain number of Poison skills, and when you attack poisoned enemies, they will be blinded based on the number of poison stacks they have. 20s CD.",
+            "traitMods": [
+                "Add 1s Blind for each stack of poison, up to 5 stacks",
+                "Add 1.5s Blind for each stack of poison, up to 10 stacks"
+            ],
+            "traitBreakpoints": [
+                2,
+                4
             ]
         },
         {

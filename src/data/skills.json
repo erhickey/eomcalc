@@ -1,6 +1,26 @@
 {
     "skills": [
         {
+            "skillId": 10731,
+            "cooldowns": [
+                5,
+                25,
+                25,
+                25
+            ],
+            "descriptions": [
+                "Summons an alloy ball from a distance that flies toward you. If it hits you, you can deflect the ball, which will then deal damage and knock airborne enemies in its path.",
+                "Summons an alloy ball from a distance that flies toward you. If it hits you, you can deflect the ball, which will then deal damage and knock airborne enemies in its path.",
+                "Summons an alloy ball from a distance that flies toward you. If it hits you, you can deflect the ball, which will then deal damage and knock airborne enemies in its path.",
+                "Summons an alloy ball from a distance that flies toward you. If it hits you, you can deflect the ball, which will then deal damage and knock airborne enemies in its path."
+            ],
+            "rarity": 4,
+            "secondaryTrait": 116,
+            "isActive": true,
+            "skillName": "Alloy Scythe",
+            "primaryTrait": 8
+        },
+        {
             "skillId": 20291,
             "cooldowns": [
                 10,
@@ -61,6 +81,26 @@
             "primaryTrait": 4
         },
         {
+            "skillId": 10751,
+            "cooldowns": [
+                10,
+                10,
+                10,
+                10
+            ],
+            "descriptions": [
+                "The Armored Beast is invincible, but cannot make basic attacks. It normally hides underground, and when a skill is cast, it will come out, knocking nearby enemies airborne and dealing damage before returning back underground to wait out the CD",
+                "The Armored Beast is invincible, but cannot make basic attacks. It normally hides underground, and when a skill is cast, it will come out, knocking nearby enemies airborne and dealing damage before returning back underground to wait out the CD",
+                "The Armored Beast is invincible, but cannot make basic attacks. It normally hides underground, and when a skill is cast, it will come out, knocking nearby enemies airborne and dealing damage before returning back underground to wait out the CD",
+                "The Armored Beast is invincible, but cannot make basic attacks. It normally hides underground, and when a skill is cast, it will come out, knocking nearby enemies airborne and dealing damage before returning back underground to wait out the CD"
+            ],
+            "rarity": 4,
+            "secondaryTrait": 116,
+            "isActive": true,
+            "skillName": "Armored Beast",
+            "primaryTrait": 5
+        },
+        {
             "skillId": 10661,
             "cooldowns": [
                 35,
@@ -98,6 +138,26 @@
             "secondaryTrait": 111,
             "isActive": true,
             "skillName": "Assault Charge",
+            "primaryTrait": 1
+        },
+        {
+            "skillId": 20071,
+            "cooldowns": [
+                90,
+                90,
+                90,
+                90
+            ],
+            "descriptions": [
+                "Basic Attacks have a <b>10% chance</b> to fire a light energy ball to the target that was hit by Basic Attack within 5m. The light energy ball will bounce 8 times to nearby enemies, dealing <color=#ff8400><b>25%</b> PHY DMG</color> each time. When there are not any target to bounce, the light energy ball will release all remaining bounce count on the last target it hits, dealing <color=#ff8400><b>18%</b> PHY DMG</color> each time",
+                "Basic Attacks have a <b>10% chance</b> to fire a light energy ball to the target that was hit by Basic Attack within 5m. The light energy ball will bounce 8 times to nearby enemies, dealing <color=#ff8400><b>38%</b> PHY DMG</color> each time. When there are not any target to bounce, the light energy ball will release all remaining bounce count on the last target it hits, dealing <color=#ff8400><b>28%</b> PHY DMG</color> each time",
+                "Basic Attacks have a <b>10% chance</b> to fire a light energy ball to the target that was hit by Basic Attack within 5m. The light energy ball will bounce 8 times to nearby enemies, dealing <color=#ff8400><b>63%</b> PHY DMG</color> each time. When there are not any target to bounce, the light energy ball will release all remaining bounce count on the last target it hits, dealing <color=#ff8400><b>48%</b> PHY DMG</color> each time",
+                "Basic Attacks have a <b>10% chance</b> to fire a light energy ball to the target that was hit by Basic Attack within 5m. The light energy ball will bounce 8 times to nearby enemies, dealing <color=#ff8400><b>100%</b> PHY DMG</color> each time. When there are not any target to bounce, the light energy ball will release all remaining bounce count on the last target it hits, dealing <color=#ff8400><b>75%</b> PHY DMG</color> each time"
+            ],
+            "rarity": 5,
+            "secondaryTrait": 114,
+            "isActive": false,
+            "skillName": "Beam Scatter",
             "primaryTrait": 1
         },
         {
@@ -139,26 +199,6 @@
             "isActive": true,
             "skillName": "Blizzard",
             "primaryTrait": 6
-        },
-        {
-            "skillId": 10741,
-            "cooldowns": [
-                15,
-                15,
-                15,
-                15
-            ],
-            "descriptions": [
-                "Call a bomb to fall from the sky to the target location, knocking up enemies for 0.5s when it lands. Dealing <color=#ff8400><b>80%</b> PHY DMG</color> and slowing enemies by 50% for 1.5s. The bomb explodes for a short delay, dealing <color=#ff8400><b>40%</b> PHY DMG</color>",
-                "Call a bomb to fall from the sky to the target location, knocking up enemies for 0.5s when it lands. Dealing <color=#ff8400><b>120%</b> PHY DMG</color> and slowing enemies by 50% for 1.5s. The bomb explodes for a short delay, dealing <color=#ff8400><b>60%</b> PHY DMG</color>",
-                "Call a bomb to fall from the sky to the target location, knocking up enemies for 0.5s when it lands. Dealing <color=#ff8400><b>200%</b> PHY DMG</color> and slowing enemies by 50% for 1.5s. The bomb explodes for a short delay, dealing <color=#ff8400><b>100%</b> PHY DMG</color>",
-                "Call a bomb to fall from the sky to the target location, knocking up enemies for 0.5s when it lands. Dealing <color=#ff8400><b>320%</b> PHY DMG</color> and slowing enemies by 50% for 1.5s. The bomb explodes for a short delay, dealing <color=#ff8400><b>160%</b> PHY DMG</color>"
-            ],
-            "rarity": 3,
-            "secondaryTrait": 116,
-            "isActive": true,
-            "skillName": "Bomb Assault",
-            "primaryTrait": 2
         },
         {
             "skillId": 10471,
@@ -581,6 +621,26 @@
             "primaryTrait": 4
         },
         {
+            "skillId": 10691,
+            "cooldowns": [
+                10,
+                10,
+                10,
+                10
+            ],
+            "descriptions": [
+                "Summons a wasp that charges at the enemy and explodes, which deals damage and a stun, and gives enemies 1 stack of poison",
+                "Summons a wasp that charges at the enemy and explodes, which deals damage and a stun, and gives enemies 1 stack of poison",
+                "Summons a wasp that charges at the enemy and explodes, which deals damage and a stun, and gives enemies 1 stack of poison",
+                "Summons a wasp that charges at the enemy and explodes, which deals damage and a stun, and gives enemies 1 stack of poison"
+            ],
+            "rarity": 3,
+            "secondaryTrait": 115,
+            "isActive": true,
+            "skillName": "Exploding Wasp",
+            "primaryTrait": 5
+        },
+        {
             "skillId": 10431,
             "cooldowns": [
                 5,
@@ -641,6 +701,26 @@
             "primaryTrait": 4
         },
         {
+            "skillId": 20141,
+            "cooldowns": [
+                3,
+                3,
+                3,
+                3
+            ],
+            "descriptions": [
+                "After a skill deals magic damage, 1 hit of Fanged Bite will be dealt to the enemy, up to once every 3s. Fanged Bite has a chance of giving the enemy 1 stack of poison.",
+                "After a skill deals magic damage, 1 hit of Fanged Bite will be dealt to the enemy, up to once every 3s. Fanged Bite has a chance of giving the enemy 1 stack of poison.",
+                "After a skill deals magic damage, 1 hit of Fanged Bite will be dealt to the enemy, up to once every 3s. Fanged Bite has a chance of giving the enemy 1 stack of poison.",
+                "After a skill deals magic damage, 1 hit of Fanged Bite will be dealt to the enemy, up to once every 3s. Fanged Bite has a chance of giving the enemy 1 stack of poison."
+            ],
+            "rarity": 3,
+            "secondaryTrait": 115,
+            "isActive": false,
+            "skillName": "Fanged Bite",
+            "primaryTrait": 6
+        },
+        {
             "skillId": 20021,
             "cooldowns": [
                 0.5,
@@ -697,7 +777,7 @@
             "rarity": 2,
             "secondaryTrait": 114,
             "isActive": true,
-            "skillName": "Flash Bomb",
+            "skillName": "Flicker Bomb",
             "primaryTrait": 2
         },
         {
@@ -801,6 +881,26 @@
             "primaryTrait": 5
         },
         {
+            "skillId": 10631,
+            "cooldowns": [
+                30,
+                30,
+                30,
+                30
+            ],
+            "descriptions": [
+                "Teleport to the target location and slash 4 time, dealing <color=#ff8400><b>60%</b> PHY DMG</color> each time, and draw a Light Hexagram circle. After the circle spelling is done, blast the ground to detonate the Circle, dealing <color=#ff8400><b>240%</b> PHY DMG</color>. The character is invulnerable during the casting.",
+                "Teleport to the target location and slash 4 time, dealing <color=#ff8400><b>90%</b> PHY DMG</color> each time, and draw a Light Hexagram circle. After the circle spelling is done, blast the ground to detonate the Circle, dealing <color=#ff8400><b>360%</b> PHY DMG</color>. The character is invulnerable during the casting.",
+                "Teleport to the target location and slash 4 time, dealing <color=#ff8400><b>150%</b> PHY DMG</color> each time, and draw a Light Hexagram circle. After the circle spelling is done, blast the ground to detonate the Circle, dealing <color=#ff8400><b>600%</b> PHY DMG</color>. The character is invulnerable during the casting.",
+                "Teleport to the target location and slash 4 time, dealing <color=#ff8400><b>200%</b> PHY DMG</color> each time, and draw a Light Hexagram circle. After the circle spelling is done, blast the ground to detonate the Circle, dealing <color=#ff8400><b>800%</b> PHY DMG</color>. The character is invulnerable during the casting."
+            ],
+            "rarity": 4,
+            "secondaryTrait": 114,
+            "isActive": true,
+            "skillName": "Hexagram Light",
+            "primaryTrait": 2
+        },
+        {
             "skillId": 20111,
             "cooldowns": [
                 8,
@@ -901,6 +1001,66 @@
             "primaryTrait": 2
         },
         {
+            "skillId": 20151,
+            "cooldowns": [
+                1,
+                1,
+                1,
+                1
+            ],
+            "descriptions": [
+                "Periodically casts an iron curtain around you, making you completely invincible and immune to all special states while it lasts, and deflecting back a mirror image of all enemy damage",
+                "Periodically casts an iron curtain around you, making you completely invincible and immune to all special states while it lasts, and deflecting back a mirror image of all enemy damage",
+                "Periodically casts an iron curtain around you, making you completely invincible and immune to all special states while it lasts, and deflecting back a mirror image of all enemy damage",
+                "Periodically casts an iron curtain around you, making you completely invincible and immune to all special states while it lasts, and deflecting back a mirror image of all enemy damage"
+            ],
+            "rarity": 3,
+            "secondaryTrait": 116,
+            "isActive": false,
+            "skillName": "Iron Curtain",
+            "primaryTrait": 3
+        },
+        {
+            "skillId": 10761,
+            "cooldowns": [
+                6,
+                6,
+                6,
+                6
+            ],
+            "descriptions": [
+                "Summons an iron hammer from underground, knocking enemies in the area airborne",
+                "Summons an iron hammer from underground, knocking enemies in the area airborne",
+                "Summons an iron hammer from underground, knocking enemies in the area airborne",
+                "Summons an iron hammer from underground, knocking enemies in the area airborne"
+            ],
+            "rarity": 2,
+            "secondaryTrait": 116,
+            "isActive": true,
+            "skillName": "Iron Hammer",
+            "primaryTrait": 6
+        },
+        {
+            "skillId": 10711,
+            "cooldowns": [
+                10,
+                10,
+                10,
+                10
+            ],
+            "descriptions": [
+                "Leap to a target location and slam your weapon down, knock up enemies for 1s, dealing <color=#ff8400><b>80%</b> PHY DMG</color>.",
+                "Leap to a target location and slam your weapon down, knock up enemies for 1s, dealing <color=#ff8400><b>120%</b> PHY DMG</color>.",
+                "Leap to a target location and slam your weapon down, knock up enemies for 1s, dealing <color=#ff8400><b>200%</b> PHY DMG</color>.",
+                "Leap to a target location and slam your weapon down, knock up enemies for 1s, dealing <color=#ff8400><b>320%</b> PHY DMG</color>."
+            ],
+            "rarity": 2,
+            "secondaryTrait": 116,
+            "isActive": true,
+            "skillName": "Jump Slash",
+            "primaryTrait": 1
+        },
+        {
             "skillId": 20251,
             "cooldowns": [
                 8,
@@ -919,6 +1079,26 @@
             "isActive": false,
             "skillName": "Kraken Shell",
             "primaryTrait": 3
+        },
+        {
+            "skillId": 10721,
+            "cooldowns": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "descriptions": [
+                "Throws a volley of kunai knives forward in a fan shape which root the enemy after hitting them",
+                "Throws a volley of kunai knives forward in a fan shape which root the enemy after hitting them",
+                "Throws a volley of kunai knives forward in a fan shape which root the enemy after hitting them",
+                "Throws a volley of kunai knives forward in a fan shape which root the enemy after hitting them"
+            ],
+            "rarity": 2,
+            "secondaryTrait": 116,
+            "isActive": true,
+            "skillName": "Kunai Mark",
+            "primaryTrait": 2
         },
         {
             "skillId": 10131,
@@ -941,26 +1121,6 @@
             "primaryTrait": 6
         },
         {
-            "skillId": 10711,
-            "cooldowns": [
-                10,
-                10,
-                10,
-                10
-            ],
-            "descriptions": [
-                "Leap to a target location and slam your weapon down, knock up enemies for 1s, dealing <color=#ff8400><b>80%</b> PHY DMG</color>.",
-                "Leap to a target location and slam your weapon down, knock up enemies for 1s, dealing <color=#ff8400><b>120%</b> PHY DMG</color>.",
-                "Leap to a target location and slam your weapon down, knock up enemies for 1s, dealing <color=#ff8400><b>200%</b> PHY DMG</color>.",
-                "Leap to a target location and slam your weapon down, knock up enemies for 1s, dealing <color=#ff8400><b>320%</b> PHY DMG</color>."
-            ],
-            "rarity": 2,
-            "secondaryTrait": 116,
-            "isActive": true,
-            "skillName": "Leap Blade",
-            "primaryTrait": 1
-        },
-        {
             "skillId": 10321,
             "cooldowns": [
                 15,
@@ -981,46 +1141,6 @@
             "primaryTrait": 1
         },
         {
-            "skillId": 20071,
-            "cooldowns": [
-                90,
-                90,
-                90,
-                90
-            ],
-            "descriptions": [
-                "Basic Attacks have a <b>10% chance</b> to fire a light energy ball to the target that was hit by Basic Attack within 5m. The light energy ball will bounce 8 times to nearby enemies, dealing <color=#ff8400><b>25%</b> PHY DMG</color> each time. When there are not any target to bounce, the light energy ball will release all remaining bounce count on the last target it hits, dealing <color=#ff8400><b>18%</b> PHY DMG</color> each time",
-                "Basic Attacks have a <b>10% chance</b> to fire a light energy ball to the target that was hit by Basic Attack within 5m. The light energy ball will bounce 8 times to nearby enemies, dealing <color=#ff8400><b>38%</b> PHY DMG</color> each time. When there are not any target to bounce, the light energy ball will release all remaining bounce count on the last target it hits, dealing <color=#ff8400><b>28%</b> PHY DMG</color> each time",
-                "Basic Attacks have a <b>10% chance</b> to fire a light energy ball to the target that was hit by Basic Attack within 5m. The light energy ball will bounce 8 times to nearby enemies, dealing <color=#ff8400><b>63%</b> PHY DMG</color> each time. When there are not any target to bounce, the light energy ball will release all remaining bounce count on the last target it hits, dealing <color=#ff8400><b>48%</b> PHY DMG</color> each time",
-                "Basic Attacks have a <b>10% chance</b> to fire a light energy ball to the target that was hit by Basic Attack within 5m. The light energy ball will bounce 8 times to nearby enemies, dealing <color=#ff8400><b>100%</b> PHY DMG</color> each time. When there are not any target to bounce, the light energy ball will release all remaining bounce count on the last target it hits, dealing <color=#ff8400><b>75%</b> PHY DMG</color> each time"
-            ],
-            "rarity": 5,
-            "secondaryTrait": 114,
-            "isActive": false,
-            "skillName": "Light Energy Bounce",
-            "primaryTrait": 1
-        },
-        {
-            "skillId": 10631,
-            "cooldowns": [
-                30,
-                30,
-                30,
-                30
-            ],
-            "descriptions": [
-                "Teleport to the target location and slash 4 time, dealing <color=#ff8400><b>60%</b> PHY DMG</color> each time, and draw a Light Hexagram circle. After the circle spelling is done, blast the ground to detonate the Circle, dealing <color=#ff8400><b>240%</b> PHY DMG</color>. The character is invulnerable during the casting.",
-                "Teleport to the target location and slash 4 time, dealing <color=#ff8400><b>90%</b> PHY DMG</color> each time, and draw a Light Hexagram circle. After the circle spelling is done, blast the ground to detonate the Circle, dealing <color=#ff8400><b>360%</b> PHY DMG</color>. The character is invulnerable during the casting.",
-                "Teleport to the target location and slash 4 time, dealing <color=#ff8400><b>150%</b> PHY DMG</color> each time, and draw a Light Hexagram circle. After the circle spelling is done, blast the ground to detonate the Circle, dealing <color=#ff8400><b>600%</b> PHY DMG</color>. The character is invulnerable during the casting.",
-                "Teleport to the target location and slash 4 time, dealing <color=#ff8400><b>200%</b> PHY DMG</color> each time, and draw a Light Hexagram circle. After the circle spelling is done, blast the ground to detonate the Circle, dealing <color=#ff8400><b>800%</b> PHY DMG</color>. The character is invulnerable during the casting."
-            ],
-            "rarity": 4,
-            "secondaryTrait": 114,
-            "isActive": true,
-            "skillName": "Light Hexagram",
-            "primaryTrait": 2
-        },
-        {
             "skillId": 10651,
             "cooldowns": [
                 30,
@@ -1037,7 +1157,7 @@
             "rarity": 3,
             "secondaryTrait": 114,
             "isActive": true,
-            "skillName": "Light Punishment",
+            "skillName": "Light of Punishment",
             "primaryTrait": 3
         },
         {
@@ -1141,6 +1261,26 @@
             "primaryTrait": 8
         },
         {
+            "skillId": 10671,
+            "cooldowns": [
+                25,
+                25,
+                25,
+                25
+            ],
+            "descriptions": [
+                "Casts a miasma over a specified area, dealing damage and 1 stack of poison every 1.5s to enemies. Lasts 7.5s.",
+                "Casts a miasma over a specified area, dealing damage and 1 stack of poison every 1.5s to enemies. Lasts 7.5s.",
+                "Casts a miasma over a specified area, dealing damage and 1 stack of poison every 1.5s to enemies. Lasts 7.5s.",
+                "Casts a miasma over a specified area, dealing damage and 1 stack of poison every 1.5s to enemies. Lasts 7.5s."
+            ],
+            "rarity": 3,
+            "secondaryTrait": 115,
+            "isActive": true,
+            "skillName": "Miasma",
+            "primaryTrait": 8
+        },
+        {
             "skillId": 10361,
             "cooldowns": [
                 30,
@@ -1199,6 +1339,26 @@
             "isActive": true,
             "skillName": "Phantom Sword",
             "primaryTrait": 1
+        },
+        {
+            "skillId": 10701,
+            "cooldowns": [
+                40,
+                40,
+                40,
+                40
+            ],
+            "descriptions": [
+                "Shoots a poison arrow forward. After hitting the enemy, it deals a fan-shaped blast wave and 1 stack of poison",
+                "Shoots a poison arrow forward. After hitting the enemy, it deals a fan-shaped blast wave and 1 stack of poison",
+                "Shoots a poison arrow forward. After hitting the enemy, it deals a fan-shaped blast wave and 1 stack of poison",
+                "Shoots a poison arrow forward. After hitting the enemy, it deals a fan-shaped blast wave and 1 stack of poison"
+            ],
+            "rarity": 2,
+            "secondaryTrait": 115,
+            "isActive": true,
+            "skillName": "Poison Arrow",
+            "primaryTrait": 4
         },
         {
             "skillId": 10201,
@@ -1461,6 +1621,26 @@
             "primaryTrait": 5
         },
         {
+            "skillId": 10771,
+            "cooldowns": [
+                15,
+                15,
+                15,
+                15
+            ],
+            "descriptions": [
+                "Shoots a shower of arrows forward. Arrows will remain in the ground, dealing damage and a massive slow down to enemies that go through them.",
+                "Shoots a shower of arrows forward. Arrows will remain in the ground, dealing damage and a massive slow down to enemies that go through them.",
+                "Shoots a shower of arrows forward. Arrows will remain in the ground, dealing damage and a massive slow down to enemies that go through them.",
+                "Shoots a shower of arrows forward. Arrows will remain in the ground, dealing damage and a massive slow down to enemies that go through them."
+            ],
+            "rarity": 2,
+            "secondaryTrait": 116,
+            "isActive": true,
+            "skillName": "Sky of Arrows",
+            "primaryTrait": 3
+        },
+        {
             "skillId": 10351,
             "cooldowns": [
                 10,
@@ -1499,26 +1679,6 @@
             "isActive": true,
             "skillName": "Starfall",
             "primaryTrait": 8
-        },
-        {
-            "skillId": 10761,
-            "cooldowns": [
-                6,
-                6,
-                6,
-                6
-            ],
-            "descriptions": [
-                "",
-                "",
-                "",
-                ""
-            ],
-            "rarity": 2,
-            "secondaryTrait": 116,
-            "isActive": true,
-            "skillName": "Steel Hammer",
-            "primaryTrait": 6
         },
         {
             "skillId": 20121,
@@ -1681,6 +1841,26 @@
             "primaryTrait": 4
         },
         {
+            "skillId": 10741,
+            "cooldowns": [
+                15,
+                15,
+                15,
+                15
+            ],
+            "descriptions": [
+                "Call a bomb to fall from the sky to the target location, knocking up enemies for 0.5s when it lands. Dealing <color=#ff8400><b>80%</b> PHY DMG</color> and slowing enemies by 50% for 1.5s. The bomb explodes for a short delay, dealing <color=#ff8400><b>40%</b> PHY DMG</color>",
+                "Call a bomb to fall from the sky to the target location, knocking up enemies for 0.5s when it lands. Dealing <color=#ff8400><b>120%</b> PHY DMG</color> and slowing enemies by 50% for 1.5s. The bomb explodes for a short delay, dealing <color=#ff8400><b>60%</b> PHY DMG</color>",
+                "Call a bomb to fall from the sky to the target location, knocking up enemies for 0.5s when it lands. Dealing <color=#ff8400><b>200%</b> PHY DMG</color> and slowing enemies by 50% for 1.5s. The bomb explodes for a short delay, dealing <color=#ff8400><b>100%</b> PHY DMG</color>",
+                "Call a bomb to fall from the sky to the target location, knocking up enemies for 0.5s when it lands. Dealing <color=#ff8400><b>320%</b> PHY DMG</color> and slowing enemies by 50% for 1.5s. The bomb explodes for a short delay, dealing <color=#ff8400><b>160%</b> PHY DMG</color>"
+            ],
+            "rarity": 3,
+            "secondaryTrait": 116,
+            "isActive": true,
+            "skillName": "Torpedo Attack",
+            "primaryTrait": 2
+        },
+        {
             "skillId": 10291,
             "cooldowns": [
                 30,
@@ -1719,6 +1899,26 @@
             "isActive": true,
             "skillName": "Tsunami",
             "primaryTrait": 8
+        },
+        {
+            "skillId": 10681,
+            "cooldowns": [
+                15,
+                15,
+                15,
+                15
+            ],
+            "descriptions": [
+                "Causes a burst of venom in a specified area, slowing down surrounding enemies. Guaranteed to give enemies 2 stacks of poison.",
+                "Causes a burst of venom in a specified area, slowing down surrounding enemies. Guaranteed to give enemies 2 stacks of poison.",
+                "Causes a burst of venom in a specified area, slowing down surrounding enemies. Guaranteed to give enemies 2 stacks of poison.",
+                "Causes a burst of venom in a specified area, slowing down surrounding enemies. Guaranteed to give enemies 2 stacks of poison."
+            ],
+            "rarity": 2,
+            "secondaryTrait": 115,
+            "isActive": true,
+            "skillName": "Venom Burst",
+            "primaryTrait": 7
         },
         {
             "skillId": 10491,

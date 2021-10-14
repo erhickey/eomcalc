@@ -11,8 +11,12 @@ Included in this project is a Haskell program which parses data from multiple ga
 
 ## Data JSON Generation Steps:
 
-1. Locate a file named main.###.com.nabooplanet.magicrystal.obb on the device you have Echoes of Magic installed on. On my device it is located at /Internal shared storage/Android/obb/com.nabooplanet.magicrystal/
-2. This file is a zip archive, extract its contents
+1. Locate a file named main.###.com.nabooplanet.magicrystal.obb on the device you have Echoes of Magic installed on. On my device it is located at /Internal shared storage/Android/obb/com.nabooplanet.magicrystal/. After connecting my phone to my computer and enabling file transer, I locate it with the following command from jmtpfs:
+
+        mtp-files | grep -A 4 -B 1 -i naboo
+2. This file is a zip archive, retrieve it, and extract its contents. I retrieve it with the following command (replace # with the File ID found in the first step):
+
+        mtp-getfile # eom.obb
 3. Navigate to assets/AssetBundles
 4. Use [UtinyRipper](https://github.com/mafaca/UtinyRipper) to extract assets from lua.unity3d. A Ripped directory will be created containing the extracted files
 5. Run generate-data with the location of the Ripped directory as the only argument
