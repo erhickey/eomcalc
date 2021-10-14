@@ -2,7 +2,7 @@
  * helper functions for creating image nodes
  */
 
-import { SKILL_IMAGES_DIR, TRAIT_IMAGES_DIR } from '@constants/resources';
+import { FALLBACK_IMAGE, SKILL_IMAGES_DIR, TRAIT_IMAGES_DIR } from '@constants/resources';
 import { Skill } from '@typez/skill';
 import { Trait } from '@typez/trait';
 import { addPathSeparator } from '@util/string';
@@ -30,6 +30,11 @@ export function createImageElement(imgDir?: string, imgName?: string): HTMLImage
   if (imgDir && imgName) {
     el.src = createImageSrc(imgDir, imgName);
   }
+
+  el.onerror = () => {
+    el.src = FALLBACK_IMAGE;
+    el.onerror = null;
+  };
 
   return el;
 }
