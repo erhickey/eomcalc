@@ -32,8 +32,9 @@ export function createImageElement(imgDir?: string, imgName?: string): HTMLImage
   }
 
   el.onerror = () => {
-    el.src = FALLBACK_IMAGE;
-    el.onerror = null;
+    if (el.src !== FALLBACK_IMAGE) {
+      el.src = FALLBACK_IMAGE;
+    }
   };
 
   return el;
