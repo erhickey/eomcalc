@@ -27,7 +27,7 @@ export class TraitComponent extends Component {
     this.classList.add('trait-inactive');
     this.appendChild(createTraitImage(this.trait));
     this.appendChild(this.description);
-    this.setDescription();
+    this.update();
 
     this.onclick = () => this.controller.onTraitClick(this.trait);
   }
