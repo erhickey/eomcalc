@@ -9,13 +9,18 @@ import { Skill } from '@typez/skill';
 export class SkillCardComponent extends Component {
   constructor(private skill: Skill, private controller: Controller, service: Service, private isBuildSkill = false) {
     super();
-    this.render();
+    this.render(service);
     this.initSubscriptions(service);
   }
 
-  private render(): void {
+  private render(service: Service): void {
     this.id = (this.isBuildSkill ? BUILD_SKILL_ID_PREFIX : SKILL_LIST_SKILL_ID_PREFIX) + this.skill.id;
     this.classList.add('skill-card', this.skill.rarity + '-card');
+
+    if (!this.isBuildSkill) {
+      this.updateChosen(service.build.some(s => s.id === this.skill.id));
+    }
+
     this.appendChild(this.createTitle());
     this.appendChild(this.createDetailButton());
     this.appendChild(createSkillImage(this.skill));
