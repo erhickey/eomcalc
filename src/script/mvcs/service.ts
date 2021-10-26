@@ -132,12 +132,32 @@ export class Service {
    */
   public addOrRemoveFilter(filtr: Filter): void {
     if (this.model.filters.some(f => f.key === filtr.key)) {
-      this.model.filters = this.model.filters.filter(f => f.key !== filtr.key);
+      this.removeFilter(filtr);
     } else {
-      this.model.filters.push(filtr);
+      this.addFilter(filtr);
     }
 
     this.updateFilters();
+  }
+
+  public replaceFilter(filtr: Filter): void {
+    this.removeFilter(filtr);
+    this.addFilter(filtr);
+    this.updateFilters();
+  }
+
+  /*
+   * does not trigger updates
+   */
+  private removeFilter(filtr: Filter): void {
+    this.model.filters = this.model.filters.filter(f => f.key !== filtr.key);
+  }
+
+  /*
+   * does not trigger updates
+   */
+  private addFilter(filtr: Filter): void {
+    this.model.filters.push(filtr);
   }
 
   public clearFilters(): void {

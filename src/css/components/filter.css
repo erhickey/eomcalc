@@ -6,11 +6,13 @@
 }
 
 .trait-filters {
+  max-width: 85%;
+  margin: 0 auto;
+  padding: 5px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-content: start;
-  padding: 5px;
 }
 
 .type-filters {
@@ -33,6 +35,21 @@
 @media (pointer: fine) {
   .clear-filter-button:hover {
     color: #ddd;
+  }
+}
+
+.text-filter {
+  float: right;
+  background: #585859;
+  border: 2px solid #303031;
+  border-radius: 5px;
+  width: min-content;
+  color: #e0e0e1;
+}
+
+@media (min-width: 768px) {
+  .text-filter {
+    width: 50%;
   }
 }
 

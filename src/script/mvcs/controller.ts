@@ -59,6 +59,10 @@ export class Controller {
     this.service.addOrRemoveFilter(filter);
   }
 
+  public onTextFilterChange(filter: Filter): void {
+    this.service.replaceFilter(filter);
+  }
+
   public onClearFiltersClick(): void {
     this.service.clearFilters();
   }

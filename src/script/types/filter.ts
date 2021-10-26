@@ -15,6 +15,16 @@ export abstract class Filter {
   }
 }
 
+export class FlexFilter extends Filter {
+  constructor(key: string, isInclusive: boolean, private _match: (skill: Skill) => boolean) {
+    super(key, isInclusive);
+  }
+
+  match(skill: Skill): boolean {
+    return this._match(skill);
+  }
+}
+
 export class SkillTypeFilter extends Filter {
   constructor(private _isActive: boolean) {
     super('skill-type-' + _isActive, false);

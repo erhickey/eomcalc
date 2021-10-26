@@ -251,6 +251,8 @@ rules:
     - error
     - ignoreArrayIndexes: true
       ignoreEnums: true
+      ignoreNumericLiteralTypes: true
+      ignoreReadonlyClassProperties: true
   '@typescript-eslint/no-shadow':
     - error
   '@typescript-eslint/explicit-function-return-type':

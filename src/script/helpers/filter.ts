@@ -5,10 +5,13 @@ export function applyFilters(filters: Filter[], skills: Skill[]): Skill[] {
   const inclusiveFilters = filters.filter(f => f.isInclusive);
   const exclusiveFilters = filters.filter(f => !f.isInclusive);
 
-  return applyFilterSubset(exclusiveFilters, applyFilterSubset(inclusiveFilters, skills));
+  return applyExclusiveFilters(exclusiveFilters, applyInclusiveFilters(inclusiveFilters, skills));
 }
 
-function applyFilterSubset(filters: Filter[], skills: Skill[]): Skill[] {
+/*
+ * apply inclusive filters, returns skills that match any of the given filters
+ */
+function applyInclusiveFilters(filters: Filter[], skills: Skill[]): Skill[] {
   if (!filters?.length) {
     return skills;
   }
@@ -22,4 +25,21 @@ function applyFilterSubset(filters: Filter[], skills: Skill[]): Skill[] {
 
     return false;
   });
+}
+
+/*
+ * apply exclusive filters, returns skills that match all of the given filters
+ */
+function applyExclusiveFilters(filters: Filter[], skills: Skill[]): Skill[] {
+  if (!filters?.length) {
+    return skills;
+  }
+
+  let toReturn = skills;
+
+  filters.forEach(f => {
+    toReturn = toReturn.filter(s => f.match(s));
+  });
+
+  return toReturn;
 }
