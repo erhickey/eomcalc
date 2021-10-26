@@ -1,5 +1,6 @@
 import { TraitComponent } from '@components/trait';
 import { Skill } from '@typez/skill';
+import { Trait } from '@typez/trait';
 import { TraitInfo } from '@typez/trait-info';
 import { buildComparator, compareBooleans, compareStringsCaseInsensitive } from '@util/compare';
 
@@ -35,13 +36,23 @@ function compareTraitsByCount(trait1: TraitInfo, trait2: TraitInfo): number {
 }
 
 function compareTraitsByType(trait1: TraitInfo, trait2: TraitInfo): number {
-  return compareBooleans(trait2.trait.isPrimary, trait1.trait.isPrimary);
+  return compareBaseTraitsByType(trait1.trait, trait2.trait);
 }
 
 function compareTraitsByName(trait1: TraitInfo, trait2: TraitInfo): number {
-  return compareStringsCaseInsensitive(trait1.trait.name, trait2.trait.name);
+  return compareBaseTraitsByName(trait1.trait, trait2.trait);
 }
 
 export function compareTraitComponents(tc1: TraitComponent, tc2: TraitComponent): number {
   return compareTraits(tc1.traitInfo, tc2.traitInfo);
+}
+
+export const compareBaseTraits = buildComparator([compareBaseTraitsByType, compareBaseTraitsByName]);
+
+function compareBaseTraitsByType(trait1: Trait, trait2: Trait): number {
+  return compareBooleans(trait2.isPrimary, trait1.isPrimary);
+}
+
+function compareBaseTraitsByName(trait1: Trait, trait2: Trait): number {
+  return compareStringsCaseInsensitive(trait1.name, trait2.name);
 }

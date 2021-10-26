@@ -1,6 +1,7 @@
 import { TRAITS } from '@api/eom';
 import { Component } from '@components/component';
 import { FILTERS_CONTAINER_ID } from '@constants/html';
+import { compareBaseTraits } from '@helpers/comparators';
 import { createTraitImage } from '@helpers/images';
 import { Controller } from '@mvcs/controller';
 import { Service } from '@mvcs/service';
@@ -19,7 +20,10 @@ export class FiltersComponent extends Component {
   constructor(private controller: Controller, service: Service) {
     super();
 
-    this.traitFilters = TRAITS.map(t => new TraitFilter(t)).map(tf => this.createTraitFilter(tf));
+    this.traitFilters = TRAITS.sort(compareBaseTraits)
+      .map(t => new TraitFilter(t))
+      .map(tf => this.createTraitFilter(tf));
+
     this.activeFilter = this.createTypeFilter(new SkillTypeFilter(true), '[Active Skills]');
     this.passiveFilter = this.createTypeFilter(new SkillTypeFilter(false), '[Passive Skills]');
     this.textFilter = this.createTextFilter();
