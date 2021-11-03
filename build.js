@@ -11,7 +11,7 @@ const onResolvePlugin = {
       return { path: args.path, external: true }
     })
   }
-}
+};
 
 const buildOptions = {
   entryPoints: [

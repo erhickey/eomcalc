@@ -2,6 +2,7 @@
 
 https://erhickey.github.io/eomcalc
 
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/erhickey/eomcalc.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/erhickey/eomcalc/alerts/) [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/erhickey/eomcalc.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/erhickey/eomcalc/context:javascript)
 
 ## About
 
