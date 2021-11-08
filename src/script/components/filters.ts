@@ -24,8 +24,10 @@ export class FiltersComponent extends Component {
       .map(t => new TraitFilter(t))
       .map(tf => this.createTraitFilter(tf));
 
-    this.activeFilter = this.createTypeFilter(new SkillTypeFilter(true), '[Active Skills]');
-    this.passiveFilter = this.createTypeFilter(new SkillTypeFilter(false), '[Passive Skills]');
+    const activeFiltr = new SkillTypeFilter(true);
+    const passiveFiltr = new SkillTypeFilter(false);
+    this.activeFilter = this.createTypeFilter(activeFiltr, passiveFiltr, '[Active Skills]');
+    this.passiveFilter = this.createTypeFilter(passiveFiltr, activeFiltr, '[Passive Skills]');
     this.textFilter = this.createTextFilter();
 
     this.render();
@@ -103,12 +105,12 @@ export class FiltersComponent extends Component {
     return el;
   }
 
-  private createTypeFilter(filter: SkillTypeFilter, text: string): HTMLDivElement {
+  private createTypeFilter(filter: SkillTypeFilter, oppositeFilter: SkillTypeFilter, text: string): HTMLDivElement {
     const el = document.createElement('div');
     el.id = filter.key;
     el.classList.add('type-filter');
     el.innerHTML = text;
-    el.onclick = () => this.controller.onFilterClick(filter);
+    el.onclick = () => this.controller.onFilterClick(filter, oppositeFilter);
     return el;
   }
 

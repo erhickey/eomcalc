@@ -146,6 +146,11 @@ export class Service {
     this.updateFilters();
   }
 
+  public addAndRemoveFilter(toAdd: Filter, toRemove: Filter): void {
+    this.removeFilter(toRemove);
+    this.addOrRemoveFilter(toAdd);
+  }
+
   /*
    * does not trigger updates
    */

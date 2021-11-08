@@ -55,8 +55,12 @@ export class Controller {
     this.service.hideTraitDetail();
   }
 
-  public onFilterClick(filter: Filter): void {
-    this.service.addOrRemoveFilter(filter);
+  public onFilterClick(filter: Filter, toRemove?: Filter): void {
+    if (toRemove) {
+      this.service.addAndRemoveFilter(filter, toRemove);
+    } else {
+      this.service.addOrRemoveFilter(filter);
+    }
   }
 
   public onTextFilterChange(filter: Filter): void {
