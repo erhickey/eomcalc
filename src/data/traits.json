@@ -160,8 +160,8 @@
                 4
             ],
             "traitMods": [
-                "30% to Slowed, 75% to Frozen",
-                "60% to Slowed, 150% to Frozen"
+                "10% to Slowed, 90% to Frozen",
+                "30% to Slowed, 180% to Frozen"
             ],
             "traitName": "Thunder",
             "traitId": 104

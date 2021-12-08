@@ -19,8 +19,12 @@ The Haskell program parses data from multiple game files, aggregates the data, a
 
         mtp-getfile # eom.obb
 3. Navigate to assets/AssetBundles
-4. Use [UtinyRipper](https://github.com/mafaca/UtinyRipper) to extract assets from lua.unity3d. A Ripped directory will be created containing the extracted files
-5. Run generate-data with the location of the Ripped directory as the only argument
+4. Use [AssetRipper](https://github.com/ds5678/AssetRipper) to extract assets from lua.unity3d:
+
+        AssetRipperConsole -o ripped -q lua.unity3d
+5. Run generate-data with the location of the ripped directory as the only argument:
+
+        cabal new-run generate-data -- <dir>/assets/AssetBundles/ripped
 
 On successful completion, json files will be generated in src/data
 

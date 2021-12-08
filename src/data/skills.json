@@ -84,19 +84,19 @@
             "isActive": true,
             "rarity": 4,
             "cooldowns": [
-                10,
-                10,
-                10,
-                10
+                20,
+                20,
+                20,
+                20
             ],
             "primaryTrait": 5,
             "secondaryTrait": 116,
             "skillName": "Armored Beast",
             "descriptions": [
-                "The Armored Beast is invincible, but cannot make basic attacks. It normally hides underground, and when a skill is cast, it will come out, knocking nearby enemies airborne and dealing damage before returning back underground to wait out the CD",
-                "The Armored Beast is invincible, but cannot make basic attacks. It normally hides underground, and when a skill is cast, it will come out, knocking nearby enemies airborne and dealing damage before returning back underground to wait out the CD",
-                "The Armored Beast is invincible, but cannot make basic attacks. It normally hides underground, and when a skill is cast, it will come out, knocking nearby enemies airborne and dealing damage before returning back underground to wait out the CD",
-                "The Armored Beast is invincible, but cannot make basic attacks. It normally hides underground, and when a skill is cast, it will come out, knocking nearby enemies airborne and dealing damage before returning back underground to wait out the CD"
+                "Steel Beast will not use Basic ATK against enemies, but it will burrows into the ground to gainhigh MOV SPD and trackenemies. While coming out of the ground, deals <color=#ff8400><b>74%</b> ATK DMG</color> and knocks up nearby enemies for 1s. Steel Beast inherits <color=#36ec3e><b>20%</b> HP</color>, <color=#ff8400><b>50%</b> ATK</color> and <color=#34d1fe><b>50%</b> AP</color> from your character, lasting <b>20s</b>.",
+                "Steel Beast will not use Basic ATK against enemies, but it will burrows into the ground to gainhigh MOV SPD and trackenemies. While coming out of the ground, deals <color=#ff8400><b>133%</b> ATK DMG</color> and knocks up nearby enemies for 1s. Steel Beast inherits <color=#36ec3e><b>20%</b> HP</color>, <color=#ff8400><b>50%</b> ATK</color> and <color=#34d1fe><b>50%</b> AP</color> from your character, lasting <b>20s</b>.",
+                "Steel Beast will not use Basic ATK against enemies, but it will burrows into the ground to gainhigh MOV SPD and trackenemies. While coming out of the ground, deals <color=#ff8400><b>187%</b> ATK DMG</color> and knocks up nearby enemies for 1s. Steel Beast inherits <color=#36ec3e><b>20%</b> HP</color>, <color=#ff8400><b>50%</b> ATK</color> and <color=#34d1fe><b>50%</b> AP</color> from your character, lasting <b>20s</b>.",
+                "Steel Beast will not use Basic ATK against enemies, but it will burrows into the ground to gainhigh MOV SPD and trackenemies. While coming out of the ground, deals <color=#ff8400><b>300%</b> ATK DMG</color> and knocks up nearby enemies for 1s. Steel Beast inherits <color=#36ec3e><b>20%</b> HP</color>, <color=#ff8400><b>50%</b> ATK</color> and <color=#34d1fe><b>50%</b> AP</color> from your character, lasting <b>20s</b>."
             ],
             "skillId": 10751
         },
@@ -613,10 +613,10 @@
             "secondaryTrait": 108,
             "skillName": "Escape Plan",
             "descriptions": [
-                "Dash in a direction, leaving behind <b>1</b> clone that will attack enemies for <b>3</b>s.Clone receives <b>900%</b> more damage from enemies and explodes <color=#34d1fe>MAG DMG that equals to <b>15%</b></color> of sum of your <color=#ff8400>ATK</color> and <color=#34d1fe>AP</color> when <b>being dead</b>.",
-                "Dash in a direction, leaving behind <b>2</b> clone that will attack enemies for <b>3</b>s.Clone receives <b>750%</b> more damage from enemies and explodes explodes <color=#34d1fe>MAG DMG that equals to <b>15%</b></color> of sum of your <color=#ff8400>ATK</color> and <color=#34d1fe>AP</color> when <b>being dead</b>.",
-                "Dash in a direction, leaving behind <b>3</b> clone that will attack enemies for <b>3</b>s.Clone receives <b>500%</b> more damage from enemies and explodes explodes <color=#34d1fe>MAG DMG that equals to <b>15%</b></color> of sum of your <color=#ff8400>ATK</color> and <color=#34d1fe>AP</color> when <b>being dead</b>.",
-                "Dash in a direction, leaving behind <b>4</b> clone that will attack enemies for <b>3</b>s.Clone receives <b>200%</b> more damage from enemies and explodes explodes <color=#34d1fe>MAG DMG that equals to <b>15%</b></color> of sum of your <color=#ff8400>ATK</color> and <color=#34d1fe>AP</color> when <b>being dead</b>."
+                "Dash in a direction, leaving behind <b>1</b> clone that will attack enemies for <b>3</b>s.Clone inherits <b>10%</b> of characters MAX HP and explodes <color=#34d1fe>MAG DMG that equals to <b>15%</b></color> of sum of your <color=#ff8400>ATK</color> and <color=#34d1fe>AP</color> when <b>being dead</b>.",
+                "Dash in a direction, leaving behind <b>2</b> clone that will attack enemies for <b>3</b>s.Clone inherits <b>12%</b> of characters MAX HP and explodes explodes <color=#34d1fe>MAG DMG that equals to <b>15%</b></color> of sum of your <color=#ff8400>ATK</color> and <color=#34d1fe>AP</color> when <b>being dead</b>.",
+                "Dash in a direction, leaving behind <b>3</b> clone that will attack enemies for <b>3</b>s.Clone inherits <b>17%</b> of characters MAX HP and explodes explodes <color=#34d1fe>MAG DMG that equals to <b>15%</b></color> of sum of your <color=#ff8400>ATK</color> and <color=#34d1fe>AP</color> when <b>being dead</b>.",
+                "Dash in a direction, leaving behind <b>4</b> clone that will attack enemies for <b>3</b>s.Clone inherits <b>33%</b> of characters MAX HP and explodes explodes <color=#34d1fe>MAG DMG that equals to <b>15%</b></color> of sum of your <color=#ff8400>ATK</color> and <color=#34d1fe>AP</color> when <b>being dead</b>."
             ],
             "skillId": 10451
         },
@@ -673,10 +673,10 @@
             "secondaryTrait": 109,
             "skillName": "Faerie Dragon",
             "descriptions": [
-                "Summon a Faerie Dragon which <color=#36ec3e><b>heals allies</b></color> attacking using ranged magic bolts,inheriting <color=#36ec3e><b>15%</b> HP</color>, <color=#ff8400><b>10%</b> ATK</color> and <color=#34d1fe><b>10%</b> AP</color> from your character, lasting <b>20s</b>.\\nWhen <b>Faerie Dragon dies</b>, it leaves a magic <color=#36ec3e>healing orb that restores HP</color> that equals to <color=#36ec3e><b>4% max HP</b></color> of the character who touches it.",
-                "Summon a Faerie Dragon which <color=#36ec3e><b>heals allies</b></color> attacking using ranged magic bolts,inheriting <color=#36ec3e><b>20%</b> HP</color>, <color=#ff8400><b>15%</b> ATK</color> and <color=#34d1fe><b>15%</b> AP</color> from your character, lasting <b>20s</b>.\\nWhen <b>Faerie Dragon dies</b>, it leaves a magic <color=#36ec3e>healing orb that restores HP</color> that equals to <color=#36ec3e><b>5.6% max HP</b></color> of the character who touches it.",
-                "Summon a Faerie Dragon which <color=#36ec3e><b>heals allies</b></color> attacking using ranged magic bolts,inheriting <color=#36ec3e><b>25%</b> HP</color>, <color=#ff8400><b>25%</b> ATK</color> and <color=#34d1fe><b>25%</b> AP</color> from your character, lasting <b>20s</b>.\\nWhen <b>Faerie Dragon dies</b>, it leaves a magic <color=#36ec3e>healing orb that restores HP</color> that equals to <color=#36ec3e><b>8.8% max HP</b></color> of the character who touches it.",
-                "Summon a Faerie Dragon which <color=#36ec3e><b>heals allies</b></color> attacking using ranged magic bolts,inheriting <color=#36ec3e><b>30%</b> HP</color>, <color=#ff8400><b>35%</b> ATK</color> and <color=#34d1fe><b>35%</b> AP</color> from your character, lasting <b>20s</b>.\\nWhen <b>Faerie Dragon dies</b>, it leaves a magic <color=#36ec3e>healing orb that restores HP</color> that equals to <color=#36ec3e><b>12.8% max HP</b></color> of the character who touches it."
+                "Summon a Faerie Dragon which <color=#36ec3e><b>heals ally</b></color> that equals to <color=#36ec3e><b>3.2% max HP</b></color> of the character every 12s and attack enemies using ranged magic bolts,inheriting <color=#36ec3e><b>15%</b> HP</color>, <color=#ff8400><b>10%</b> ATK</color> and <color=#34d1fe><b>10%</b> AP</color> from your character, lasting <b>20s</b>.\\nWhen <b>Faerie Dragon dies</b>, it leaves a magic <color=#36ec3e>healing orb that restores HP</color> that equals to <color=#36ec3e><b>4% max HP</b></color> of the character who touches it.",
+                "Summon a Faerie Dragon which <color=#36ec3e><b>heals ally</b></color> that equals to <color=#36ec3e><b>4% max HP</b></color> of the character every 12s and attack enemies using ranged magic bolts,inheriting <color=#36ec3e><b>20%</b> HP</color>, <color=#ff8400><b>15%</b> ATK</color> and <color=#34d1fe><b>15%</b> AP</color> from your character, lasting <b>20s</b>.\\nWhen <b>Faerie Dragon dies</b>, it leaves a magic <color=#36ec3e>healing orb that restores HP</color> that equals to <color=#36ec3e><b>5.6% max HP</b></color> of the character who touches it.",
+                "Summon a Faerie Dragon which <color=#36ec3e><b>heals ally</b></color> that equals to <color=#36ec3e><b>6% max HP</b></color> of the character every 12s and attack enemies using ranged magic bolts,inheriting <color=#36ec3e><b>25%</b> HP</color>, <color=#ff8400><b>25%</b> ATK</color> and <color=#34d1fe><b>25%</b> AP</color> from your character, lasting <b>20s</b>.\\nWhen <b>Faerie Dragon dies</b>, it leaves a magic <color=#36ec3e>healing orb that restores HP</color> that equals to <color=#36ec3e><b>8.8% max HP</b></color> of the character who touches it.",
+                "Summon a Faerie Dragon which <color=#36ec3e><b>heals ally</b></color>  that equals to <color=#36ec3e><b>8.8% max HP</b></color> of the character every 12s and attack enemies using ranged magic bolts,inheriting <color=#36ec3e><b>30%</b> HP</color>, <color=#ff8400><b>35%</b> ATK</color> and <color=#34d1fe><b>35%</b> AP</color> from your character, lasting <b>20s</b>.\\nWhen <b>Faerie Dragon dies</b>, it leaves a magic <color=#36ec3e>healing orb that restores HP</color> that equals to <color=#36ec3e><b>12.8% max HP</b></color> of the character who touches it."
             ],
             "skillId": 10541
         },
@@ -1002,21 +1002,21 @@
         },
         {
             "isActive": false,
-            "rarity": 3,
+            "rarity": 4,
             "cooldowns": [
-                1,
-                1,
-                1,
-                1
+                20,
+                20,
+                20,
+                20
             ],
             "primaryTrait": 3,
             "secondaryTrait": 116,
             "skillName": "Iron Curtain",
             "descriptions": [
-                "Periodically casts an iron curtain around you, making you completely invincible and immune to all special states while it lasts, and deflecting back a mirror image of all enemy damage",
-                "Periodically casts an iron curtain around you, making you completely invincible and immune to all special states while it lasts, and deflecting back a mirror image of all enemy damage",
-                "Periodically casts an iron curtain around you, making you completely invincible and immune to all special states while it lasts, and deflecting back a mirror image of all enemy damage",
-                "Periodically casts an iron curtain around you, making you completely invincible and immune to all special states while it lasts, and deflecting back a mirror image of all enemy damage"
+                "When <b>attacked</b>, there's a <b>20% chance</b> of summoning the iron curtain, lasting <b>3s</b>, units deal damage to you during the duration will <color=#a57963>take a share of the same damage and effect</color>. <b>20s CD</b>.",
+                "When <b>attacked</b>, there's a <b>20% chance</b> of summoning the iron curtain, lasting <b>4.5s</b>, units deal damage to you during the duration will <color=#a57963>take a share of the same damage and effect</color>. <b>20s CD</b>.",
+                "When <b>attacked</b>, there's a <b>30% chance</b> of summoning the iron curtain, lasting <b>5s</b>, units deal damage to you during the duration will <color=#a57963>take a share of the same damage and effect</color>. <b>20s CD</b>.",
+                "When <b>attacked</b>, there's a <b>40% chance</b> of summoning the iron curtain, lasting <b>6s</b>, units deal damage to you during the duration will <color=#a57963>take a share of the same damage and effect</color>. <b>20s CD</b>."
             ],
             "skillId": 20151
         },
@@ -1629,14 +1629,14 @@
                 15,
                 15
             ],
-            "primaryTrait": 3,
+            "primaryTrait": 4,
             "secondaryTrait": 116,
             "skillName": "Sky of Arrows",
             "descriptions": [
-                "Shoots a shower of arrows forward. Arrows will remain in the ground, dealing damage and a massive slow down to enemies that go through them.",
-                "Shoots a shower of arrows forward. Arrows will remain in the ground, dealing damage and a massive slow down to enemies that go through them.",
-                "Shoots a shower of arrows forward. Arrows will remain in the ground, dealing damage and a massive slow down to enemies that go through them.",
-                "Shoots a shower of arrows forward. Arrows will remain in the ground, dealing damage and a massive slow down to enemies that go through them."
+                "Suppress target area with a flurry of arrows, dealing 3waves of <color=#ff8400>PHY DMG that equals to <b>11%</b></color> of sum of your <color=#ff8400>ATK</color> and <color=#34d1fe>AP</color>to enemies.Arrowswill remain on theground for 5s and<color=#a57963>slow enemies pass through for <b>50%</b></color>.",
+                "Suppress target area with a flurry of arrows, dealing 3waves of <color=#ff8400>PHY DMG that equals to <b>16%</b></color> of sum of your <color=#ff8400>ATK</color> and <color=#34d1fe>AP</color>to enemies.Arrowswill remain on theground for 5s and<color=#a57963>slow enemies pass through for <b>50%</b></color>.",
+                "Suppress target area with a flurry of arrows, dealing 3waves of <color=#ff8400>PHY DMG that equals to <b>26%</b></color> of sum of your <color=#ff8400>ATK</color> and <color=#34d1fe>AP</color>to enemies.Arrowswill remain on theground for 5s and<color=#a57963>slow enemies pass through for <b>50%</b></color>.",
+                "Suppress target area with a flurry of arrows, dealing 3waves of <color=#ff8400>PHY DMG that equals to <b>42%</b></color> of sum of your <color=#ff8400>ATK</color> and <color=#34d1fe>AP</color>to enemies.Arrowswill remain on theground for 5s and<color=#a57963>slow enemies pass through for <b>50%</b></color>."
             ],
             "skillId": 10771
         },
@@ -1731,12 +1731,12 @@
             ],
             "primaryTrait": 2,
             "secondaryTrait": 113,
-            "skillName": "Super Strike",
+            "skillName": "Super Shockwave",
             "descriptions": [
-                "Gives your next Basic Attack strike a fan-shaped splash dmg effect, dealing <color=#ff8400><b>100%</b> PHY DMG</color>.",
-                "Gives your next Basic Attack strike a fan-shaped splash dmg effect, dealing <color=#ff8400><b>150%</b> PHY DMG</color>.",
-                "Gives your next Basic Attack strike a fan-shaped splash dmg effect, dealing <color=#ff8400><b>250%</b> PHY DMG</color>.",
-                "Gives your next Basic Attack strike a fan-shaped splash dmg effect, dealing <color=#ff8400><b>400%</b> PHY DMG</color>."
+                "Use the overload powerto release aBlast Shockwave forward that knocks yourself back 2m, dealing<color=#ff8400><b>100%</b> PHY DMG</color>.",
+                "Use the overload powerto release aBlast Shockwave forward that knocks yourself back 2m, dealing<color=#ff8400><b>150%</b> PHY DMG</color>.",
+                "Use the overload powerto release aBlast Shockwave forward that knocks yourself back 2m, dealing<color=#ff8400><b>250%</b> PHY DMG</color>.",
+                "Use the overload powerto release aBlast Shockwave forward that knocks yourself back 2m, dealing<color=#ff8400><b>400%</b> PHY DMG</color>."
             ],
             "skillId": 10301
         },
@@ -1775,8 +1775,8 @@
             "descriptions": [
                 "Dash forward to strike, dealing <color=#ff8400><b>40%</b> PHY DMG</color> to all targets you pass through. <color=#ff543f>If any target dies to Sweeping Blade, its cooldown refreshes</color>.",
                 "Dash forward to strike, dealing <color=#ff8400><b>60%</b> PHY DMG</color> to all targets you pass through. <color=#ff543f>If any target dies to Sweeping Blade, its cooldown refreshes</color>.",
-                "Dash forward to strike, dealing <color=#ff8400><b>60%</b> PHY DMG</color> to all targets you pass through. <color=#ff543f>If any target dies to Sweeping Blade, its cooldown refreshes</color>. <color=#e465ff>You can activate twice before cooldown</color>.",
-                "Dash forward to strike, dealing <color=#ff8400><b>95%</b> PHY DMG</color> to all targets you pass through. <color=#ff543f>If any target dies to Sweeping Blade, its cooldown refreshes</color>. <color=#e465ff>You can activate twice before cooldown</color>."
+                "Dash forward to strike, dealing <color=#ff8400><b>60%</b> PHY DMG</color> to all targets you pass through. <color=#ff543f>If any target dies to Sweeping Blade, its cooldown refreshes</color>. <color=#e465ff>You can activate twice within 5s after casting</color>.",
+                "Dash forward to strike, dealing <color=#ff8400><b>95%</b> PHY DMG</color> to all targets you pass through. <color=#ff543f>If any target dies to Sweeping Blade, its cooldown refreshes</color>. <color=#e465ff>You can activate twice within 5s after casting</color>."
             ],
             "skillId": 10241
         },

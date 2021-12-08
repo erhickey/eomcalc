@@ -15,15 +15,15 @@ import EomJson.Json.Trait (Traits(..))
 
 -- relative path of english skill and traits description file
 descriptionsFile :: String
-descriptionsFile = "/lua.unity3d/Assets/AssetBundles/lua.unity3d/temp/lua/config/language/en_us.lua.bytes"
+descriptionsFile = "/Assets/Asset_Bundles/lua.unity3d/temp/lua/config/language/en_us.lua.txt"
 
 -- relative path of skill details file
 skillDetailsFile :: String
-skillDetailsFile = "/lua.unity3d/Assets/AssetBundles/lua.unity3d/temp/lua/config/SkillConfig.lua.bytes"
+skillDetailsFile = "/Assets/Asset_Bundles/lua.unity3d/temp/lua/config/SkillConfig.lua.txt"
 
 -- relative path of trait detailsfile
 traitDetailsFile :: String
-traitDetailsFile = "/lua.unity3d/Assets/AssetBundles/lua.unity3d/temp/lua/config/SkillTraitConfig.lua.bytes"
+traitDetailsFile = "/Assets/Asset_Bundles/lua.unity3d/temp/lua/config/SkillTraitConfig.lua.txt"
 
 -- data to write out to rarities.json
 raritiesJson :: String
