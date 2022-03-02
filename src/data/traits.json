@@ -1,315 +1,315 @@
 {
     "traits": [
         {
-            "traitDescription": "Equip a certain number of Warrior skills to increase PHYS DEF and Basic Atk Dmg, also gives basic attacks fan-shaped splash dmg effect",
             "traitBreakpoints": [
                 2,
                 4,
                 6
             ],
+            "traitDescription": "Equip a certain number of Warrior skills to increase PHYS DEF and Basic Atk Dmg, also gives basic attacks fan-shaped splash dmg effect",
+            "traitId": 1,
             "traitMods": [
                 "100% Basic Atk Dmg boost",
                 "200% Basic Atk Dmg boost",
                 "400% Basic Atk Dmg boost"
             ],
-            "traitName": "Warrior",
-            "traitId": 1
+            "traitName": "Warrior"
         },
         {
-            "traitDescription": "Equip a certain number of Assassin skills to raise Crit Rate and Crit Dmg",
             "traitBreakpoints": [
                 2,
                 4,
                 6
             ],
+            "traitDescription": "Equip a certain number of Assassin skills to raise Crit Rate and Crit Dmg",
+            "traitId": 2,
             "traitMods": [
                 "Crit Rate +15%, Crit Dmg +45%",
                 "Crit Rate +20%, Crit Dmg +90%",
                 "Crit Rate +35%, Crit Dmg +120%"
             ],
-            "traitName": "Assassin",
-            "traitId": 2
+            "traitName": "Assassin"
         },
         {
-            "traitDescription": "Equip a certain number of Guardian skills to rebound all kinds of damage received back at surrounding enemies",
             "traitBreakpoints": [
                 2,
                 4,
                 6
             ],
+            "traitDescription": "Equip a certain number of Guardian skills to rebound all kinds of damage received back at surrounding enemies",
+            "traitId": 3,
             "traitMods": [
                 "Rebound 120% of Dmg Received(Rebound 10% in PVP)",
                 "Rebound 240% of Dmg Received(Rebound 20% in PVP)",
                 "Rebound 480% of Dmg Received(Rebound 30% in PVP)"
             ],
-            "traitName": "Guardian",
-            "traitId": 3
+            "traitName": "Guardian"
         },
         {
-            "traitDescription": "Equip a certain number of Ranger skills to give Basic Atk 30% chance or active skills 100% chance to fire tracking arrows.",
             "traitBreakpoints": [
                 3,
                 6,
                 9
             ],
+            "traitDescription": "Equip a certain number of Ranger skills to give Basic Atk 30% chance or active skills 100% chance to fire tracking arrows.",
+            "traitId": 4,
             "traitMods": [
                 "3 tracking arrows",
                 "6 tracking arrows",
                 "12 tracking arrows"
             ],
-            "traitName": "Ranger",
-            "traitId": 4
+            "traitName": "Ranger"
         },
         {
-            "traitDescription": "Equip a certain number of Summon skills to enhance stats for all summoned creatures and extend their duration 5s",
             "traitBreakpoints": [
                 3,
                 6
             ],
+            "traitDescription": "Equip a certain number of Summon skills to enhance stats for all summoned creatures and extend their duration 5s",
+            "traitId": 5,
             "traitMods": [
                 "Inherit Bonus 15% HP, 20% ATK, 20% AP from character",
                 " Inherit Bonus 30% HP, 40% ATK, 40% AP from character"
             ],
-            "traitName": "Summon",
-            "traitId": 5
+            "traitName": "Summon"
         },
         {
-            "traitDescription": "Equip a certain number of Mage skills to boost MAG DMG of next active skill within 10s after casting any active skill",
             "traitBreakpoints": [
                 2,
                 4,
                 6
             ],
+            "traitDescription": "Equip a certain number of Mage skills to boost MAG DMG of next active skill within 10s after casting any active skill",
+            "traitId": 6,
             "traitMods": [
                 "22% AP boost",
                 "45% AP boost",
                 "90% AP boost"
             ],
-            "traitName": "Mage",
-            "traitId": 6
+            "traitName": "Mage"
         },
         {
-            "traitDescription": "Equip a certain number of Shaman skills for a chance of instantly resetting the CD of each active skill cast",
             "traitBreakpoints": [
                 3,
                 6
             ],
+            "traitDescription": "Equip a certain number of Shaman skills for a chance of instantly resetting the CD of each active skill cast",
+            "traitId": 7,
             "traitMods": [
                 "20% Chance",
                 "40% Chance"
             ],
-            "traitName": "Shaman",
-            "traitId": 7
+            "traitName": "Shaman"
         },
         {
-            "traitDescription": "Equip a certain number of Seer skills to reduce CD for all active skills",
             "traitBreakpoints": [
                 2,
                 4
             ],
+            "traitDescription": "Equip a certain number of Seer skills to reduce CD for all active skills",
+            "traitId": 8,
             "traitMods": [
                 "Reduce CD 15%",
                 "Reduce CD 30%"
             ],
-            "traitName": "Seer",
-            "traitId": 8
+            "traitName": "Seer"
         },
         {
-            "traitDescription": "Equip a certain number of Flame skills to gain decaying Flame Energy after casting skills, up to 20. Become in a Fever when Flame Energy reaches 50%, boost DMG dealt. Become Overheated when Flame Energy reaches 100%, boost MOV SPD and ATK SPD but you are unable to cast skills for a few second.",
             "traitBreakpoints": [
                 2,
                 4
             ],
+            "traitDescription": "Equip a certain number of Flame skills to gain decaying Flame Energy after casting skills, up to 20. Become in a Fever when Flame Energy reaches 50%, boost DMG dealt. Become Overheated when Flame Energy reaches 100%, boost MOV SPD and ATK SPD but you are unable to cast skills for a few second.",
+            "traitId": 101,
             "traitMods": [
                 "Boost 20% DMG when being in a Fever, Boost 30% MOV SPD and 80% ATK SPD when being Overheated for 2s",
                 "Boost 100% DMG when being Fever, Boost 100% MOV SPD and 200% ATK SPD when being Overheated for 5s"
             ],
-            "traitName": "Flame",
-            "traitId": 101
+            "traitName": "Flame"
         },
         {
-            "traitDescription": "Equip a certain number of Frost skills for a chance to Freeze a target upon dealing damage with any skill, Freeze will deal bonus damage to the target",
             "traitBreakpoints": [
                 2,
                 4
             ],
+            "traitDescription": "Equip a certain number of Frost skills for a chance to Freeze a target upon dealing damage with any skill, Freeze will deal bonus damage to the target",
+            "traitId": 102,
             "traitMods": [
                 "5% Chance, Freeze 1s, 20% bonus MAG DMG",
                 "7% Chance, Freeze 2s, 30% bonus MAG DMG"
             ],
-            "traitName": "Frost",
-            "traitId": 102
+            "traitName": "Frost"
         },
         {
-            "traitDescription": "Equip a certain number of Arcane skills for a chance that the next active skill will be critical hit within 10s after casting any active skill",
             "traitBreakpoints": [
                 2,
                 4
             ],
+            "traitDescription": "Equip a certain number of Arcane skills for a chance that the next active skill will be critical hit within 10s after casting any active skill",
+            "traitId": 103,
             "traitMods": [
                 "20% Chance",
                 "45% Chance"
             ],
-            "traitName": "Arcane",
-            "traitId": 103
+            "traitName": "Arcane"
         },
         {
-            "traitDescription": "Equip a certain number of Thunder skills to increase damage dealt to Slowed and Frozen enemies",
             "traitBreakpoints": [
                 2,
                 4
             ],
+            "traitDescription": "Equip a certain number of Thunder skills to increase MAG DAM ratio dealt by skills to SlowedStun and Frozen enemies",
+            "traitId": 104,
             "traitMods": [
-                "10% to Slowed, 90% to Frozen",
-                "30% to Slowed, 180% to Frozen"
+                "20% to Slowed, 60% to Stun, 100% to Frozen",
+                "40% to Slowed, 120% to Stun, 200% to Frozen"
             ],
-            "traitName": "Thunder",
-            "traitId": 104
+            "traitName": "Thunder"
         },
         {
-            "traitDescription": "Equip a certain number of Dark skills for a chance to trigger a Lifesteal upon dealing damage",
             "traitBreakpoints": [
                 3
             ],
+            "traitDescription": "Equip a certain number of Dark skills for a chance to trigger a Lifesteal upon dealing damage",
+            "traitId": 105,
             "traitMods": [
                 "10% Chance, 7% Lifesteal"
             ],
-            "traitName": "Dark",
-            "traitId": 105
+            "traitName": "Dark"
         },
         {
-            "traitDescription": "Equip a certain number of Ocean skills for a chance to get a 10s Shield (based on percentage of max HP) after each active skill cast",
             "traitBreakpoints": [
                 2,
                 4
             ],
+            "traitDescription": "Equip a certain number of Ocean skills for a chance to get a 10s Shield (based on percentage of max HP) after each active skill cast",
+            "traitId": 107,
             "traitMods": [
                 "10% Chance, Shield 8% of max HP",
                 "10% Chance, Shield 16% of max HP"
             ],
-            "traitName": "Ocean",
-            "traitId": 107
+            "traitName": "Ocean"
         },
         {
-            "traitDescription": "Equip a certain number of Earth skills to raise the character's Max HP",
             "traitBreakpoints": [
                 2,
                 4,
                 6
             ],
+            "traitDescription": "Equip a certain number of Earth skills to raise the character's Max HP",
+            "traitId": 108,
             "traitMods": [
                 "Raise Max HP 10%",
                 "Raise Max HP 20%",
                 "Raise Max HP 40%"
             ],
-            "traitName": "Earth",
-            "traitId": 108
+            "traitName": "Earth"
         },
         {
-            "traitDescription": "Equip a certain number of Nature skills to recover HP every 5s (based on max HP)",
             "traitBreakpoints": [
                 2,
                 4
             ],
+            "traitDescription": "Equip a certain number of Nature skills to recover HP every 5s (based on max HP)",
+            "traitId": 109,
             "traitMods": [
                 "Recover 2% of max HP every 5s",
                 "Recover 4% of max HP every 5s"
             ],
-            "traitName": "Nature",
-            "traitId": 109
+            "traitName": "Nature"
         },
         {
-            "traitDescription": "Equip a certain number of Tornado skills for a stackable boost of MOV SPD and Dodge after using a skill (The highest dodge rate attainable is only up to 90%)",
             "traitBreakpoints": [
                 2,
                 4
             ],
+            "traitDescription": "Equip a certain number of Tornado skills for a stackable boost of MOV SPD and Dodge after using a skill (The highest dodge rate attainable is only up to 90%)",
+            "traitId": 110,
             "traitMods": [
                 "3% MOV SPD, 2.5% Dodge, 5 stacks",
                 "6% MOV SPD, 5% Dodge, 5 stacks"
             ],
-            "traitName": "Tornado",
-            "traitId": 110
+            "traitName": "Tornado"
         },
         {
-            "traitDescription": "Equip a certain number of Void skills to gain stacking Void power by using Basic ATK, at maximum stacks your next Basic ATK will deal bonus DMG and make the target into Void",
             "traitBreakpoints": [
                 2,
                 4
             ],
+            "traitDescription": "Equip a certain number of Void skills to gain stacking Void power by using Basic ATK, at maximum stacks your next Basic ATK will deal bonus DMG and make the target into Void",
+            "traitId": 111,
             "traitMods": [
                 "After 11 attacks, your next Basic ATK will deal 100% Bonus PHY DMG and make the target into Void for 1s",
                 "After 3 attacks, your next Basic ATK will deal 150% Bonus PHY DMG and make the target into Void for 3s"
             ],
-            "traitName": "Void",
-            "traitId": 111
+            "traitName": "Void"
         },
         {
-            "traitDescription": "Equip a certain number of Evil skills to increase ATK and ATK SPD as HP decreases",
             "traitBreakpoints": [
                 2,
                 4
             ],
+            "traitDescription": "Equip a certain number of Evil skills to increase ATK and ATK SPD as HP decreases",
+            "traitId": 112,
             "traitMods": [
                 "Up to 50% ATK and 120% ATK SPD boost",
                 "Up to 100% ATK and 240% ATK SPD boost"
             ],
-            "traitName": "Evil",
-            "traitId": 112
+            "traitName": "Evil"
         },
         {
-            "traitDescription": "Equip a certain number of Origin skills to lower target Armor for 3s upon dealing Basic Atk damage",
             "traitBreakpoints": [
                 2,
                 4
             ],
+            "traitDescription": "Equip a certain number of Origin skills to lower target Armor for 3s upon dealing Basic Atk damage",
+            "traitId": 113,
             "traitMods": [
                 "Lower Armor 25%",
                 "Lower Armor 45%"
             ],
-            "traitName": "Origin",
-            "traitId": 113
+            "traitName": "Origin"
         },
         {
-            "traitDescription": "Equip a certain number of Light skills, each Active skill in cooldown grants the character a stack of ATK SPD bonus",
             "traitBreakpoints": [
                 2,
                 4,
                 6
             ],
+            "traitDescription": "Equip a certain number of Light skills, each Active skill in cooldown grants the character a stack of ATK SPD bonus",
+            "traitId": 114,
             "traitMods": [
                 "10% ATK SPD for each stack",
                 "20% ATK SPD for each stack",
                 "40% ATK SPD for each stack"
             ],
-            "traitName": "Light",
-            "traitId": 114
+            "traitName": "Light"
         },
         {
-            "traitDescription": "Equip a certain number of Poison skills, and when you attack poisoned enemies, they will be blinded based on the number of poison stacks they have. 20s CD.",
             "traitBreakpoints": [
                 2,
                 4
             ],
+            "traitDescription": "Equip a certain number of Poison skills, and when you attack poisoned enemies, they will be blinded based on the number of poison stacks they have. 20s CD.",
+            "traitId": 115,
             "traitMods": [
                 "Add 1s Blind for each stack of poison, up to 5 stacks",
                 "Add 1.5s Blind for each stack of poison, up to 10 stacks"
             ],
-            "traitName": "Poison",
-            "traitId": 115
+            "traitName": "Poison"
         },
         {
-            "traitDescription": "Equip a certain number of Steel skills to reduce all types of DMG taken based on your PHY DEF and MAG DEF",
             "traitBreakpoints": [
                 2,
                 4
             ],
+            "traitDescription": "Equip a certain number of Steel skills to reduce all types of DMG taken based on your PHY DEF and MAG DEF",
+            "traitId": 116,
             "traitMods": [
                 "Reduces DMG equal to 5% of your PHY DEF and 5% of your MAG DEF",
                 "Reduces DMG equal to 10% of your PHY DEF and 10% of your MAG DEF"
             ],
-            "traitName": "Steel",
-            "traitId": 116
+            "traitName": "Steel"
         }
     ]
 }
