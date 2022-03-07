@@ -33,6 +33,7 @@ fs.rmdirSync('./dist', {recursive: true});
 fs.mkdirSync('./dist');
 fs.closeSync(fs.openSync('./dist/.nojekyll', 'w'));
 fsp.copyFile('./src/html/index.html', './dist/index.html');
+fsp.copyFile('./src/html/accessory_prefixes.html', './dist/accessory_prefixes.html');
 copyDir('./src/img', './dist/assets/img', ['webp', 'ico']);
 
 // run serve or build
