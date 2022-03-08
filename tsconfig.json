@@ -25,18 +25,18 @@
     "skipLibCheck": true,
     "baseUrl": "src",
     "paths": {
-      "@api/*": ["script/api/*"],
-      "@components/*": ["script/components/*"],
-      "@constants/*": ["script/constants/*"],
-      "@helpers/*": ["script/helpers/*"],
-      "@mvcs/*": ["script/mvcs/*"],
-      "@typez/*": ["script/types/*"],
-      "@util/*": ["script/util/*"],
+      "@api/*": ["app/api/*"],
+      "@components/*": ["app/components/*"],
+      "@constants/*": ["app/constants/*"],
+      "@helpers/*": ["app/helpers/*"],
+      "@mvcs/*": ["app/mvcs/*"],
+      "@typez/*": ["app/types/*"],
+      "@util/*": ["app/util/*"],
       "@data/*": ["data/*"]
     }
   },
   "include": [
-    "src/script/**/*",
+    "src/app/**/*",
     "src/data/*"
   ]
 }

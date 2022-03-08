@@ -6,38 +6,6 @@ https://erhickey.github.io/eomcalc
 
 ## About
 
-An over-engineered static site built with typescript/css/html/haskell. This project has several development dependencies (typescript, rxjs, esbuild, eslint, @typescript-eslint, prettier).
+A static site built with typescript/css/html. The site has several development dependencies, and a single runtime dependency of rxjs. I have tried to keep the architecture as simple and clean as possible with minimal dependencies.
 
-The Haskell program parses data from multiple game files, aggregates the data, and writes it out as JSON for use in the calculator.
-
-## Data JSON Generation Steps:
-
-1. Locate a file named main.###.com.nabooplanet.magicrystal.obb on the device you have Echoes of Magic installed on. On my device it is located at /Internal shared storage/Android/obb/com.nabooplanet.magicrystal/. After connecting my phone to my computer and enabling file transer, I locate it with the following command from jmtpfs:
-
-        mtp-files | grep -A 4 -B 1 -i naboo
-2. This file is a zip archive, retrieve it, and extract its contents. I retrieve it with the following command (replace # with the File ID found in the first step):
-
-        mtp-getfile # eom.obb
-3. Navigate to assets/AssetBundles
-4. Use [AssetRipper](https://github.com/ds5678/AssetRipper) to extract assets from lua.unity3d:
-
-        AssetRipperConsole -o ripped -q lua.unity3d
-5. Run generate-data with the location of the ripped directory as the only argument:
-
-        cabal new-run generate-data -- <dir>/assets/AssetBundles/ripped
-
-On successful completion, json files will be generated in src/data
-
-## Image Conversion:
-
-Images have been graciously supplied by AsymmetryViolet on [Discord](https://discord.gg/4jSaCgbRyq).
-
-The images supplied are in png format, I have used [ImageMagick](https://imagemagick.org/) to convert and resize them:
-
-    mogrify -resize NxN -format webp *png
-
-Skills have been resized to 50x50, traits to 30x30, and cards have not been resized.
-
-The following command will rename the files appropriately:
-
-    for f in *webp ; do mv "$f" "$(printf "$f" | tr [:upper:] [:lower:] | tr ' ' _)" ; done
+The data and icons to support this project are mined from the game files, which are transferred from a mobile device with [jmtpfs](https://github.com/JasonFerrara/jmtpfs). The data exists as lua tables in various files that are extracted with [AssetRipper](https://github.com/ds5678/AssetRipper). A simple lua script, along with the [lua-cjson](https://github.com/mpx/lua-cjson) library, is used to convert the data to json files. The json files are then transformed into a usable format with javascript and [Node.js](https://nodejs.org/en/). Lastly, [ImageMagick](https://imagemagick.org/) is used to resize and convert the images. In typical fashion, this is all glued together with shell scripts. If you have all the required dependencies installed, and a mobile device connected to your machine, you should be able to perform all of these steps by running [mine-data.sh](/src/sh/mine-data.sh).

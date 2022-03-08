@@ -1,3 +1,11 @@
+/*
+  eslint-disable
+    no-console,
+    no-undef,
+    @typescript-eslint/explicit-function-return-type,
+    @typescript-eslint/no-var-requires
+*/
+
 const esbuild = require('esbuild');
 const fs = require('fs');
 const fsp = require('fs/promises');
@@ -8,28 +16,25 @@ const onResolvePlugin = {
   name: 'webp-external',
   setup(build) {
     build.onResolve({ filter: /.*\.webp$/ }, args => {
-      return { path: args.path, external: true }
-    })
+      return { path: args.path, external: true };
+    });
   }
 };
 
 const buildOptions = {
-  entryPoints: [
-    './src/script/eom-calc.ts',
-    './src/css/eom-calc.css'
-  ],
+  entryPoints: ['./src/app/eom-calc.ts', './src/css/eom-calc.css'],
   outdir: './dist/assets/',
   sourcemap: false,
   minify: true,
   bundle: true,
   legalComments: 'none',
-  plugins: [onResolvePlugin],
+  plugins: [onResolvePlugin]
 };
 
 // clean dist directory
 // create .nojekyll file (for gh-pages)
 // copy index.html and images to dist
-fs.rmdirSync('./dist', {recursive: true});
+fs.rmdirSync('./dist', { recursive: true });
 fs.mkdirSync('./dist');
 fs.closeSync(fs.openSync('./dist/.nojekyll', 'w'));
 fsp.copyFile('./src/html/index.html', './dist/index.html');
@@ -40,19 +45,18 @@ copyDir('./src/img', './dist/assets/img', ['webp', 'ico']);
 if (process.argv.includes('--serve')) {
   buildOptions.sourcemap = true;
 
-  esbuild.serve({servedir: 'dist'}, buildOptions)
-    .then(server => {
-      console.log('Listening on ' + server.host + ':' + server.port);
-      require('child_process').exec(getStartCommand(process.platform) + ' http://' + server.host + ':' + server.port);
-    });
+  esbuild.serve({ servedir: 'dist' }, buildOptions).then(server => {
+    console.log('Listening on ' + server.host + ':' + server.port);
+    require('child_process').exec(getStartCommand(process.platform) + ' http://' + server.host + ':' + server.port);
+  });
 } else {
   esbuild.build(buildOptions);
 }
 
 // recursively copy directory, only copying files with given extension(s)
 function copyDir(src, dest, filetypes) {
-  fs.mkdirSync(dest, {recursive: true});
-  const entries = fs.readdirSync(src, {withFileTypes: true});
+  fs.mkdirSync(dest, { recursive: true });
+  const entries = fs.readdirSync(src, { withFileTypes: true });
 
   for (const entry of entries) {
     const srcPath = path.join(src, entry.name);
